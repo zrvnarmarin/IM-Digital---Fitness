@@ -3,6 +3,7 @@ import Navbar from './(home-sections)/Navbar'
 import HeroSection from './(home-sections)/HeroSection'
 import ExploreOurProgram from './(home-sections)/ExploreOurProgram'
 import TheClassYouWillGetThereSection from './(home-sections)/TheClassYouWillGetThereSection'
+import WhyJoinUs from './(home-sections)/WhyJoinUs'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <HeroSection />
       <ExploreOurProgram />
       <TheClassYouWillGetThereSection />
+      <WhyJoinUs />
     </main>
   )
 }

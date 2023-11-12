@@ -38,7 +38,6 @@ export function ProgramCard({ title, description, icon }: { title: string, descr
                 <p className='text-lg text-white leading-2 font-medium'>Join Now</p>
                 {<RightIcon />}
             </Link>
-
         </div>
     )
 }
