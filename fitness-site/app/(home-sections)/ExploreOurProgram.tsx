@@ -12,7 +12,7 @@ export default function ExploreOurProgram() {
       <h1 className='uppercase font-bold text-white text-3xl'>
         Explore Our Program
       </h1>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 pt-8 md:pt-12'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pt-8 md:pt-12'>
           {programCards.map(programCard =>
                 <ProgramCard
                     key={programCard.title}
@@ -28,7 +28,7 @@ export default function ExploreOurProgram() {
 
 export function ProgramCard({ title, description, icon }: { title: string, description: string, icon:() => JSX.Element }) {
     return (
-        <div className='flex flex-col gap-8 rounded-xl p-6 bg-[#1F2125]'>
+        <div className='flex flex-col gap-8 rounded-xl p-6 bg-[#1F2125] hover:scale-105 hover:bg-[#35373B] hover:outline-2 focus:outline-2 outline-[#1D7349] cursor-pointer'>
             <div className='flex gap-4 items-center'>
                 <div className='bg-[#1D7349] rounded-xl p-2 w-fit'>{icon()}</div>
                 <p className='text-xl text-white leading-2 font-medium'>{title}</p>

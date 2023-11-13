@@ -13,28 +13,31 @@ export default function Footer() {
             We will help you shape the body of your dreams
           </p>
           <div className='flex flex-row gap-4'>
-            <div className='rounded-full border-2 border-[#1D7349] p-1'>
+            <div className='rounded-full cursor-pointer border-2 border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200'>
               <InstagramIcon />
             </div>
-            <div className='rounded-full border-2 border-[#1D7349] p-1'>
+            <div className='rounded-full border-2 cursor-pointer border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200'>
             <FacebookIcon />
             </div>
-            <div className='rounded-full border-2 border-[#1D7349] p-1'>
+            <div className='rounded-full border-2 cursor-pointer border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200'>
               <YouTubeIcon />
             </div>
           </div>
        </div>
 
-        <ul className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pt-12'>
+        <ul className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pt-12'>
           {footerLinks.map(footerLink =>
             <div key={footerLink.heading}>
-              <h3 className='text-white leading-2 text-xl'>{footerLink.heading}</h3>
-              {footerLink.links.map(link =>
-                <p key={link} className='text-gray-200 leading-2 text-md'>{link}</p>  
-              )}
+              <h3 className='text-white leading-2 text-xl pb-8 font-semibold'>{footerLink.heading}</h3>
+              <div className='flex flex-col gap-2'>
+                {footerLink.links.map(link =>
+                  <Link href={`/${link}`} key={link} className='text-gray-200 leading-2 text-md hover:underline hover:underline-offset-4 hover:decoration-[#1D7349]'>{link}</Link>
+                )}
+              </div>
             </div>  
           )}
         </ul>
+        <h3 className='text-white text-lg md:text-3xl lg:text-4xl pt-32 pb-8'>&#169; IM Digital Ltd.</h3>
     </footer>
   )
 }
@@ -45,11 +48,11 @@ const footerLinks = [
     links: [ 'Home', 'About', 'Appointment', 'Blog' ]
   },
   {
-    heading: 'Brzi Link',
+    heading: 'Fast Link',
     links: [ 'Home', 'About', 'Appointment', 'Blog' ]
   },
   {
-    heading: 'Okej link',
+    heading: 'Super link',
     links: [ 'Home', 'About', 'Appointment', 'Blog' ]
   }
 ]

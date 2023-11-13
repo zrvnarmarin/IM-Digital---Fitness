@@ -21,7 +21,7 @@ export default function Navbar() {
                 <li className='text-white xs:text-md lg:text-lg xl:text-xl font-semibold leading-7'><Link href={'/contact'}>Community</Link></li>
             </ul>
             <div>
-                <button className='hidden lg:block text-white lg:text-lg xl:text-xl font-semibold leading-7 bg-[#1D7349] px-8 py-4 rounded-md'>Join Now</button>
+                <button className='hidden lg:block text-white lg:text-lg xl:text-xl font-semibold leading-7 bg-[#1D7349]  hover:bg-[#34a26d] hover:scale-105  px-8 py-4 rounded-md'>Join Now</button>
             </div>
             <div className='block lg:hidden'>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="text-white w-8 h-8">
