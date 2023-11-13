@@ -30,7 +30,7 @@ export default function Footer() {
             <div key={footerLink.heading}>
               <h3 className='text-white leading-2 text-xl'>{footerLink.heading}</h3>
               {footerLink.links.map(link =>
-                <p className='text-gray-200 leading-2 text-md'>{link}</p>  
+                <p key={link} className='text-gray-200 leading-2 text-md'>{link}</p>  
               )}
             </div>  
           )}
@@ -45,11 +45,11 @@ const footerLinks = [
     links: [ 'Home', 'About', 'Appointment', 'Blog' ]
   },
   {
-    heading: 'Quick Links',
+    heading: 'Brzi Link',
     links: [ 'Home', 'About', 'Appointment', 'Blog' ]
   },
   {
-    heading: 'Quick Links',
+    heading: 'Okej link',
     links: [ 'Home', 'About', 'Appointment', 'Blog' ]
   }
 ]
