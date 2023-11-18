@@ -37,7 +37,7 @@ export default function Footer() {
             </div>  
           )}
         </ul>
-        <h3 className='text-white text-lg md:text-xl lg:text-2xl pt-32 pb-8'>&#169; IM Digital Ltd.</h3>
+        <h3 className='text-white text-sm md:text-md lg:text-lg pt-16 pb-8'>&#169; IM Digital Ltd.</h3>
     </footer>
   )
 }

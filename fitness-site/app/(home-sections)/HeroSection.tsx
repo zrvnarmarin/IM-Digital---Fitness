@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function HeroSection() {
   return (
-    <section className='px-8 py-24 relative w-full'>
-      <div className='absolute top-5 left-0 w-96 h-96 bg-[rgba(5,30,18,0.7)] blur-3xl'></div>
-      <div className='hidden lg:block absolute bottom-5 right-0 w-96 h-96 bg-[rgba(5,30,18,0.7)] blur-3xl'></div>
+    <section className='px-6 md:px-8 lg:px-24 py-24 relative w-full'>
+      {/* <div className='absolute top-5 left-0 w-96 h-96 bg-[rgba(5,30,18,0.7)] blur-3xl'></div> */}
+      {/* <div className='hidden lg:block absolute bottom-5 right-0 w-96 h-96 bg-[rgba(5,30,18,0.7)] blur-3xl'></div> */}
       <h1 className='flex flex-col gap-4 justify-center items-center relative'>
         <span className='relative flex justify-center w-full'>
             <span className='z-10 text-white opacity-30 text-6xl md:text-8xl lg:text-9xl text-center uppercase font-black'>Body</span>

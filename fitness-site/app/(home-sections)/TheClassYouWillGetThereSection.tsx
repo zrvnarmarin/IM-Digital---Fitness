@@ -3,9 +3,9 @@ import { DotsImage } from '@/public/Icons'
 import Igor from '../../public/igor.jpg'
 import Image from 'next/image'
 
-export default function TheClassYouWillGetThereSection() {
+export default function TheClassYouWillGetThereSection() { 
   return (
-    <section className='pl-8 py-24 grid grid-cols-1 md:grid-cols-2 gap-12'>
+    <section className='px-6 md:px-8 lg:px-24 pl-8 py-24 grid grid-cols-1 md:grid-cols-2 gap-12'>
         <div className='border border-white text-white min-h-64 flex items-center justify-center'>
             {/* <Image src={Igor} alt='Image' className='w-full object-cover h-full' /> */}
             Insert Image Here
