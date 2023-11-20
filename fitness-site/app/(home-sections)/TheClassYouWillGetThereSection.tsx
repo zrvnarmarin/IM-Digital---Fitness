@@ -1,6 +1,5 @@
 import React from 'react'
 import { DotsImage } from '@/public/Icons'
-import Igor from '../../public/igor.jpg'
 import Image from 'next/image'
 
 export default function TheClassYouWillGetThereSection() { 
