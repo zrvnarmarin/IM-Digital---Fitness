@@ -6,7 +6,7 @@ import { CalendarIcon } from '@/public/Icons'
 
 export default function WhyJoinUs() {
   return (
-    <section className='px-8 py-24 flex flex-col gap-8'>
+    <section className='w-full px-6 md:px-8 lg:px-24 pl-8 pb-24 pt-8 flex flex-col gap-8'>
       <h1 className='uppercase font-bold text-white text-3xl'>
             Why Join Us
       </h1>

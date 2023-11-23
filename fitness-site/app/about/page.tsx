@@ -1,10 +1,8 @@
 import React from "react";
 import Navbar from "../(home-sections)/Navbar";
 import HeroSection from "./(about-sections)/HeroSection";
-import { LeftIcon, RightIcon } from "@/public/Icons";
+import { RightIcon } from "@/public/Icons";
 import Link from "next/link";
-import AboutUsGridImageOne from "../../public/AboutUsGridImageOne.avif";
-import Image from "next/image";
 
 export default function Page() {
   return (
@@ -208,21 +206,13 @@ export const EarthImage = () => {
 
 export function DiscoverOurProgramsSection() {
   return (
-    <>
-      <div className="py-24 flex flex-row gap-16 items-center">
-        {/* <div className="animate-ping">
-          <RightIcon strokeOne="#1D7349" strokeTwo="#1D7349" />
-        </div> */}
-        <Link
-          href="/programs"
-          className="animate-pulse text-white lg:text-lg xl:text-xl font-semibold leading-7 bg-[#1D7349]  hover:bg-[#34a26d] hover:scale-105  px-8 py-4 lg:px-16 lg:py-8 rounded-md"
-        >
-          Discover Our Programs
-        </Link>
-        {/* <div className="animate-ping">
-          <LeftIcon strokeOne="#1D7349" strokeTwo="#1D7349" />
-        </div> */}
-      </div>
-    </>
+    <div className="flex items-center justify-center py-24 px-6 md:px-8 lg:px-24  gap-12 w-full">
+      <Link
+        href="/programs"
+        className="flex justify-center text-white lg:text-lg xl:text-xl font-semibold leading-7 bg-[#1D7349] hover:bg-[#34a26d] w-full px-8 py-4 lg:px-16 lg:py-8 rounded-md"
+      >
+        Discover Our Programs
+      </Link>
+    </div>
   );
 }
