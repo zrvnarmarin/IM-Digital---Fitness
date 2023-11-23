@@ -7,7 +7,7 @@ import Footer from '../Footer';
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center lg:py-8 bg-[#111317]">
+    <main className="flex min-h-screen flex-col items-center lg:py-4 bg-[#111317]">
       <Navbar />
       <HeroSection />
     </main>
