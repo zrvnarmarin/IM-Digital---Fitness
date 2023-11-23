@@ -1,15 +1,18 @@
 import React from 'react';
 import Navbar from '@/app/(home-sections)/Navbar';
 import Footer from '@/app/Footer';
+import Image from 'next/image';
+import ContactImage from '../../public/AboutUsHeroImage.avif'
 
 export default function ContactSection() {
   return (
     <section className='flex flex-col items-center justify-center lg:pt-4 bg-[#111317]'>
       <Navbar />
-      <div className='px-8 pt-12 pb-6'>
+      {/* <div className='px-8 pt-12 pb-6'>
         <HeroSection />
-      </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-8 pb-16 px-8'>
+      </div> */}
+      <HeroSectionTwo />
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-8 lg:px-24 pl-8 py-24'>
         <ContactFormSection />
         <ContactInfoSection />
       </div>
@@ -28,6 +31,27 @@ export function HeroSection() {
       </p>
     </div>
   );
+}
+
+export function HeroSectionTwo() {
+  return (
+    <>
+      <div className="relative text-white min-h-64 flex items-center justify-center">
+        <div className="relative brightness-50 max-h-1/2 w-screen">
+          <Image
+            src={ContactImage}
+            alt="Image"
+            className="z-10 w-full object-cover h-[24rem] brightness-50"
+            height={0}
+            width={0}
+          />
+        </div>
+        <p className="text-[#FFFFFF] opacity-100 text-6xl md:text-8xl lg:text-9xl uppercase font-black absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+          Contact
+        </p>
+      </div>
+    </>
+  )
 }
 
 export function ContactFormSection() {
