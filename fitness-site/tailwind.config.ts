@@ -15,6 +15,9 @@ const config: Config = {
           'hero-pattern': "url('/img/hero-pattern.svg')",
           'footer-texture': "url('/img/footer-texture.png')"
       },
+      gridTemplateColumns: {
+        'gallery': 'repeat(auto-fit, minmax(250px, 1fr))'
+      }
     },
   },
   plugins: [],
