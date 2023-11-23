@@ -72,7 +72,44 @@ export const WeightGainIcon = () => {
   );
 };
 
-export const RightIcon = () => {
+export const LeftIcon = ({
+  strokeOne,
+  strokeTwo,
+}: {
+  strokeOne: string;
+  strokeTwo: string;
+}) => {
+  return (
+    <svg
+      width="26"
+      height="26"
+      viewBox="0 0 26 26"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M4.70029 13.185L20.3003 13.185"
+        stroke={strokeOne}
+        strokeWidth="2.08"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M10.9917 19.4504L4.69971 13.1854L10.9917 6.91943"
+        stroke={strokeTwo}
+        strokeWidth="2.08"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const RightIcon = ({
+  strokeOne,
+  strokeTwo,
+}: {
+  strokeOne: string;
+  strokeTwo: string;
+}) => {
   return (
     <svg
       width="26"
@@ -83,13 +120,13 @@ export const RightIcon = () => {
     >
       <path
         d="M21.2997 12.815L5.69971 12.815"
-        stroke="#F3F4F6"
+        stroke={strokeOne}
         stroke-width="2.08"
         stroke-linejoin="round"
       />
       <path
         d="M15.0083 6.54961L21.3003 12.8146L15.0083 19.0806"
-        stroke="#F3F4F6"
+        stroke={strokeTwo}
         stroke-width="2.08"
         stroke-linejoin="round"
       />
@@ -279,7 +316,21 @@ export const YouTubeIcon = () => {
 };
 
 export const DurationIcon = () => {
-    return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock-3"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16.5 12"/></svg>
-    );
-}
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-clock-3"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <polyline points="12 6 12 12 16.5 12" />
+    </svg>
+  );
+};

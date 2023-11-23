@@ -7,7 +7,7 @@ import { formatString } from '@/app/utils/helpers';
 export default function Page({ params }: { params: { programId: string}}) {
   return (
     //ovdje ispod u main tag stavi min-h-screen ako zelis veliki razmak izmedju ovog i footera
-    <main className="flex flex-col items-center lg:py-8 bg-[#111317]">
+    <main className="flex flex-col items-center lg:py-4 bg-[#111317]">
       <Navbar />
       <div className='relative text-white min-h-64 flex flex-col items-center justify-center'>
         <div className='relative brightness-50 max-h-1/2 w-screen'>

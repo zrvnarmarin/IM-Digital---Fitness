@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from '../(home-sections)/Navbar'
 import HeroSection from './(programs-sections)/HeroSection'
-import { RightIcon } from '@/public/Icons';
 import Link from 'next/link';
 import Footer from '../Footer';
 
