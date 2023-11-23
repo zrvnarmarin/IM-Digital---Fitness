@@ -210,15 +210,18 @@ export function DiscoverOurProgramsSection() {
   return (
     <>
       <div className="py-24 flex flex-row gap-16 items-center">
-      <div className="animate-ping">
-            <RightIcon strokeOne="#1D7349" strokeTwo="#1D7349" />
-        </div>
-        <Link href='/programs' className="animate-pulse text-white lg:text-lg xl:text-xl font-semibold leading-7 bg-[#1D7349]  hover:bg-[#34a26d] hover:scale-105  px-8 py-4 lg:px-16 lg:py-8 rounded-md">
+        {/* <div className="animate-ping">
+          <RightIcon strokeOne="#1D7349" strokeTwo="#1D7349" />
+        </div> */}
+        <Link
+          href="/programs"
+          className="animate-pulse text-white lg:text-lg xl:text-xl font-semibold leading-7 bg-[#1D7349]  hover:bg-[#34a26d] hover:scale-105  px-8 py-4 lg:px-16 lg:py-8 rounded-md"
+        >
           Discover Our Programs
         </Link>
-        <div className="animate-ping">
-            <LeftIcon strokeOne="#1D7349" strokeTwo="#1D7349" />
-        </div>
+        {/* <div className="animate-ping">
+          <LeftIcon strokeOne="#1D7349" strokeTwo="#1D7349" />
+        </div> */}
       </div>
     </>
   );

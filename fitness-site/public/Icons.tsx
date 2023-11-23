@@ -327,7 +327,7 @@ export const DurationIcon = () => {
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class="lucide lucide-clock-3"
+      className="lucide lucide-clock-3"
     >
       <circle cx="12" cy="12" r="10" />
       <polyline points="12 6 12 12 16.5 12" />

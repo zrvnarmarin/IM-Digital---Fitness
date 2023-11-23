@@ -51,18 +51,18 @@ export function ProgramCard({
   return (
     <Link href={program.href} className={cardClass}>
       <div className="flex gap-4 items-center">
-        <div className="bg-[#1D7349] rounded-xl p-2 w-fit">
+        <div className="bg-[#1D7349] rounded-xl p-2 w-12 h-12 flex items-center justify-center">
           {program.icon()}
         </div>
-        <p className="text-md md:text-lg lg:text-xl text-white leading-7 font-semibold">
+        <p className="flex-1 text-md md:text-lg lg:text-xl text-white leading-7 font-semibold">
           {program.title}
         </p>
       </div>
-      <p className="text-sm md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
+      <p className="flex-1 text-sm md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
         {program.description}
       </p>
       {program.duration && (
-        <div className="text-sm md:text-md text-gray-300 leading-2 font-normal flex flex-row gap-2 items-center">
+        <div className="flex-1 text-sm md:text-md text-gray-300 leading-2 font-normal flex flex-row gap-2 items-center">
           <span className="bg-[#1D7349] rounded-md p-1 text-lg">
             <DurationIcon />
           </span>
@@ -75,7 +75,7 @@ export function ProgramCard({
         </div>
       )}
       {program.intensity && (
-        <div className="text-sm md:text-md text-gray-300 leading-2 font-normal">
+        <div className="flex-1 text-sm md:text-md text-gray-300 leading-2 font-normal">
           <span className="text-sm md:text-md lg:text-lg text-gray-300 leading-2 font-semibold">
             Intensity:
           </span>
@@ -93,10 +93,10 @@ export function ProgramCard({
           </div>
         </div>
       )}
-      <div>
-        <p className="flex gap-4 justify-end text-md lg:text-lg text-white leading-2 font-medium">
+      <div className="flex-1">
+        <p className="flex items-center gap-4 justify-end text-md lg:text-lg text-white leading-2 font-medium">
           Discover More
-          <RightIcon />
+          <RightIcon strokeOne="#FFFFFF" strokeTwo="#FFFFFF" />
         </p>
       </div>
     </Link>
@@ -127,7 +127,11 @@ const fitnessPrograms = [
     intensity: "High",
     icon: HeartIcon,
     keyPoses: ["Cardio Pose 1", "Cardio Pose 2"],
-    benefits: ["Improved cardiovascular health", "Calorie burning", "Enhanced endurance"],
+    benefits: [
+      "Improved cardiovascular health",
+      "Calorie burning",
+      "Enhanced endurance",
+    ],
   },
   {
     title: "Strength Builder",
@@ -140,7 +144,11 @@ const fitnessPrograms = [
     intensity: "Moderate",
     icon: DumbellIcon,
     keyPoses: ["Strength Pose 1", "Strength Pose 2"],
-    benefits: ["Increased muscle strength", "Muscle definition", "Improved functional strength"],
+    benefits: [
+      "Increased muscle strength",
+      "Muscle definition",
+      "Improved functional strength",
+    ],
   },
   {
     title: "CrossFit Challenge",
@@ -153,7 +161,11 @@ const fitnessPrograms = [
     intensity: "Very High",
     icon: HeartIcon,
     keyPoses: ["CrossFit Pose 1", "CrossFit Pose 2"],
-    benefits: ["Improved agility", "Enhanced strength", "Overall fitness advancement"],
+    benefits: [
+      "Improved agility",
+      "Enhanced strength",
+      "Overall fitness advancement",
+    ],
   },
   {
     title: "Yoga and Meditation",
@@ -166,6 +178,10 @@ const fitnessPrograms = [
     intensity: "Low",
     icon: DumbellIcon,
     keyExercises: ["Yoga Pose 1", "Yoga Pose 2"],
-    benefits: ["Increased flexibility", "Stress relief", "Mind-body connection"],
+    benefits: [
+      "Increased flexibility",
+      "Stress relief",
+      "Mind-body connection",
+    ],
   },
 ];
