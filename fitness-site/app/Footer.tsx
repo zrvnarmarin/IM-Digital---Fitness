@@ -12,7 +12,7 @@ export default function Footer() {
           </p>
         </Link>
         <p className="text-lg font-normal text-gray-200">
-          We will help you shape the body of your dreams
+          Unlock Your Strongest Version
         </p>
         <div className="flex flex-row gap-4">
           <div className="rounded-full cursor-pointer border-2 border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200">

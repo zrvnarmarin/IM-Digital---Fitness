@@ -206,7 +206,7 @@ export const EarthImage = () => {
 
 export function DiscoverOurProgramsSection() {
   return (
-    <div className="flex items-center justify-center py-24 px-6 md:px-8 lg:px-24  gap-12 w-full">
+    <div className="flex items-center justify-center pt-24 pb-48 px-6 md:px-8 lg:px-24  gap-12 w-full">
       <Link
         href="/programs"
         className="flex justify-center text-white lg:text-lg xl:text-xl font-semibold leading-7 bg-[#1D7349] hover:bg-[#34a26d] w-full px-8 py-4 lg:px-16 lg:py-8 rounded-md"

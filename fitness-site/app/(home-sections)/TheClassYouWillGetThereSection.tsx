@@ -26,7 +26,7 @@ export default function TheClassYouWillGetThereSection() {
         <h1 className="uppercase font-bold text-white text-3xl">
           The Class You Will Get There
         </h1>
-        <p className="text-md text-gray-300 leading-2 font-normal">
+        <p className="flex-1 text-sm md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
           We consistently improving our offering, service and pride orselves on
           creating connections with our members addelivering the most
           personalized fitness experience possible.
