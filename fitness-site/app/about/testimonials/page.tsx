@@ -6,11 +6,15 @@ export default function Page() {
   return (
     <main className="flex min-h-screen flex-col items-center lg:pt-4 bg-[#111317]">
       <Navbar />
-      <p className="text-[#FFFFFF] opacity-100 text-6xl md:text-8xl lg:text-9xl uppercase font-black px-6 md:px-8 lg:px-24 pt-24 pb-8 text-center">
+      <p className="text-[#FFFFFF] opacity-100 text-4xl md:text-8xl lg:text-9xl uppercase font-black px-6 md:px-8 lg:px-24 pt-8 lg:pt-24 pb-8 text-center">
         Testimonials
       </p>
-      <section className="px-6 md:px-8 lg:px-24 pl-8 py-8 md:py-16 lg:py-24 grid gap-4 grid-cols-gallery bg-[#111317]">
-        <div className="grid grid-cols-1  gap-6 pt-8 md:pt-12">
+      <p className="text-white">
+        Read some of our client's testimonials who are experiencing every day
+        our services
+      </p>
+      <section className="px-6 md:px-8 lg:px-32 md:py-8 lg:py-16 grid gap-4 grid-cols-gallery bg-[#111317]">
+        <div className="grid grid-cols-1  gap-10 pt-8 md:pt-12">
           {testimonials.map((testimonial) => (
             <TestimonialCard
               key={testimonial.id}
@@ -28,23 +32,29 @@ export default function Page() {
 export function TestimonialCard({
   name,
   testimonial,
-  date
+  date,
 }: {
   name: string;
   testimonial: string;
-  date: string
+  date: string;
 }) {
   return (
-    <div className="flex flex-col gap-8 p-6 border-l-4 border-white">
+    <div className="flex flex-col gap-8 p-6 border-l-4 border-white hover:bg-[#1F2125] rounded-r-md">
       <div className="flex gap-4 items-center">
-        <div className="bg-[#1D7349] rounded-xl p-2 w-fit">nesto</div>
-        <p className="flex-1 text-md md:text-lg lg:text-xl text-white leading-7 font-semibold">
-          {name}
+        <div className="bg-[#1D7349] rounded-xl p-2 w-fit">
+          <p className="flex-1 text-md md:text-lg lg:text-xl text-white leading-7 font-semibold">
+            {name}
+          </p>
+        </div>
+      </div>
+      <div className="flex flex-row gap-2">
+        <div className="flex justify-start">
+          <QuotationMark />
+        </div>
+        <p className="text-sm md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
+          {testimonial}
         </p>
       </div>
-      <p className="flex-1 text-sm md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
-        <QuotationMark />{testimonial}
-      </p>
       <p className="flex-1 text-sm md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
         {date}
       </p>
