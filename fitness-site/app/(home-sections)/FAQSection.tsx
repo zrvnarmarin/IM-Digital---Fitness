@@ -5,11 +5,36 @@ import React, { useState } from "react";
 export default function FAQSection() {
   return (
     <section className="w-full px-6 md:px-8 lg:px-24 pl-8 pb-24 pt-8 bg-[#111317]">
-      <h1 className="uppercase font-bold pb-8 text-white text-3xl text-center">Frequently Asked Questions</h1>
-      <div className="w-full ">
-        <Accordion />
-      </div>
+      <h1 className="uppercase font-bold pb-8 text-white text-3xl text-center">
+        Frequently Asked Questions
+      </h1>
+      <QuestionCategories />
+      <Accordion />
     </section>
+  );
+}
+
+export function QuestionCategories() {
+  const [activeCategory, setActiveCategory] = useState(questionCategories[0].id);
+
+  const handleCategoryClick = (categoryId: string) => {
+    setActiveCategory(categoryId);
+  };
+
+  return (
+    <div className="w-full flex flex-row justify-between flex-wrap gap-4 pb-12">
+      {questionCategories.map((questionCategory) => (
+        <div
+          key={questionCategory.id}
+          className={`border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white ${
+            activeCategory === questionCategory.id ? "bg-[#1F2125] text-white" : ""
+          }`}
+          onClick={() => handleCategoryClick(questionCategory.id)}
+        >
+          <p>{questionCategory.name}</p>
+        </div>
+      ))}
+    </div>
   );
 }
 
@@ -21,7 +46,7 @@ export function Accordion() {
   };
 
   return (
-    <div className="">
+    <div className="w-full">
       {faq.map((accordion, index) => (
         <Panel
           key={accordion.id}
@@ -73,34 +98,46 @@ function Panel({
 }
 
 const faq = [
-    {
-      id: 1,
-      title: "What is the duration of the Cardio Blast program?",
-      answer: "The Cardio Blast program has a duration of 4 weeks."
-    },
-    {
-      id: 2,
-      title: "Which key exercises are included in the Strength Builder program?",
-      answer: "The Strength Builder program includes key exercises like Squats, Deadlifts, and Bench Press."
-    },
-    {
-      id: 3,
-      title: "What is the intensity level of the CrossFit Challenge program?",
-      answer: "The CrossFit Challenge program has a very high intensity level."
-    },
-    {
-      id: 4,
-      title: "Which yoga poses are part of the Yoga and Meditation program?",
-      answer: "The Yoga and Meditation program includes key poses like Sun Salutations, Warrior Series, and Balancing Poses."
-    },
-    {
-      id: 5,
-      title: "Is World Gym open to beginners?",
-      answer: "Yes, World Gym welcomes all individuals, including beginners, who are serious about improving their health and fitness."
-    },
-    {
-      id: 6,
-      title: "What amenities are offered at World Gym?",
-      answer: "World Gym provides a variety of amenities, including a sprawling gym floor with free weights and cardio equipment, indoor turf training areas, group fitness classes, personal training, wellness and recovery options, and more. Please check your local World Gym for a complete list of amenities."
-    },
-  ];
+  {
+    id: 1,
+    title: "What is the duration of the Cardio Blast program?",
+    answer: "The Cardio Blast program has a duration of 4 weeks.",
+  },
+  {
+    id: 2,
+    title: "Which key exercises are included in the Strength Builder program?",
+    answer:
+      "The Strength Builder program includes key exercises like Squats, Deadlifts, and Bench Press.",
+  },
+  {
+    id: 3,
+    title: "What is the intensity level of the CrossFit Challenge program?",
+    answer: "The CrossFit Challenge program has a very high intensity level.",
+  },
+  {
+    id: 4,
+    title: "Which yoga poses are part of the Yoga and Meditation program?",
+    answer:
+      "The Yoga and Meditation program includes key poses like Sun Salutations, Warrior Series, and Balancing Poses.",
+  },
+  {
+    id: 5,
+    title: "Is World Gym open to beginners?",
+    answer:
+      "Yes, World Gym welcomes all individuals, including beginners, who are serious about improving their health and fitness.",
+  },
+  {
+    id: 6,
+    title: "What amenities are offered at World Gym?",
+    answer:
+      "World Gym provides a variety of amenities, including a sprawling gym floor with free weights and cardio equipment, indoor turf training areas, group fitness classes, personal training, wellness and recovery options, and more. Please check your local World Gym for a complete list of amenities.",
+  },
+];
+
+const questionCategories = [
+  { id: "consultations", name: "Consultations" },
+  { id: "membership", name: "Membership" },
+  { id: "programs", name: "Programs" },
+  { id: "training", name: "Training" },
+  { id: "locations", name: "Locations" },
+];
