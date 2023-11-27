@@ -49,6 +49,9 @@ export function ProgramCard({
 
   return (
     <Link href={program.href} className={cardClass}>
+      <div className="w-full flex">
+        <Image src={program.image} alt="program_image" width={0} height={0} />
+      </div>
       <div className="flex gap-4 items-center">
         <div className="bg-[#1D7349] rounded-xl p-2 w-12 h-12 flex items-center justify-center">
           {program.icon()}

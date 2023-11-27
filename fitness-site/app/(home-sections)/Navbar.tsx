@@ -3,12 +3,15 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { UseScrollPosition } from "../hooks/UseScrollPosition";
 
 export default function Navbar() {
   const pathname = usePathname();
 
+  const scrolPosition = UseScrollPosition()
+
   return (
-    <header className="w-full">
+    <header className={`w-full sticky top-0 z-30 ${scrolPosition > 0 ? 'bg-[#1F2125] duration-700' : ''}`}>
       <nav className="flex flex-row justify-between items-center py-6 bg-[#111317] lg:bg-inherit px-8">
         <Link href={"/"}>
           <p className="text-3xl sm:text-4xl leading-10 font-black italic text-[#1D7349] md:text-6xl lg:text-[#1D7349]">
@@ -23,7 +26,7 @@ export default function Navbar() {
             <Link href={"/programs"}>Programs</Link>
           </li>
           <li className="text-[#F3F4F6] xs:text-md lg:text-lg xl:text-xl font-normal hover:underline hover:underline-offset-8 hover:decoration-[#1D7349] leading-7">
-            <Link href={"/service"}>Service</Link>
+            <Link href={"/services"}>Services</Link>
           </li>
           <li className="text-[#F3F4F6] xs:text-md lg:text-lg xl:text-xl font-normal hover:underline hover:underline-offset-8 hover:decoration-[#1D7349] leading-7">
             <Link href={"/about"}>About</Link>

@@ -9,7 +9,7 @@ export default function Page() {
       <p className="text-[#FFFFFF] opacity-100 text-4xl md:text-8xl lg:text-9xl uppercase font-black px-6 md:px-8 lg:px-24 pt-8 lg:pt-24 pb-8 text-center">
         Testimonials
       </p>
-      <p className="text-white">
+      <p className="text-white px-6 md:px-8 lg:px-32 md:py-8 lg:py-16">
         Read some of our client's testimonials who are experiencing every day
         our services
       </p>

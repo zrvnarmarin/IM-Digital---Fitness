@@ -89,7 +89,7 @@ export function LegacyOfStrengthSection() {
       </div>
 
       <div className="cold-span-1">
-        <div className="sticky top-16">
+        <div className="sticky top-48">
           <AboutCard />
         </div>
       </div>

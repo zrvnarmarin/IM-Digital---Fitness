@@ -3,6 +3,7 @@ import { Inter, Montserrat } from 'next/font/google'
 import './globals.css'
 import Footer from './Footer'
 import Sidebar from './components/Sidebar'
+import Navbar from './(home-sections)/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 const montserrat = Montserrat({ subsets: ['latin']})
@@ -22,7 +23,7 @@ export default function RootLayout({
       <body className={montserrat.className}>
         {children}
         <Footer />
-        {/* <Sidebar /> */}
+        {/* <Sidebar />  */}
       </body>
     </html>
   )
