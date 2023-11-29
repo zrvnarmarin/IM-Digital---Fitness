@@ -45,10 +45,9 @@ export function ProgramCard({
       href={href}
       className="flex flex-col gap-8 rounded-xl p-6 bg-[#1F2125] hover:scale-105 hover:bg-[#35373B] hover:outline-2 focus:outline-2 outline-[#1D7349] cursor-pointer"
     >
-      <Image src={YogaImage} alt="program_image" width={0} height={0} />
-      <div className="flex gap-4 items-center">
+      <div className="flex flex-col gap-4 items-center">
         <div className="bg-[#1D7349] rounded-xl p-2 w-fit">{icon()}</div>
-        <p className="flex-1 text-md md:text-lg lg:text-xl text-white leading-7 font-semibold">
+        <p className="text-md md:text-lg lg:text-xl text-center text-white leading-7 font-semibold">
           {title}
         </p>
       </div>
