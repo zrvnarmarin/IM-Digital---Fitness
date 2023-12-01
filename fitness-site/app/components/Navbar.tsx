@@ -3,6 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { MenuIcon } from '@/public/Icons'
 
 export default function Navbar() {
     const pathname = usePathname()
@@ -24,9 +25,7 @@ export default function Navbar() {
                 <button className='hidden lg:block text-white lg:text-lg xl:text-xl font-semibold leading-7 bg-[#1D7349]  hover:bg-[#34a26d] hover:scale-105  px-8 py-4 rounded-md'>Join Now</button>
             </div>
             <div className='block lg:hidden rounded-xl p-1 border-2 border-white cursor-pointer'>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="text-white w-8 h-8">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-                </svg>
+                <MenuIcon />
             </div>
         </nav>
     </header>

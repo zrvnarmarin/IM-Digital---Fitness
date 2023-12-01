@@ -3,10 +3,12 @@
 import React, { useState } from "react";
 import Navbar from "../(home-sections)/Navbar";
 import Image from "next/image";
-import ExampleImage from "../../public/testimage.svg";
+import ServiceImageOne from "../../public/ServiceImageOne.avif";
+import AboutImage from "../../public/AboutUsHeroImage.avif";
+import { HeartIcon } from "@/public/Icons";
 
 export default function Page() {
-  const [isAccordionShown, setIsAccordionShown] = useState(false)
+  const [isAccordionShown, setIsAccordionShown] = useState(false);
 
   return (
     <main className="flex min-h-screen flex-col items-center lg:pt-4 bg-[#111317]">
@@ -15,14 +17,14 @@ export default function Page() {
         <div className="relative text-white min-h-64 flex items-center justify-center">
           <div className="relative brightness-50 max-h-1/2 w-screen">
             <Image
-              src={ExampleImage}
+              src={ServiceImageOne}
               alt="Image"
-              className="z-10 w-full object-cover h-[24rem] brightness-50"
+              className="z-10 w-full object-cover h-[24rem] brightness-70"
               height={0}
               width={0}
             />
           </div>
-          <p className="text-[#FFFFFF] opacity-100 text-6xl md:text-8xl lg:text-9xl uppercase font-black absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+          <p className="text-[#FFFFFF] opacity-100 text-6xl md:text-8xl lg:text-9xl uppercase font-semibold absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
             Services
           </p>
         </div>
@@ -76,18 +78,21 @@ export default function Page() {
         <section className=" pl-8 py-8 md:py-16 lg:py-24 grid gap-16 grid-cols-1 bg-[#111317]S">
           {services.map((service) => (
             <div className="grid grid-cols-2 gap-8">
-              <div className=" flex flex-col gap-2">
-                <p>Ikona</p>
-                <h2 className="text-xl text-white bg-green-500">{service.type}</h2>
-                <p>{service.calls}</p>
-                <p>${service.cost}</p>
-                <p>{service.details}</p>
-                <div 
+              <div className="flex flex-col gap-2">
+                <div className="rounded-full w-fit cursor-pointer border-2 border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200">
+                  <HeartIcon />
+                </div>
+                <h2 className="text-start text-3xl text-white">
+                  {service.type}
+                </h2>
+                <p className="text-start">{service.calls}</p>
+                <p className="text-start text-xl text-white py-4">{service.cost}</p>
+                <p className="text-start">{service.details}</p>
+                <div
                   onClick={(e) => {
-                    console.log(isAccordionShown)
-                    setIsAccordionShown(prev => !prev)
+                    setIsAccordionShown((prev) => !prev);
                   }}
-                  className="flex items-center justify-between gap-6 py-4 cursor-pointer"
+                  className="flex items-center justify-between gap-6 cursor-pointer my-6 cursor-pointe border-white border-[1px] p-4"
                 >
                   <h3 className="text-gray-300 font-semibold text-sm md:text-md lg:text-xl">
                     View Program Details
@@ -99,17 +104,22 @@ export default function Page() {
                   )}
                 </div>
                 {isAccordionShown ? (
-                  <div className="pl-2 font-normal text-gray-400 text-md lg:text-lg py-2">
-                    <h2>The program</h2>
-                    <p>{service.program}</p>
-                    <h2>Meal Plan</h2>
-                    <p>{service.mealPlan}</p>
+                  <div className="flex flex-col gap-4 pl-2 font-normal text-gray-400 text-md lg:text-lg py-2">
+                    <h2 className="text-start text-lg text-white">The program</h2>
+                    <p className="text-start text-md">{service.program}</p>
+                    <h2 className="text-start text-lg text-white">Meal Plan</h2>
+                    <p className="text-start text-md">{service.mealPlan}</p>
                   </div>
                 ) : null}
               </div>
-              <div className="order-1 border-white border-2 flex items-center justify-center">
-                Image container
+              <div className="flex items-center justify-center text-5xl bg-[#111317]">
+                <p className="bg-[#1D7349] rounded-full font-bold p-24">
+                  {service.id}
+                </p>
               </div>
+              <div>
+                <button className='hidden lg:block text-white lg:text-lg xl:text-xl font-semibold leading-7 bg-[#1D7349]  hover:bg-[#34a26d] hover:scale-105  px-8 py-4 rounded-md'>Join Now</button>
+            </div>
             </div>
           ))}
         </section>
@@ -120,11 +130,11 @@ export default function Page() {
 
 export function ImgContainer() {
   return (
-    <div>
-      <div className="relative group h-64 bg-black p-12 rounded-xl overflow-hidden cursor-pointer">
+    <div className="object-cover">
+      <div className="relative group h-64 bg-black p-12 rounded-full rounded-full overflow-hidden cursor-pointer">
         <Image
           priority
-          src={ExampleImage}
+          src={AboutImage}
           alt="alt"
           fill={true}
           className="object-cover group-hover:opacity-90"
@@ -136,12 +146,11 @@ export function ImgContainer() {
   );
 }
 
-
 const services = [
   {
     id: 1,
     type: "Standard Plan",
-    calls: "Once a month",
+    calls: "Calls Once a month",
     cost: "$125/month",
     details:
       "The Standard plan includes one (1) live video chat or phone call each month to review your next workout plan and answer any questions.",
@@ -154,7 +163,7 @@ const services = [
   {
     id: 2,
     type: "Complete Plan",
-    calls: "Twice a month",
+    calls: "Calls Twice a month",
     cost: "$175/month",
     details:
       "The Complete plan includes two (2) live video or phone coaching calls each month for even more support and inspiration.",
@@ -167,12 +176,14 @@ const services = [
   {
     id: 3,
     type: "Premium Plan",
-    calls: "Once a week",
+    calls: "Calls Once a week",
     cost: "$225/month",
     details:
       "With Premium, you get one (1) live video or phone coaching session each week with your trainer to keep you on track and help you make a sustainable lifestyle improvement.",
-    program: "With the Premium plan, get the optimal level of personal coaching and accountability from your online personal trainer. Learn to build better habits and improve food relationships with weekly check-in calls and unlimited in-app messaging.",
-    mealPlan: "After you enroll, you will choose between one of four meal plan paths: Balanced, lactose-free, gluten-free, or vegetarian. Your coach will teach you how to best integrate them into your lifestyle and add variety as you go. Meal plans are calorie appropriate and based on a macro ratio of 40% carbohydrates, 30% protein, and 30% fat with a variance of 15-20%.",
+    program:
+      "With the Premium plan, get the optimal level of personal coaching and accountability from your online personal trainer. Learn to build better habits and improve food relationships with weekly check-in calls and unlimited in-app messaging.",
+    mealPlan:
+      "After you enroll, you will choose between one of four meal plan paths: Balanced, lactose-free, gluten-free, or vegetarian. Your coach will teach you how to best integrate them into your lifestyle and add variety as you go. Meal plans are calorie appropriate and based on a macro ratio of 40% carbohydrates, 30% protein, and 30% fat with a variance of 15-20%.",
     joinNow: "JOIN NOW",
   },
 ];

@@ -355,3 +355,24 @@ export const QuotationMark = () => {
   );
 };
 
+export const MenuIcon = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="41"
+      height="13"
+      viewBox="0 0 41 13"
+      fill="none"
+    >
+      <rect x="0.371094" y="0.441406" width="40" height="2" fill="white"></rect>
+      <rect
+        x="10.0098"
+        y="5.44141"
+        width="30.3619"
+        height="2"
+        fill="white"
+      ></rect>
+      <rect x="17.3711" y="10.4414" width="23" height="2" fill="white"></rect>
+    </svg>
+  );
+};

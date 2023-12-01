@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Montserrat } from 'next/font/google'
+import { Inter, Montserrat, Bebas_Neue } from 'next/font/google'
 import './globals.css'
 import Footer from './Footer'
 import Sidebar from './components/Sidebar'
@@ -7,6 +7,11 @@ import Navbar from './(home-sections)/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 const montserrat = Montserrat({ subsets: ['latin']})
+const bebasNeue = Bebas_Neue({
+  subsets: ['latin'],
+  weight: '400'
+})
+
 
 export const metadata: Metadata = {
   title: 'Aeon Olympia Strenght | When Strength Overcomes',
@@ -20,7 +25,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>
+      <body className={bebasNeue.className}>
+        {/* <Navbar /> */}
         {children}
         <Footer />
         {/* <Sidebar />  */}
