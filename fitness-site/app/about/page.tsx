@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../(home-sections)/Navbar";
 import HeroSection from "./(about-sections)/HeroSection";
 import { RightIcon } from "@/public/Icons";
 import Link from "next/link";
@@ -7,7 +6,6 @@ import Link from "next/link";
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col items-center lg:pt-4 bg-[#111317]">
-      <Navbar />
       <HeroSection />
       <LegacyOfStrengthSection />
       <LegacyOfCourageSection />
@@ -18,14 +16,14 @@ export default function Page() {
 
 export function LegacyOfStrengthSection() {
   return (
-    <section className="px-6 md:px-8 lg:px-24 pl-8 py-24 grid grid-cols-3  gap-12">
+    <section className="px-6 md:px-8 lg:px-24 pl-8 py-24 grid grid-cols-1 md:grid-cols-3 gap-12">
       {/* 2 grid columns */}
-      <div className="text-white col-span-2">
-        <h1 className="text-md md:text-lg lg:text-3xl text-white leading-7 font-semibold">
+      <div className=" text-white col-span-2">
+        <h1 className="uppercase font-normal text-white text-2xl tracking-wider">
           A Legacy Of Strength
         </h1>{" "}
         <br />
-        <p>
+        <p className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
           In the early 1960’s, one man set out on a mission to change the world
           by improving people’s lives through fitness- and that he did. What
           started out as a small, single location in Los Angeles, California,
@@ -38,7 +36,7 @@ export function LegacyOfStrengthSection() {
           about improving their health and fitness.
         </p>{" "}
         <br />
-        <p>
+        <p className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
           Today, World Gym is an iconic, globally recognized gym brand with over
           four decades of experience helping people get fit, feel good, and live
           better. A serious gym for serious workouts, our sprawling gym floor
@@ -49,7 +47,7 @@ export function LegacyOfStrengthSection() {
           list of amenities.
         </p>{" "}
         <br />
-        <p>
+        <p className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
           Our story is more than 46 years in the making and we’re continuing to
           set the bar high when it comes to fitness innovation. Even if you’re
           just starting the first chapter of your personal fitness journey, our
@@ -57,8 +55,10 @@ export function LegacyOfStrengthSection() {
           to so many others. Join us!{" "}
         </p>{" "}
         <br />
-        <h2>1960s | Before World Gym</h2>
-        <p>
+        <h2 className="uppercase font-normal text-white text-2xl tracking-wider">
+          1960s | Before World Gym
+        </h2>
+        <p className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
           In the “golden days”, there weren’t many options for working out. But
           Joe Gold, our founder, had a passion for bodybuilding. He found
           success as a professional “muscleman” and toured with celebrities. Out
@@ -67,8 +67,10 @@ export function LegacyOfStrengthSection() {
           the father of bodybuilding.
         </p>{" "}
         <br />
-        <h2>1970s | Muscle Beach</h2>
-        <p>
+        <h2 className="uppercase font-normal text-white text-2xl tracking-wider">
+          1970s | Muscle Beach
+        </h2>
+        <p className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
           World Gym and the modern fitness revolution can be traced back to the
           glory days of Muscle Beach in Los Angeles, California. In 1976, Joe
           Gold opened a small gym filled with custom-made equipment. Before
@@ -76,8 +78,10 @@ export function LegacyOfStrengthSection() {
           greats such as Arnold Schwarzenegger, Lou Ferrigno, and Dave Draper.
         </p>{" "}
         <br />
-        <h2>1980s | Muscle Bench</h2>
-        <p>
+        <h2 className="uppercase font-normal text-white text-2xl tracking-wider">
+          1980s | Muscle Bench
+        </h2>
+        <p className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
           1970s | Muscle Beach World Gym and the modern fitness revolution can
           be traced back to the glory days of Muscle Beach in Los Angeles,
           California. In 1976, Joe Gold opened a small gym filled with
@@ -88,8 +92,8 @@ export function LegacyOfStrengthSection() {
         <br />
       </div>
 
-      <div className="cold-span-1">
-        <div className="sticky top-48">
+      <div className="col-span-1">
+        <div className="col-span-1 sticky top-48">
           <AboutCard />
         </div>
       </div>
@@ -100,37 +104,13 @@ export function LegacyOfStrengthSection() {
 
 export function LegacyOfCourageSection() {
   return (
-    <section className="px-6 md:px-8 lg:px-24 pl-8 pb-24 grid grid-cols-2 gap-12">
+    <section className="px-6 md:px-8 lg:px-24 pl-8 pb-24 grid grid-cols-1 md:grid-cols-2 gap-12">
       <div className="text-white col-span-1 order-1">
-        <h1 className="text-md md:text-lg lg:text-3xl text-white leading-7 font-semibold">
+        <h1 className="uppercase font-normal text-white text-2xl tracking-wider">
           A Legacy Of Courage
         </h1>{" "}
         <br />
-        <p>
-          In the early 1960’s, one man set out on a mission to change the world
-          by improving people’s lives through fitness- and that he did. What
-          started out as a small, single location in Los Angeles, California,
-          has exploded to become an iconic, globally recognized gym brand that
-          has fueled the modern fitness industry for decades. During this time,
-          World Gym has produced some of the most legendary and iconic
-          bodybuilders; has shaped and sculpted the Hollywood elite; has
-          inspired millions of workout enthusiasts to lead an active lifestyle
-          and transform their bodies; and it has welcomed all who were serious
-          about improving their health and fitness.
-        </p>{" "}
-        <br />
-        <p>
-          Today, World Gym is an iconic, globally recognized gym brand with over
-          four decades of experience helping people get fit, feel good, and live
-          better. A serious gym for serious workouts, our sprawling gym floor
-          offers the best in free weights, cardio equipment and strength
-          training machines. We also offer indoor turf training areas, amazing
-          group fitness classes, personal training, wellness and recovery
-          options and more. Please check your local World Gym for a complete
-          list of amenities.
-        </p>{" "}
-        <br />
-        <p>
+        <p className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
           Our story is more than 46 years in the making and we’re continuing to
           set the bar high when it comes to fitness innovation. Even if you’re
           just starting the first chapter of your personal fitness journey, our
@@ -138,8 +118,10 @@ export function LegacyOfCourageSection() {
           to so many others. Join us!{" "}
         </p>{" "}
         <br />
-        <h2>1960s | Before World Gym</h2>
-        <p>
+        <h2 className="uppercase font-normal text-white text-2xl tracking-wider">
+          1960s | Before World Gym
+        </h2>
+        <p className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
           In the “golden days”, there weren’t many options for working out. But
           Joe Gold, our founder, had a passion for bodybuilding. He found
           success as a professional “muscleman” and toured with celebrities. Out
@@ -149,7 +131,7 @@ export function LegacyOfCourageSection() {
         </p>
       </div>
 
-      <div className="col-span-1 border-2 border-white grid grid-cols-1 place-items-center text-white">
+      <div className="col-span-1 order-1 border-2 border-white grid grid-cols-1 place-items-center text-white">
         {/* Place for Image 1 */}
         <div className="w-auto h-auto">Image one</div>
         {/* Place for Image 2 */}
@@ -206,12 +188,12 @@ export const EarthImage = () => {
 
 export function DiscoverOurProgramsSection() {
   return (
-    <div className="flex items-center justify-center pt-24 pb-48 px-6 md:px-8 lg:px-24  gap-12 w-full">
+    <div className="md:pt-32 flex justify-center">
       <Link
         href="/programs"
-        className="flex justify-center text-white lg:text-lg xl:text-xl font-semibold leading-7 bg-[#1D7349] hover:bg-[#34a26d] w-full px-8 py-4 lg:px-16 lg:py-8 rounded-md"
+        className="text-white uppercase hover:scale-105 text-lg lg:text-xl xl:text-2xl font-normal leading-10 tracking-wider bg-[#1D7349] hover:bg-[#34a26d] px-10 py-1 rounded-full"
       >
-        Discover Our Programs
+        See Our Programs
       </Link>
     </div>
   );

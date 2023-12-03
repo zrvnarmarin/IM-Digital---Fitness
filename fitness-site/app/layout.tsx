@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={bebasNeue.className}>
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
         <Footer />
         {/* <Sidebar />  */}
