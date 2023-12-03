@@ -1,14 +1,12 @@
 import React from 'react'
-import Navbar from '../(home-sections)/Navbar'
 import HeroSection from './(programs-sections)/HeroSection'
-import Link from 'next/link';
-import Footer from '../Footer';
+import { ProgramCardsSection } from './(programs-sections)/ProgramCardsSection'
 
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col items-center lg:py-4 bg-[#111317]">
-      <Navbar />
       <HeroSection />
+      <ProgramCardsSection />
     </main>
   )
 }

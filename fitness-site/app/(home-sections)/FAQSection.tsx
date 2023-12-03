@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 export default function FAQSection() {
   return (
-    <section className="flex flex-col gap-10 w-full px-6 md:px-8 lg:px-24 pl-8 pb-24 pt-8 bg-[#111317]">
+    <section className="flex flex-col gap-6 w-full px-6 md:px-8 lg:px-24 pl-8 pb-24 pt-8 bg-[#111317]">
       <h1 className="uppercase font-normal text-white text-2xl tracking-wider">
         Frequently Asked Questions
       </h1>
@@ -15,19 +15,23 @@ export default function FAQSection() {
 }
 
 export function QuestionCategories() {
-  const [activeCategory, setActiveCategory] = useState(questionCategories[0].id);
+  const [activeCategory, setActiveCategory] = useState(
+    questionCategories[0].id
+  );
 
   const handleCategoryClick = (categoryId: string) => {
     setActiveCategory(categoryId);
   };
 
   return (
-    <div className="flex justify-between gap-4 overflow-x-auto">
+    <div className="flex justify-between gap-4 overflow-x-auto p-4">
       {questionCategories.map((questionCategory) => (
         <div
           key={questionCategory.id}
           className={`border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white ${
-            activeCategory === questionCategory.id ? "bg-[#1F2125] text-white" : ""
+            activeCategory === questionCategory.id
+              ? "bg-[#1F2125] text-white"
+              : ""
           }`}
           onClick={() => handleCategoryClick(questionCategory.id)}
         >

@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Navbar from './(home-sections)/Navbar'
 import HeroSection from './(home-sections)/HeroSection'
 import ExploreOurProgram from './(home-sections)/ExploreOurProgram'
