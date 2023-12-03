@@ -24,9 +24,9 @@ export default function Navbar() {
             <div>
                 <button className='hidden lg:block text-white lg:text-lg xl:text-xl font-semibold leading-7 bg-[#1D7349]  hover:bg-[#34a26d] hover:scale-105  px-8 py-4 rounded-md'>Join Now</button>
             </div>
-            <div className='block lg:hidden rounded-xl p-1 border-2 border-white cursor-pointer'>
+            {/* <div className='block lg:hidden rounded-xl p-1 border-2 border-white cursor-pointer'>
                 <MenuIcon />
-            </div>
+            </div> */}
         </nav>
     </header>
   )

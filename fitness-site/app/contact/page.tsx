@@ -73,7 +73,7 @@ export function ContactFormSection() {
             type="text"
             id="name"
             name="name"
-            placeholder="John Doe"
+            placeholder="john doe"
             className="mt-1 p-2 w-full rounded-md text-gray-300 tracking-wider border-slate-700 border bg-[#111317]"
           />
         </div>

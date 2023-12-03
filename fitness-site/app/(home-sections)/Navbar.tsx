@@ -8,10 +8,14 @@ import { UseScrollPosition } from "../hooks/UseScrollPosition";
 export default function Navbar() {
   const pathname = usePathname();
 
-  const scrolPosition = UseScrollPosition()
+  const scrolPosition = UseScrollPosition();
 
   return (
-    <header className={`w-full sticky top-0 z-30 ${scrolPosition > 0 ? 'bg-[#1F2125] duration-700' : ''}`}>
+    <header
+      className={`w-full sticky top-0 z-30 ${
+        scrolPosition > 0 ? "bg-[#1F2125] duration-700" : ""
+      }`}
+    >
       <nav className="flex flex-row justify-between items-center py-6 bg-[#111317] lg:bg-inherit px-8">
         <Link href={"/"}>
           <p className="text-3xl sm:text-4xl leading-10 font-black italic text-[#1D7349] md:text-6xl lg:text-[#1D7349]">
@@ -40,21 +44,9 @@ export default function Navbar() {
             Join Now
           </button>
         </div>
-        <div className="block lg:hidden rounded-xl p-1 border-2 border-white cursor-pointer">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="text-white w-8 h-8"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
-            />
-          </svg>
+        <div className="flex flex-col gap-2 items-end lg:hidden cursor-pointer">
+          <div className="w-8 h-[2px] bg-white"></div>
+          <div className="w-4 h-[2px] bg-white"></div>
         </div>
       </nav>
     </header>
