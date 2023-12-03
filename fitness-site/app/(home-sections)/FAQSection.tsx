@@ -24,7 +24,7 @@ export function QuestionCategories() {
   };
 
   return (
-    <div className="flex justify-between gap-4 overflow-x-auto p-4">
+    <div className="flex justify-between gap-4 overflow-x-auto py-4">
       {questionCategories.map((questionCategory) => (
         <div
           key={questionCategory.id}

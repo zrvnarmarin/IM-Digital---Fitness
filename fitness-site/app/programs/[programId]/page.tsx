@@ -1,7 +1,5 @@
 import React from "react";
-import Navbar from "./../../(home-sections)/Navbar";
 import Image from "next/image";
-import GymImage from "../../../public/gym.avif";
 import { formatString } from "@/app/utils/helpers";
 import { programs } from "@/app/data";
 import YogaImage from "../../../public/yoga-program.avif";
@@ -9,6 +7,7 @@ import Link from "next/link";
 import { RightIcon } from "@/public/Icons";
 
 export default function Page({ params }: { params: { programId: string } }) {
+  // TO DO: fix the bug of pulling info for each individual program
   const program = programs.find(
     (program) => program.title === params.programId
   );
@@ -16,14 +15,13 @@ export default function Page({ params }: { params: { programId: string } }) {
   return (
     //ovdje ispod u main tag stavi min-h-screen ako zelis veliki razmak izmedju ovog i footera
     <main className="flex flex-col items-center lg:py-4 bg-[#111317]">
-      <Navbar />
       <p className="text-[#FFFFFF] text-center text-6xl md:text-8xl lg:text-9xl uppercase font-black">
         {formatString(params.programId)}
       </p>
 
       <section className="text-white px-6 md:px-8 lg:px-24 pl-8 py-16 lg:py-24 flex flex-col gap-12">
         <div>
-          <p>
+          <p className="px-4 normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
             Yoga, an ancient practice that originated in India, is a holistic
             approach to physical, mental, and spiritual well-being. Rooted in a
             philosophy that seeks harmony and balance, yoga encompasses a
@@ -31,7 +29,7 @@ export default function Page({ params }: { params: { programId: string } }) {
             individuals of all ages and fitness levels.
           </p>
           <br />
-          <p>
+          <p className="px-4 normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
             At its core, yoga combines physical postures (asanas), breath
             control (pranayama), meditation, and ethical principles to promote
             overall health and inner peace. The practice is not just a form of
@@ -41,13 +39,23 @@ export default function Page({ params }: { params: { programId: string } }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Image src={YogaImage} alt="image" width={0} height={0} />
+          <Image
+            src={YogaImage}
+            alt="image"
+            width={0}
+            height={0}
+            className="rounded-md"
+          />
           <div className="flex flex-col gap-2 lg:justify-around lg:gap-0 md:py-2">
-            <h2 className="text-center">Benefits Of Yoga</h2>
+            <h2 className="text-xl tracking-wider md:text-lg lg:text-xl text-start text-white leading-7 font-medium ">
+              Benefits Of Yoga
+            </h2>
             <ul>
               {obj?.benefits.map((benefit) => (
-                <li key={benefit} className="px-2">
-                  {benefit}
+                <li key={benefit}>
+                  <p className="px-2 normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
+                    {benefit}
+                  </p>
                 </li>
               ))}
             </ul>
@@ -125,10 +133,15 @@ export function ProgramCategoryCard({
 }) {
   return (
     <div className="flex flex-col gap-8  shadow-md shadow-slate-700">
-      <Image src={YogaImage} alt="program_image" width={0} height={0} className="overflow-hidden" />
+      <Image
+        src={YogaImage}
+        alt="program_image"
+        width={0}
+        height={0}
+        className="overflow-hidden"
+      />
       <div className="flex flex-col gap-2 px-6 pb-6">
         <div className="flex gap-4 items-center">
-        
           <p className="flex-1 text-md md:text-lg lg:text-xl text-white leading-7 font-semibold">
             {name}
           </p>
