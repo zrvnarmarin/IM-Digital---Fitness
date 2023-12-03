@@ -36,11 +36,11 @@ export default function Footer() {
             <div className="flex flex-col gap-2">
               {footerLink.links.map((link) => (
                 <Link
-                  href={`/${link}`}
-                  key={link}
+                  href={link.link}
+                  key={link.name}
                   className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normalhover:underline hover:underline-offset-4 hover:decoration-[#1D7349]"
                 >
-                  {link}
+                  {link.name}
                 </Link>
               ))}
             </div>
@@ -57,10 +57,36 @@ export default function Footer() {
 const footerLinks = [
   {
     heading: "General",
-    links: ["About", "Programs", "Services", "Contact"],
+    links: [
+      {
+        name: 'About',
+        link: '/about-us'
+      },
+      {
+        name: 'Programs',
+        link: '/programs'
+      },
+      {
+        name: 'Services',
+        link: '/services'
+      },
+      {
+        name: 'Contact',
+        link: '/contact'
+      },
+    ]
   },
   {
     heading: "More About Us",
-    links: ["Testimonials", "Photo Gallery"],
+    links: [
+      {
+        name: 'Testimonials',
+        link: '/about-us/testimonials'
+      },
+      {
+        name: 'Photo Gallery',
+        link: '/about-us/photo-gallery'
+      },
+    ]
   },
 ];
