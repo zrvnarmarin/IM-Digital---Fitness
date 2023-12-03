@@ -4,8 +4,8 @@ import React, { useState } from "react";
 
 export default function FAQSection() {
   return (
-    <section className="w-full px-6 md:px-8 lg:px-24 pl-8 pb-24 pt-8 bg-[#111317]">
-      <h1 className="uppercase font-bold pb-8 text-white text-3xl text-center">
+    <section className="flex flex-col gap-10 w-full px-6 md:px-8 lg:px-24 pl-8 pb-24 pt-8 bg-[#111317]">
+      <h1 className="uppercase font-normal text-white text-2xl tracking-wider">
         Frequently Asked Questions
       </h1>
       <QuestionCategories />
@@ -22,7 +22,7 @@ export function QuestionCategories() {
   };
 
   return (
-    <div className="w-full flex flex-row justify-between flex-wrap gap-4 pb-12">
+    <div className="flex justify-between gap-4 overflow-x-auto">
       {questionCategories.map((questionCategory) => (
         <div
           key={questionCategory.id}
@@ -31,7 +31,7 @@ export function QuestionCategories() {
           }`}
           onClick={() => handleCategoryClick(questionCategory.id)}
         >
-          <p>{questionCategory.name}</p>
+          <p className="">{questionCategory.name}</p>
         </div>
       ))}
     </div>
@@ -79,17 +79,17 @@ function Panel({
       className="cursor-pointer border-[#1F2125] border-b-2"
     >
       <div className="flex items-center justify-between gap-6 py-4">
-        <h3 className="text-gray-300 font-semibold text-sm md:text-md lg:text-xl">
+        <h3 className="normal-case tracking-wider text-md md:text-md lg:text-lg text-white leading-2 font-normal">
           {title}
         </h3>
         {isActive ? (
-          <p className="text-4xl font-semibold text-[#1D7349]">-</p>
+          <p className="text-4xl font-normal text-[#1D7349]">-</p>
         ) : (
-          <p className="text-4xl font-semibold text-[#1D7349]">+</p>
+          <p className="text-4xl font-normal text-[#1D7349]">+</p>
         )}
       </div>
       {isActive ? (
-        <p className="pl-2 font-normal text-gray-400 text-md lg:text-lg py-2">
+        <p className="pl-2 normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
           {answer}
         </p>
       ) : null}

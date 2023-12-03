@@ -7,9 +7,9 @@ import ExampleImage from "../../public/AboutUsHeroImage.avif";
 
 export default function WhyJoinUs() {
   return (
-    <section className="w-full px-6 md:px-8 lg:px-24 pl-8 pb-24 pt-8 flex flex-col gap-8">
-      <h1 className="uppercase font-bold text-white text-3xl">Why Join Us</h1>
-      <p className="flex-1 text-sm md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
+    <section className="w-full px-6 md:px-8 lg:px-24 pl-8 pb-24 flex flex-col gap-8">
+      <h1 className="uppercase font-normal text-white text-2xl tracking-wider">Why Join Us</h1>
+      <p className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
         We have experience serving members in helping body fitness, and under
         the guidance of a professional trainer
       </p>
@@ -51,9 +51,9 @@ export function ReasonToJoinCard({
     <div className="flex flex-col gap-4 p-6 bg-[#1F2125]">
       <div className="flex gap-4 items-center">
         <div className="bg-[#1D7349] rounded-xl p-2 w-fit">{icon()}</div>
-        <p className="flex-1 text-md md:text-lg lg:text-xl text-white leading-7 font-semibold">{title}</p>
+        <p className="text-xl tracking-wider md:text-lg lg:text-xl text-start text-white leading-7 font-medium">{title}</p>
       </div>
-      <p className="flex-1 text-sm md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
+      <p className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
         {description}
       </p>
     </div>

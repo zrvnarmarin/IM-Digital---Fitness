@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Montserrat, Bebas_Neue } from 'next/font/google'
+import { Inter, Montserrat, Bebas_Neue, Gorditas, Oswald } from 'next/font/google'
 import './globals.css'
 import Footer from './Footer'
 import Sidebar from './components/Sidebar'
@@ -7,7 +7,7 @@ import Navbar from './(home-sections)/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 const montserrat = Montserrat({ subsets: ['latin']})
-const bebasNeue = Bebas_Neue({
+const bebasNeue = Oswald({
   subsets: ['latin'],
   weight: '400'
 })
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={bebasNeue.className}>
-        {/* <Navbar /> */}
+        <Navbar />
         {children}
         <Footer />
         {/* <Sidebar />  */}

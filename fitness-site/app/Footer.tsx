@@ -11,7 +11,7 @@ export default function Footer() {
             LOGO
           </p>
         </Link>
-        <p className="text-lg font-normal text-gray-200">
+        <p className="uppercase font-normal text-white text-2xl tracking-wider">
           Unlock Your Strongest Version
         </p>
         <div className="flex flex-row gap-4">
@@ -30,7 +30,7 @@ export default function Footer() {
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pt-12">
         {footerLinks.map((footerLink) => (
           <div key={footerLink.heading}>
-            <h3 className="text-white leading-2 text-xl pb-8 font-semibold">
+            <h3 className="text-xl tracking-wider md:text-lg lg:text-xl text-start text-white leading-7 font-medium pb-8">
               {footerLink.heading}
             </h3>
             <div className="flex flex-col gap-2">
@@ -38,7 +38,7 @@ export default function Footer() {
                 <Link
                   href={`/${link}`}
                   key={link}
-                  className="text-gray-200 leading-2 text-md hover:underline hover:underline-offset-4 hover:decoration-[#1D7349]"
+                  className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normalhover:underline hover:underline-offset-4 hover:decoration-[#1D7349]"
                 >
                   {link}
                 </Link>
@@ -47,8 +47,8 @@ export default function Footer() {
           </div>
         ))}
       </ul>
-      <h3 className="text-white text-sm md:text-md lg:text-lg pt-16 pb-8">
-        &#169; IM Digital Ltd.
+      <h3 className="tracking-wider text-md text-white md:text-md lg:text-lg pt-16 pb-8">
+        <span className="text-[#1D7349]">&#169;</span> <span className="text-xs text-[#1D7349]">Developed By</span> IM Digital Ltd.
       </h3>
     </footer>
   );
@@ -56,15 +56,11 @@ export default function Footer() {
 
 const footerLinks = [
   {
-    heading: "Quick Links",
-    links: ["Home", "About", "Appointment", "Blog"],
+    heading: "General",
+    links: ["About", "Programs", "Services", "Contact"],
   },
   {
-    heading: "About",
-    links: ["Testimonials", "Gallery", "Appointment", "Blog"],
-  },
-  {
-    heading: "Super link",
-    links: ["Home", "About", "Appointment", "Blog"],
+    heading: "More About Us",
+    links: ["Testimonials", "Photo Gallery"],
   },
 ];
