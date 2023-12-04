@@ -9,7 +9,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const scrolPosition = UseScrollPosition();
-
+ 
   return (
     <header
       className={`w-full sticky top-0 z-30 ${
@@ -46,10 +46,10 @@ const NavbarLinksSection = () => {
 
 const HamburgerMenuButton = () => {
   return (
-    <div className="flex flex-col gap-2 items-end lg:hidden cursor-pointer">
+    <button className="flex flex-col gap-2 items-end lg:hidden">
       <div className="w-8 h-[2px] bg-white"></div>
       <div className="w-4 h-[2px] bg-white"></div>
-    </div>
+    </button>
   );
 };
 
@@ -63,7 +63,7 @@ const JoinNowButton = () => {
   );
 };
 
-const Logo = () => {
+export const Logo = () => {
   return (
     <Link href={"/"}>
       <p className="text-3xl sm:text-4xl leading-10 font-black italic text-[#1D7349] md:text-6xl lg:text-[#1D7349]">
