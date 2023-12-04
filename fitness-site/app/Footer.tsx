@@ -38,7 +38,7 @@ export default function Footer() {
                 <Link
                   href={link.link}
                   key={link.name}
-                  className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normalhover:underline hover:underline-offset-4 hover:decoration-[#1D7349]"
+                  className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal hover:underline hover:underline-offset-4 hover:decoration-[#1D7349]"
                 >
                   {link.name}
                 </Link>

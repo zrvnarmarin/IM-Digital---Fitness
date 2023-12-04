@@ -213,3 +213,45 @@ export const testimonials = [
     date: "August 2023",
   },
 ];
+
+export const services = [
+  {
+    id: 1,
+    type: "Standard Plan",
+    calls: "Calls Once a month",
+    cost: "$125/month",
+    details:
+      "The Standard plan includes one (1) live video chat or phone call each month to review your next workout plan and answer any questions.",
+    program:
+      "Includes highly custom workouts, nutrition coaching, and direct connection with your personal coach with unlimited text messaging right through the Forge mobile app. The only difference between each program is the number of private coaching sessions with your personal trainer.",
+    mealPlan:
+      "After you enroll, you will choose between one of four meal plan paths: Balanced, lactose-free, gluten-free, or vegetarian. Your coach will teach you how to best integrate them into your lifestyle and add variety as you go. Meal plans are calorie-appropriate and based on a macro ratio of 40% carbohydrates, 30% protein, and 30% fat with a variance of 15-20%.",
+    joinNow: "JOIN NOW",
+  },
+  {
+    id: 2,
+    type: "Complete Plan",
+    calls: "Calls Twice a month",
+    cost: "$175/month",
+    details:
+      "The Complete plan includes two (2) live video or phone coaching calls each month for even more support and inspiration.",
+    program:
+      "The Complete plan is ideal for individuals seeking more coaching and accountability than in the Standard Plan with double the video or phone chat sessions each month plus unlimited in-app messaging.",
+    mealPlan:
+      "After you enroll, you will choose between one of four meal plan paths: Balanced, lactose-free, gluten-free, or vegetarian. Your coach will teach you how to best integrate them into your lifestyle and add variety as you go. Meal plans are calorie-appropriate and based on a macro ratio of 40% carbohydrates, 30% protein, and 30% fat with a variance of 15-20%.",
+    joinNow: "JOIN NOW",
+  },
+  {
+    id: 3,
+    type: "Premium Plan",
+    calls: "Calls Once a week",
+    cost: "$225/month",
+    details:
+      "With Premium, you get one (1) live video or phone coaching session each week with your trainer to keep you on track and help you make a sustainable lifestyle improvement.",
+    program:
+      "With the Premium plan, get the optimal level of personal coaching and accountability from your online personal trainer. Learn to build better habits and improve food relationships with weekly check-in calls and unlimited in-app messaging.",
+    mealPlan:
+      "After you enroll, you will choose between one of four meal plan paths: Balanced, lactose-free, gluten-free, or vegetarian. Your coach will teach you how to best integrate them into your lifestyle and add variety as you go. Meal plans are calorie appropriate and based on a macro ratio of 40% carbohydrates, 30% protein, and 30% fat with a variance of 15-20%.",
+    joinNow: "JOIN NOW",
+  },
+];

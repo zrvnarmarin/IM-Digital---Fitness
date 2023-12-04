@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import ExampleImage from '../../../../public/AboutUsHeroImage.avif'
+import ExampleImage from '../../../../public/ServiceIlustration.png'
 
 
 export default function PhotoGallerySection() {
