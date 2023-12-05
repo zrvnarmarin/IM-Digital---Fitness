@@ -6,6 +6,7 @@ import XImageIcon from "../../public/icons8-x-50.png";
 import Image from "next/image";
 import { InstagramIcon, YouTubeIcon, FacebookIcon } from "@/public/Icons";
 import LogoImg from "../../public/logo-removebg-preview.png";
+import { link } from "fs";
 
 export default function Sidebar({
   isSideBarOpen,
@@ -24,7 +25,7 @@ export default function Sidebar({
               <Image src={XImageIcon} alt="X-button" width={0} height={0} />
             </button>
           </div>
-          <NavbarLinksSection />
+          <NavbarLinksSection onCloseSidebar={onCloseSidebar} />
           <div className="bg-[#111317] mt-16 flex flex-col gap-8 items-end py-2 px-8 w-full">
             <div className="flex flex-col gap-2">
               <p className="font-normal text-white uppercase text-end text-lg tracking-wider">
@@ -60,11 +61,18 @@ export default function Sidebar({
   );
 }
 
-const NavbarLink = ({ navbarLink }: { navbarLink: NavbarLink }) => {
+const NavbarLink = ({
+  navbarLink,
+  onCloseSidebar,
+}: {
+  navbarLink: NavbarLink;
+  onCloseSidebar: () => void;
+}) => {
   return (
     <li className="text-[#F3F4F6] xs:text-md lg:text-lg xl:text-xl font-normal tracking-wider hover:underline hover:underline-offset-8 hover:decoration-[#1D7349] leading-7">
       <Link
         href={`${navbarLink.link}`}
+        onClick={() => onCloseSidebar()}
         className=" font-normal text-white text-lg tracking-wider"
       >
         {navbarLink.name}
@@ -73,11 +81,19 @@ const NavbarLink = ({ navbarLink }: { navbarLink: NavbarLink }) => {
   );
 };
 
-const NavbarLinksSection = () => {
+const NavbarLinksSection = ({
+  onCloseSidebar,
+}: {
+  onCloseSidebar: () => void;
+}) => {
   return (
     <ul className="lg:flex flex flex-col items-end justify-between gap-6 pt-16 py-2 px-8 ">
       {navbarLinks.map((link) => (
-        <NavbarLink key={link.name} navbarLink={link} />
+        <NavbarLink
+          key={link.name}
+          navbarLink={link}
+          onCloseSidebar={onCloseSidebar}
+        />
       ))}
     </ul>
   );
@@ -85,13 +101,15 @@ const NavbarLinksSection = () => {
 
 export const LogoImage = () => {
   return (
-    <Image
-      src={LogoImg}
-      alt="logo"
-      width={70}
-      height={70}
-      className="bg-white rounded-full"
-    />
+    <Link href={'/'}>
+      <Image
+        src={LogoImg}
+        alt="logo"
+        width={70}
+        height={70}
+        className="bg-white rounded-full"
+      />
+    </Link>
   );
 };
 
