@@ -5,15 +5,14 @@ import React, { useState } from "react";
 import XImageIcon from "../../public/icons8-x-50.png";
 import Image from "next/image";
 import { InstagramIcon, YouTubeIcon, FacebookIcon } from "@/public/Icons";
+import LogoImg from '../../public/logo-removebg-preview.png'
 
 export default function Sidebar() {
   return (
     <aside className="top-0 left-0 bottom-0 bg-[#1F2125] w-full md:w-2/3 h-screen sticky z-40">
       <div className="flex justify-between items-center py-2 px-8">
-        <span className="uppercase text-3xl sm:text-4xl leading-10 font-black italic text-[#1D7349] md:text-6xl lg:text-[#1D7349]">
-          L
-        </span>
-        <XIcon />
+        <LogoImage />
+        <XButton />
       </div>
       <NavbarLinksSection />
       <div className="bg-[#111317] mt-16 flex flex-col gap-8 items-end py-2 px-8 w-full">
@@ -72,8 +71,18 @@ const NavbarLinksSection = () => {
   );
 };
 
-export const XIcon = () => {
-  return <Image src={XImageIcon} alt="X-button" width={0} height={0} />;
+export const LogoImage = () => {
+  return (
+    <Image src={LogoImg} alt="logo" width={70} height={70} />
+  )
+}
+
+export const XButton = () => {
+  return (
+    <button>
+      <Image src={XImageIcon} alt="X-button" width={0} height={0} />
+    </button>
+  );
 };
 
 const navbarLinks = [
