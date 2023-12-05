@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { UseScrollPosition } from "../hooks/UseScrollPosition";
+import { LogoImage } from "../components/Sidebar";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -13,11 +14,11 @@ export default function Navbar() {
   return (
     <header
       className={`w-full sticky top-0 z-30 ${
-        scrolPosition > 0 ? "bg-[#1F2125] duration-700" : ""
+        scrolPosition > 0 ? "duration-700" : ""
       }`}
     >
-      <nav className="flex flex-row justify-between items-center py-2 bg-[#111317] lg:bg-inherit px-8">
-        <Logo />
+      <nav className="flex flex-row justify-between items-center py-2  lg:bg-inherit px-8">
+        <LogoImage />
         <NavbarLinksSection />
         <HamburgerMenuButton />
       </nav>

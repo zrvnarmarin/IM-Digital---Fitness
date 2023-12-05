@@ -73,7 +73,7 @@ const NavbarLinksSection = () => {
 
 export const LogoImage = () => {
   return (
-    <Image src={LogoImg} alt="logo" width={70} height={70} />
+    <Image src={LogoImg} alt="logo" width={70} height={70} className="bg-white rounded-full" />
   )
 }
 
