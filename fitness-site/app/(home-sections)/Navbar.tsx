@@ -19,7 +19,6 @@ export default function Navbar() {
       <nav className="flex flex-row justify-between items-center py-2 bg-[#111317] lg:bg-inherit px-8">
         <Logo />
         <NavbarLinksSection />
-        <JoinNowButton />
         <HamburgerMenuButton />
       </nav>
     </header>
@@ -46,7 +45,7 @@ const NavbarLinksSection = () => {
 
 const HamburgerMenuButton = () => {
   return (
-    <button className="flex flex-col gap-2 items-end lg:hidden">
+    <button className="flex flex-col gap-2 items-end">
       <div className="w-8 h-[2px] bg-white"></div>
       <div className="w-4 h-[2px] bg-white"></div>
     </button>

@@ -2,25 +2,78 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
-import XImageIcon from '../../public/icons8-x-50.png'
+import XImageIcon from "../../public/icons8-x-50.png";
 import Image from "next/image";
+import { InstagramIcon, YouTubeIcon, FacebookIcon } from "@/public/Icons";
 
 export default function Sidebar() {
   return (
-    <aside className="py-2 px-8 top-0 left-0 bottom-0 bg-gray-800 w-1/3 h-screen sticky z-40">
-      <div className="flex justify-between items-center">
-        <span className="uppercase text-3xl sm:text-4xl leading-10 font-black italic text-[#1D7349] md:text-6xl lg:text-[#1D7349]">L</span>
+    <aside className="top-0 left-0 bottom-0 bg-[#1F2125] w-full md:w-2/3 h-screen sticky z-40">
+      <div className="flex justify-between items-center py-2 px-8">
+        <span className="uppercase text-3xl sm:text-4xl leading-10 font-black italic text-[#1D7349] md:text-6xl lg:text-[#1D7349]">
+          L
+        </span>
         <XIcon />
       </div>
       <NavbarLinksSection />
+      <div className="bg-[#111317] mt-16 flex flex-col gap-8 items-end py-2 px-8 w-full">
+        <div className="flex flex-col gap-2">
+          <p className="font-normal text-white uppercase text-end text-lg tracking-wider">
+            Get In Touch With Us
+          </p>
+          <Link
+            href="/"
+            className="text-[#F3F4F6] xs:text-md lg:text-lg xl:text-xl font-normal tracking-wider hover:underline hover:underline-offset-8 hover:decoration-[#1D7349] leading-7"
+          >
+            info@aeonolympiastrength.com
+          </Link>
+        </div>
+        <div className="flex flex-col gap-2">
+          <p className="font-normal text-white uppercase text-end text-lg tracking-wider">
+            Follow Us
+          </p>
+          <div className="flex flex-row gap-4">
+            <div className="rounded-full cursor-pointer border-2 border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200">
+              <InstagramIcon />
+            </div>
+            <div className="rounded-full border-2 cursor-pointer border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200">
+              <FacebookIcon />
+            </div>
+            <div className="rounded-full border-2 cursor-pointer border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200">
+              <YouTubeIcon />
+            </div>
+          </div>
+        </div>
+      </div>
     </aside>
   );
 }
 
-export const XIcon = () => {
+const NavbarLink = ({ navbarLink }: { navbarLink: NavbarLink }) => {
   return (
-    <Image src={XImageIcon} alt="X-button" width={0} height={0} />
-  )
+    <li className="text-[#F3F4F6] xs:text-md lg:text-lg xl:text-xl font-normal tracking-wider hover:underline hover:underline-offset-8 hover:decoration-[#1D7349] leading-7">
+      <Link
+        href={`${navbarLink.link}`}
+        className=" font-normal text-white text-lg tracking-wider"
+      >
+        {navbarLink.name}
+      </Link>
+    </li>
+  );
+};
+
+const NavbarLinksSection = () => {
+  return (
+    <ul className="lg:flex flex flex-col items-end justify-between gap-6 pt-16 py-2 px-8 ">
+      {navbarLinks.map((link) => (
+        <NavbarLink key={link.name} navbarLink={link} />
+      ))}
+    </ul>
+  );
+};
+
+export const XIcon = () => {
+  return <Image src={XImageIcon} alt="X-button" width={0} height={0} />;
 };
 
 const navbarLinks = [
@@ -45,22 +98,4 @@ const navbarLinks = [
 export type NavbarLink = {
   name: string;
   link: string;
-};
-
-const NavbarLink = ({ navbarLink }: { navbarLink: NavbarLink }) => {
-  return (
-    <li className="text-[#F3F4F6] xs:text-md lg:text-lg xl:text-xl font-normal tracking-wider hover:underline hover:underline-offset-8 hover:decoration-[#1D7349] leading-7">
-      <Link href={`${navbarLink.link}`}>{navbarLink.name}</Link>
-    </li>
-  );
-};
-
-const NavbarLinksSection = () => {
-  return (
-    <ul className="hidden pt-32 lg:flex flex-col items-center justify-between gap-12">
-      {navbarLinks.map((link) => (
-        <NavbarLink key={link.name} navbarLink={link} />
-      ))}
-    </ul>
-  );
 };
