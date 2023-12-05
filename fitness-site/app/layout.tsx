@@ -1,9 +1,8 @@
 import type { Metadata } from 'next'
-import { Inter, Montserrat, Bebas_Neue, Gorditas, Oswald } from 'next/font/google'
+import { Inter, Montserrat, League_Spartan, Oswald } from 'next/font/google'
 import './globals.css'
 import Footer from './Footer'
-import Sidebar from './components/Sidebar'
-import Navbar from './(home-sections)/Navbar'
+import NavigationWrapper from './components/NavigationWrapper'
 
 const inter = Inter({ subsets: ['latin'] })
 const montserrat = Montserrat({ subsets: ['latin']})
@@ -26,10 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={bebasNeue.className}>
-        <Navbar />
+        <NavigationWrapper />
         {children}
         <Footer />
-        {/* <Sidebar />    */}
       </body>
     </html>
   )

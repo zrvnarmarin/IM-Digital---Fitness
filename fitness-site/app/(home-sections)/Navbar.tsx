@@ -1,16 +1,22 @@
 "use client";
 
-import React from "react";
+import React, { SetStateAction } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { UseScrollPosition } from "../hooks/UseScrollPosition";
 import { LogoImage } from "../components/Sidebar";
 
-export default function Navbar() {
+export default function Navbar({
+  isSideBarOpen,
+  onOpenSidebar
+}: {
+  isSideBarOpen: boolean;
+  onOpenSidebar: () => void
+}) {
   const pathname = usePathname();
 
   const scrolPosition = UseScrollPosition();
- 
+
   return (
     <header
       className={`w-full sticky top-0 z-30 ${
@@ -19,8 +25,10 @@ export default function Navbar() {
     >
       <nav className="flex flex-row justify-between items-center py-2  lg:bg-inherit px-8">
         <LogoImage />
-        <NavbarLinksSection />
-        <HamburgerMenuButton />
+        <button onClick={(e) => onOpenSidebar()} className="flex flex-col gap-2 items-end">
+          <div className="w-8 h-[2px] bg-white"></div>
+          <div className="w-4 h-[2px] bg-white"></div>
+        </button>
       </nav>
     </header>
   );

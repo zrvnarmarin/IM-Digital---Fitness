@@ -5,46 +5,58 @@ import React, { useState } from "react";
 import XImageIcon from "../../public/icons8-x-50.png";
 import Image from "next/image";
 import { InstagramIcon, YouTubeIcon, FacebookIcon } from "@/public/Icons";
-import LogoImg from '../../public/logo-removebg-preview.png'
+import LogoImg from "../../public/logo-removebg-preview.png";
 
-export default function Sidebar() {
+export default function Sidebar({
+  isSideBarOpen,
+  onCloseSidebar,
+}: {
+  isSideBarOpen: boolean;
+  onCloseSidebar: () => void;
+}) {
   return (
-    <aside className="top-0 left-0 bottom-0 bg-[#1F2125] w-full md:w-2/3 h-screen sticky z-40">
-      <div className="flex justify-between items-center py-2 px-8">
-        <LogoImage />
-        <XButton />
-      </div>
-      <NavbarLinksSection />
-      <div className="bg-[#111317] mt-16 flex flex-col gap-8 items-end py-2 px-8 w-full">
-        <div className="flex flex-col gap-2">
-          <p className="font-normal text-white uppercase text-end text-lg tracking-wider">
-            Get In Touch With Us
-          </p>
-          <Link
-            href="/"
-            className="text-[#F3F4F6] xs:text-md lg:text-lg xl:text-xl font-normal tracking-wider hover:underline hover:underline-offset-8 hover:decoration-[#1D7349] leading-7"
-          >
-            info@aeonolympiastrength.com
-          </Link>
-        </div>
-        <div className="flex flex-col gap-2">
-          <p className="font-normal text-white uppercase text-end text-lg tracking-wider">
-            Follow Us
-          </p>
-          <div className="flex flex-row gap-4">
-            <div className="rounded-full cursor-pointer border-2 border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200">
-              <InstagramIcon />
+    <>
+      {isSideBarOpen && (
+        <aside className="top-0 left-0 bottom-0 bg-[#1F2125] w-full md:w-2/3 h-screen sticky z-40">
+          <div className="flex justify-between items-center py-2 px-8">
+            <LogoImage />
+            <button onClick={() => onCloseSidebar()}>
+              <Image src={XImageIcon} alt="X-button" width={0} height={0} />
+            </button>
+          </div>
+          <NavbarLinksSection />
+          <div className="bg-[#111317] mt-16 flex flex-col gap-8 items-end py-2 px-8 w-full">
+            <div className="flex flex-col gap-2">
+              <p className="font-normal text-white uppercase text-end text-lg tracking-wider">
+                Get In Touch With Us
+              </p>
+              <Link
+                href="/"
+                className="text-[#F3F4F6] xs:text-md lg:text-lg xl:text-xl font-normal tracking-wider hover:underline hover:underline-offset-8 hover:decoration-[#1D7349] leading-7"
+              >
+                info@aeonolympiastrength.com
+              </Link>
             </div>
-            <div className="rounded-full border-2 cursor-pointer border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200">
-              <FacebookIcon />
-            </div>
-            <div className="rounded-full border-2 cursor-pointer border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200">
-              <YouTubeIcon />
+            <div className="flex flex-col gap-2">
+              <p className="font-normal text-white uppercase text-end text-lg tracking-wider">
+                Follow Us
+              </p>
+              <div className="flex flex-row gap-4">
+                <div className="rounded-full cursor-pointer border-2 border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200">
+                  <InstagramIcon />
+                </div>
+                <div className="rounded-full border-2 cursor-pointer border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200">
+                  <FacebookIcon />
+                </div>
+                <div className="rounded-full border-2 cursor-pointer border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200">
+                  <YouTubeIcon />
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </aside>
+        </aside>
+      )}
+    </>
   );
 }
 
@@ -73,9 +85,15 @@ const NavbarLinksSection = () => {
 
 export const LogoImage = () => {
   return (
-    <Image src={LogoImg} alt="logo" width={70} height={70} className="bg-white rounded-full" />
-  )
-}
+    <Image
+      src={LogoImg}
+      alt="logo"
+      width={70}
+      height={70}
+      className="bg-white rounded-full"
+    />
+  );
+};
 
 export const XButton = () => {
   return (
