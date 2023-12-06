@@ -25,9 +25,9 @@ export default function Navbar({
     >
       <nav className="flex flex-row justify-between items-center py-2  lg:bg-inherit px-8">
         <LogoImage />
-        <button onClick={(e) => onOpenSidebar()} className="flex flex-col gap-2 items-end">
-          <div className="w-8 h-[2px] bg-white"></div>
-          <div className="w-4 h-[2px] bg-white"></div>
+        <button onClick={() => onOpenSidebar()} className="flex flex-col gap-2 items-end">
+          <div className="w-6 h-[2px] bg-white"></div>
+          <div className="w-3 h-[2px] bg-white"></div>
         </button>
       </nav>
     </header>

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import XImageIcon from "../../public/icons8-x-50.png";
 import Image from "next/image";
 import { InstagramIcon, YouTubeIcon, FacebookIcon } from "@/public/Icons";
@@ -15,6 +15,16 @@ export default function Sidebar({
   isSideBarOpen: boolean;
   onCloseSidebar: () => void;
 }) {
+
+  useEffect(() => {
+    if (isSideBarOpen) {
+      document.body.classList.add("overflow-y-hidden");
+    } else {
+      document.body.classList.remove("overflow-y-hidden");
+    }
+  
+  }, [isSideBarOpen]);
+  
   return (
     <>
       {isSideBarOpen && (
@@ -25,35 +35,9 @@ export default function Sidebar({
               <Image src={XImageIcon} alt="X-button" width={0} height={0} />
             </button>
           </div>
-          <NavbarLinksSection onCloseSidebar={onCloseSidebar} />
-          <div className="bg-[#111317] mt-16 flex flex-col gap-8 items-end py-2 px-8 w-full">
-            <div className="flex flex-col gap-2">
-              <p className="font-normal text-white uppercase text-end text-lg tracking-wider">
-                Get In Touch With Us
-              </p>
-              <Link
-                href="/"
-                className="text-[#F3F4F6] xs:text-md lg:text-lg xl:text-xl font-normal tracking-wider hover:underline hover:underline-offset-8 hover:decoration-[#1D7349] leading-7"
-              >
-                info@aeonolympiastrength.com
-              </Link>
-            </div>
-            <div className="flex flex-col gap-2">
-              <p className="font-normal text-white uppercase text-end text-lg tracking-wider">
-                Follow Us
-              </p>
-              <div className="flex flex-row gap-4">
-                <div className="rounded-full cursor-pointer border-2 border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200">
-                  <InstagramIcon />
-                </div>
-                <div className="rounded-full border-2 cursor-pointer border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200">
-                  <FacebookIcon />
-                </div>
-                <div className="rounded-full border-2 cursor-pointer border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200">
-                  <YouTubeIcon />
-                </div>
-              </div>
-            </div>
+          <div className="flex flex-col">
+            <NavbarLinksSection onCloseSidebar={onCloseSidebar} />
+            <GetInTouchWithUsSection />
           </div>
         </aside>
       )}
@@ -99,9 +83,43 @@ const NavbarLinksSection = ({
   );
 };
 
+export const GetInTouchWithUsSection = () => {
+  return (
+    <div className="bg-[#111317] mt-16 flex flex-col gap-8 items-end py-2 px-8 w-full">
+      <div className="flex flex-col gap-2">
+        <p className="font-normal text-white uppercase text-end text-lg tracking-wider">
+          Get In Touch With Us
+        </p>
+        <Link
+          href="/"
+          className="text-[#F3F4F6] xs:text-md lg:text-lg xl:text-xl font-normal tracking-wider hover:underline hover:underline-offset-8 hover:decoration-[#1D7349] leading-7"
+        >
+          info@aeonolympiastrength.com
+        </Link>
+      </div>
+      <div className="flex flex-col gap-2">
+        <p className="font-normal text-white uppercase text-end text-lg tracking-wider">
+          Follow Us
+        </p>
+        <div className="flex flex-row gap-4">
+          <div className="rounded-full cursor-pointer border-2 border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200">
+            <InstagramIcon />
+          </div>
+          <div className="rounded-full border-2 cursor-pointer border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200">
+            <FacebookIcon />
+          </div>
+          <div className="rounded-full border-2 cursor-pointer border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200">
+            <YouTubeIcon />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export const LogoImage = () => {
   return (
-    <Link href={'/'}>
+    <Link href={"/"}>
       <Image
         src={LogoImg}
         alt="logo"
