@@ -33,11 +33,7 @@ export default function HeroSection() {
             <span className="z-10 text-[#FFFFFF] opacity-40 lg:opacity-50 text-5xl md:text-8xl lg:text-9xl uppercase font-black">
               Strenght
             </span>
-            {/* <p className="flex flex-col gap-2 text-[#DCEAE3] text-sm md:text-xl lg:text-2xl tracking-wider text-center md:text-end font-semibold z-20">
-              <span>Unlock Your</span>
-              <span className="">Strongest Version</span>
-            </p> */}
-            <div className="pt-16 md:pt-32 flex justify-center">
+            <div className="pt-16 md:pt-32 flex justify-center items-center">
               <Link
                 href="/programs"
                 className="text-white hover:scale-105 text-lg lg:text-xl xl:text-2xl font-normal leading-10 tracking-wider bg-[#1D7349] hover:bg-[#34a26d] px-10 py-1 rounded-full"

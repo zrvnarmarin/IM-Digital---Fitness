@@ -21,15 +21,15 @@ export default function Navbar({
 
   return (
     <header
-      className={`w-full sticky top-0 z-30 ${
-        scrolPosition > 0 ? "duration-700" : ""
+      className={`w-full sticky top-0 z-30 bg-white ${
+        scrolPosition > 0 ? "opacity-10 bg-white duration-700" : ""
       }`}
     >
       <nav className="flex flex-row justify-between items-center py-2  lg:bg-inherit px-8">
         <LogoImage />
         <button onClick={() => onOpenSidebar()} className="flex flex-col gap-2 items-end">
-          <div className="w-6 h-[2px] bg-white"></div>
-          <div className="w-3 h-[2px] bg-white"></div>
+          <div className="w-6 h-[2px] bg-black"></div>
+          <div className="w-3 h-[2px] bg-black"></div>
         </button>
       </nav>
     </header>
@@ -55,8 +55,8 @@ export const LogoImage = () => {
       <Image
         src={LogoImg}
         alt="logo"
-        width={70}
-        height={70}
+        width={40}
+        height={40}
         className="bg-white rounded-full"
       />
     </Link>

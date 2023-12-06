@@ -60,7 +60,7 @@ const footerLinks = [
     links: [
       {
         name: 'About',
-        link: '/about-us'
+        link: '/about'
       },
       {
         name: 'Programs',
@@ -81,11 +81,11 @@ const footerLinks = [
     links: [
       {
         name: 'Testimonials',
-        link: '/about-us/testimonials'
+        link: '/about/testimonials'
       },
       {
         name: 'Photo Gallery',
-        link: '/about-us/photo-gallery'
+        link: '/about/photo-gallery'
       },
     ]
   },
