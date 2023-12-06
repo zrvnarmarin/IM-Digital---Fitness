@@ -24,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={bebasNeue.className}>
+      <body className={`${bebasNeue.className} m-0`}>
         <NavigationWrapper />
         {children}
         <Footer />

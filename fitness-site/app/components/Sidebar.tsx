@@ -8,11 +8,6 @@ import { InstagramIcon, YouTubeIcon, FacebookIcon } from "@/public/Icons";
 import LogoImg from "../../public/logo-removebg-preview.png";
 import { MotionAside, MotionDiv } from "./MotionDiv";
 
-const variants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1 },
-};
-
 export default function Sidebar({
   isSideBarOpen,
   onCloseSidebar,
@@ -33,8 +28,6 @@ export default function Sidebar({
       {isSideBarOpen && (
         <MotionAside
           className="top-0 left-0 bottom-0 bg-[#1F2125] w-full h-screen sticky z-40"
-          initial={{ width: 0 }}
-          animate={{ width: "100%" }}
         >
           <div className="flex justify-between items-center py-2 px-8">
             <LogoImage onCloseSidebar={onCloseSidebar} />
