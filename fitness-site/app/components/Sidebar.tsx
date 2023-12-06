@@ -6,7 +6,6 @@ import XImageIcon from "../../public/icons8-x-50.png";
 import Image from "next/image";
 import { InstagramIcon, YouTubeIcon, FacebookIcon } from "@/public/Icons";
 import LogoImg from "../../public/logo-removebg-preview.png";
-import { link } from "fs";
 
 export default function Sidebar({
   isSideBarOpen,
@@ -22,15 +21,14 @@ export default function Sidebar({
     } else {
       document.body.classList.remove("overflow-y-hidden");
     }
-  
   }, [isSideBarOpen]);
-  
+
   return (
     <>
       {isSideBarOpen && (
-        <aside className="top-0 left-0 bottom-0 bg-[#1F2125] w-full md:w-2/3 h-screen sticky z-40">
+        <aside className="top-0 left-0 bottom-0 bg-[#1F2125] w-full h-screen sticky z-40">
           <div className="flex justify-between items-center py-2 px-8">
-            <LogoImage />
+            <LogoImage onCloseSidebar={onCloseSidebar} />
             <button onClick={() => onCloseSidebar()}>
               <Image src={XImageIcon} alt="X-button" width={0} height={0} />
             </button>
@@ -117,9 +115,9 @@ export const GetInTouchWithUsSection = () => {
   );
 };
 
-export const LogoImage = () => {
+export const LogoImage = ({ onCloseSidebar } : { onCloseSidebar: () => void  }) => {
   return (
-    <Link href={"/"}>
+    <Link href={"/"} onClick={() => onCloseSidebar()}>
       <Image
         src={LogoImg}
         alt="logo"

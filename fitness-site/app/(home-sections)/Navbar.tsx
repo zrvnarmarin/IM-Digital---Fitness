@@ -2,9 +2,11 @@
 
 import React, { SetStateAction } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { UseScrollPosition } from "../hooks/UseScrollPosition";
-import { LogoImage } from "../components/Sidebar";
+import LogoImg from "../../public/logo-removebg-preview.png";
+
 
 export default function Navbar({
   isSideBarOpen,
@@ -42,65 +44,21 @@ const NavbarLink = ({ navbarLink }: { navbarLink: NavbarLink }) => {
   );
 };
 
-const NavbarLinksSection = () => {
-  return (
-    <ul className="hidden lg:flex flex-row items-center justify-between gap-12">
-      {navbarLinks.map((link) => (
-        <NavbarLink key={link.name} navbarLink={link} />
-      ))}
-    </ul>
-  );
-};
-
-const HamburgerMenuButton = () => {
-  return (
-    <button className="flex flex-col gap-2 items-end">
-      <div className="w-8 h-[2px] bg-white"></div>
-      <div className="w-4 h-[2px] bg-white"></div>
-    </button>
-  );
-};
-
-const JoinNowButton = () => {
-  return (
-    <div>
-      <button className="hidden lg:block uppercase text-white hover:scale-105 text-lg lg:text-xl xl:text-2xl font-normal leading-10 tracking-wider bg-[#1D7349] hover:bg-[#34a26d] px-10 py-1 rounded-full">
-        Join Now
-      </button>
-    </div>
-  );
-};
-
-export const Logo = () => {
-  return (
-    <Link href={"/"}>
-      <p className="text-3xl sm:text-4xl leading-10 font-black italic text-[#1D7349] md:text-6xl lg:text-[#1D7349]">
-        LOGO
-      </p>
-    </Link>
-  );
-};
-
 export type NavbarLink = {
   name: string;
   link: string;
 };
 
-const navbarLinks = [
-  {
-    name: "Programs",
-    link: "/programs",
-  },
-  {
-    name: "Services",
-    link: "/services",
-  },
-  {
-    name: "About",
-    link: "/about",
-  },
-  {
-    name: "Contact",
-    link: "/contact",
-  },
-];
+export const LogoImage = () => {
+  return (
+    <Link href={"/"}>
+      <Image
+        src={LogoImg}
+        alt="logo"
+        width={70}
+        height={70}
+        className="bg-white rounded-full"
+      />
+    </Link>
+  );
+};

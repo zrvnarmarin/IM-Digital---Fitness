@@ -6,7 +6,7 @@ import NavigationWrapper from './components/NavigationWrapper'
 
 const inter = Inter({ subsets: ['latin'] })
 const montserrat = Montserrat({ subsets: ['latin']})
-const bebasNeue = Oswald({
+const bebasNeue = League_Spartan({
   subsets: ['latin'],
   weight: '400'
 })
