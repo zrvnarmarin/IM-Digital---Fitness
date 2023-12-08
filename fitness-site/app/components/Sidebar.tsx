@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 import XImageIcon from "../../public/icons8-x-50.png";
 import Image from "next/image";
 import { InstagramIcon, YouTubeIcon, FacebookIcon } from "@/public/Icons";
-import LogoImg from "../../public/logo-removebg-preview.png";
+import LogoWhite from '../../public/logo-white.png'
 import { MotionAside, MotionDiv } from "./MotionDiv";
 
 export default function Sidebar({
@@ -29,7 +29,7 @@ export default function Sidebar({
         <MotionAside
           className="top-0 left-0 bottom-0 bg-[#1F2125] w-full h-screen sticky z-40"
         >
-          <div className="flex justify-between items-center py-2 px-8">
+          <div className="flex justify-between items-center py-2 px-4">
             <LogoImage onCloseSidebar={onCloseSidebar} />
             <button onClick={() => onCloseSidebar()}>
               <Image src={XImageIcon} alt="X-button" width={0} height={0} />
@@ -71,7 +71,7 @@ const NavbarLinksSection = ({
   onCloseSidebar: () => void;
 }) => {
   return (
-    <ul className="lg:flex flex flex-col items-end justify-between gap-6 pt-16 py-2 px-8 ">
+    <ul className="lg:flex flex flex-col items-end justify-between gap-6 pt-16 py-2 px-4">
       {navbarLinks.map((link) => (
         <NavbarLink
           key={link.name}
@@ -85,7 +85,7 @@ const NavbarLinksSection = ({
 
 export const GetInTouchWithUsSection = () => {
   return (
-    <div className="bg-[#111317] mt-16 flex flex-col gap-8 items-end py-2 px-8 w-full">
+    <div className="bg-[#111317] mt-16 flex flex-col gap-8 items-end py-2 px-4 w-full">
       <div className="flex flex-col gap-2">
         <p className="font-normal text-white uppercase text-end text-lg tracking-wider">
           Get In Touch With Us
@@ -123,13 +123,12 @@ export const LogoImage = ({
   onCloseSidebar: () => void;
 }) => {
   return (
-    <Link href={"/"} onClick={() => onCloseSidebar()}>
+    <Link href={"/"} onClick={onCloseSidebar}>
       <Image
-        src={LogoImg}
+        src={LogoWhite}
         alt="logo"
-        width={70}
-        height={70}
-        className="bg-white rounded-full"
+        width={60}
+        height={60}
       />
     </Link>
   );

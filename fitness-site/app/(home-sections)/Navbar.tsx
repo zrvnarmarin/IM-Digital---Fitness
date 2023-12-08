@@ -1,11 +1,11 @@
 "use client";
 
-import React, { SetStateAction } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { UseScrollPosition } from "../hooks/UseScrollPosition";
-import LogoImg from "../../public/logo-removebg-preview.png";
+import LogoWhite from '../../public/logo-white.png'
 
 
 export default function Navbar({
@@ -25,7 +25,7 @@ export default function Navbar({
         scrolPosition > 0 ? "duration-700" : ""
       }`}
     >
-      <nav className="flex flex-row justify-between items-center py-2  lg:bg-inherit px-8">
+      <nav className="flex flex-row justify-between items-center py-2  lg:bg-inherit px-4">
         <LogoImage />
         <button onClick={() => onOpenSidebar()} className="flex flex-col gap-2 items-end">
           <div className="w-6 h-[2px] bg-white"></div>
@@ -53,11 +53,10 @@ export const LogoImage = () => {
   return (
     <Link href={"/"}>
       <Image
-        src={LogoImg}
+        src={LogoWhite}
         alt="logo"
-        width={40}
-        height={40}
-        className="bg-white opacity-20 rounded-full"
+        width={60}
+        height={60}
       />
     </Link>
   );
