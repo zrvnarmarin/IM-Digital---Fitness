@@ -6,7 +6,7 @@ import XImageIcon from "../../public/icons8-x-50.png";
 import Image from "next/image";
 import { InstagramIcon, YouTubeIcon, FacebookIcon } from "@/public/Icons";
 import LogoWhite from '../../public/logo-white.png'
-import { MotionAside, MotionDiv } from "./MotionDiv";
+import { MotionAside } from "./MotionDiv";
 
 export default function Sidebar({
   isSideBarOpen,

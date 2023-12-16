@@ -10,3 +10,19 @@ export type Program = {
   icon: () => JSX.Element;
   image: any;
 };
+
+export type Service = {
+  id: number;
+  type: string;
+  calls: string;
+  cost: string;
+  details: string;
+  program: string;
+  mealPlan: string;
+};
+
+export type NavbarLink = {
+  name: string;
+  link: string;
+};
+

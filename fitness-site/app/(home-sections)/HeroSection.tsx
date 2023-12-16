@@ -16,7 +16,7 @@ export default function HeroSection() {
             <Image
               src={AboutUsHeroImage}
               alt="Image"
-              className="z-10 w-full object-cover h-[40rem] brightness-100"
+              className="z-10 w-full object-cover h-[40rem] md:h-[42rem] brightness-100"
               height={0}
               width={0}
             />
