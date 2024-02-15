@@ -43,9 +43,6 @@ export function ProgramCard({
         />
       </div>
       <div className="flex gap-4 items-center px-8">
-        {/* <div className="bg-[#1D7349] rounded-xl p-2 w-12 h-12 flex items-center justify-center">
-          {program.icon()}
-        </div> */}
         <p className="text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold ">
           {program.title}
         </p>
