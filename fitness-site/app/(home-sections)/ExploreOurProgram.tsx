@@ -1,9 +1,6 @@
 import React from "react";
-import { RightIcon } from "@/public/Icons";
 import Link from "next/link";
 import { programs } from "../data";
-import Image from "next/image";
-import YogaImage from '../../public/yoga-program.avif'
 
 export default function ExploreOurProgram() {
   return (
@@ -32,34 +29,28 @@ export function ProgramCard({
   title,
   description,
   icon,
-  image
+  image,
 }: {
   href: string;
   title: string;
   description: string;
   icon: () => JSX.Element;
-  image: any
+  image: any;
 }) {
   return (
-    <Link
-      href={href}
-      className="flex flex-col gap-8 rounded-xl p-6 bg-[#1F2125] hover:scale-105 hover:bg-[#35373B] hover:outline-2 focus:outline-2 outline-[#1D7349] cursor-pointer"
+    <div
+      //#1F2125
+      className="flex flex-col gap-8 rounded-md p-6 bg-[#111317] duration-100 border border-[#1D7349]"
     >
       <div className="flex flex-row md:flex-col gap-4 items-center">
         <div className="bg-[#1D7349] rounded-xl p-2 w-fit">{icon()}</div>
-        <p className="text-xl tracking-wider md:text-lg lg:text-xl text-start text-white leading-7 font-medium">
+        <p className="text-2xl text-start text-[#1D7349] leading-7 font-bold tracking-wider uppercase">
           {title}
         </p>
       </div>
       <p className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
         {description}
       </p>
-      <Link href={"/join-now"} className="flex gap-4 items-center justify-start">
-        <p className="text-md tracking-wider lg:text-lg text-white leading-2 font-medium">
-          Join Now
-        </p>
-        {<RightIcon strokeOne={"#FFFFFF"} strokeTwo={"#FFFFFF"} />}
-      </Link>
-    </Link>
+    </div>
   );
 }

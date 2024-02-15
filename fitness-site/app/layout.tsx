@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { Inter, Montserrat, League_Spartan, Oswald } from 'next/font/google'
+import { Inter, Montserrat, League_Spartan, Saira } from 'next/font/google'
 import './globals.css'
 import Footer from './Footer'
 import NavigationWrapper from './components/NavigationWrapper'
 
 const inter = Inter({ subsets: ['latin'] })
 const montserrat = Montserrat({ subsets: ['latin']})
-const bebasNeue = League_Spartan({
+const bebasNeue = Saira({
   subsets: ['latin'],
   weight: '400'
 })

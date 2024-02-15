@@ -25,7 +25,7 @@ export default function Navbar({
         scrolPosition > 0 ? "duration-700" : ""
       }`}
     >
-      <nav className="flex flex-row justify-between items-center py-2  lg:bg-inherit px-4">
+      <nav className="flex flex-row justify-between items-center py-2 lg:bg-inherit px-4">
         <LogoImage />
         <button onClick={() => onOpenSidebar()} className="flex flex-col gap-2 items-end">
           <div className="w-6 h-[2px] bg-white"></div>

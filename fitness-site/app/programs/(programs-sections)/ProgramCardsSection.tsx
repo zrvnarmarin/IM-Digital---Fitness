@@ -26,7 +26,7 @@ export function ProgramCard({
   program: Program;
   isLastItem?: boolean;
 }) {
-  const cardClass = `flex flex-col gap-6 rounded-xl bg-[#1F2125] hover:scale-105 hover:bg-[#35373B] 
+  const cardClass = `flex flex-col gap-6 rounded-xl bg-[#111111] hover:scale-105 hover:bg-[#35373B] 
       hover:outline-2 focus:outline-2 outline-[#1D7349] cursor-pointer pb-6 ${
         isLastItem ? "lg:col-span-2xl" : ""
       }`;
@@ -42,44 +42,42 @@ export function ProgramCard({
           className="rounded-t-md"
         />
       </div>
-      <div className="flex gap-4 items-center px-4">
-        <div className="bg-[#1D7349] rounded-xl p-2 w-12 h-12 flex items-center justify-center">
+      <div className="flex gap-4 items-center px-8">
+        {/* <div className="bg-[#1D7349] rounded-xl p-2 w-12 h-12 flex items-center justify-center">
           {program.icon()}
-        </div>
-        <p className="text-xl tracking-wider md:text-lg lg:text-xl text-start text-white leading-7 font-medium ">
+        </div> */}
+        <p className="text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold ">
           {program.title}
         </p>
       </div>
-      <p className="px-4 normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
+      <p className="px-8 normal-case tracking-normal text-md md:text-md lg:text-lg text-gray-100 leading-2 font-normal">
         {program.description}
       </p>
       {program.duration && (
-        <div className="flex-1 px-4 text-sm md:text-md text-gray-300 leading-2 font-normal flex flex-row gap-2 items-center">
+        <div className="flex-1 px-8 text-sm md:text-md text-gray-300 leading-2 font-normal flex flex-row gap-2 items-center">
           <span className="bg-[#1D7349] rounded-md p-1 text-lg">
             <DurationIcon />
           </span>
-          <span className="text-md tracking-wider lg:text-lg text-white leading-2 font-medium">
+          <span className="normal-case tracking-normal text-md md:text-md lg:text-lg text-gray-100 leading-2 font-normal">
             Duration:
           </span>
-          <span className="text-md md:text-md lg:text-lg text-white leading-2 font-normal">
+          <span className="normal-case tracking-normal text-md md:text-md lg:text-lg text-gray-100 leading-2 font-normal">
             {program.duration}
           </span>
         </div>
       )}
       {program.intensity && (
-        <div className="px-4 flex flex-col gap-2 text-sm md:text-md text-gray-300 leading-2 font-normal">
-          <span className="text-md tracking-wider lg:text-lg text-white leading-2 font-normal">
-            Intensity:
-          </span>
+        <div className="px-8 flex flex-col gap-2 normal-case tracking-normal text-md md:text-md lg:text-lg text-gray-100 leading-2 font-normal">
+          Intensity:
           <div className="w-full border-gray-500 rounded-md bg-slate-700">
             <div
               className={`h-2 border border-gray-500 rounded-md
                 ${
                   program.intensity === "Low"
-                    ? "w-1/3 bg-green-400"
+                    ? "w-1/3 bg-[#1D7349]"
                     : program.intensity === "Moderate"
-                    ? "w-2/3 bg-yellow-400"
-                    : "w-full bg-red-400"
+                    ? "w-2/3 bg-[#1D7349]"
+                    : "w-full bg-[#1D7349]"
                 }`}
             ></div>
           </div>
