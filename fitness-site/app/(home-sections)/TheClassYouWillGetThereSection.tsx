@@ -8,7 +8,7 @@ export default function TheClassYouWillGetThereSection() {
   return (
     <section className="flex flex-col  bg-[#111111] mt-24">
 
-      <h1 className="uppercase font-normal text-white text-2xl tracking-wider w-full px-6 md:px-8 lg:px-24 pt-12">
+      <h1 className="uppercase font-normal text-white text-2xl tracking-wider w-full px-6 md:px-8 lg:px-24 pt-12 pb-12">
         Fitness All About
       </h1>
 
@@ -54,7 +54,7 @@ export const SecondHomeSectionCard = ({ card } : { card: SeconSectionCardType })
           <span className="text-[#1D7349]">{card.icon}</span>
         </div>
       </div>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-2">
         <div className="flex flex-row md:flex-col items-center md:items-start">
           {/* <div className=" bg-[#1D7349] rounded-xl p-2 w-fit">{icon()}</div> */}
           <p className="font-semibold text-[#1D7349] text-lg md:text-xl lg:text-2xl tracking-wide uppercase">

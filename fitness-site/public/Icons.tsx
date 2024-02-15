@@ -1,8 +1,8 @@
 export const DumbellIcon = () => {
   return (
     <svg
-      width="35"
-      height="35"
+      width={20}
+      height={20}
       viewBox="0 0 35 35"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -14,6 +14,7 @@ export const DumbellIcon = () => {
     </svg>
   );
 };
+
 
 export const HeartIcon = () => {
   return (
