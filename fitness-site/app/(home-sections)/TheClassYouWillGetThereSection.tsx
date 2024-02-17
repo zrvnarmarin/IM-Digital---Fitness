@@ -6,7 +6,7 @@ import ExampleImage from "../../public/homePageSecondImage.jpg";
 
 export default function TheClassYouWillGetThereSection() {
   return (
-    <section className="flex flex-col  bg-[#111111] mt-24">
+    <section className="flex flex-col md:flex-row  bg-[#111111] mt-24">
 
       <h1 className="uppercase font-normal text-white text-2xl tracking-wider w-full px-6 md:px-8 lg:px-24 pt-12 pb-12">
         Fitness All About

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Image from "next/image";
 import { RightIcon, TwoHumansIcons, DumbellIcon } from "@/public/Icons";
 import { CameraIcon } from "@/public/Icons";
@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function WhyJoinUs() {
   return (
-    <section className="w-full px-6 md:px-8 lg:px-24 pl-8 pb-24 flex flex-col gap-8">
+    <SectionWrapper>
       <h1 className="uppercase font-normal text-white text-2xl tracking-wider w-full pt-12">
         Why Join Us
       </h1>
@@ -24,7 +24,7 @@ export default function WhyJoinUs() {
           ))}
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 }
 
@@ -74,8 +74,8 @@ const reasonsToJoin = [
 
 export function ProgramCard() {
   return (
-    <Link href={"/"} className={``}>
-      <div className="w-full flex">
+    <Link href={"/"} className={`bg-[#111111]`}>
+      <div className="w-full flex rounded-t-md">
         <Image
           src={TestImage}
           alt="program_image"
@@ -86,24 +86,27 @@ export function ProgramCard() {
       </div>
 
       <div className="flex flex-col gap-2 items-start justify-start px-8 pt-8">
-        <span className="normal-case tracking-normal text-xs text-gray-100 leading-2 font-normal bg-[#1D7349] px-3 py-1 rounded-md">
+        <span className="normal-case tracking-normal text-2xs md:text-xs text-gray-100 leading-2 font-normal bg-[#1D7349] px-3 py-1 rounded-md">
           Nesto badge
         </span>
-        <p className="text-xl lg:text-3xl tracking-normal text-white leading-7 font-semibold ">
+        <p className="text-md lg:text-2xl xl:text-3xl tracking-normal text-white leading-7 font-semibold ">
           Cardiovascular strength
         </p>
       </div>
 
       <div className="flex flex-col pt-8 mx-8">
-        <p className="normal-case tracking-wider text-md md:text-lg text-gray-300 leading-2 font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt beatae obcaecati eius illo assumenda fugiat, ut quae mollitia </p>
+        <p className="normal-case tracking-wider text-sm md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt beatae
+          obcaecati eius illo assumenda fugiat, ut quae mollitia{" "}
+        </p>
       </div>
 
       <div className="border-b border-gray-600 flex items-center justify-between mx-8 pt-12 pb-4 normal-case tracking-normal text-md md:text-md lg:text-lg text-gray-100 leading-2 font-normal">
-        <span className="flex flex-row gap-2 normal-case tracking-normal text-sm text-gray-100 leading-2 font-normal rounded-md">
-          <DumbellIcon /> 24 Number Of Classes
+        <span className="flex flex-row gap-2 normal-case tracking-normal text-2xs text-gray-100 leading-2 font-normal rounded-md">
+          <DumbellIcon /> 24 Number Of 
         </span>
-        <span className="flex flex-row gap-2 normal-case tracking-normal text-sm text-gray-100 leading-2 font-normal rounded-md">
-          <DumbellIcon /> 7 Extra Ways for something
+        <span className="flex flex-row gap-2 normal-case tracking-normal text-2xs text-gray-100 leading-2 font-normal rounded-md">
+          <DumbellIcon />7 Ways for 
         </span>
       </div>
 
@@ -118,5 +121,17 @@ export function ProgramCard() {
         <RightIcon strokeOne="#FFFFFF" strokeTwo="#FFFFFF" />
       </p> */}
     </Link>
+  );
+}
+
+type SectionWrapperProps = {
+  children: ReactNode;
+};
+
+export function SectionWrapper({ children }: SectionWrapperProps) {
+  return (
+    <section className="w-full flex flex-col gap-8 pt-10 sm:pt-12 md:pt-16 lg:pt-28 px-8 md:px-14 lg:px-28 xl:px-42 2xl:px-48 bg-[#1F2125]">
+      {children}
+    </section>
   );
 }

@@ -23,7 +23,7 @@ export default function HeroSection() {
           Unleash your potential at out cutting edge gym. <br /> Elevate your
           strength.
         </p>
-        <div className="flex flex-row items-center gap-8">
+        {/* <div className="flex flex-row items-center gap-8">
           <Link
             href="/programs"
             className=" bg-white text-[#1D7349] hover:bg-[#1D7349] hover:text-white duration-100 text-2xl pt-4 tracking-tight uppercase font-semibold pb-4 px-12 rounded-lg"
@@ -37,7 +37,7 @@ export default function HeroSection() {
           >
             Explore More
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );
