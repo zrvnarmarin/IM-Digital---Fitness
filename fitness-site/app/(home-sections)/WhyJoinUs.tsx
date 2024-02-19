@@ -85,7 +85,7 @@ export function ProgramCard() {
         />
       </div>
 
-      <div className="flex flex-col gap-2 items-start justify-start px-8 pt-8">
+      <div className="flex flex-col gap-3 items-start justify-start px-8 pt-8">
         <span className="normal-case tracking-normal text-xs text-gray-100 leading-2 font-normal bg-[#1D7349] px-3 py-1 rounded-md">
           Nesto badge
         </span>
