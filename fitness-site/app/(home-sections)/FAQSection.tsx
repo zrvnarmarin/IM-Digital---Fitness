@@ -1,16 +1,17 @@
 "use client";
 
 import React, { useState } from "react";
+import SectionWrapper from "../components/wrappers/SectionWrapper";
 
 export default function FAQSection() {
   return (
-    <section className="flex flex-col gap-6 w-full px-6 md:px-8 lg:px-24 pl-8 pb-24 pt-8 bg-[#111317]">
+    <SectionWrapper>
       <h1 className="uppercase font-normal text-white text-2xl tracking-wider">
         Frequently Asked Questions
       </h1>
       <QuestionCategories />
       <Accordion />
-    </section>
+    </SectionWrapper>
   );
 }
 
@@ -24,7 +25,7 @@ export function QuestionCategories() {
   };
 
   return (
-    <div className="flex justify-between gap-4 overflow-x-auto py-4">
+    <div className="flex flex-wrap justify-start gap-12 overflow-x-auto">
       {questionCategories.map((questionCategory) => (
         <div
           key={questionCategory.id}

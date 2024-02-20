@@ -1,23 +1,29 @@
 import React, { ReactNode } from "react";
 import Image from "next/image";
-import { RightIcon, TwoHumansIcons, DumbellIcon } from "@/public/Icons";
+import { TwoHumansIcons, DumbellIcon } from "@/public/Icons";
 import { CameraIcon } from "@/public/Icons";
 import { CalendarIcon } from "@/public/Icons";
-import ExampleImage from "../../public/AboutUsHeroImage.avif";
+import ShareIcon from '../../public/share-arrow-svgrepo-com.png'
 import TestImage from "../../public/CardioBlastImage.jpg";
 import Link from "next/link";
+import SectionWrapper from "../components/wrappers/SectionWrapper";
 
 export default function WhyJoinUs() {
   return (
     <SectionWrapper>
-      <h1 className="uppercase font-normal text-white text-2xl tracking-wider w-full pt-12">
-        Why Join Us
-      </h1>
+      <div className="flex items-center justify-between">
+        <h1 className="uppercase font-normal text-white text-2xl tracking-wider mr-4">
+          Why Join Us
+        </h1>
+        <button className="border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
+          Meet the rest
+        </button>
+      </div>
       <p className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
         We have experience serving members in helping body fitness, and under
         the guidance of a professional trainer
       </p>
-      <div className="pt-10">
+      <div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-lg gap-6">
           {reasonsToJoin.map((programCard) => (
             <ProgramCard key={programCard.description} />
@@ -85,53 +91,45 @@ export function ProgramCard() {
         />
       </div>
 
-      <div className="flex flex-col gap-2 items-start justify-start px-8 pt-8">
-        <span className="normal-case tracking-normal text-2xs md:text-xs text-gray-100 leading-2 font-normal bg-[#1D7349] px-3 py-1 rounded-md">
-          Nesto badge
-        </span>
-        <p className="text-md lg:text-2xl xl:text-3xl tracking-normal text-white leading-7 font-semibold ">
-          Cardiovascular strength
-        </p>
-      </div>
+      <div className="px-8 py-8">
+        <div className="flex flex-col gap-3 items-start justify-start">
+          <div className="w-full flex items-center justify-between">
+            <span className="normal-case tracking-normal text-2xs md:text-xs text-gray-100 leading-2 font-normal bg-[#1D7349] px-3 py-1 rounded-md">
+              Nesto badge
+            </span>
+            <span><Image src={ShareIcon} width={20} height={20} alt="share_icon" /></span>
+          </div>
+          <p className="text-md lg:text-2xl xl:text-3xl tracking-normal text-white leading-7 font-semibold ">
+            Cardiovascular strength
+          </p>
+        </div>
+        <div className="flex flex-col pt-8">
+          <p className="normal-case tracking-wider text-sm md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt beatae
+            obcaecati eius illo assumenda fugiat, ut quae mollitia{" "}
+          </p>
+        </div>
 
-      <div className="flex flex-col pt-8 mx-8">
-        <p className="normal-case tracking-wider text-sm md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt beatae
-          obcaecati eius illo assumenda fugiat, ut quae mollitia{" "}
-        </p>
-      </div>
+        <div className="border-b border-gray-600 flex items-center justify-between pt-12 pb-4 normal-case tracking-normal text-2xs md:text-sm lg:text-lg text-gray-100 leading-2 font-normal">
+          <span className="flex flex-row items-center gap-2 normal-case tracking-normal text-gray-100 leading-2 font-normal rounded-md">
+            <DumbellIcon /> 24 Number Of
+          </span>
+          <span className="flex flex-row items-center gap-2 normal-case tracking-normal text-gray-100 leading-2 font-normal rounded-md">
+            <DumbellIcon />7 Ways for
+          </span>
+        </div>
 
-      <div className="border-b border-gray-600 flex items-center justify-between mx-8 pt-12 pb-4 normal-case tracking-normal text-md md:text-md lg:text-lg text-gray-100 leading-2 font-normal">
-        <span className="flex flex-row gap-2 normal-case tracking-normal text-2xs text-gray-100 leading-2 font-normal rounded-md">
-          <DumbellIcon /> 24 Number Of 
-        </span>
-        <span className="flex flex-row gap-2 normal-case tracking-normal text-2xs text-gray-100 leading-2 font-normal rounded-md">
-          <DumbellIcon />7 Ways for 
-        </span>
+        {/* Rasmiliti da li ovdje staviti gumb, da li se uklapa u dizajn */}
+        <div className="flex flex-row justify-between items-center pt-4">
+          <p className="font-semibold text-[#1D7349] text-lg md:text-xl lg:text-2xl tracking-wide uppercase">
+            $130.00
+          </p>
+          <button className="border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
+          Discover More
+        </button>
+        </div>
       </div>
-
-      <div className="flex flex-row justify-between items-center mx-8 pt-2">
-        <p className="font-semibold text-[#1D7349] text-lg md:text-xl lg:text-2xl tracking-wide uppercase">
-          $130.00
-        </p>
-      </div>
-
-      {/* <p className="flex px-4 items-center gap-4 justify-end text-md tracking-wider lg:text-lg text-white leading-2 font-medium">
-        Discover More
-        <RightIcon strokeOne="#FFFFFF" strokeTwo="#FFFFFF" />
-      </p> */}
+      
     </Link>
-  );
-}
-
-type SectionWrapperProps = {
-  children: ReactNode;
-};
-
-export function SectionWrapper({ children }: SectionWrapperProps) {
-  return (
-    <section className="w-full flex flex-col gap-8 pt-10 sm:pt-12 md:pt-16 lg:pt-28 px-8 md:px-14 lg:px-28 xl:px-42 2xl:px-48 bg-[#1F2125]">
-      {children}
-    </section>
   );
 }

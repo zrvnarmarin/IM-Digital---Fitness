@@ -1,10 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import { InstagramIcon, FacebookIcon, YouTubeIcon } from "@/public/Icons";
+import FooterWrapper from "./components/wrappers/FooterWrapper";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#111317] px-8 flex flex-col">
+    <FooterWrapper>
       <div className="flex flex-col gap-6">
         <Link href={"/"}>
           <p className="text-3xl sm:text-4xl leading-10 font-black italic text-[#1D7349] md:text-6xl lg:text-[#1D7349]">
@@ -48,9 +49,9 @@ export default function Footer() {
         ))}
       </ul>
       <h3 className="tracking-wider text-md text-white md:text-md lg:text-lg pt-16 pb-8">
-        <span className="text-[#1D7349]">&#169;</span> <span className="text-xs text-[#1D7349]">Developed By</span> IM Digital Ltd.
+        <span className="text-[#1D7349]">&#169;</span> <span className="text-xs text-[#1D7349]">Developed By</span> Marin Zrvnar
       </h3>
-    </footer>
+    </FooterWrapper>
   );
 }
 
