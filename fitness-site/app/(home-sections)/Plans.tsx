@@ -68,6 +68,7 @@ export function PlanCard({ plan }: { plan: PlanCardType }) {
           Join now
         </button>
       </div>
+      
     </div>
   );
 }

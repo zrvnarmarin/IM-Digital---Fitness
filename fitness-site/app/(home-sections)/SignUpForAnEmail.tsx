@@ -16,7 +16,7 @@ const SignUpForAnEmail = () => {
       </div>
       
       {/* Blue Overlay */}
-      <div className="absolute inset-0 bg-[#1D7349] opacity-40"></div>
+      <div className="absolute inset-0 bg-[#04130c] opacity-40"></div>
 
       {/* Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
