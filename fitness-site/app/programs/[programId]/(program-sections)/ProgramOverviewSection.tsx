@@ -1,14 +1,52 @@
 import React from "react";
 import SectionWrapper from "@/app/components/wrappers/SectionWrapper";
 import Image from "next/image";
-import TestImage from '../../../../public/homePageSecondImage.jpg'
+import TestImage from "../../../../public/HeroTestTest.jpg";
+import { DumbellIcon } from "@/public/Icons";
 
 export default function ProgramOverviewSection() {
   return (
     <SectionWrapper>
-      <p className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
-        {description}
-      </p>
+      <div className="grid grid-cols-2 gap-8">
+        <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-4">
+            <p className="uppercase font-normal text-white text-2xl tracking-wider w-full">
+              Intensity:
+            </p>
+            <div className="w-full border-gray-500 rounded-md bg-slate-700">
+              <div
+                className={`h-2 border border-gray-500 rounded-md ${
+                  intensity === "Low"
+                    ? "w-1/3 bg-[#1D7349]"
+                    : intensity === "Moderate"
+                      ? "w-2/3 bg-[#1D7349]"
+                      : "w-full bg-[#1D7349]"
+                }`}
+              ></div>
+            </div>
+            <p className="uppercase font-normal text-white text-2xl tracking-wider w-full text-end">{`[${intensity}]`}</p>
+          </div>
+          <p className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
+            {description}
+          </p>
+          <ul className="flex flex-row gap-6">
+            {somethingArray.map(something =>
+                <SomethingCard key={something.id} something={something} />    
+            )}
+          </ul>
+        </div>
+
+        <div>
+          <Image
+            src={TestImage}
+            width={0}
+            height={0}
+            alt="jkbj"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
       <div className="flex flex-col gap-6 relative">
         <ul className="flex flex-col gap-6">
           {keyFeatures.map((keyFeature) => (
@@ -16,6 +54,7 @@ export default function ProgramOverviewSection() {
           ))}
         </ul>
       </div>
+
     </SectionWrapper>
   );
 }
@@ -42,10 +81,34 @@ export const KeyFeatureCard = ({ keyFeature }: { keyFeature: KeyFeature }) => {
   );
 };
 
+export const SomethingCard = ({ something } : { something: SomethingType}) => {
+  return (
+    <div className="flex flex-col gap-4 rounded-md p-6 bg-[#111111] duration-100 border-2 border-[#1D7349]">
+      <div className="flex flex-row md:flex-col gap-4 items-center md:items-start">
+        <div className=" bg-[#1D7349] rounded-md p-2 w-fit">
+          <DumbellIcon />
+        </div>
+        <p className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-start text-[#1D7349] leading-7 font-semibold">
+          {something.title}
+        </p>
+      </div>
+      <p className="normal-case tracking-wider text-md md:text-lg text-gray-300 leading-2 font-medium">
+        {something.description}
+      </p>
+    </div>
+  );
+};
+
 export type KeyFeature = {
   id: number;
   title: string;
   description: string;
+};
+
+export type SomethingType = {
+    id: number;
+    title: string;
+    description: string;
 };
 
 const keyFeatures = [
@@ -75,6 +138,21 @@ const keyFeatures = [
   },
 ];
 
+const somethingArray= [
+    {
+      id: 1,
+      title: "Functional Strength",
+      description:
+        "Develops foundational strength to perform daily tasks with ease and reduce the risk of injury.",
+    },
+    {
+      id: 2,
+      title: "Muscle Definition",
+      description:
+        "Builds lean muscle mass and enhances muscle definition for a more aesthetic physique.",
+    }
+  ];
+
 const description = `Our Strength Training Program is a comprehensive and results-driven
 fitness program designed to help individuals of all fitness levels build
 muscle, increase strength, and improve overall physical performance.
@@ -82,3 +160,5 @@ Whether you're a beginner looking to develop a solid foundation of
 strength or an experienced lifter aiming to break through plateaus, our
 program provides expert guidance and support to help you reach your
 goals`;
+
+const intensity = "High";
