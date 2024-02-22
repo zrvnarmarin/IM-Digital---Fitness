@@ -2,7 +2,12 @@ import React from "react";
 import Image from "next/image";
 import SectionWrapper from "@/app/components/wrappers/SectionWrapper";
 import { DumbellIcon } from "@/public/Icons";
-import TestImage from "../../../../public/HeroTestTest.jpg";
+
+// Objectives images - 2x za svaki program
+import BuildLeanMuscle from "../../../../public/model2.png";
+import ImproveFunctionalStrength from "../../../../public/model3.png";
+
+// Objectives icons - 2x za svaki program
 
 export default function ProgramObjectives() {
   return (
@@ -35,7 +40,7 @@ export const ProgramObjectiveCard = ({
         >
           {/* Background Image */}
           <div className="absolute inset-0">
-            <Image src={TestImage} layout="fill" objectFit="cover" alt="image" />
+            <Image src={BuildLeanMuscle} layout="fill" objectFit="cover" alt="image" />
           </div>
           {/* Blue Overlay */}
           <div className="absolute inset-0 bg-black opacity-95"></div>
@@ -54,7 +59,7 @@ export const ProgramObjectiveCard = ({
             </p>
           </div>
         </li>
-        <Image src={TestImage} width={0} height={0} alt="jkbj" className="w-full h-full object-cover" />
+        <Image src={BuildLeanMuscle} width={0} height={0} alt="jkbj" className="w-full h-full object-cover" />
     </div>
   );
 };

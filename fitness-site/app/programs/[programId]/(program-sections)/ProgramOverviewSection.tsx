@@ -10,9 +10,14 @@ export default function ProgramOverviewSection() {
       <div className="grid grid-cols-2 gap-8">
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-4">
-            <p className="uppercase font-normal text-white text-2xl tracking-wider w-full">
-              Intensity:
-            </p>
+            <div className="flex flex-row items-center gap-4">
+              <div className=" bg-[#1D7349] rounded-md p-2 w-fit">
+                <DumbellIcon />
+              </div>
+              <span className="uppercase font-normal text-white text-2xl tracking-wider w-full">
+                Intensity:
+              </span>
+            </div>
             <div className="w-full border-gray-500 rounded-md bg-slate-700">
               <div
                 className={`h-2 border border-gray-500 rounded-md ${
@@ -24,15 +29,32 @@ export default function ProgramOverviewSection() {
                 }`}
               ></div>
             </div>
-            <p className="uppercase font-normal text-white text-2xl tracking-wider w-full text-end">{`[${intensity}]`}</p>
+            <div className="w-full flex justify-end">
+              <p className="uppercase font-normal text-white text-2xl tracking-wider w-fit text-end bg-[#1D7349] p-2 rounded-md">
+                {`[${intensity}]`}
+              </p>
+            </div>
+          </div>
+          <div className="w-full flex items-center justify-between">
+            <div className="flex flex-row items-center gap-4">
+              <div className=" bg-[#1D7349] rounded-md p-2 w-fit">
+                <DumbellIcon />
+              </div>
+              <span className="uppercase font-normal text-white text-2xl tracking-wider w-full">
+                Duration:
+              </span>
+            </div>
+            <p className="text-end uppercase font-normal text-white text-2xl tracking-wider w-full">
+              [6 weeks]
+            </p>
           </div>
           <p className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
             {description}
           </p>
           <ul className="flex flex-row gap-6">
-            {somethingArray.map(something =>
-                <SomethingCard key={something.id} something={something} />    
-            )}
+            {somethingArray.map((something) => (
+              <SomethingCard key={something.id} something={something} />
+            ))}
           </ul>
         </div>
 
@@ -54,7 +76,6 @@ export default function ProgramOverviewSection() {
           ))}
         </ul>
       </div>
-
     </SectionWrapper>
   );
 }
@@ -81,14 +102,14 @@ export const KeyFeatureCard = ({ keyFeature }: { keyFeature: KeyFeature }) => {
   );
 };
 
-export const SomethingCard = ({ something } : { something: SomethingType}) => {
+export const SomethingCard = ({ something }: { something: SomethingType }) => {
   return (
     <div className="flex flex-col gap-4 rounded-md p-6 bg-[#111111] duration-100 border-2 border-[#1D7349]">
       <div className="flex flex-row md:flex-col gap-4 items-center md:items-start">
         <div className=" bg-[#1D7349] rounded-md p-2 w-fit">
           <DumbellIcon />
         </div>
-        <p className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-start text-[#1D7349] leading-7 font-semibold">
+        <p className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold">
           {something.title}
         </p>
       </div>
@@ -106,9 +127,9 @@ export type KeyFeature = {
 };
 
 export type SomethingType = {
-    id: number;
-    title: string;
-    description: string;
+  id: number;
+  title: string;
+  description: string;
 };
 
 const keyFeatures = [
@@ -138,20 +159,20 @@ const keyFeatures = [
   },
 ];
 
-const somethingArray= [
-    {
-      id: 1,
-      title: "Functional Strength",
-      description:
-        "Develops foundational strength to perform daily tasks with ease and reduce the risk of injury.",
-    },
-    {
-      id: 2,
-      title: "Muscle Definition",
-      description:
-        "Builds lean muscle mass and enhances muscle definition for a more aesthetic physique.",
-    }
-  ];
+const somethingArray = [
+  {
+    id: 1,
+    title: "Something",
+    description:
+      "Develops something strength to perform daily tasks with ease and reduce the risk of injury.",
+  },
+  {
+    id: 2,
+    title: "Something Definition",
+    description:
+      "Builds something mass and enhances muscle definition for a more aesthetic physique.",
+  },
+];
 
 const description = `Our Strength Training Program is a comprehensive and results-driven
 fitness program designed to help individuals of all fitness levels build

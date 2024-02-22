@@ -30,6 +30,33 @@ export const programs = [
     ],
   },
   {
+    title: "Calisthenics",
+    href: "/programs/calisthenics",
+    description:
+      "This high-intensity cardio program is designed to improve cardiovascular fitness and burn calories.",
+    duration: "4 weeks",
+    intensity: "High",
+    icon: HeartIcon,
+    image: YogaImage,
+    benefits: [
+      "Improved cardiovascular health",
+      "Calorie burning",
+      "Enhanced endurance",
+    ],
+    categories: [
+      {
+        name: "High-Intensity Cardio",
+        description:
+          "Designed to elevate heart rate and improve cardiovascular fitness.",
+      },
+      {
+        name: "Aerobic Exercises",
+        description:
+          "Includes activities like running, cycling, and jump rope for sustained endurance.",
+      },
+    ],
+  },
+  {
     title: "Strength Builder",
     href: "/programs/strength-builder",
     description:

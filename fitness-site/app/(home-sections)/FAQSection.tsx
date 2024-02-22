@@ -10,7 +10,7 @@ export default function FAQSection() {
         Frequently Asked Questions
       </h1>
       <QuestionCategories />
-      <Accordion />
+      <Accordion faqArray={homePageFAQ} />
     </SectionWrapper>
   );
 }
@@ -43,7 +43,7 @@ export function QuestionCategories() {
   );
 }
 
-export function Accordion() {
+export function Accordion({ faqArray } : { faqArray: FAQType[]}) {
   const [activeIndex, setActiveIndex] = useState(-1); // Initialize with -1 to have no active accordion initially
 
   const handleShow = (index: number) => {
@@ -52,7 +52,7 @@ export function Accordion() {
 
   return (
     <div className="w-full">
-      {faq.map((accordion, index) => (
+      {faqArray.map((accordion, index) => (
         <Panel
           key={accordion.id}
           index={index}
@@ -81,7 +81,7 @@ function Panel({
   return (
     <div
       onClick={onShow}
-      className="cursor-pointer border-[#1F2125] border-b-2"
+      className="cursor-pointer border-[#1F2125] border-b-2 bg-[#111111] px-6"
     >
       <div className="flex items-center justify-between gap-6 py-4">
         <h3 className="normal-case tracking-wider text-md md:text-md lg:text-lg text-white leading-2 font-normal">
@@ -102,7 +102,13 @@ function Panel({
   );
 }
 
-const faq = [
+export type FAQType = {
+  id: number;
+  title: string;
+  answer: string;
+}
+
+const homePageFAQ = [
   {
     id: 1,
     title: "What is the duration of the Cardio Blast program?",

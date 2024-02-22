@@ -6,6 +6,8 @@ import ProgramOverviewSection from "./(program-sections)/ProgramOverviewSection"
 import ProgramObjectives from "./(program-sections)/ProgramObjectives";
 import ProgramStructure from "./(program-sections)/ProgramStructure";
 import ProgramBenefits from "./(program-sections)/ProgramBenefits";
+import ProgramFAQ from "./(program-sections)/ProgramFAQ";
+import ProgramNutritionalGuidance from "./(program-sections)/ProgramNutritionalGuidance";
 
 export default function Page({ params }: { params: { programId: string } }) {
   // TO DO: fix the bug of pulling info for each individual program
@@ -20,6 +22,8 @@ export default function Page({ params }: { params: { programId: string } }) {
       <ProgramObjectives />
       <ProgramStructure />
       <ProgramBenefits />
+      <ProgramNutritionalGuidance />
+      <ProgramFAQ />
     </main>
   );
 }
