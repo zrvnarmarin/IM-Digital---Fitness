@@ -152,6 +152,10 @@ const navbarLinks = [
     link: "/services",
   },
   {
+    name: "Instructors",
+    link: "/instructors",
+  },
+  {
     name: "About",
     link: "/about",
   },

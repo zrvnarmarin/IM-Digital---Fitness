@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export type Program = {
   title: string;
   href: string;
@@ -26,3 +28,14 @@ export type NavbarLink = {
   link: string;
 };
 
+export type InstructorType = {
+  imageSrc: StaticImageData;
+  id: number;
+  name: string;
+  gender: string;
+  certifications: string[];
+  experience: number;
+  specializations: string[];
+  availability: string[];
+  description: string;
+};

@@ -6,6 +6,7 @@ import FAQSection from './(home-sections)/FAQSection'
 import OurTeam from './(home-sections)/OurTeam'
 import Plans from './(home-sections)/Plans'
 import SignUpForAnEmail from './(home-sections)/SignUpForAnEmail'
+import SuccessStories from './(home-sections)/SuccessStories'
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <WhyJoinUs />
       <Plans />
       <OurTeam />
+      <SuccessStories />
       <FAQSection />
       <SignUpForAnEmail />
     </main>
