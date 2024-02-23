@@ -5,6 +5,7 @@ import Image, { StaticImageData } from "next/image";
 import SectionWrapper from "@/app/components/wrappers/SectionWrapper";
 import { InstructorType } from "@/app/types";
 import { instructors } from "@/app/data/instructors";
+import { InstagramIcon } from "@/public/Icons";
 
 export function InstructorCardsSection() {
   return (
@@ -69,13 +70,18 @@ export const InstructorCard = ({
               ))}
             </ul>
           </div>
-          <div className="flex flex-row gap-4 items-center">
-            <button className="border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
-              Check Availability
-            </button>
-            <button className="border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
-              Get In Contact
-            </button>
+          <div className="flex flex-row gap-4 items-center justify-between">
+            <div className="rounded-full cursor-pointer border-2 border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200">
+              <InstagramIcon />
+            </div>
+            <div className="flex flex-row items-center gap-4">
+              <button className="border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
+                Check Availability
+              </button>
+              <button className="border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
+                Get In Contact
+              </button>
+            </div>
           </div>
         </div>
       </div>
