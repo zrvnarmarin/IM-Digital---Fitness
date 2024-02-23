@@ -6,6 +6,10 @@ import Link from "next/link";
 import SectionWrapper from "../components/wrappers/SectionWrapper";
 import TestImage from "../../public/AboutUsHeroImage.avif";
 import ShareIcon from "../../public/share-arrow-svgrepo-com.png";
+import {
+  SuccessStoryCard,
+} from "../(home-sections)/SuccessStories";
+import { testimonials } from "../data";
 
 export default function Page() {
   return (
@@ -16,6 +20,8 @@ export default function Page() {
       <FoundersSection />
       <LongParagraphsSection />
       <MissionAndValuesSection />
+      <TestimonialsSection />
+      <SeeProgramsSection />
     </main>
   );
 }
@@ -289,12 +295,12 @@ export const LongParagraphsSection = () => {
 export const MissionAndValuesSection = () => {
   return (
     <SectionWrapper>
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-12 lg:px-16">
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-12 ">
         {stats.map((stat) => (
           <StatCard key={stat.id} stat={stat} />
         ))}
       </ul>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-32 lg:px-16 pt-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-32  pt-16">
         <div className="flex flex-col gap-4">
           <p className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold">
             Our Core Values
@@ -329,6 +335,26 @@ export const MissionAndValuesSection = () => {
   );
 };
 
+export const TestimonialsSection = () => {
+  return (
+    <SectionWrapper>
+      <h1 className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold">
+        See What Other Think Of Our Services
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 md:pt-8 pb-24">
+        {testimonials.slice(0, 2).map((testimonial) => (
+          <SuccessStoryCard
+            key={testimonial.id}
+            name={testimonial.name}
+            testimonial={testimonial.testimonial}
+            date={testimonial.date}
+          />
+        ))}
+      </div>
+    </SectionWrapper>
+  );
+};
+
 export type StatType = {
   id: number;
   statValue: number;
@@ -338,22 +364,22 @@ export type StatType = {
 export const stats = [
   {
     id: 1,
-    statValue: '17.000+',
+    statValue: "17.000+",
     statDescription: "Gyms Open In United States",
   },
   {
     id: 2,
-    statValue: '85%',
+    statValue: "85%",
     statDescription: "Gyms Open In United States",
   },
   {
     id: 3,
-    statValue: '375+',
+    statValue: "375+",
     statDescription: "Gyms Open In United States",
   },
 ];
 
-const StatCard = ({ stat } : { stat: StatType }) => {
+const StatCard = ({ stat }: { stat: StatType }) => {
   return (
     <li className="col-span-1 md:col-span-1 lg:col-span-1">
       <div className="relative w-full h-64 overflow-hidden rounded-lg shadow-lg">
@@ -364,7 +390,7 @@ const StatCard = ({ stat } : { stat: StatType }) => {
           className="absolute top-0 left-0 w-full h-full opacity-50"
           alt=""
         />
-        <div className="absolute inset-0 bg-[#1D7349] opacity-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1D7349] to-[#161616] opacity-20"></div>
         <div className="absolute inset-0 flex flex-col gap-4 items-center justify-center">
           <p className="text-4xl md:text-5xl lg:text-6xl tracking-normal text-start text-white leading-7 font-semibold">
             {stat.statValue}
@@ -375,6 +401,27 @@ const StatCard = ({ stat } : { stat: StatType }) => {
         </div>
       </div>
     </li>
+  );
+};
+
+// ovo uzor - https://www.insidercx.com/about-us
+export const SeeProgramsSection = () => {
+  return (
+    <SectionWrapper>
+      <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-6 py-16 px-24 rounded-md bg-gradient-to-r from-[#1D7349] to-[#161616]">
+        <div className="flex flex-col items-center gap-6">
+          <h2 className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold">
+            Check our programs — you won`t regret that decision for sure!
+          </h2>
+          <p className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
+          Analyze patient feedback. Optimize workflows to deliver a superb patient experience. Stop your never-ending battle with patient retention.
+          </p>
+        </div>
+        <button className="w-fit border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
+          See Programs
+        </button>
+      </div>
+    </SectionWrapper>
   );
 };
 
