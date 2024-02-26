@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "../(home-sections)/Navbar";
 import Sidebar from "./Sidebar";
 
@@ -9,6 +9,12 @@ export default function NavigationWrapper() {
 
   const closeSidebar = () => setIsSideBarOpen(false);
   const openSidebar = () => setIsSideBarOpen(true);
+
+  useEffect(() => {
+    
+    
+
+  })
 
   return (
     <>

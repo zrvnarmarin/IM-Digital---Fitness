@@ -11,6 +11,7 @@ export const instructors: InstructorType[] = [
     {
       id: 1,
       name: "John Doe",
+      href: 'john-doe',
       imageSrc: InstructorJohnDoe,
       gender: "Male",
       certifications: ["PTC", "GEIC"],
@@ -22,6 +23,7 @@ export const instructors: InstructorType[] = [
     {
       id: 2,
       name: "Jane Smith",
+      href: 'jane-smith',
       imageSrc: InstructorJaneSmith,
       gender: "Female",
       certifications: ["CPT", "Yoga Instructor"],
@@ -34,6 +36,7 @@ export const instructors: InstructorType[] = [
     {
       id: 3,
       name: "Michael Johnson",
+      href: 'michael-johnson',
       imageSrc: InstructorMichaelJohnson,
       gender: "Male",
       certifications: ["CPT", "CrossFit Trainer"],
@@ -46,6 +49,7 @@ export const instructors: InstructorType[] = [
     {
       id: 4,
       name: "Emily Brown",
+      href: 'emily-brown',
       imageSrc: InstructorEmilyBrown,
       gender: "Female",
       certifications: ["CPT", "Zumba Instructor"],
@@ -58,6 +62,7 @@ export const instructors: InstructorType[] = [
     {
       id: 5,
       name: "Christopher Lee",
+      href: 'christopher-lee',
       imageSrc: InstructorChristopherLee,
       gender: "Male",
       certifications: ["CPT", "Boxing Coach"],
@@ -70,6 +75,7 @@ export const instructors: InstructorType[] = [
     {
       id: 6,
       name: "Sophia Nguyen",
+      href: 'sophia-nguyen',
       imageSrc: InstructorSophiaNguyen,
       gender: "Female",
       certifications: ["CPT", "Pilates Instructor"],
@@ -81,6 +87,7 @@ export const instructors: InstructorType[] = [
     },
     {
       id: 7,
+      href: 'david-wilson',
       name: "David Wilson",
       imageSrc: InstructorDavidWilson,
       gender: "Male",

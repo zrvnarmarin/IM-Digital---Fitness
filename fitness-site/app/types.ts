@@ -31,6 +31,7 @@ export type NavbarLink = {
 export type InstructorType = {
   imageSrc: StaticImageData;
   id: number;
+  href: string;
   name: string;
   gender: string;
   certifications: string[];

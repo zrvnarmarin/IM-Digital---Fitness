@@ -75,9 +75,9 @@ export const InstructorCard = ({
               <InstagramIcon />
             </div>
             <div className="flex flex-row items-center gap-4">
-              <button className="border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
+              <Link href={`/instructors/${instructor.href}/availability`} className="border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
                 Check Availability
-              </button>
+              </Link>
               <button className="border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
                 Get In Contact
               </button>
