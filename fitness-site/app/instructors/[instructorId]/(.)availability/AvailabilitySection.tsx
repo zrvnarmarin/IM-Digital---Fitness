@@ -14,7 +14,7 @@ export default function AvailabilitySection({ instructor }: { instructor: Instru
     const availableTimesByDate = instructor?.availability.filter((availableTime) => availableTime.date === availabilityDate);
 
     return (
-        <div className='flex flex-col items-start gap-2 bg-red-700'>
+        <div className='flex flex-col items-start gap-6'>
             <div className='flex flex-row gap-2'>
                 {instructor?.availability.map((availableTime, key) =>
                     <AvailabilityChangeButton
@@ -25,7 +25,7 @@ export default function AvailabilitySection({ instructor }: { instructor: Instru
                     />
                 )}
             </div>
-            <ul className='w-full flex flex-col items-center gap-4 bg-blue-300'>
+            <ul className='w-full flex flex-col items-center gap-6'>
                 {instructor && availableTimesByDate?.map((availableTime, key) =>
                     <AvailabilitySlot
                         key={key} 
@@ -45,7 +45,8 @@ export const AvailabilityChangeButton = ({ availabilityDate, selectedDate, setAv
 
     return (
         <button
-            className={`border-2 border-white rounded p-8 ${isButtonSelected ? 'bg-blue-500' : ''}`}
+            className={`border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white 
+                ${isButtonSelected ? 'bg-[#1D7349] test-white' : ''}`}
             onClick={() => setAvailabilityDate(availabilityDate)}
         >
             {availabilityDate}
