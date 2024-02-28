@@ -2,8 +2,6 @@ import Modal from '@/app/components/Modal'
 import { instructors } from '@/app/data/instructors'
 import React from 'react'
 import Image from 'next/image'
-import { InstructorType } from '@/app/types'
-import { AvailabilitySlot } from './AvailabilitySlot'
 import AvailabilitySection from './AvailabilitySection'
 
 export default function InstructorAvailability({ params }: { params: { instructorId: string } }) {

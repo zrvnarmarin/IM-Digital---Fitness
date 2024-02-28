@@ -1,6 +1,6 @@
 'use client'
 
-import { InstructorType } from "@/app/types"; // Assuming you have a type for availability
+import { InstructorType } from "@/app/types";
 import React, { useState } from "react";
 import { AvailabilitySlot } from './AvailabilitySlot';
 
@@ -27,13 +27,16 @@ export default function AvailabilitySection({ instructor }: { instructor: Instru
             </div>
             <ul className='w-full flex flex-col items-center gap-6'>
                 {instructor && availableTimesByDate?.map((availableTime, key) =>
-                    <AvailabilitySlot
-                        key={key} 
-                        availabilityDate={availabilityDate}
-                        instructor={instructor} 
-                        isFullyBooked 
-                        availableTime={availableTime}
-                    />
+                    availableTime.training.map(training => ( 
+                        <AvailabilitySlot
+                            training={training}
+                            key={key} 
+                            availabilityDate={availabilityDate}
+                            instructor={instructor} 
+                            isFullyBooked 
+                            availableTime={availableTime}
+                        />
+                    )) 
                 )}
             </ul>
         </div>

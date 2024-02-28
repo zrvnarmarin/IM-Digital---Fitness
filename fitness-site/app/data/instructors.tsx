@@ -79,7 +79,7 @@ export const instructors: InstructorType[] = [
           ]
         },
         {
-          date: 'February 27, Monday',
+          date: 'February 28, Monday',
           training: [
             {
               id: 1,
@@ -182,7 +182,7 @@ export const instructors: InstructorType[] = [
           ]
         },
         {
-          date: 'February 27, Monday',
+          date: 'February 28, Monday',
           training: [
             {
               id: 1,
@@ -286,7 +286,7 @@ export const instructors: InstructorType[] = [
           ]
         },
         {
-          date: 'February 27, Monday',
+          date: 'February 28, Monday',
           training: [
             {
               id: 1,
@@ -390,7 +390,7 @@ export const instructors: InstructorType[] = [
           ]
         },
         {
-          date: 'February 27, Monday',
+          date: 'February 28, Monday',
           training: [
             {
               id: 1,
@@ -494,7 +494,7 @@ export const instructors: InstructorType[] = [
           ]
         },
         {
-          date: 'February 27, Monday',
+          date: 'February 28, Monday',
           training: [
             {
               id: 1,
@@ -598,7 +598,7 @@ export const instructors: InstructorType[] = [
           ]
         },
         {
-          date: 'February 27, Monday',
+          date: 'February 28, Monday',
           training: [
             {
               id: 1,
