@@ -24,14 +24,8 @@ export default function AvailabilitySection({ instructor }: { instructor: Instru
                         setAvailabilityDate={availabilityDateHandler}
                     />
                 )}
-                <button className="border-2 border-white rounded p-8">sdkfmbofg</button>
-                <button className="border-2 border-white rounded p-8">sdkfmbofg</button>
-                <button className="border-2 border-white rounded p-8">sdkfmbofg</button>
-                <button className="border-2 border-white rounded p-8">sdkfmbofg</button>
-                <button className="border-2 border-white rounded p-8">sdkfmbofg</button>
-                <button className="border-2 border-white rounded p-8">sdkfmbofg</button>
             </div>
-            <div>
+            <ul className='w-full flex flex-col items-center gap-4 bg-blue-300'>
                 {instructor && availableTimesByDate?.map((availableTime, key) =>
                     <AvailabilitySlot
                         key={key} 
@@ -41,7 +35,7 @@ export default function AvailabilitySection({ instructor }: { instructor: Instru
                         availableTime={availableTime}
                     />
                 )}
-            </div>
+            </ul>
         </div>
     );
 }
