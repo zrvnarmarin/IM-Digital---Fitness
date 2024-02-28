@@ -37,6 +37,13 @@ export type InstructorType = {
   certifications: string[];
   experience: number;
   specializations: string[];
-  availability: string[];
+  availability: {
+    date: string;
+    training: {
+      id: number;
+      hours: string;
+      trainingType: string;
+    }[];
+  }[];
   description: string;
 };
