@@ -47,3 +47,15 @@ export type InstructorType = {
   }[];
   description: string;
 };
+
+export type LocationType = {
+  href: string;
+  id: number;
+  locationName: string;
+  locationCity: string;
+  address: string;
+  workingHours: string[];
+  email: string;
+  imageCardSrc: StaticImageData;
+  imagesSrc: StaticImageData[]
+}

@@ -12,7 +12,7 @@ export default function InstructorAvailability({ params }: { params: { instructo
       <div className='flex flex-col gap-6 bg-[#111111] px-12 py-4 overflow-auto'>
         <div className='flex flex-col md:flex-row gap-2 items-center'>
           <Image src={instructor?.imageSrc} alt='instructor_image' height={150} width={150} />
-          <div className='flex flex-col'>
+          <div className='flex flex-col items-center gap-4'>
             <p className='w-full text-xl md:text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold'>
               {instructor?.name}
             </p>
