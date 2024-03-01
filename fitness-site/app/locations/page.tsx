@@ -11,7 +11,7 @@ export default function Page() {
     <main className="flex min-h-screen flex-col items-center lg:py-4 bg-[#181a1f]">
       <HeroSection />
       <AboutLocations />
-      <Locations />
+      <LocationsSection />
     </main>
   )
 }
@@ -30,77 +30,66 @@ export function HeroSection() {
 }
 
 export function AboutLocations() {
-    return (
-        <SectionWrapper>
-            <h1 className='uppercase font-normal text-white text-2xl tracking-wider w-full'>Nesto nesto nesto nesto</h1>
-            <p className='normal-case tracking-wider text-md md:text-lg text-gray-300 leading-2 font-medium'>
-                As the largest Croatian chain of fitness centers, we are always looking for new locations to expand in order to
-                provide our members with even greater availability throughout Croatia.
-                Gyms4you is a European concept of fitness centers with an excellent ratio 
-                of quality service and price. We are open 24 hours a day, 365 days a year, and with one membership card, 
-                our members can train in any of our gyms.
-            </p>
-        </SectionWrapper>
-    )
+  return (
+    <SectionWrapper>
+      <h1 className='uppercase font-normal text-white text-2xl tracking-wider w-full'>Nesto nesto nesto nesto</h1>
+      <p className='normal-case tracking-wider text-md md:text-lg text-gray-300 leading-2 font-medium'>
+          As the largest Croatian chain of fitness centers, we are always looking for new locations to expand in order to
+          provide our members with even greater availability throughout Croatia.
+          Gyms4you is a European concept of fitness centers with an excellent ratio 
+          of quality service and price. We are open 24 hours a day, 365 days a year, and with one membership card, 
+          our members can train in any of our gyms.
+      </p>
+    </SectionWrapper>
+  )
 }
 
-export function Locations() {
-    return (
-        <SectionWrapper>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 rounded-lg gap-6">
-            {locations.map((location) => (
-                <LocationCard 
-                    key={location.id} 
-                    location={location}
-                />
-            ))}
+export function LocationsSection() {
+  return (
+    <SectionWrapper>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 rounded-lg gap-6">
+        {locations.map((location) => (
+          <LocationCard 
+              key={location.id} 
+              location={location}
+          />
+        ))}
       </div>
-        </SectionWrapper>
-    )
+    </SectionWrapper>
+  )
 }
 
-export const LocationCard = ({ location } : { location: LocationType }) => {
-    return (
-      <Link href={`/locations/${location.href}`}>
-        <div className="relative group rounded overflow-hidden cursor-pointer shadow-md">
-          {/* Background Image */}
-          <div className="group-hover:opacity-75 transition duration-300 ease-in-out">
-            <Image
-              className="object-cover w-full h-54 md:h-72 lg:h-80 xl:h-96 transform group-hover:scale-105 duration-300"
-              src={location.imageCardSrc}
-              alt="Card Background"
-              width={0}
-              height={0}
-            />
-          </div>
-  
-          {/* On hover image */}
-          <div className="absolute top-0 bottom-0 right-0 p-4 transition duration-300 ease-in-out bg-black/10 text-white opacity-0 group-hover:opacity-100">
-            <div className="flex flex-col gap-8 pt-4">
-              <span>
-                <Image src={ShareIcon} width={20} height={20} alt="share_icon" />
-              </span>
-              <span className="font-black text-sm md:text-md lg:text-lg xl:text-xl text-gray-100 hover:text:[#1D7349] duration-100">
-                fb
-              </span>
-              <span className="font-black text-sm md:text-md lg:text-lg xl:text-xl text-gray-100 hover:text:[#1D7349] duration-100">
-                li
-              </span>
-              <span className="font-black text-sm md:text-md lg:text-lg xl:text-xl text-gray-100 hover:text:[#1D7349] duration-100">
-                in
-              </span>
-            </div>
+export const LocationCard = ({ location }: { location: LocationType }) => {
+  return (
+    <Link href={`/locations/${location.href}`}>
+      <div className="relative group rounded overflow-hidden cursor-pointer shadow-md">
+        {/* Background Image */}
+        <div className="group-hover:opacity-75 transition duration-300 ease-in-out">
+          <Image
+            className="object-cover w-full h-54 md:h-72 lg:h-80 xl:h-96 transform group-hover:scale-105 duration-300"
+            src={location.locationCardImageSrc}
+            alt="Card Background"
+            width={0}
+            height={0}
+          />
+        </div>
+
+        {/* On hover image */}
+        <div className="absolute inset-0 flex flex-col justify-center items-center p-4 transition duration-300 ease-in-out bg-black/20 text-white opacity-0 group-hover:opacity-100">
+          <div className="flex flex-col items-center gap-8">
+            <span className="font-black capitalize text-sm md:text-md lg:text-lg xl:text-xl text-gray-100 duration-100">
+              {location.locationName}
+            </span>
+            <span className="font-black text-sm md:text-md lg:text-lg xl:text-xl text-gray-100 duration-100">
+              {location.locationCity}
+            </span>
+            <button className="w-fit border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
+             Gallery
+            </button>
           </div>
         </div>
-  
-        <div className="flex flex-col items-start gap-2">
-          <p className="font-semibold text-gray-100 text-lg md:text-xl lg:text-2xl tracking-wide pt-4">
-            {location.locationName}
-          </p>
-          <p className="normal-case tracking-wider text-sm md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
-            {location.locationCity}
-          </p>
-        </div>
-      </Link>
-    );
-  };
+
+      </div>
+    </Link>
+  );
+};

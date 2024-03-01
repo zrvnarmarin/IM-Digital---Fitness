@@ -56,6 +56,6 @@ export type LocationType = {
   address: string;
   workingHours: string[];
   email: string;
-  imageCardSrc: StaticImageData;
-  imagesSrc: StaticImageData[]
+  locationCardImageSrc: StaticImageData;
+  imagesSrc: StaticImageData[];
 }

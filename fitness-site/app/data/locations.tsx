@@ -15,8 +15,14 @@ export const locations: LocationType[] = [
             '17:00 - 23:00'
         ],
         email: 'gymName@aeonstrength.com',
-        imageCardSrc: TestImage,
+        locationCardImageSrc: TestImage,
         imagesSrc: [
+            TestImage,
+            TestImageTwo,
+            TestImageThree,
+            TestImage,
+            TestImageTwo,
+            TestImageThree,
             TestImage,
             TestImageTwo,
             TestImageThree
@@ -33,8 +39,14 @@ export const locations: LocationType[] = [
             'Closed on Sundays'
         ],
         email: 'examplegym@example.com',
-        imageCardSrc: TestImage,
+        locationCardImageSrc: TestImage,
         imagesSrc: [
+            TestImage,
+            TestImageTwo,
+            TestImageThree,
+            TestImage,
+            TestImageTwo,
+            TestImageThree,
             TestImage,
             TestImageTwo,
             TestImageThree
@@ -50,9 +62,15 @@ export const locations: LocationType[] = [
             '10:00 - 22:00',
             'Closed on Saturdays'
         ],
-        imageCardSrc: TestImage,
+        locationCardImageSrc: TestImage,
         email: 'fitnesscenterxyz@example.com',
         imagesSrc: [
+            TestImage,
+            TestImageTwo,
+            TestImageThree,
+            TestImage,
+            TestImageTwo,
+            TestImageThree,
             TestImage,
             TestImageTwo,
             TestImageThree
@@ -69,8 +87,14 @@ export const locations: LocationType[] = [
             'Closed on Mondays'
         ],
         email: 'gymabc@example.com',
-        imageCardSrc: TestImage,
+        locationCardImageSrc: TestImage,
         imagesSrc: [
+            TestImage,
+            TestImageTwo,
+            TestImageThree,
+            TestImage,
+            TestImageTwo,
+            TestImageThree,
             TestImage,
             TestImageTwo,
             TestImageThree
