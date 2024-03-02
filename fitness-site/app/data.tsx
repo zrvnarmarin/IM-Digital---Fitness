@@ -84,7 +84,7 @@ export const programs = [
     ],
   },
   {
-    title: "CrossFit Challenge",
+    title: "CrossFit ",
     href: "/programs/crossfit-challenge",
     description:
       "Engage in the ultimate fitness adventure with our CrossFit Challenge program.",

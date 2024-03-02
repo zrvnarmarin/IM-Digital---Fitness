@@ -6,7 +6,7 @@ import NavigationWrapper from './components/NavigationWrapper'
 
 const inter = Inter({ subsets: ['latin'] })
 const montserrat = Montserrat({ subsets: ['latin']})
-const bebasNeue = Saira({
+const saira = Saira({
   subsets: ['latin'],
   weight: '400'
 })
@@ -24,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${bebasNeue.className} m-0`}>
+      <body className={`${montserrat.className} m-0`}>
         <NavigationWrapper />
         {children}
         <Footer />
