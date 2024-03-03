@@ -11,13 +11,14 @@ export default function TheClassYouWillGetThereSection() {
         The Class You Will Get There
       </h1>
 
-      <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className=" grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="text-white flex items-center justify-center">
-          <div className="relative flex items-center justify-center group h-full w-full rounded-xl  cursor-pointer">
+          <div className="relative flex items-center justify-center group h-full w-full rounded-xl cursor-pointer">
             <Image
               priority
               src={ExampleImage}
               alt="alt"
+              fill={true}
               // fill={true} slika s ovim propertijem ocito zauzima mjesta koliko mu flexbox sirina i njegova visina dopustaju
               className="object-cover rounded-md"
             />
@@ -42,7 +43,7 @@ export const SecondHomeSectionCard = ({
 }) => {
   return (
     <li
-      className="group flex flex-row gap-4 rounded-lg p-6 bg-gradient-to-r from-[#101010] hover:[#101010] hover:to-[#292929] to-[#161616] border border-[#292929] duration-900 "
+      className="group flex flex-row gap-4 rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#161616] hover:from-[#101010] hover:to-[#292929] border border-[#292929] duration-900 "
     >
       <div className="flex gap-4 items-center">
         <div className="border border-[#31C57D] group-hover:border-white group-hover:bg-white rounded-md p-4 md:p-6 lg:p-10">
@@ -52,11 +53,11 @@ export const SecondHomeSectionCard = ({
       <div className="flex flex-col gap-2">
         <div className="flex flex-row md:flex-col items-center md:items-start">
           {/* <div className=" bg-[#1D7349] rounded-xl p-2 w-fit">{icon()}</div> */}
-          <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-[#31C57D] leading-7 font-semibold">
+          <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-[#31C57D] group-hover:text-[#C57D31] leading-7 font-semibold">
             {card.mainTitle}
           </p>
         </div>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-medium">
+        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
           {card.description}
         </p>
       </div>
@@ -75,6 +76,7 @@ const secondSectionCardsData = [
     id: 1,
     icon: CardioIcon,
     mainTitle: "Bodybuilding training",
+    color: '#31C57D',
     description:
       "This is a placeholder text and where it will be something eventually written his.",
   },
@@ -82,12 +84,14 @@ const secondSectionCardsData = [
     id: 2,
     icon: CardioIcon,
     mainTitle: "Cardiovascular training",
+    color: '#C57D31',
     description:
       "This is a placeholder text and where it will be something eventually written his.",
   },
   {
     id: 3,
     icon: CardioIcon,
+    color: '#7D31C5',
     mainTitle: "CrossFit training",
     description:
       "This is a placeholder text and where it will be something eventually written his.",

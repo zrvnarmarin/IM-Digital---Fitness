@@ -7,11 +7,11 @@ export default function Plans() {
   return (
     <SectionWrapper>
       <div className="flex items-center justify-between">
-        <h1 className="uppercase font-normal text-white text-2xl tracking-wider mr-4">
+        <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
           Plans
         </h1>
         <button className="border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
-          See All Programs
+          See All Plans
         </button>
       </div>
       <div>
@@ -27,7 +27,7 @@ export default function Plans() {
 
 export function PlanCard({ plan }: { plan: PlanCardType }) {
   return (
-    <div className="relative flex flex-col gap-2 p-8 py-10 bg-[#1F2125] rounded-md">
+    <div className="relative flex flex-col gap-2 p-8 py-10 duration-900 rounded-lg">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -35,30 +35,31 @@ export function PlanCard({ plan }: { plan: PlanCardType }) {
           layout="fill"
           objectFit="cover"
           alt="image"
+          className="rounded-lg"
         />
       </div>
       
       {/* Blue Overlay */}
-      <div className="absolute inset-0 bg-black opacity-95"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#101010] hover:from-[#101010] hover:to-[#292929] to-[#161616] border border-[#292929] opacity-95 rounded-lg"></div>
       
       {/* Text Content */}
       <div className="relative z-10">
         <div className="flex items-center">
-          <p className="font-semibold text-white text-lg md:text-xl lg:text-2xl tracking-wide">
+          <p className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-center text-white leading-7 font-bold">
             {plan.title}
           </p>
         </div>
-        <p className="w-full pt-4 text-xl md:text-xl lg:text-6xl tracking-normal text-start text-[#1D7349] leading-7 font-black">
+        <p className="w-full pt-4 text-xl md:text-xl lg:text-5xl tracking-wider underline underline-offset-8 decoration-2 decoration-solid text-center text-[#31C57D] leading-7 font-semibold">
           ${plan.price}
         </p>
-        <p className="font-semibold text-gray-100 text-lg md:text-xl tracking-wide uppercase">
+        <p className="w-full text-xl pt-2 md:text-md lg:text-lg tracking-normal text-center text-white leading-7 font-semibold uppercase">
           {plan.description}
         </p>
-        <ul className="flex flex-col gap-3 pt-6">
+        <ul className="flex flex-col gap-1 items-center pt-6">
           {plan.perks.map((perk, index) => (
             <li
               key={index} // Use index as the key, since plan.id might not be unique
-              className="font-semibold text-gray-100 text-lg md:text-xl tracking-wide"
+              className="fnormal-case text-md md:text-md text-gray-300 leading-2 font-normal"
             >
               &#x2022; {perk}
             </li>
@@ -85,21 +86,21 @@ export type PlanCardType = {
 const plans = [
   {
     id: 1,
-    title: "Professional Trainer",
+    title: "Standard Package",
     description: "Single Class",
     price: "49.77",
     perks: ["Perk One", "Perk Two", "Perk Three", "Perk Four"],
   },
   {
     id: 3,
-    title: "Professional Trainer",
+    title: "Advanced Package",
     description: "Single Class",
     price: "99.77",
     perks: ["Perk One", "Perk Two", "Perk Three", "Perk Four"],
   },
   {
     id: 2,
-    title: "Professional Trainer",
+    title: "Premium Package",
     description: "Single class",
     price: "199.77",
     perks: ["Perk One", "Perk Two", "Perk Three", "Perk Four"],

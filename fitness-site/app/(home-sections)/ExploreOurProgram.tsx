@@ -50,7 +50,7 @@ export function ProgramCard({
           {title}
         </p>
       </div>
-      <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-medium">
+      <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
         {description}
       </p>
     </div>
@@ -60,5 +60,6 @@ export function ProgramCard({
 // main zelene boje:
 // stara - #1D7349
 // nova zelena (koristim ju na ikonama na prvoj sekciji home stranice) - #279C63
-// nova zelena za NASLOVE - #31C57D
+// nova zelena za NASLOVE - #31C57D  -- komplementarna boja: #C57D31
+// stavi ovu zelenu boju za naslove u canvin color circle i generiraj tetradic boje za ostale nijanse - #31C57D
 // linear gradient za kartice i border te kartice - bg-gradient-to-r from-[#101010] to-[#151515] border border-[#292929] 

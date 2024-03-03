@@ -9,7 +9,7 @@ export default function OurTeam() {
   return (
     <SectionWrapper>
       <div className="flex items-center justify-between">
-        <h1 className="uppercase font-normal text-white text-2xl tracking-wider mr-4">
+        <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
           Our Team
         </h1>
         <button className="border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
@@ -23,30 +23,6 @@ export default function OurTeam() {
         ))}
       </div>
     </SectionWrapper>
-  );
-}
-
-export function ReasonToJoinCard({
-  title,
-  description,
-  icon,
-}: {
-  title: string;
-  description: string;
-  icon: () => JSX.Element;
-}) {
-  return (
-    <div className="flex flex-col gap-4 p-6 bg-[#1F2125]">
-      <div className="flex gap-4 items-center">
-        <div className="bg-[#1D7349] rounded-xl p-2 w-fit">{icon()}</div>
-        <p className="text-xl tracking-wider md:text-lg lg:text-xl text-start text-white leading-7 font-medium">
-          {title}
-        </p>
-      </div>
-      <p className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
-        {description}
-      </p>
-    </div>
   );
 }
 
@@ -96,17 +72,17 @@ export const TrainerCard = ({ trainer }: { trainer: TrainerType }) => {
 
         {/* On hover image */}
         <div className="absolute top-0 bottom-0 right-0 p-4 transition duration-300 ease-in-out bg-black/10 text-white opacity-0 group-hover:opacity-100">
-          <div className="flex flex-col gap-8 pt-4">
+          <div className="flex flex-col gap-4 pt-4">
             <span>
               <Image src={ShareIcon} width={20} height={20} alt="share_icon" />
             </span>
-            <span className="font-black text-sm md:text-md lg:text-lg xl:text-xl text-gray-100 hover:text:[#1D7349] duration-100">
+            <span className="w-full pt-4 text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
               fb
             </span>
-            <span className="font-black text-sm md:text-md lg:text-lg xl:text-xl text-gray-100 hover:text:[#1D7349] duration-100">
+            <span className="w-full pt-4 text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
               li
             </span>
-            <span className="font-black text-sm md:text-md lg:text-lg xl:text-xl text-gray-100 hover:text:[#1D7349] duration-100">
+            <span className="w-full pt-4 text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
               in
             </span>
           </div>
@@ -114,12 +90,13 @@ export const TrainerCard = ({ trainer }: { trainer: TrainerType }) => {
       </div>
 
       <div className="flex flex-col items-start gap-2">
-        <p className="font-semibold text-gray-100 text-lg md:text-xl lg:text-2xl tracking-wide pt-4">
+        <p className="w-full pt-4 text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
           {trainer.name}
         </p>
-        <p className="normal-case tracking-wider text-sm md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
+        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
           {trainer.description}
         </p>
+        {/* Ovdje staviti strelicu desno, pogledaj dizajn */}
       </div>
     </Link>
   );

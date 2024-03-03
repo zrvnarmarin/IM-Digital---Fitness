@@ -6,7 +6,7 @@ import SectionWrapper from "../components/wrappers/SectionWrapper";
 export default function FAQSection() {
   return (
     <SectionWrapper>
-      <h1 className="uppercase font-normal text-white text-2xl tracking-wider">
+      <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
         Frequently Asked Questions
       </h1>
       <QuestionCategories />
@@ -29,7 +29,7 @@ export function QuestionCategories() {
       {questionCategories.map((questionCategory) => (
         <div
           key={questionCategory.id}
-          className={`border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white ${
+          className={`border-2 border-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer normal-case text-md md:text-md text-gray-300 leading-2 font-normal ${
             activeCategory === questionCategory.id
               ? "bg-[#1F2125] text-white"
               : ""
@@ -81,20 +81,20 @@ function Panel({
   return (
     <div
       onClick={onShow}
-      className="cursor-pointer border-[#1F2125] border-b-2 bg-[#111111] px-6"
+      className="cursor-pointer bg-gradient-to-r from-[#101010] to-[#161616] border-b border-[#292929] px-6"
     >
-      <div className="flex items-center justify-between gap-6 py-4">
-        <h3 className="normal-case tracking-wider text-md md:text-md lg:text-lg text-white leading-2 font-normal">
+      <div className="flex items-center justify-between gap-6 py-2">
+        <h3 className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
           {title}
         </h3>
         {isActive ? (
-          <p className="text-4xl font-normal text-[#1D7349]">-</p>
+          <p className="text-4xl font-normal text-[#31C57D]">-</p>
         ) : (
-          <p className="text-4xl font-normal text-[#1D7349]">+</p>
+          <p className="text-4xl font-normal text-[#31C57D]">+</p>
         )}
       </div>
       {isActive ? (
-        <p className="pl-2 normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
+        <p className="pl-2 pb-4 normal-case text-md md:text-sm text-gray-300 leading-2 font-normal">
           {answer}
         </p>
       ) : null}

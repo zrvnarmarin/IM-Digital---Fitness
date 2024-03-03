@@ -9,10 +9,10 @@ export default function SuccessStories() {
   return (
     <SectionWrapper>
       <div className="flex items-center justify-between">
-        <h1 className="uppercase font-normal text-white text-2xl tracking-wider mr-4">
+        <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
           Success Stories
         </h1>
-        <button className="border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
+        <button className="border-2 border-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
           Read More Stories
         </button>
       </div>
@@ -27,9 +27,9 @@ export default function SuccessStories() {
         ))}
       </div>
       <div className="flex flex-row justify-center gap-4">
-        <button className="w-8 h-2 rounded-md bg-[#1D7349]" />
-        <button className="w-8 h-2 rounded-md bg-[#1D7349]" />
-        <button className="w-8 h-2 rounded-md bg-[#1D7349]" />
+        <button className="w-8 h-2 rounded-md bg-[#31C57D]" />
+        <button className="w-8 h-2 rounded-md bg-[#31C57D]" />
+        <button className="w-8 h-2 rounded-md bg-[#31C57D]" />
       </div>
     </SectionWrapper>
   );
@@ -45,12 +45,12 @@ export function SuccessStoryCard({
   date: string;
 }) {
   return (
-    <div className="flex flex-col gap-8 p-8 border-l-2 border-[#1D7349]">
+    <div className="flex flex-col gap-8 p-8 bg-gradient-to-r from-[#101010] to-[#292929]">
       <div className="flex justify-start">
         <QuotationMark />
       </div>
       <div className="flex flex-row gap-2">
-        <p className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
+        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
           {testimonial}
         </p>
       </div>
@@ -64,7 +64,7 @@ export function SuccessStoryCard({
             className="w-full h-full object-cover rounded-full"
           />
         </div>
-        <p className="font-semibold text-gray-100 text-lg md:text-xl lg:text-2xl tracking-wide">
+        <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
           {name}
         </p>
       </div>
