@@ -45,7 +45,7 @@ export function SuccessStoryCard({
   date: string;
 }) {
   return (
-    <div className="flex flex-col gap-8 p-8 bg-gradient-to-r from-[#101010] to-[#292929]">
+    <div className="flex flex-col gap-8 p-8 bg-gradient-to-r from-[#101010] to-[#292929] rounded-lg">
       <div className="flex justify-start">
         <QuotationMark />
       </div>

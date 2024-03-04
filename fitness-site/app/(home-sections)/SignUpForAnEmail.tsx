@@ -16,24 +16,29 @@ const SignUpForAnEmail = () => {
       </div>
       
       {/* Blue Overlay */}
-      <div className="absolute inset-0 bg-[#04130c] opacity-40"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#101010] hover:from-[#101010] hover:to-[#292929] to-[#161616] opacity-95"></div>
 
       {/* Content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-        <p className="font-medium text-lg md:text-xl lg:text-3xl tracking-wide">
-          Sign up for an email
+      <div className="absolute inset-0 flex flex-col justify-center gap-12 text-white">
+        <p className="text-center uppercase font-semibold text-white text-2xl tracking-wider w-full">
+          Sign up to our newsletter
         </p>
-        <p className="pt-4 text-xl md:text-xl lg:text-6xl tracking-normal leading-7 font-black">
-          Get it all in the action
-        </p>
-        <div className="flex flex-col items-center gap-4 mt-4">
-          <input
-            type="text"
-            className="border outline-none border-b-white text-white text-3xl w-32 md:w-64 lg:w-96 bg-transparent px-4 py-2"
-          />
-          <button className="border-2 border-white rounded-3xl py-2 px-4 cursor-pointer text-white">
-            Submit
-          </button>
+        <div>
+          <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-center text-white leading-7 font-semibold">
+            Get it all in the action
+          </p>
+          <div className="w-full flex flex-col justify-center items-center gap-6 mt-4">
+            <div className="flex items-center justify-center px-12 border-b border-white">
+              <input
+                type="text"
+                placeholder="Enter Your Email"
+                className="w-full outline-none text-white text-center border-none bg-none bg-transparent"
+              />
+            </div>
+            <button className="border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
+              Submit
+            </button>
+          </div>
         </div>
       </div>
     </div>
