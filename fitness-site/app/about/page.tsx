@@ -10,6 +10,7 @@ import {
   SuccessStoryCard,
 } from "../(home-sections)/SuccessStories";
 import { testimonials } from "../data";
+import BrandImageLogo from '../../public/fifaLogo.jpg'
 
 export default function Page() {
   return (
@@ -21,6 +22,26 @@ export default function Page() {
       <LongParagraphsSection />
       <MissionAndValuesSection />
       <TestimonialsSection />
+      <SectionWrapper>
+        <p className="w-full text-xl md:text-xl lg:text-xl text-center tracking-normal text-white leading-7 font-semibold">
+          Trusted by top private gyms
+        </p>
+        <div className="flex flex-wrap gap-6 justify-evenly">
+        {['li', 'fb', 'li', 'fb', 'li'].map(n =>
+          <p className="text-white text-xl">
+            {n}
+          </p>
+        )}
+        </div>
+
+        <div className="flex flex-wrap gap-6 justify-evenly">
+          {['li', 'fb', 'li', 'fb'].map(n =>
+            <p className="text-white text-xl">
+              {n}
+            </p>
+          )}
+        </div>
+      </SectionWrapper>
       <SeeProgramsSection />
     </main>
   );
@@ -226,10 +247,15 @@ export const LongParagraphsSection = () => {
         <p className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-center text-white leading-7 px-6 font-bold">
           <span className="text-[#31C57D]">Enrage</span> your inner beast and <span className="text-[#31C57D]">unleash</span> it today!
         </p>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
-          Seeing the impact it had on our first clients, we decided to make it
-          accessible to private clinics that want to transform their businesses.
-        </p>
+        <div className="flex flex-col md:flex-row gap-6 items-center">
+          <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
+            Seeing the impact it had on our first clients, we decided to make it
+            accessible to private clinics that want to transform their businesses.
+          </p>
+          <button className="w-full border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
+            Explore Locations
+          </button>
+        </div>
       </div>
     </SectionWrapper>
   );
@@ -254,9 +280,9 @@ export const MissionAndValuesSection = () => {
             reiciendis nulla aliquam placeat placeat placeat placeat placeat
             placeat.
           </p>
-          <p className="normal-case text-md md:text-lg text-gray-300 leading-2 font-semibold">
+          <div className="normal-case text-md md:text-lg text-gray-300 leading-2 font-semibold">
             <p><span className="text-[#31C57D]">Effective.</span> Passion-driven. <span className="text-[#31C57D]">Committed.</span></p>
-          </p>
+          </div>
         </div>
 
         <div className="flex flex-col gap-4">
@@ -269,9 +295,9 @@ export const MissionAndValuesSection = () => {
             reiciendis nulla aliquam placeat placeat placeat placeat placeat
             placeat.
           </p>
-          <p className="normal-case text-md md:text-lg text-gray-300 leading-2 font-semibold">
+          <div className="normal-case text-md md:text-lg text-gray-300 leading-2 font-semibold">
             <p><span className="text-[#31C57D]">Effective.</span> Passion-driven. <span className="text-[#31C57D]">Committed.</span></p>
-          </p>
+          </div>
         </div>
       </div>
     </SectionWrapper>
@@ -284,7 +310,7 @@ export const TestimonialsSection = () => {
       <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
         See What Other Think Of Our Services
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 md:pt-8 pb-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 md:pt-8">
         {testimonials.slice(0, 2).map((testimonial) => (
           <SuccessStoryCard
             key={testimonial.id}
@@ -373,12 +399,12 @@ const GalleryCard = () => {
 export const SeeProgramsSection = () => {
   return (
     <SectionWrapper>
-      <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-6 py-16 px-24 rounded-md bg-gradient-to-r from-[#1D7349] to-[#161616]">
+      <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-6 px-6 py-6 bg-gradient-to-r from-[#101010] to-[#292929] rounded-lg">
         <div className="flex flex-col items-center gap-6">
-          <h2 className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold">
+          <h2 className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
             Check our programs — you won`t regret that decision for sure!
           </h2>
-          <p className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
+          <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal pt-6">
           Analyze patient feedback. Optimize workflows to deliver a superb patient experience. Stop your never-ending battle with patient retention.
           </p>
         </div>
