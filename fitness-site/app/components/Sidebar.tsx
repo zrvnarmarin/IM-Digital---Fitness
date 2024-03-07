@@ -167,6 +167,10 @@ const navbarLinks = [
     name: "Contact",
     link: "/contact",
   },
+  {
+    name: "Testimonials",
+    link: "/about/testimonials",
+  },
 ];
 
 export type NavbarLink = {
