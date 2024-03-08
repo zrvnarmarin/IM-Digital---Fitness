@@ -32,8 +32,8 @@ export function HeroSection() {
 export function AboutLocations() {
   return (
     <SectionWrapper>
-      <h1 className='uppercase font-normal text-white text-2xl tracking-wider w-full'>Nesto nesto nesto nesto</h1>
-      <p className='normal-case tracking-wider text-md md:text-lg text-gray-300 leading-2 font-medium'>
+      <h1 className='uppercase font-semibold text-white text-2xl tracking-wider w-full'>Nesto nesto nesto nesto</h1>
+      <p className='normal-case text-md md:text-md text-gray-300 leading-2 font-normal'>
           As the largest Croatian chain of fitness centers, we are always looking for new locations to expand in order to
           provide our members with even greater availability throughout Croatia.
           Gyms4you is a European concept of fitness centers with an excellent ratio 
@@ -74,8 +74,23 @@ export const LocationCard = ({ location }: { location: LocationType }) => {
           />
         </div>
 
-        {/* On hover image */}
-        <div className="absolute inset-0 flex flex-col justify-center items-center p-4 transition duration-300 ease-in-out bg-black/20 text-white opacity-0 group-hover:opacity-100">
+        {/* Default text at bottom */}
+        <div className="absolute inset-x-0 bottom-0 flex justify-center items-center p-4 bg-black/70 text-white z-10 group-hover:opacity-0 transition duration-300 ease-in-out">
+          <div className="flex flex-col items-center gap-4">
+            <span className="w-full pt-4 text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
+              {location.locationName}
+            </span>
+            <span className="w-full pt-4 text-xl md:text-xl lg:text-xl tracking-normal text-center text-white leading-7 font-semibold">
+              {location.locationCity}
+            </span>
+            <button className="w-fit border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
+             Gallery
+            </button>
+          </div>
+        </div>
+
+        {/* On hover text */}
+        <div className="absolute inset-0 flex flex-col justify-center items-center p-4 transition duration-300 ease-in-out bg-black/20 text-white opacity-0 group-hover:opacity-100 z-20">
           <div className="flex flex-col items-center gap-8">
             <span className="font-black capitalize text-sm md:text-md lg:text-lg xl:text-xl text-gray-100 duration-100">
               {location.locationName}
@@ -84,7 +99,7 @@ export const LocationCard = ({ location }: { location: LocationType }) => {
               {location.locationCity}
             </span>
             <button className="w-fit border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
-             Gallery
+             View Details
             </button>
           </div>
         </div>

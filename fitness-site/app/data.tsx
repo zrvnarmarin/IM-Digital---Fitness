@@ -121,51 +121,6 @@ export const programs = [
       },
     ],
   },
-  {
-    title: "Yoga Practices",
-    href: "/programs/yoga-practices",
-    description: "Discover harmony and flexibility through our Yoga program. ",
-    duration: "8 weeks",
-    intensity: "Low",
-    icon: DumbellIcon,
-    image: YogaImage,
-    benefits: [
-      "Flexibility: Improves range of motion and reduces stiffness.",
-      "Strength: Engages various muscle groups, promoting overall body strength.",
-      "Balance: Enhances stability and core strength through balancing poses.",
-      "Stress Reduction: Incorporates mindfulness and relaxation techniques.",
-    ],
-    categories: [
-      {
-        name: "Hatha Yoga",
-        description: "Focuses on physical postures and breathing exercises.",
-      },
-      {
-        name: "Vinyasa Yoga",
-        description: "Emphasizes flowing movements synchronized with breath.",
-      },
-      {
-        name: "Ashtanga Yoga",
-        description:
-          "Follows a set sequence of postures with a focus on breath and movement.",
-      },
-      {
-        name: "Bikram Yoga",
-        description:
-          "Practiced in a heated room, consists of a fixed sequence of 26 postures.",
-      },
-      {
-        name: "Yin Yoga",
-        description:
-          "Involves passive, long-held poses to target connective tissues.",
-      },
-      {
-        name: "Kundalini Yoga",
-        description:
-          "Aims to awaken spiritual energy through breath, mantra, and postures.",
-      },
-    ],
-  },
 ];
 
 export const testimonials = [

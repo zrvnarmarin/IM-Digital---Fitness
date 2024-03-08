@@ -180,8 +180,8 @@ export const founders: FounderType[] = [
 export const LongParagraphsSection = () => {
   return (
     <SectionWrapper>
-      <div className="flex flex-col gap-8 px-4 md:px-20 lg:px-32 xl:px-56 2xl:px-72 pt-32">
-      <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
+      <div className="flex flex-col gap-8 px-4 md:px-20 lg:px-32 xl:px-56 2xl:px-72">
+      <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full text-center">
           Something of placeholder
         </h1>
         <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
@@ -228,6 +228,12 @@ export const LongParagraphsSection = () => {
           feedback using technology.
         </p>
         <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
+          <span className="text-[#31C57D] font-bold">Our team has worked</span> on setting up feedback systems in multinational
+          companies. Combining our backgrounds in data science and psychology,
+          we started helping the largest private clinics in Croatia to collect
+          feedback using technology.
+        </p>
+        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
           That`s how InsiderCX was born.
         </p>
         <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
@@ -247,12 +253,9 @@ export const LongParagraphsSection = () => {
         <p className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-center text-white leading-7 px-6 font-bold">
           <span className="text-[#31C57D]">Enrage</span> your inner beast and <span className="text-[#31C57D]">unleash</span> it today!
         </p>
-        <div className="flex flex-col md:flex-row gap-6 items-center">
-          <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
-            Seeing the impact it had on our first clients, we decided to make it
-            accessible to private clinics that want to transform their businesses.
-          </p>
-          <button className="w-full border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
+        <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
+          
+          <button className="w-fit border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
             Explore Locations
           </button>
         </div>
@@ -264,7 +267,7 @@ export const LongParagraphsSection = () => {
 export const MissionAndValuesSection = () => {
   return (
     <SectionWrapper>
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-12">
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {stats.map((stat) => (
           <StatCard key={stat.id} stat={stat} />
         ))}

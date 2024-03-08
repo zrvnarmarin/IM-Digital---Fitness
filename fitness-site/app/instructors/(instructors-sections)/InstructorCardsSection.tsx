@@ -23,7 +23,7 @@ export const InstructorCard = ({
   instructor: InstructorType;
 }) => {
   return (
-    <div className="flex flex-col gap-2 bg-[#111111]">
+    <div className="flex flex-col gap-2 from-[#101010] to-[#292929] border border-[#292929]">
       <div className="flex flex-row">
         <Image
           src={instructor.imageSrc}
@@ -34,7 +34,7 @@ export const InstructorCard = ({
         />
         <div className="w-full group flex flex-col gap-4 rounded-md bg-[#111111] duration-100 hover:bg-[#161616] py-4 px-6">
           <div className="flex flex-row items-center justify-between">
-            <p className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold">
+            <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
               {instructor.name}
             </p>
             <span>
@@ -44,26 +44,26 @@ export const InstructorCard = ({
           <ul className="flex flex-row gap-2">
             {instructor.specializations.map((specialization) => (
               <li key={specialization}>
-                <p className=" font-normal text-white text-md tracking-wider w-fit bg-[#1D7349] px-4 rounded">
+                <p className="normal-case text-xs text-white leading-2 font-normal bg-[#31C57D] px-3 py-1 rounded-lg">
                   {specialization}
                 </p>
               </li>
             ))}
           </ul>
-          <p className="normal-case tracking-wider text-md md:text-lg text-gray-300 leading-2 font-medium">
+          <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
             +{instructor.experience} years of the experience in the industry
           </p>
-          <p className="normal-case tracking-wider text-md md:text-lg text-gray-300 leading-2 font-medium">
+          <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
             {instructor.description}
           </p>
           <div className="flex flex-row gap-2">
-            <p className="normal-case tracking-wider text-md md:text-lg text-gray-300 leading-2 font-medium">
+            <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
               Certifications:
             </p>
             <ul className="flex flex-row gap-2">
               {instructor.certifications.map((certification) => (
                 <li key={certification}>
-                  <p className="font-normal text-white text-md tracking-wider w-fit bg-[#1D7349] px-4 rounded">
+                  <p className="normal-case text-xs text-white leading-2 font-normal bg-[#31C57D] px-3 py-1 rounded-lg">
                     {certification}
                   </p>
                 </li>
