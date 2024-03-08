@@ -7,7 +7,7 @@ import ProgramObjectives from "./(program-sections)/ProgramObjectives";
 import ProgramStructure from "./(program-sections)/ProgramStructure";
 import ProgramBenefits from "./(program-sections)/ProgramBenefits";
 import ProgramFAQ from "./(program-sections)/ProgramFAQ";
-import ProgramNutritionalGuidance from "./(program-sections)/ProgramNutritionalGuidance";
+import ProgramFeatures from "./(program-sections)/ProgramFeatures";
 
 export default function Page({ params }: { params: { programId: string } }) {
   // TO DO: fix the bug of pulling info for each individual program
@@ -19,10 +19,10 @@ export default function Page({ params }: { params: { programId: string } }) {
     <main className="flex flex-col items-center lg:py-4 bg-[#111317]">
       <HeroSection programId={formatString(params.programId)} />
       <ProgramOverviewSection />
+      <ProgramFeatures />
       <ProgramObjectives />
       <ProgramStructure />
       <ProgramBenefits />
-      <ProgramNutritionalGuidance />
       <ProgramFAQ />
     </main>
   );

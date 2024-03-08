@@ -23,7 +23,7 @@ export const InstructorCard = ({
   instructor: InstructorType;
 }) => {
   return (
-    <div className="flex flex-col gap-2 from-[#101010] to-[#292929] border border-[#292929]">
+    <div className="flex flex-col gap-2 rounded-lg bg-gradient-to-r from-[#101010] to-[#292929] border border-[#292929]">
       <div className="flex flex-row">
         <Image
           src={instructor.imageSrc}
@@ -32,7 +32,7 @@ export const InstructorCard = ({
           alt="instructor"
           className="w-fit object-cover"
         />
-        <div className="w-full group flex flex-col gap-4 rounded-md bg-[#111111] duration-100 hover:bg-[#161616] py-4 px-6">
+        <div className="w-full group flex flex-col gap-4 py-4 px-6">
           <div className="flex flex-row items-center justify-between">
             <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
               {instructor.name}
@@ -71,10 +71,7 @@ export const InstructorCard = ({
             </ul>
           </div>
           <div className="flex flex-row gap-4 items-center justify-between">
-            <div className="rounded-full cursor-pointer border-2 border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200">
-              <InstagramIcon />
-            </div>
-            <div className="flex flex-row items-center gap-4">
+            <div className="w-full flex flex-row items-center justify-end gap-4">
               <Link href={`/instructors/${instructor.href}/availability`} className="border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
                 Check Availability
               </Link>

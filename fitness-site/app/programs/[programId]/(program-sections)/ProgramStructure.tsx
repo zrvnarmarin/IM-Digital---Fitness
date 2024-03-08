@@ -7,24 +7,23 @@ import TestImage from "../../../../public/HeroTestTest.jpg";
 export default function ProgramStructure() {
   return (
     <SectionWrapper>
-      <h1 className="uppercase font-normal text-white text-2xl tracking-wider w-full">
+      <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
         Structure
       </h1>
-      <p className="normal-case tracking-wider text-md md:text-lg text-gray-300 leading-2 font-medium">
+      <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
         Throughout the program, participants will track their progress using
         performance metrics such as strength gains, muscle measurements, and
-        body composition changes
-      </p>
-      <p className="normal-case tracking-wider text-md md:text-lg text-gray-300 leading-2 font-medium">
+        body composition changes <br /> <br />
         Regular assessments and check-ins with our trainers will ensure that
         participants stay on track, make necessary adjustments to their
         workouts, and continue progressing toward their goals
       </p>
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-12">
-        {trainingPhases.map((trainingPhase) => (
+      <ul className="grid grid-cols-1 lg:grid-cols-1 gap-6 pt-12">
+        {trainingPhases.map((trainingPhase, index) => (
           <TrainingPhaseCard
             key={trainingPhase.id}
             trainingPhase={trainingPhase}
+            index={index}
           />
         ))}
       </ul>
@@ -32,56 +31,52 @@ export default function ProgramStructure() {
   );
 }
 
-// see here: https://www.slideteam.net/media/catalog/product/cache/1280x720/e/s/essential_phases_of_website_development_plan_process_slide01.jpg
 export const TrainingPhaseCard = ({
   trainingPhase,
+  index,
 }: {
   trainingPhase: TrainingPhaseType;
+  index: number;
 }) => {
-  const borderClassName =
-    trainingPhase.phaseNumber === "01"
-      ? `border-${phaseOneColor}`
-      : trainingPhase.phaseNumber === "02"
-        ? `border-${phaseTwoColor}`
-        : `border-${phaseThreeColor}`;
+  const isEven = index % 2 === 0; // Check if the index is even
 
   return (
-    <li
-      className={`relative flex flex-col justify-between gap-8 pt-10 bg-[#111111] border-[#1D7349] border-2 ${borderClassName}`}
-    >
-      <div className="flex flex-row md:flex-col gap-4 items-center md:items-start px-8">
-        {/* Icon Container */}
-        <div className="bg-[#1D7349] rounded-full p-2 w-fit absolute -top-12 left-1/2 transform -translate-x-1/2">
-          <DumbellIcon width={70} height={70} />
-        </div>
-
-        {/* Phase Title */}
-        <p className="w-full pt-8 text-xl md:text-xl lg:text-3xl tracking-normal text-center text-white leading-7 font-semibold">
-          {trainingPhase.phase}
-        </p>
-      </div>
-
-      {/* Phase Description */}
-      <div className="flex flex-col gap-2 px-8">
-        {trainingPhase.sentences.map((sentence) => (
-          <p
-            key={sentence}
-            className="normal-case tracking-wider text-md md:text-lg text-gray-300 leading-2 font-medium"
-          >
-            &#x2022; {sentence}
+    <div className={`grid grid-cols-2 gap-6 p-6 bg-gradient-to-r from-[#101010] to-[#292929] border border-[#292929] duration-900 rounded-lg ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+      <div className="flex flex-col justify-evenly gap-2">
+        <div>
+          <p className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-center text-white leading-7 pb-1 font-semibold">
+            <span className="text-[#31C57D]">Phase</span>{" "}
+            {trainingPhase.phaseNumber}
           </p>
-        ))}
+          <div className="h-4 w-full bg-[#31C57D]"></div>
+          <div className="flex flex-row md:flex-col items-center md:items-start">
+            <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-center text-white leading-7 pt-4 font-semibold">
+              {trainingPhase.phase}
+            </p>
+          </div>
+        </div>
+        <div className="flex items-center justify-center">
+          <div className="bg-[#31C57D] rounded-full p-2 flex items-center w-fit justify-center relative">
+            <div className="absolute inset-0 bg-black opacity-50 rounded-full"></div>
+            <DumbellIcon width={70} height={70} />
+          </div>
+        </div>
       </div>
-
-      {/* Phase Number */}
-      <div className="flex flex-col gap-2 pt-8">
-        <p className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-center text-white leading-7 font-semibold">
-          <span className="text-[#1D7349]">Phase</span>{" "}
-          {trainingPhase.phaseNumber}
-        </p>
-        <div className="h-4 w-full bg-[#1D7349]"></div>
-      </div>
-    </li>
+      <li className="relative group flex flex-col gap-4 rounded-lg">
+        <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-2 px-8">
+            {trainingPhase.sentences.map((sentence) => (
+              <p
+                key={sentence}
+                className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal"
+              >
+                &#x2022; {sentence}
+              </p>
+            ))}
+          </div>
+        </div>
+      </li>
+    </div>
   );
 };
 

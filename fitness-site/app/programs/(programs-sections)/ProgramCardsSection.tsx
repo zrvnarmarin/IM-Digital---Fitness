@@ -4,18 +4,24 @@ import Image from "next/image";
 import { Program } from "@/app/types";
 import { programs } from "@/app/data";
 import { DurationIcon, RightIcon } from "@/public/Icons";
+import TestImage from '../../../public/CardioBlastImage.jpg'
+import ShareIcon from '../../../public/share-arrow-svgrepo-com.png'
+import { DumbellIcon } from "@/public/Icons";
+import SectionWrapper from "@/app/components/wrappers/SectionWrapper";
 
 export function ProgramCardsSection() {
   return (
-    <section className="px-6 md:px-8 lg:px-24 pl-8 py-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-4 gap-12">
-      {programs.map((program, index) => (
-        <ProgramCard
-          key={program.title}
-          program={program}
-          isLastItem={index === programs.length - 1}
-        />
-      ))}
-    </section>
+    <SectionWrapper>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6">
+        {programs.map((program, index) => (
+          <ProgramCard
+            key={program.title}
+            program={program}
+            isLastItem={index === programs.length - 1}
+          />
+        ))}
+      </div>
+    </SectionWrapper>
   );
 }
 
@@ -26,65 +32,75 @@ export function ProgramCard({
   program: Program;
   isLastItem?: boolean;
 }) {
-  const cardClass = `flex flex-col gap-6 rounded-xl bg-[#111111] hover:scale-105 hover:bg-[#35373B] 
-      hover:outline-2 focus:outline-2 outline-[#1D7349] cursor-pointer pb-6 ${
-        isLastItem ? "lg:col-span-2xl" : ""
-      }`;
-
   return (
-    <Link href={program.href} className={cardClass}>
-      <div className="w-full flex">
+    <Link href={program.href} className={`bg-[#111111]`}>
+      <div className="w-full flex rounded-t-md">
         <Image
-          src={program.image}
+          src={TestImage}
           alt="program_image"
           width={0}
           height={0}
           className="rounded-t-md"
         />
       </div>
-      <div className="flex gap-4 items-center px-8">
-        <p className="text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold ">
-          {program.title}
-        </p>
-      </div>
-      <p className="px-8 normal-case tracking-normal text-md md:text-md lg:text-lg text-gray-100 leading-2 font-normal">
-        {program.description}
-      </p>
-      {program.duration && (
-        <div className="flex-1 px-8 text-sm md:text-md text-gray-300 leading-2 font-normal flex flex-row gap-2 items-center">
-          <span className="bg-[#1D7349] rounded-md p-1 text-lg">
-            <DurationIcon />
-          </span>
-          <span className="normal-case tracking-normal text-md md:text-md lg:text-lg text-gray-100 leading-2 font-normal">
-            Duration:
-          </span>
-          <span className="normal-case tracking-normal text-md md:text-md lg:text-lg text-gray-100 leading-2 font-normal">
-            {program.duration}
-          </span>
-        </div>
-      )}
-      {program.intensity && (
-        <div className="px-8 flex flex-col gap-2 normal-case tracking-normal text-md md:text-md lg:text-lg text-gray-100 leading-2 font-normal">
-          Intensity:
-          <div className="w-full border-gray-500 rounded-md bg-slate-700">
-            <div
-              className={`h-2 border border-gray-500 rounded-md
-                ${
-                  program.intensity === "Low"
-                    ? "w-1/3 bg-[#1D7349]"
-                    : program.intensity === "Moderate"
-                    ? "w-2/3 bg-[#1D7349]"
-                    : "w-full bg-[#1D7349]"
-                }`}
-            ></div>
-          </div>
-        </div>
-      )}
 
-      <p className="flex px-4 items-center gap-4 justify-end text-md tracking-wider lg:text-lg text-white leading-2 font-medium">
-        Discover More
-        <RightIcon strokeOne="#FFFFFF" strokeTwo="#FFFFFF" />
-      </p>
+      <div className="px-8 py-8 bg-gradient-to-r from-[#101010] hover:from-[#101010] hover:to-[#292929] to-[#161616] border border-[#292929] duration-900 rounded-b-lg">
+        <div className="flex flex-col gap-3 items-start justify-start rounded-lg">
+          <div className="w-full flex items-center justify-between rounded-lg">
+            <span className="normal-case text-xs text-white leading-2 font-normal border border-[#31C57D] px-3 py-1 rounded-lg">
+              Intensity
+            </span>
+            <span><Image src={ShareIcon} width={20} height={20} alt="share_icon" /></span>
+          </div>
+          <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
+            {program.title}
+          </p>
+        </div>
+        <div className="flex flex-col pt-8">
+          <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
+            {program.description}
+          </p>
+        </div>
+
+        <div className="border-b border-gray-600 flex items-center justify-between pt-12 pb-4 normal-case tracking-normal text-2xs md:text-sm lg:text-lg text-gray-100 leading-2 font-normal">
+          <span className="flex flex-row items-center gap-2 normal-case text-xs text-white leading-2 font-normal">
+            <DumbellIcon /> 24 Number Of
+          </span>
+          <span className="flex flex-row items-center gap-2 normal-case text-xs text-white leading-2 font-normal">
+            <DumbellIcon />7 Ways for
+          </span>
+        </div>
+
+        {/* Rasmiliti da li ovdje staviti gumb, da li se uklapa u dizajn */}
+        <div className="flex flex-row justify-between items-center pt-4">
+          <p className="text-xl md:text-xl lg:text-xl tracking-normal text-start text-[#31C57D] group-hover:text-[#C57D31] leading-7 font-semibold">
+            $130.00
+          </p>
+          <button className="border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
+          Discover More
+        </button>
+        </div>
+      </div>
+      
     </Link>
   );
 }
+
+// TO DO: grab this code and put it inside card for intensity property in the future
+// {program.intensity && (
+//   //         <div className="px-8 flex flex-col gap-2 normal-case tracking-normal text-md md:text-md lg:text-lg text-gray-100 leading-2 font-normal">
+//   //           Intensity:
+//   //           <div className="w-full border-gray-500 rounded-md bg-slate-700">
+//   //             <div
+//   //               className={`h-2 border border-gray-500 rounded-md
+//   //                 ${
+//   //                   program.intensity === "Low"
+//   //                     ? "w-1/3 bg-[#1D7349]"
+//   //                     : program.intensity === "Moderate"
+//   //                     ? "w-2/3 bg-[#1D7349]"
+//   //                     : "w-full bg-[#1D7349]"
+//   //                 }`}
+//   //             ></div>
+//   //           </div>
+//   //         </div>
+//   //       )}

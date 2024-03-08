@@ -12,10 +12,10 @@ import ImproveFunctionalStrength from "../../../../public/model3.png";
 export default function ProgramObjectives() {
   return (
     <SectionWrapper>
-      <h1 className="uppercase font-normal text-white text-2xl tracking-wider w-full">
+      <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
         Objectives/Goals
       </h1>
-      <ul className="grid grid-cols-2 gap-6">
+      <ul className="grid grid-cols-1 gap-6">
         {programObjectives.map((programObjective) => (
           <ProgramObjectiveCard
             key={programObjective.id}
@@ -34,32 +34,28 @@ export const ProgramObjectiveCard = ({
 }) => {
   return (
     <div className="grid grid-cols-2">
-        <li
-          //#1F2125
-          className="relative flex flex-col gap-2 p-8 py-10 bg-[#111111] rounded-md "
-        >
-          {/* Background Image */}
-          <div className="absolute inset-0">
-            <Image src={BuildLeanMuscle} layout="fill" objectFit="cover" alt="image" />
-          </div>
-          {/* Blue Overlay */}
-          <div className="absolute inset-0 bg-black opacity-95"></div>
-          {/* Text Content */}
-          <div className="relative z-10">
-            <div className="flex flex-row md:flex-col gap-4 items-center md:items-start">
-              <div className=" bg-[#1D7349] rounded-md p-2 w-fit">
-                <DumbellIcon />
-              </div>
-              <p className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-start text-[#1D7349] leading-7 font-semibold">
-                {programObjective.title}
-              </p>
-            </div>
-            <p className="normal-case tracking-wider text-md md:text-lg text-gray-300 leading-2 font-medium">
-              {programObjective.description}
+      <li
+        className="relative flex flex-col gap-2 p-8 py-10 bg-[#111111] items-center justify-center"
+      >
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image src={BuildLeanMuscle} layout="fill" objectFit="cover" alt="image" />
+        </div>
+        {/* Blue Overlay */}
+        <div className="absolute inset-0 bg-black opacity-95"></div>
+        {/* Text Content */}
+        <div className="relative z-10">
+          <div className="flex flex-row md:flex-col gap-4 items-center md:items-start">
+            <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-[#31C57D] group-hover:text-[#C57D31] leading-7 font-semibold">
+              {programObjective.title}
             </p>
           </div>
-        </li>
-        <Image src={BuildLeanMuscle} width={0} height={0} alt="jkbj" className="w-full h-full object-cover" />
+          <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
+            {programObjective.description}
+          </p>
+        </div>
+      </li>
+      <Image src={BuildLeanMuscle} width={0} height={0} alt="jkbj" className="w-full h-full object-cover" />
     </div>
   );
 };

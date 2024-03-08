@@ -28,6 +28,12 @@ export type NavbarLink = {
   link: string;
 };
 
+export type FAQType = {
+  id: number;
+  title: string;
+  answer: string;
+}
+
 export type InstructorType = {
   imageSrc: StaticImageData;
   id: number;

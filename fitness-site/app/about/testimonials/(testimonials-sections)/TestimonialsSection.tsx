@@ -1,13 +1,15 @@
 import React from "react";
 import { QuotationMark } from "@/public/Icons";
 import { testimonials } from "@/app/data";
+import { SuccessStoryCard } from "@/app/(home-sections)/SuccessStories";
+import SectionWrapper from "@/app/components/wrappers/SectionWrapper";
 
 export function TestimonialsSection() {
   return (
-    <section className="px-6 md:px-8 lg:px-32 md:py-8 lg:py-16 grid gap-4 grid-cols-gallery bg-[#111317]">
-      <div className="grid grid-cols-1  gap-10 pt-16 md:pt-12">
+    <SectionWrapper>
+      <div className="grid grid-cols-1 gap-6">
         {testimonials.map((testimonial) => (
-          <TestimonialCard
+          <SuccessStoryCard
             key={testimonial.id}
             name={testimonial.name}
             testimonial={testimonial.testimonial}
@@ -15,7 +17,7 @@ export function TestimonialsSection() {
           />
         ))}
       </div>
-    </section>
+    </SectionWrapper>
   );
 }
 
