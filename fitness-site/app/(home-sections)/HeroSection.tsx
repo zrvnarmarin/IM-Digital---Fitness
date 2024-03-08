@@ -6,7 +6,10 @@ import AboutUsHeroImage from "../../public/HeroTestTest.jpg";
 export default function HeroSection() {
   return (
     <div className="pt-8 sm:pt-10 md:pt-12 lg:pt-20 pb-4 px-8 md:px-14 lg:px-28 xl:px-42 2xl:px-48 min-w-screen min-h-screen w-full grid grid-cols-1 md:grid-cols-2 gap-6 bg-[#000000] relative">
-      <div className="flex flex-col gap-6 items-center justify-center">
+      <div
+        className="absolute top-36 left-4 w-[32rem] h-64 bg-[#0f3d27] opacity-60 z-10 blur-3xl"
+      />
+      <div className="flex flex-col gap-6 items-center justify-center z-50">
         <p className="w-full uppercase text-md md:text-md text-gray-300 leading-2 text-start font-normal">
           Gym areas
         </p>

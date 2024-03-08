@@ -81,7 +81,7 @@ function Panel({
   return (
     <div
       onClick={onShow}
-      className="cursor-pointer bg-gradient-to-r from-[#101010] to-[#161616] border-b border-[#292929] px-8 py-1"
+      className="cursor-pointer bg-gradient-to-r from-[#101010] to-[#191919] border-b border-[#292929] px-8 py-1"
     >
       <div className="flex items-center justify-between gap-6 py-2">
         <h3 className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
