@@ -5,39 +5,36 @@ import AboutUsHeroImage from "../../public/HeroTestTest.jpg";
 
 export default function HeroSection() {
   return (
-    <div className="min-w-screen min-h-screen w-full flex items-center justify-center bg-slate-700 relative">
-      <Image
-        src={AboutUsHeroImage}
-        alt="Image"
-        className="absolute z-10 inset-0 w-full h-full object-cover"
-        layout="fill"
-      />
-      <div className="absolute z-20 text-white text-center sm:text-left left-4 sm:left-16 top-1/2 transform -translate-y-1/2">
-        <h1 className="text-3xl sm:text-9xl font-black mb-4 uppercase">
-          Be fit
-        </h1>
-        <h1 className="text-3xl sm:text-9xl font-black mb-4 uppercase">
-           be stronger
-        </h1>
-        <p className="text-lg sm:text-3xl">
-          Unleash your potential at out cutting edge gym. <br /> Elevate your
-          strength.
+    <div className="pt-8 sm:pt-10 md:pt-12 lg:pt-20 pb-4 px-8 md:px-14 lg:px-28 xl:px-42 2xl:px-48 min-w-screen min-h-screen w-full grid grid-cols-1 md:grid-cols-2 gap-6 bg-[#000000] relative">
+      <div className="flex flex-col gap-6 items-center justify-center">
+        <p className="w-full uppercase text-md md:text-md text-gray-300 leading-2 text-start font-normal">
+          Gym areas
         </p>
-        {/* <div className="flex flex-row items-center gap-8">
-          <Link
-            href="/programs"
-            className=" bg-white text-[#1D7349] hover:bg-[#1D7349] hover:text-white duration-100 text-2xl pt-4 tracking-tight uppercase font-semibold pb-4 px-12 rounded-lg"
+        <h1 className="w-full text-xl md:text-xl lg:text-5xl tracking-normal text-start text-white leading-7 font-semibold">
+          We create simple and effective plans and programs 
+        </h1>
+        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quae aliquid deserunt.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <div className="w-full flex items-center justify-start">
+          <Link 
+            href={'/contact'} 
+            className="w-fit border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white"
           >
-            Become a member
+            Get In Touch
           </Link>
-
-          <Link
-            href="/programs"
-            className="border-2 border-[#1D7349] hover:bg-white hover:text-[#1D7349] duration-100 text-2xl pt-5 tracking-tight uppercase font-medium pb-4 px-12 rounded-lg"
-          >
-            Explore More
-          </Link>
-        </div> */}
+        </div>
+      </div>
+      <div className="relative flex items-center justify-center group h-full w-full rounded-xl cursor-pointer">
+        <Image
+          priority
+          src={AboutUsHeroImage}
+          alt="alt"
+          fill={true}
+          // fill={true} slika s ovim propertijem ocito zauzima mjesta koliko mu flexbox sirina i njegova visina dopustaju
+          className="object-cover rounded-md"
+        />
       </div>
     </div>
   );
