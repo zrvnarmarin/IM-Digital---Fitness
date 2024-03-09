@@ -35,27 +35,27 @@ export function OverallInfo() {
             <div>
                 <Image src={SwimmingImage} height={0} width={0} alt="Swimming_pool" />
                 <div className="group flex flex-row items-center justify-between gap-4 rounded-b-lg p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-t-0 border-x-[#292929] border-b-[#292929]">
-                    <div>
-                        <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
+                    <div className="flex flex-col items-center">
+                        <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-center text-white leading-7 font-semibold">
                             Indoor Pool
                         </p>
-                        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">Yes</p>
+                        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">1</p>
                     </div>
-                    <div>
-                        <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
-                            Indoor Pool
+                    <div className="flex flex-col items-center">
+                        <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-center text-white leading-7 font-semibold">
+                            Pool Length
                         </p>
-                        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">Yes</p>
+                        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">30m</p>
                     </div>
-                    <div>
-                        <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
-                            Indoor Pool
+                    <div className="flex flex-col items-center justify-center">
+                        <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-center text-white leading-7 font-semibold">
+                            Spa
                         </p>
-                        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">Yes</p>
+                        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">Sauna And Steam</p>
                     </div>
-                    <div>
-                        <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
-                            Indoor Pool
+                    <div className="flex flex-col items-center justify-center">
+                        <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-center text-white leading-7 font-semibold">
+                            Lessons
                         </p>
                         <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">Yes</p>
                     </div>
