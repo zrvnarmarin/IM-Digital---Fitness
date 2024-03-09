@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import { programs } from "../data";
 import { DumbellIcon } from "@/public/Icons";
 import SectionWrapper from "../components/wrappers/SectionWrapper";

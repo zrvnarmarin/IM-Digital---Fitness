@@ -1,16 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import HeroSection from "./(about-sections)/HeroSection";
-import { RightIcon } from "@/public/Icons";
 import Link from "next/link";
 import SectionWrapper from "../components/wrappers/SectionWrapper";
 import TestImage from "../../public/CardioBlastImage.jpg";
 import ShareIcon from "../../public/share-arrow-svgrepo-com.png";
-import {
-  SuccessStoryCard,
-} from "../(home-sections)/SuccessStories";
+import { SuccessStoryCard } from "../(home-sections)/SuccessStories";
 import { testimonials } from "../data";
-import BrandImageLogo from '../../public/fifaLogo.jpg'
 
 export default function Page() {
   return (
@@ -398,7 +394,6 @@ const GalleryCard = () => {
   );
 };
 
-// ovo uzor - https://www.insidercx.com/about-us
 export const SeeProgramsSection = () => {
   return (
     <SectionWrapper>

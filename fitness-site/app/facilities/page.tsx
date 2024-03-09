@@ -48,7 +48,7 @@ export function AboutFacilities() {
 const FacilitiesSection = ({ facilities } : { facilities: FacilityType[] }) => {
   return (
     <SectionWrapper>
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
         {facilities.map((facility) => (
           <FacilityCard facility={facility} key={facility.id} />
         ))}
@@ -110,12 +110,6 @@ export type FacilityType = {
       cardImageSrc: StudiosFacilityCardImage
     },
     {
-      id: 3,
-      href: '/cycle-studios',
-      facilityName: 'cycle studios',
-      cardImageSrc: CyclingFacilityCardImage
-    },
-    {
       id: 4,
       href: '/welness-and-spa',
       facilityName: 'welness and spa',
@@ -126,11 +120,5 @@ export type FacilityType = {
       href: '/gym',
       facilityName: 'gym',
       cardImageSrc: TestImage
-    },
-    {
-      id: 6,
-      href: 'Foodie',
-      facilityName: 'foodie',
-      cardImageSrc: FoodieCardImage
     }
   ]
