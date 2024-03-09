@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div
         className="absolute top-36 left-4 w-[32rem] h-64 bg-[#0f3d27] opacity-60 z-10 blur-3xl"
       />
-      <div className="flex flex-col gap-6 items-center justify-center z-50">
+      <div className="flex flex-col gap-6 items-center justify-center z-20">
         <p className="w-full uppercase text-md md:text-md text-gray-300 leading-2 text-start font-normal">
           Gym areas
         </p>

@@ -1,12 +1,10 @@
 import React from 'react'
-import { ImgContainer } from '@/app/about/photo-gallery/(photo-gallery-sections)/PhotoGallerySection'
 import ServicesIlustration from '../../../public/ServiceIlustration.png'
 
 export default function AboutServicesSection() {
   return (
     <section className="px-6 md:px-8 lg:px-24 pl-8 py-24 gap-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <ImgContainer />
           <div className="flex flex-col gap-4">
             <h1 className="uppercase font-normal text-white text-2xl tracking-wider">
               Online Personal Training

@@ -13,11 +13,6 @@ export default function ServicesPerksSection() {
             WORKOUTS FOR HOME, GYM OR PRETTY MUCH ANYWHERE!
           </p>
         </div>
-        <section className="px-6 md:px-8 lg:px-24 py-8 gap-4 grid grid-cols-1 sm:grid-cols-3 justify-center">
-          <ImgContainer  />
-          <ImgContainer  />
-          <ImgContainer  />
-        </section>
       </section>
   )
 }

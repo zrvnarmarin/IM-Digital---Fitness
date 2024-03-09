@@ -1,5 +1,4 @@
 import React from 'react'
-import { ImgContainer } from '@/app/about/photo-gallery/(photo-gallery-sections)/PhotoGallerySection'
 import ServiceImageOne from '../../../public/ServiceImageOne.avif'
 
 export default function VideoTestimonialsSection() {
@@ -13,11 +12,6 @@ export default function VideoTestimonialsSection() {
             See what some of our clients have to say
           </p>
         </div>
-        <section className="px-6 md:px-8 lg:px-24 py-8 gap-4 grid grid-cols-1 sm:grid-cols-3 justify-center">
-          <ImgContainer  />
-          <ImgContainer  />
-          <ImgContainer  />
-        </section>
       </section>
   )
 }
