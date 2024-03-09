@@ -3,6 +3,7 @@ import Image from "next/image";
 import SectionWrapper from "@/app/components/wrappers/SectionWrapper";
 import SwimmingImage from '../../../public/SwimmingFacilityCard.jpg'
 import { DumbellIcon } from "@/public/Icons";
+import { Accordion } from "@/app/(home-sections)/FAQSection";
 
 export default function Page() {
     return (
@@ -11,9 +12,24 @@ export default function Page() {
             <OverallInfo />
             <SwimmingBenefits />
             <LongParagraphsSection />
+            <FAQSection />
             <LearnSwim />
         </main>
     )
+}
+
+export function FAQSection () {
+  return (
+    <SectionWrapper>
+      <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full text-start">
+        FAQ
+      </h1>
+      <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
+        Find the answers to most common questiosn for the swimming facility.
+      </p>
+      <Accordion faqArray={swimmingFacilityFaq} />
+    </SectionWrapper>
+  )
 }
 
 export function HeroSection() {
@@ -66,25 +82,25 @@ export function OverallInfo() {
 }
 
 export function LearnSwim() {
-    return (
-        <SectionWrapper>
-            <h2 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
-                Learn To Swim
-            </h2>
-            <div className="flex p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] rounded-lg">
-                <p className="w-2/3 normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
-                    Whether you’re an experienced open water swimmer looking to bring your time down, or a beginner
-                    venturing into the pool for the first time, you can sign up for one-to-one lessons with our coaches.
-                    You can buy lessons in packs of four or 12.
-                </p>
-                <div className="w-1/3 flex items-center justify-center">
-                    <button className="w-fit border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
-                        Get In Touch
-                    </button>
-                </div>
-            </div>
-        </SectionWrapper>
-    )
+  return (
+    <SectionWrapper>
+      <h2 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
+        Learn To Swim
+      </h2>
+      <div className="flex p-6 bg-gradient-to-r from-[#101010] to-[#161616] rounded-lg">
+        <p className="w-2/3 normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
+          Whether you’re an experienced open water swimmer looking to bring your time down, or a beginner
+          venturing into the pool for the first time, you can sign up for one-to-one lessons with our coaches.
+          You can buy lessons in packs of four or 12.
+        </p>
+        <div className="w-1/3 flex items-center justify-center">
+          <button className="w-fit border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
+            Get In Touch
+          </button>
+        </div>
+      </div>
+    </SectionWrapper>
+  )
 }
 
 export const LongParagraphsSection = () => {
@@ -181,3 +197,22 @@ export const swimmingBenefits = [
         description: 'Something description fot his benefit title'
     }
 ]
+
+const swimmingFacilityFaq = [
+  {
+    id: 1,
+    title: "What is the duration of the Cardio Blast program?",
+    answer: "The Cardio Blast program has a duration of 4 weeks.",
+  },
+  {
+    id: 2,
+    title: "Which key exercises are included in the Strength Builder program?",
+    answer:
+      "The Strength Builder program includes key exercises like Squats, Deadlifts, and Bench Press.",
+  },
+  {
+    id: 3,
+    title: "What is the intensity level of the CrossFit Challenge program?",
+    answer: "The CrossFit Challenge program has a very high intensity level.",
+  }
+];

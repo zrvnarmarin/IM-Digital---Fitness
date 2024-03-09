@@ -43,7 +43,7 @@ export const SecondHomeSectionCard = ({
 }) => {
   return (
     <li
-      className="group flex flex-row gap-4 rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#161616] hover:from-[#101010] hover:to-[#292929] border border-[#292929] duration-900 "
+      className="group flex flex-row gap-4 rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#161616] hover:from-[#101010] hover:to-[#292929] border border-[#292929] duration-900"
     >
       <div className="flex gap-4 items-center">
         <div className="border border-[#31C57D] group-hover:border-white group-hover:bg-white rounded-md p-4 md:p-6 lg:p-10">
