@@ -6,7 +6,7 @@ export const programs = [
     title: "Cardio Blast",
     href: "/programs/cardio-blast",
     description:
-      "This high-intensity cardio program is designed to improve cardiovascular fitness and burn calories.",
+      "This high-intensity cardio program is designed to improve cardiovascular",
     duration: "4 weeks",
     intensity: "High",
     icon: HeartIcon,
@@ -33,7 +33,7 @@ export const programs = [
     title: "Calisthenics",
     href: "/programs/calisthenics",
     description:
-      "This high-intensity cardio program is designed to improve cardiovascular fitness and burn calories.",
+      "This high-intensity cardio program is designed to improve cardiovascular",
     duration: "4 weeks",
     intensity: "High",
     icon: HeartIcon,
@@ -60,7 +60,7 @@ export const programs = [
     title: "Strength Builder",
     href: "/programs/strength-builder",
     description:
-      "Embark on a transformative journey to build robust strength and lean muscle with the best Strength plan.",
+      "Embark on a transformative journey to build robust strength and",
     duration: "6 weeks",
     intensity: "Moderate",
     icon: DumbellIcon,
@@ -87,7 +87,7 @@ export const programs = [
     title: "CrossFit ",
     href: "/programs/crossfit-challenge",
     description:
-      "Engage in the ultimate fitness adventure with our CrossFit Challenge program.",
+      "Engage in the ultimate fitness adventure with our CrossFit Challenge",
     keyExercises: ["Box Jumps", "Kettlebell Swings", "Rope Climbs"],
     duration: "10 weeks",
     intensity: "Very High",

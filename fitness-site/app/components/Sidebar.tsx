@@ -27,7 +27,7 @@ export default function Sidebar({
     <>
       {isSideBarOpen && (
         <MotionAside
-          className="top-0 left-0 bottom-0 bg-[#1F2125] w-full h-screen sticky z-40"
+          className="top-0 left-0 bottom-0 bg-[#000000] w-full h-screen sticky z-40"
         >
           <div className="flex justify-between items-center py-2 px-4">
             <LogoImage onCloseSidebar={onCloseSidebar} />
@@ -171,6 +171,10 @@ const navbarLinks = [
     name: "Testimonials",
     link: "/about/testimonials",
   },
+  {
+    name: "Facilities",
+    link: "/facilities",
+  }
 ];
 
 export type NavbarLink = {
