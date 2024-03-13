@@ -49,7 +49,7 @@ export function ProgramCard({
           {title}
         </p>
       </div>
-      <p className="normal-case text-sm 2xl:text-md text-gray-300 leading-2 font-normal">
+      <p className="normal-case text-sm text-gray-300 leading-2 font-normal">
         {description}
       </p>
     </div>

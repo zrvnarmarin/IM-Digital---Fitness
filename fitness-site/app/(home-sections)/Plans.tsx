@@ -10,9 +10,11 @@ export default function Plans() {
         <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
           Plans
         </h1>
-        <button className="border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
-          See All Plans
-        </button>
+        <div className="w-full flex items-center justify-end">
+          <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
+            See All Plans
+          </button>
+        </div>
       </div>
       <div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-lg gap-6">
@@ -65,7 +67,7 @@ export function PlanCard({ plan }: { plan: PlanCardType }) {
             </li>
           ))}
         </ul>
-        <button className="w-full mt-6 border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
+        <button className="w-full mt-6 bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
           Join now
         </button>
       </div>

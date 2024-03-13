@@ -12,9 +12,11 @@ export default function OurTeam() {
         <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
           Our Team
         </h1>
-        <button className="border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
-          Meet the rest
-        </button>
+        <div className="w-full flex items-center justify-end">
+          <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
+           Meet The Rest
+          </button>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-lg gap-6">
@@ -89,7 +91,7 @@ export const TrainerCard = ({ trainer }: { trainer: TrainerType }) => {
         </div>
       </div>
 
-      <div className="flex flex-col items-start gap-2">
+      <div className="flex flex-col items-start gap-1">
         <p className="w-full pt-4 text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
           {trainer.name}
         </p>

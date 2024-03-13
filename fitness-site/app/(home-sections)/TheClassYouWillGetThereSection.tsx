@@ -1,14 +1,25 @@
-import React from "react";
-import CardioIcon from '../../public/jumping-rope-svgrepo-com.png'
+'use client'
+
+import React, { useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import ExampleImage from "../../public/CardioBlastImage.jpg";
 import SectionWrapper from "../components/wrappers/SectionWrapper";
+import SwimmingImage from '../../public/SwimmingFacilityCard.jpg'
+import SpaImage from '../../public/WelnessAndSpaCard.jpg'
+import StudiosImage from '../../public/StudiosFacilityCard.jpg'
+import GymImage from '../../public/gymImage.jpg'
+import { DumbellIcon } from "@/public/Icons";
 
 export default function TheClassYouWillGetThereSection() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleShow = (index: number) => setActiveIndex(index)
+  console.log(activeIndex)
+
   return (
     <SectionWrapper>
       <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
-        The Class You Will Get There
+        Facilities
       </h1>
 
       <div className=" grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -19,15 +30,19 @@ export default function TheClassYouWillGetThereSection() {
               src={ExampleImage}
               alt="alt"
               fill={true}
-              // fill={true} slika s ovim propertijem ocito zauzima mjesta koliko mu flexbox sirina i njegova visina dopustaju
               className="object-cover rounded-md"
             />
           </div>
         </div>
         <div className="flex flex-col gap-6 relative">
           <ul className="flex flex-col gap-6">
-            {secondSectionCardsData.map((card) => (
-              <SecondHomeSectionCard key={card.id} card={card} />
+            {facilities.map((card, index) => (
+              <FacilitiesCard 
+                key={card.id} 
+                card={card} 
+                isActive={activeIndex === index} 
+                onShow={() => handleShow(index)} 
+              />
             ))}
           </ul>
         </div>
@@ -36,30 +51,41 @@ export default function TheClassYouWillGetThereSection() {
   );
 }
 
-export const SecondHomeSectionCard = ({
+export const FacilitiesCard = ({
   card,
+  isActive,
+  onShow
 }: {
   card: SeconSectionCardType;
+  isActive: boolean;
+  onShow: () => void;
 }) => {
   return (
     <li
-      className="group flex flex-row gap-4 rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#161616] hover:from-[#101010] hover:to-[#292929] border border-[#292929] duration-900"
+      onClick={onShow}
+      className={`${isActive ? 'cursor-pointer group flex flex-row rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#292929] border border-[#292929]' : 'cursor-pointer'}`}
     >
-      <div className="flex gap-4 items-center">
-        <div className="border border-[#31C57D] group-hover:border-white group-hover:bg-white rounded-md p-4 md:p-6 lg:p-10">
-          <span className="text-[#1D7349]"><Image src={card.icon} width={20} height={20} alt="share_icon" /></span>
+      
+      <div className={`${isActive ? 'flex flex-row gap-2 items-start' : 'flex flex-row gap-2 items-start px-6'} `}>
+        <div className="pt-0.5">
+          <DumbellIcon width={25} height={25} />
         </div>
-      </div>
-      <div className="flex flex-col gap-2">
-        <div className="flex flex-row md:flex-col items-center md:items-start">
-          {/* <div className=" bg-[#1D7349] rounded-xl p-2 w-fit">{icon()}</div> */}
-          <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-[#31C57D] group-hover:text-[#C57D31] leading-7 font-semibold">
-            {card.mainTitle}
-          </p>
+        <div className="flex flex-col">
+          <div className={`${isActive ? 'w-full flex flex-col items-center gap-2 text-xl md:text-xl lg:text-xl tracking-normal text-start text-[#31C57D] leading-7 font-semibold' : 'flex items-center gap-2 w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-[#31C57D] group-hover:text-[#C57D31] leading-7 font-semibold'}`}>
+            <p className="w-full ">{card.mainTitle}</p>
+            {
+              isActive
+                ? 
+                  <p className="normal-case text-sm 2xl:text-md text-gray-300 leading-2 font-normal">
+                    {card.description}
+                  </p>
+                : 
+                  null
+            }
+          </div>
         </div>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
-          {card.description}
-        </p>
+        
+
       </div>
     </li>
   );
@@ -71,29 +97,37 @@ export type SeconSectionCardType = {
   description: string;
 };
 
-const secondSectionCardsData = [
+const facilities = [
   {
     id: 1,
-    icon: CardioIcon,
-    mainTitle: "Bodybuilding training",
+    imageSrc: SwimmingImage,
+    mainTitle: "Swimming",
     color: '#31C57D',
     description:
-      "This is a placeholder text and where it will be something eventually written his.",
+      "This is a placeholder text and where it will be something eventually written his. This is a placeholder text and where it will be something eventually written his.",
   },
   {
     id: 2,
-    icon: CardioIcon,
-    mainTitle: "Cardiovascular training",
+    icon: SpaImage,
+    mainTitle: "Spa And Welness",
     color: '#C57D31',
     description:
-      "This is a placeholder text and where it will be something eventually written his.",
+    "This is a placeholder text and where it will be something eventually written his. This is a placeholder text and where it will be something eventually written his.",
   },
   {
     id: 3,
-    icon: CardioIcon,
+    icon: StudiosImage,
     color: '#7D31C5',
-    mainTitle: "CrossFit training",
+    mainTitle: "Studios",
     description:
-      "This is a placeholder text and where it will be something eventually written his.",
+    "This is a placeholder text and where it will be something eventually written his. This is a placeholder text and where it will be something eventually written his.",
+  },
+  {
+    id: 4,
+    icon: GymImage,
+    color: '#7D31C5',
+    mainTitle: "Gym",
+    description:
+    "This is a placeholder text and where it will be something eventually written his. This is a placeholder text and where it will be something eventually written his.",
   },
 ];

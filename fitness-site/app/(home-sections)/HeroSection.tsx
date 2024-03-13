@@ -23,7 +23,7 @@ export default function HeroSection() {
         <div className="w-full flex items-center justify-start">
           <Link 
             href={'/contact'} 
-            className="w-fit border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white"
+            className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white"
           >
             Get In Touch
           </Link>

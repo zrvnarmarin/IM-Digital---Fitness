@@ -35,9 +35,11 @@ const SignUpForAnEmail = () => {
                 className="w-full outline-none text-white text-center border-none bg-none bg-transparent"
               />
             </div>
-            <button className="border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
-              Submit
-            </button>
+            <div className="w-full flex items-center justify-center">
+              <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
+                Submit
+              </button>
+            </div>
           </div>
         </div>
       </div>

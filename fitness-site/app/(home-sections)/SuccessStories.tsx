@@ -12,9 +12,11 @@ export default function SuccessStories() {
         <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
           Success Stories
         </h1>
-        <button className="border-2 border-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
-          Read More Stories
-        </button>
+        <div className="w-full flex items-center justify-end">
+          <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
+            Read More Stories
+          </button>
+        </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 md:pt-8">
         {testimonials.slice(0, 2).map((testimonial) => (
@@ -50,7 +52,7 @@ export function SuccessStoryCard({
         <QuotationMark />
       </div>
       <div className="flex flex-row gap-2">
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
+        <p className="normal-case text-md text-gray-300 leading-2 font-normal">
           {testimonial}
         </p>
       </div>
@@ -68,9 +70,6 @@ export function SuccessStoryCard({
           {name}
         </p>
       </div>
-      {/* <p className="flex-1 text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal">
-        {date}
-      </p> */}
     </div>
   );
 }
