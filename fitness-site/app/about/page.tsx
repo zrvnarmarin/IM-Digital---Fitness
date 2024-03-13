@@ -10,9 +10,8 @@ import { testimonials } from "../data";
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center lg:pt-4 bg-[#111317]">
+    <main className="flex min-h-screen flex-col items-center bg-[#000000]">
       <HeroSection />
-      {/* <LegacyOfStrengthSection /> */}
       <LegacyOfCourageSection />
       <FoundersSection />
       <LongParagraphsSection />
@@ -47,7 +46,7 @@ export function LegacyOfCourageSection() {
   return (
     <SectionWrapper>
       <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
-        A Legacy Of Courage 
+        Carrying the journey of strength for decades
       </h1>
 
       <div className=" grid grid-cols-1 md:grid-cols-2 gap-6">

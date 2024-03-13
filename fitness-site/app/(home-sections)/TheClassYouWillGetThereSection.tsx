@@ -14,7 +14,6 @@ export default function TheClassYouWillGetThereSection() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleShow = (index: number) => setActiveIndex(index)
-  console.log(activeIndex)
 
   return (
     <SectionWrapper>
@@ -66,7 +65,7 @@ export const FacilitiesCard = ({
       className={`${isActive ? 'cursor-pointer group flex flex-row rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#292929] border border-[#292929]' : 'cursor-pointer'}`}
     >
       
-      <div className={`${isActive ? 'flex flex-row gap-2 items-start' : 'flex flex-row gap-2 items-start px-6'} `}>
+      <div className={`${isActive ? 'flex flex-row gap-2 items-start' : 'rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#292929] border border-[#292929] flex flex-row gap-2 items-start px-6'} `}>
         <div className="pt-0.5">
           <DumbellIcon width={25} height={25} />
         </div>

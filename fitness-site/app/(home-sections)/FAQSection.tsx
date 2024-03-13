@@ -9,37 +9,8 @@ export default function FAQSection() {
       <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
         Frequently Asked Questions
       </h1>
-      <QuestionCategories />
       <Accordion faqArray={homePageFAQ} />
     </SectionWrapper>
-  );
-}
-
-export function QuestionCategories() {
-  const [activeCategory, setActiveCategory] = useState(
-    questionCategories[0].id
-  );
-
-  const handleCategoryClick = (categoryId: string) => {
-    setActiveCategory(categoryId);
-  };
-
-  return (
-    <div className="flex flex-wrap justify-start gap-12 overflow-x-auto">
-      {questionCategories.map((questionCategory) => (
-        <div
-          key={questionCategory.id}
-          className={`border-2 border-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer normal-case text-md md:text-md text-gray-300 leading-2 font-normal ${
-            activeCategory === questionCategory.id
-              ? "bg-[#1F2125] text-white"
-              : ""
-          }`}
-          onClick={() => handleCategoryClick(questionCategory.id)}
-        >
-          <p className="">{questionCategory.name}</p>
-        </div>
-      ))}
-    </div>
   );
 }
 
@@ -143,12 +114,4 @@ const homePageFAQ = [
     answer:
       "World Gym provides a variety of amenities, including a sprawling gym floor with free weights and cardio equipment, indoor turf training areas, group fitness classes, personal training, wellness and recovery options, and more. Please check your local World Gym for a complete list of amenities.",
   },
-];
-
-const questionCategories = [
-  { id: "consultations", name: "Consultations" },
-  { id: "membership", name: "Membership" },
-  { id: "programs", name: "Programs" },
-  { id: "training", name: "Training" },
-  { id: "locations", name: "Locations" },
 ];
