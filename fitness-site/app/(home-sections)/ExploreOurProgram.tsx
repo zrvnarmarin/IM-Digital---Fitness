@@ -7,7 +7,7 @@ export default function ExploreOurProgram() {
   return (
     <SectionWrapper>
       <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
-        Explore Our Program
+        What makes us special
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-6 md:pt-8">
         {programs.map((programCard) => (
@@ -41,7 +41,7 @@ export function ProgramCard({
   return (
     <div
       //#1F2125
-      className="flex flex-col gap-4 rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] duration-100 "
+      className="flex flex-col gap-4 rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]"
     >
       <div className="flex flex-row md:flex-col gap-4 items-center md:items-start">
         <div className=" bg-[#279C63] rounded-md p-2 w-fit"><DumbellIcon /></div>

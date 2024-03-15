@@ -3,55 +3,53 @@ import SectionWrapper from "@/app/components/wrappers/SectionWrapper";
 import Image from "next/image";
 import TestImage from "../../../../public/HeroTestTest.jpg";
 import { DumbellIcon } from "@/public/Icons";
+import { formatString } from "@/app/utils/helpers";
 
-export default function ProgramOverviewSection() {
+export default function ProgramOverviewSection({ programId } : { programdId: string }) {
   return (
     <SectionWrapper>
-      <div className="grid grid-cols-2 gap-8">
-        <div className="flex flex-col gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex flex-col gap-8 rounded-lg ">
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-4">
-              <div className=" bg-[#1D7349] rounded-md p-2 w-fit">
-                <DumbellIcon />
+              <div className="w-full flex flex-col items-start justify-between gap-4">
+              <h1 className="uppercase italic text-[#31C57D] text-2xl tracking-normal font-semibold">
+                Feel your strength
+              </h1>
+                <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
+                  {description}
+                </p>
               </div>
-              <div className="w-full flex items-center justify-between">
-                <span className="text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
+            </div>
+
+            <div className="flex flex-col justify-between w-full bg-gradient-to-r from-[#101010] to-[#191919] border border-[#292929] py-3 px-4 rounded-lg">
+              <div className="flex flex-row items-center justify-between gap-4 text-sm tracking-normal text-end text-white leading-7 font-medium">
+                <span className="font-semibold">Duration:</span> <span className="font-normal">6 Weeks</span>
+              </div>
+              <div className="flex flex-row items-center justify-between gap-4">
+                <span className="text-sm tracking-normal text-end text-white leading-7 font-semibold">
                   Intensity:
                 </span>
-                <span className="text-xl md:text-xl lg:text-xl tracking-normal text-end text-white leading-7 font-semibold">
-                  {`[${intensity}]`}
-                </span>
+                <div className="flex flex-row items-center justify-end w-1/3 gap-2">
+                  <span className="w-1/3 rounded-lg h-2 border border-[#292929]"></span>
+                  <span className="bg-[#31C57D] w-1/3 rounded-lg h-2 border border-[#292929]"></span>
+                  <span className="bg-[#31C57D] w-1/3 rounded-lg h-2 border border-[#292929]"></span>
+                </div>
               </div>
             </div>
-            <div className="w-full border-gray-500 rounded-md bg-slate-700">
-              <div
-                className={`h-2 border border-gray-500 rounded-md ${
-                  intensity === "Low"
-                    ? "w-1/3 bg-[#1D7349]"
-                    : intensity === "Moderate"
-                      ? "w-2/3 bg-[#1D7349]"
-                      : "w-full bg-[#1D7349]"
-                }`}
-              ></div>
-            </div>
+
           </div>
-          <div className="w-full flex items-center justify-between">
-            <div className="flex flex-row items-center gap-4">
-              <div className=" bg-[#1D7349] rounded-md p-2 w-fit">
-                <DumbellIcon />
-              </div>
-              <span className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-end text-white leading-7 font-semibold">
-                Duration:
-              </span>
-            </div>
-            <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-end text-white leading-7 font-semibold">
-              [6 weeks]
-            </p>
+          <div className="w-full flex flex-row items-center justify-between">
+            <button className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
+              Phase 1
+            </button>
+            <button className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
+              Phase 1
+            </button>
+            <button className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
+              Phase 1
+            </button>
           </div>
-          <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
-            {description}
-          </p>
-          
         </div>
 
         <div>

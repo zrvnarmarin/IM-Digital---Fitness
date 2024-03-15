@@ -3,15 +3,14 @@ import { locations } from './../../data/locations';
 import SectionWrapper from "@/app/components/wrappers/SectionWrapper";
 import { LocationType } from "@/app/types";
 import Link from "next/link";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import ShareIcon from '../../../public/share-arrow-svgrepo-com.png'
-import TestImage from '../../../public/gymImage.jpg'
 
 export default function Page({ params }: { params: { locationName: string } }) {
   const location = locations.find(location => params.locationName === location.href)
 
   return (
-    <main className="flex flex-col items-center lg:py-4 bg-[#111317]">
+    <main className="flex flex-col items-center bg-[#111317]">
       <HeroSection locationName={location?.locationName} />
       <AboutLocation location={location} />
       <GallerySection />

@@ -1,15 +1,11 @@
-import Link from "next/link";
+import Image from "next/image";
 import React from "react";
+import TestImage from '../../../public/HeroTestTest.jpg';
 
 export default function HeroSection() {
   return (
-    <div className="w-full">
-      <p className="px-6 md:px-8 lg:px-24 text-[#F3F3F3] opacity-100 text-4xl md:text-6xl lg:text-8xl uppercase font-black text-start">
-        About Us
-      </p>
-      <p className="px-6 md:px-8 lg:px-24 uppercase font-normal text-[#1D7349] text-2xl tracking-wider">
-        Find More Things About Us
-      </p>
+    <div className="w-screen h-screen bg-red-400">
+      
     </div>
   );
 }

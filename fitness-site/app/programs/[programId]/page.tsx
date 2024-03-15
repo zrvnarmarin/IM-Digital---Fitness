@@ -16,11 +16,11 @@ export default function Page({ params }: { params: { programId: string } }) {
   );
 
   return (
-    <main className="flex flex-col items-center lg:py-4 bg-[#111317]">
+    <main className="flex flex-col items-center bg-[#111317]">
       <HeroSection programId={formatString(params.programId)} />
-      <ProgramOverviewSection />
+      <ProgramOverviewSection programId={formatString(params.programId)} />
       <ProgramFeatures />
-      <ProgramObjectives />
+      {/* <ProgramObjectives /> */}
       <ProgramStructure />
       <ProgramBenefits />
       <ProgramFAQ />

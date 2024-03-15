@@ -3,7 +3,6 @@ import SectionWrapper from '../components/wrappers/SectionWrapper';
 import Link from 'next/link';
 import Image from 'next/image';
 import { LocationType } from '../types';
-import ShareIcon from '../../public/share-arrow-svgrepo-com.png'
 import { locations } from '../data/locations';
 
 export default function Page() {
@@ -11,7 +10,6 @@ export default function Page() {
     <main className="flex min-h-screen flex-col items-center lg:py-4 bg-[#181a1f]">
       <HeroSection />
       <AboutLocations />
-      <LocationsSection />
     </main>
   )
 }
@@ -32,26 +30,21 @@ export function HeroSection() {
 export function AboutLocations() {
   return (
     <SectionWrapper>
-      <h1 className='uppercase font-semibold text-white text-2xl tracking-wider w-full'>Nesto nesto nesto nesto</h1>
-      <p className='normal-case text-md md:text-md text-gray-300 leading-2 font-normal'>
+      <h1 className='uppercase font-semibold text-white text-2xl tracking-wider w-full'>
+        Explore All Our Locations 
+      </h1>
+      <p className='normal-case text-sm text-gray-300 leading-2 font-normal'>
           As the largest Croatian chain of fitness centers, we are always looking for new locations to expand in order to
           provide our members with even greater availability throughout Croatia.
           Gyms4you is a European concept of fitness centers with an excellent ratio 
           of quality service and price. We are open 24 hours a day, 365 days a year, and with one membership card, 
           our members can train in any of our gyms.
       </p>
-    </SectionWrapper>
-  )
-}
-
-export function LocationsSection() {
-  return (
-    <SectionWrapper>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 rounded-lg gap-6">
         {locations.map((location) => (
           <LocationCard 
-              key={location.id} 
-              location={location}
+            key={location.id} 
+            location={location}
           />
         ))}
       </div>
@@ -83,9 +76,6 @@ export const LocationCard = ({ location }: { location: LocationType }) => {
             <span className="w-full pt-4 text-xl md:text-xl lg:text-xl tracking-normal text-center text-white leading-7 font-semibold">
               {location.locationCity}
             </span>
-            <button className="w-fit border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
-             Gallery
-            </button>
           </div>
         </div>
 
