@@ -6,7 +6,7 @@ import { FAQType } from "@/app/(home-sections)/FAQSection";
 export default function ProgramFAQ() {
   return (
     <SectionWrapper>
-      <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
+      <h1 className="uppercase italic text-white text-2xl tracking-normal font-semibold">
         FAQ
       </h1>
       <Accordion faqArray={programFAQ} />

@@ -26,6 +26,20 @@ export const KeyFeatureCard = ({ keyFeature }: { keyFeature: KeyFeature }) => {
     <li
       className="group flex flex-row rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]"
     >
+      {/* This is the code for the image in the background - TEST IT! */}
+        {/* Image spans across the width and height of the screen
+        <div className="absolute inset-0">
+          <Image
+            priority
+            src={TestImage}
+            alt="alt"
+            layout="fill"
+            objectPosition="center"
+            className="rounded-md object-cover"
+          />
+        </div>
+        {/* Overlaying color */}
+        {/* <div className="absolute inset-0 bg-black opacity-70"></div>  */}
       <div className="flex flex-col gap-4">
         <div className="flex flex-row md:flex-col items-center md:items-start gap-3">
           <div className="w-full flex items-center gap-3 text-lg tracking-normal text-start text-[#ffffff] leading-7 font-semibold">
@@ -60,7 +74,7 @@ const keyFeatures = [
     id: 2,
     title: "Progressive Overload",
     description:
-      "We emphasize progressive overload principles to continually challenge your muscles and nerves",
+      "We emphasize progressive overload principles to continually challenge your muscles",
   },
   {
     id: 3,
@@ -72,6 +86,6 @@ const keyFeatures = [
     id: 4,
     title: "Caring Community",
     description:
-      "Join a supportive community of like-minded individuals who share your commitment to strength ",
+      "Join a supportive community of like-minded individuals who share your commitment ",
   },
 ];
