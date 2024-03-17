@@ -9,7 +9,7 @@ export default function ProgramOverviewSection({ programId } : { programdId: str
   return (
     <SectionWrapper>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="flex flex-col gap-8 rounded-lg ">
+        <div className="flex flex-col gap-4 rounded-lg">
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-4">
               <div className="w-full flex flex-col items-start justify-between gap-4">
@@ -22,7 +22,7 @@ export default function ProgramOverviewSection({ programId } : { programdId: str
               </div>
             </div>
 
-            <div className="flex flex-col justify-between w-full bg-gradient-to-r from-[#101010] to-[#191919] border border-[#292929] py-3 px-4 rounded-lg">
+            <div className="flex flex-col justify-between w-full ">
               <div className="flex flex-row items-center justify-between gap-4 text-sm tracking-normal text-end text-white leading-7 font-medium">
                 <span className="font-semibold">Duration:</span> <span className="font-normal">6 Weeks</span>
               </div>
@@ -40,14 +40,14 @@ export default function ProgramOverviewSection({ programId } : { programdId: str
 
           </div>
           <div className="w-full flex flex-row items-center justify-between">
+            <p className="flex items-center gap-2 normal-case text-xs text-[#31C57D] leading-2 font-normal">
+              <span className="rounded-full p-2 bg-gradient-to-r from-[#101010] to-[#191919] border border-[#292929]">
+                <DumbellIcon />
+              </span>
+              Lorem ipsum dolor sit amet
+            </p>
             <button className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
-              Phase 1
-            </button>
-            <button className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
-              Phase 1
-            </button>
-            <button className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
-              Phase 1
+              Lorem Ipsum
             </button>
           </div>
         </div>

@@ -43,10 +43,44 @@ export const TrainingPhaseCard = ({
   return (
     <li className={`grid grid-cols-1 md:grid-cols-2 gap-6`}>
 
-      <div className="relative flex flex-col justify-center gap-12">
+      <div className="relative flex flex-col justify-center gap-16">
+        <div className="z-40">
+          <p className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-center text-white leading-7 pb-1 font-semibold">
+            <span className="text-[#31C57D]">Phase</span>{" "}
+            {trainingPhase.phaseNumber}
+          </p>
+          <div className="h-4 w-full bg-[#31C57D]"></div>
+          <div className="flex flex-row md:flex-col items-center md:items-start">
+            <p className="w-full text-xl tracking-normal text-center text-white leading-7 pt-4 font-semibold">
+              {trainingPhase.phase}
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-row justify-between gap-6">
 
-        {/* This is the code for the image in the background - TEST IT! */}
-        {/* Image spans across the width and height of the screen
+          <div className="flex flex-row gap-2 items-center">
+            <span className="rounded-full p-2 bg-gradient-to-r from-[#101010] to-[#191919] border border-[#292929]">
+                <DumbellIcon />
+              </span>
+            <div className="flex flex-col items-center text-gray-300">
+              <p className="text-lg tracking-normal text-start text-[#ffffff] leading-7 font-semibold">34%</p>
+              <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">Active learners</p>
+            </div>
+          </div>
+          <div className="flex flex-row gap-2 items-center">
+            <span className="rounded-full p-2 bg-gradient-to-r from-[#101010] to-[#191919] border border-[#292929]">
+                <DumbellIcon />
+              </span>
+            <div className="flex flex-col items-center text-gray-300">
+              <p className="text-lg tracking-normal text-start text-[#ffffff] leading-7 font-semibold">34%</p>
+              <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">Active learners</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <div className="relative group flex flex-col gap-4 rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#161616]">
         <div className="absolute inset-0">
           <Image
             priority
@@ -57,42 +91,19 @@ export const TrainingPhaseCard = ({
             className="rounded-md object-cover"
           />
         </div>
-        {/* Overlaying color */}
-        {/* <div className="absolute inset-0 bg-black opacity-70"></div>  */}
-
-        <div className="z-40">
-          <p className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-center text-white leading-7 pb-1 font-semibold">
-            <span className="text-[#31C57D]">Phase</span>{" "}
-            {trainingPhase.phaseNumber}
-          </p>
-          <div className="h-4 w-full bg-[#31C57D]"></div>
-          <div className="flex flex-row md:flex-col items-center md:items-start">
-            <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-center text-white leading-7 pt-4 font-semibold">
-              {trainingPhase.phase}
-            </p>
-          </div>
-        </div>
-        <div className="flex items-center justify-center">
-          <div className="bg-[#31C57D] rounded-lg p-2 flex items-center w-fit justify-center relative">
-            <div className="absolute inset-0 bg-black opacity-10 rounded-lg"></div>
-            <DumbellIcon width={70} height={70} />
-          </div>
-        </div>
-      </div>
-
-      <div className="relative group flex flex-col gap-4 rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-        <div className="flex flex-col gap-6">
+        <div className="absolute inset-0 bg-black opacity-80 border border-[#292929] rounded-lg"></div>
+        <div className="flex flex-col gap-6 z-20">
           <h1 className="uppercase italic text-[#31C57D] text-2xl tracking-normal font-semibold">
             Feel your strength
           </h1>
           <div className="flex flex-col gap-4 px-6">
             {trainingPhase.sentences.map((sentence) => (
-              <p
-                key={sentence}
-                className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal"
-              >
-                &#x2022; {sentence}
-              </p>
+              <div key={sentence} className="flex flex-row gap-4">
+                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
+                  &#10003;
+                </span> 
+                <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">{sentence}</p>
+              </div>
             ))}
           </div>
         </div>
