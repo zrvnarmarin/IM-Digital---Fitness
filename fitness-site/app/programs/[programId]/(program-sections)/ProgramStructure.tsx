@@ -17,7 +17,7 @@ export default function ProgramStructure() {
         participants stay on track, make necessary adjustments to their
         workouts, and continue progressing toward their goals
       </p>
-      <ul className="grid grid-cols-1 lg:grid-cols-1 gap-12 pt-12">
+      <ul className="grid grid-cols-1 lg:grid-cols-1 gap-6 pt-12">
         {trainingPhases.map((trainingPhase, index) => (
           <TrainingPhaseCard
             key={trainingPhase.id}

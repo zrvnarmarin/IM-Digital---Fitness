@@ -3,11 +3,12 @@ import { formatString } from "@/app/utils/helpers";
 import { programs } from "@/app/data";
 import HeroSection from "./(program-sections)/HeroSection";
 import ProgramOverviewSection from "./(program-sections)/ProgramOverviewSection";
-import ProgramObjectives from "./(program-sections)/ProgramObjectives";
 import ProgramStructure from "./(program-sections)/ProgramStructure";
 import ProgramBenefits from "./(program-sections)/ProgramBenefits";
 import ProgramFAQ from "./(program-sections)/ProgramFAQ";
 import ProgramFeatures from "./(program-sections)/ProgramFeatures";
+import MoreProgramInfoSection from "./(program-sections)/MoreProgramInfoSection";
+import ProgramBuyAndDiscoundSection from "./(program-sections)/ProgramBuyAndDiscoundSection";
 
 export default function Page({ params }: { params: { programId: string } }) {
   // TO DO: fix the bug of pulling info for each individual program
@@ -18,10 +19,12 @@ export default function Page({ params }: { params: { programId: string } }) {
   return (
     <main className="flex flex-col items-center bg-[#111317]">
       <HeroSection programId={formatString(params.programId)} />
-      <ProgramOverviewSection programId={formatString(params.programId)} />
+      <ProgramOverviewSection />
       <ProgramFeatures />
       {/* <ProgramObjectives /> */}
       <ProgramStructure />
+      <MoreProgramInfoSection />
+      <ProgramBuyAndDiscoundSection programId={formatString(params.programId)} />
       <ProgramBenefits />
       <ProgramFAQ />
     </main>
