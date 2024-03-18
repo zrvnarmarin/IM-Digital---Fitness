@@ -3,9 +3,8 @@ import SectionWrapper from "@/app/components/wrappers/SectionWrapper";
 import Image from "next/image";
 import TestImage from "../../../../public/HeroTestTest.jpg";
 import { DumbellIcon } from "@/public/Icons";
-import { formatString } from "@/app/utils/helpers";
 
-export default function ProgramOverviewSection({ programId } : { programdId: string }) {
+export default function ProgramOverviewSection() {
   return (
     <SectionWrapper>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

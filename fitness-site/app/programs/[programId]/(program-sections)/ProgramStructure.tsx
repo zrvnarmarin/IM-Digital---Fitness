@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import SectionWrapper from "@/app/components/wrappers/SectionWrapper";
-import { DumbellIcon } from "@/public/Icons";
 import TestImage from "../../../../public/HeroTestTest.jpg";
 
 export default function ProgramStructure() {
@@ -43,43 +42,34 @@ export const TrainingPhaseCard = ({
   return (
     <li className={`grid grid-cols-1 md:grid-cols-2 gap-6`}>
 
-      <div className="relative flex flex-col justify-center gap-16">
-        <div className="z-40">
-          <p className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-center text-white leading-7 pb-1 font-semibold">
+      {/* Left section */}
+      <div className="relative flex flex-col justify-center items-center gap-6">
+        <div className="z-30">
+          <p className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold">
             <span className="text-[#31C57D]">Phase</span>{" "}
             {trainingPhase.phaseNumber}
           </p>
-          <div className="h-4 w-full bg-[#31C57D]"></div>
+          <div className="h-0.5 w-2/3 bg-[#31C57D]"></div>
           <div className="flex flex-row md:flex-col items-center md:items-start">
-            <p className="w-full text-xl tracking-normal text-center text-white leading-7 pt-4 font-semibold">
+            <p className="w-full text-xl tracking-normal text-start text-white leading-7 pt-4 font-semibold">
               {trainingPhase.phase}
             </p>
           </div>
         </div>
-        <div className="flex flex-row justify-between gap-6">
-
-          <div className="flex flex-row gap-2 items-center">
-            <span className="rounded-full p-2 bg-gradient-to-r from-[#101010] to-[#191919] border border-[#292929]">
-                <DumbellIcon />
-              </span>
-            <div className="flex flex-col items-center text-gray-300">
-              <p className="text-lg tracking-normal text-start text-[#ffffff] leading-7 font-semibold">34%</p>
-              <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">Active learners</p>
-            </div>
-          </div>
-          <div className="flex flex-row gap-2 items-center">
-            <span className="rounded-full p-2 bg-gradient-to-r from-[#101010] to-[#191919] border border-[#292929]">
-                <DumbellIcon />
-              </span>
-            <div className="flex flex-col items-center text-gray-300">
-              <p className="text-lg tracking-normal text-start text-[#ffffff] leading-7 font-semibold">34%</p>
-              <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">Active learners</p>
-            </div>
-          </div>
-          
+        <div className="absolute z-10 inset-0 bg-black opacity-40 border border-[#292929] rounded-lg"></div>
+        <div className="absolute inset-0">
+          <Image
+            priority
+            src={TestImage}
+            alt="alt"
+            layout="fill"
+            objectPosition="center"
+            className="rounded-md object-cover"
+          />
         </div>
       </div>
 
+      {/* Right section */}
       <div className="relative group flex flex-col gap-4 rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#161616]">
         <div className="absolute inset-0">
           <Image
