@@ -4,7 +4,6 @@ import HeroSection from "./(program-sections)/HeroSection";
 import ProgramOverviewSection from "./(program-sections)/ProgramOverviewSection";
 import ProgramStructure from "./(program-sections)/ProgramStructure";
 import ProgramBenefits from "./(program-sections)/ProgramBenefits";
-import ProgramFAQ from "./(program-sections)/ProgramFAQ";
 import ProgramFeatures from "./(program-sections)/ProgramFeatures";
 import MoreProgramInfoSection from "./(program-sections)/MoreProgramInfoSection";
 import ProgramBuyAndDiscoundSection from "./(program-sections)/ProgramBuyAndDiscoundSection";
@@ -23,7 +22,6 @@ export default function Page({ params }: { params: { programId: string } }) {
       <ProgramBenefits />
       <SuccessStoriesSection />
       <OtherProgramsSection />
-      <ProgramFAQ />
     </main>
   );
 }
