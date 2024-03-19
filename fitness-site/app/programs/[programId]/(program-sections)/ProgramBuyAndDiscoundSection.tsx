@@ -2,7 +2,7 @@ import { LogoImage } from "@/app/(home-sections)/Navbar";
 import React from "react";
 import Link from "next/link";
 
-export default function ProgramBuyAndDiscoundSection({ programId } : { programId: number}) {
+export default function ProgramBuyAndDiscoundSection({ programId } : { programId: string}) {
     return (
         <section className="w-full flex flex-col md:flex-row items-center justify-center gap-8 py-6">
             <LogoImage  />

@@ -23,7 +23,7 @@ export default function ProgramBenefits() {
             />
           </div>
           <div className="absolute inset-0 bg-black opacity-80 border border-[#292929] rounded-lg"></div>
-          <div className="flex flex-col gap-6 z-20">
+          <div className="flex flex-col gap-2 z-20">
             <div className="w-full flex flex-col items-start gap-6 text-lg tracking-normal text-start text-[#ffffff] leading-7 font-semibold">
               <span className="rounded-full p-2 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
                 <DumbellIcon  width={30} height={30} />
@@ -50,7 +50,7 @@ export default function ProgramBenefits() {
             />
           </div>
           <div className="absolute inset-0 bg-black opacity-80 border border-[#292929] rounded-lg"></div>
-          <div className="flex flex-col gap-6 z-20">
+          <div className="flex flex-col gap-2 z-20">
             <div className="w-full flex flex-col items-start gap-6 text-lg tracking-normal text-start text-[#ffffff] leading-7 font-semibold">
               <span className="rounded-full p-2 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
                 <DumbellIcon  width={30} height={30} />
