@@ -23,7 +23,7 @@ export const InstructorCard = ({
   instructor: InstructorType;
 }) => {
   return (
-    <div className="flex flex-col gap-2 rounded-lg bg-gradient-to-r from-[#101010] to-[#292929] border border-[#292929]">
+    <div className="flex flex-col gap-2 ">
       <div className="flex flex-row">
         <Image
           src={instructor.imageSrc}
@@ -32,7 +32,7 @@ export const InstructorCard = ({
           alt="instructor"
           className="w-fit object-cover"
         />
-        <div className="w-full group flex flex-col gap-4 py-4 px-6">
+        <div className="w-full group flex flex-col gap-4 py-4 px-6 rounded-lg bg-gradient-to-r from-[#101010] to-[#292929] border border-[#292929]">
           <div className="flex flex-row items-center justify-between">
             <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
               {instructor.name}
@@ -72,10 +72,13 @@ export const InstructorCard = ({
           </div>
           <div className="flex flex-row gap-4 items-center justify-between">
             <div className="w-full flex flex-row items-center justify-end gap-4">
-              <Link href={`/instructors/${instructor.href}/availability`} className="border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
+              <Link 
+                href={`/instructors/${instructor.href}/availability`} 
+                className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white"
+              >
                 Check Availability
               </Link>
-              <button className="border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
+              <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
                 Get In Contact
               </button>
             </div>
