@@ -1,46 +1,145 @@
 import React from "react";
 import Image from "next/image";
-import HeroSection from "./(about-sections)/HeroSection";
 import Link from "next/link";
 import SectionWrapper from "../components/wrappers/SectionWrapper";
 import TestImage from "../../public/CardioBlastImage.jpg";
 import ShareIcon from "../../public/share-arrow-svgrepo-com.png";
 import { SuccessStoryCard } from "../(home-sections)/SuccessStories";
 import { testimonials } from "../data";
+import { DumbellIcon } from "@/public/Icons";
+
+// TO DO: osmisliti kako ukorporirati galeriju slika (tipa kao na hacksmithu)
 
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col items-center bg-[#000000]">
       <HeroSection />
-      <LegacyOfCourageSection />
-      <FoundersSection />
-      <LongParagraphsSection />
+      <SecondSection />
+      {/* <FoundersSection /> */}
       <MissionAndValuesSection />
+      <LongParagraphsSection />
+      <LegacyOfCourageSection />
       <TestimonialsSection />
-      <SectionWrapper>
-        <p className="w-full text-xl md:text-xl lg:text-xl text-center tracking-normal text-white leading-7 font-semibold">
-          Trusted by top private gyms
-        </p>
-        <div className="flex flex-wrap gap-6 justify-evenly">
-        {['li', 'fb', 'li', 'fb', 'li'].map(n =>
-          <p className="text-white text-xl">
-            {n}
-          </p>
-        )}
-        </div>
-
-        <div className="flex flex-wrap gap-6 justify-evenly">
-          {['li', 'fb', 'li', 'fb'].map(n =>
-            <p className="text-white text-xl">
-              {n}
-            </p>
-          )}
-        </div>
-      </SectionWrapper>
       <SeeProgramsSection />
     </main>
   );
 }
+
+export function HeroSection() {
+  return (
+    <SectionWrapper>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div className="flex flex-col gap-6">
+          <h1 className="w-full text-xl md:text-xl lg:text-5xl tracking-normal text-end text-white leading-7 font-semibold">
+            Our Evolutionary Odissey
+          </h1>
+          <p className="normal-case text-sm text-gray-300 leading-2 font-normal text-end">
+            At Aeon Olympia Strength Gym, we pride ourselves on providing a world-class fitness facility
+            equiped with a range of amenities to enhance your workout experience. Our goal is to create a
+            comfortable and motivating environment where you can focus on your fitness journey. Our goal is to create a
+            comfortable and motivating environment where you can focus on your fitness journey.
+          </p>
+        </div>
+        <div className="text-white flex items-center justify-center">
+          <div className="relative flex items-center justify-center group h-full w-full rounded-xl cursor-pointer">
+            <Image
+              priority
+              src={TestImage}
+              alt="alt"
+              fill={true}
+              // fill={true} slika s ovim propertijem ocito zauzima mjesta koliko mu flexbox sirina i njegova visina dopustaju
+              className="object-cover rounded-md"
+            />
+          </div>
+        </div>
+      </div>
+      
+    </SectionWrapper>
+  )
+}
+
+export function SecondSection() {
+  return (
+    <SectionWrapper>
+      <h1 className="uppercase italic text-white text-2xl tracking-normal text-center font-semibold">
+        History
+      </h1>
+      <p className="normal-case text-sm text-gray-300 text-center leading-2 font-normal">
+        Embark on a journey through our very hubmle beginnings, to the new heights as of today
+      </p>
+      {secondSectionArray.map((card, index) =>
+        <SecondSectionCard card={card} key={card.id} index={index} />  
+      )}
+    </SectionWrapper>
+  )
+}
+
+export type CardType = {
+  year: number;
+  title: string;
+  description: string;
+}
+
+const secondSectionArray = [
+  {
+    id: 1,
+    year: 2012,
+    title: 'Lorem Ipsum Dolor Sit',
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam? Quae atque sed distinctio.`
+  },
+  {
+    id: 2,
+    year: 2016,
+    title: 'Lorem Ipsum Dolor Sit',
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam? Quae atque sed distinctio.`
+  },
+  {
+    id: 3,
+    year: 2020,
+    title: 'Lorem Ipsum Dolor Sit',
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam? Quae atque sed distinctio.`
+  },
+  {
+    id: 4,
+    year: 2023,
+    title: 'Lorem Ipsum Dolor Sit',
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam? Quae atque sed distinctio.`
+  }
+]
+
+export const SecondSectionCard = ({ card, index } : { card: CardType, index: number }) => {
+  const isEven = index % 2 === 0;
+
+  return (
+    <section className="flex flex-row">
+      {/* <p className="text-white">{index}</p> */}
+
+      <div className={`relative flex flex-row items-center gap-16 w-1/2 ${isEven ? 'order-2 justify-start' : 'order-0 justify-end'}`}>
+        <div className={`${isEven ? 'order-1' : 'order-0'} z-30 flex flex-row`}>
+          <p className="order-0 w-full text-xl md:text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold">
+            <span className="text-[#31C57D]">{card.year}</span>{" "}
+          </p>
+        </div>
+        <div className="flex items-center h-full w-[1px] bg-[#31C57D]"></div>
+      </div>
+      
+
+      <div className={`flex flex-col gap-2 w-1/2 ${!isEven ? 'pl-16' : 'pr-16'}`}>
+        <div className="w-full group flex flex-row gap-4 py-10 px-10 rounded-lg bg-gradient-to-r from-[#101010] to-[#191919] border border-[#292929]">
+          <div className="flex flex-col gap-6">
+            <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-gray-100 leading-7 font-semibold">
+              {card.title}
+            </p>
+            <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
+              {card.description}
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  );
+};
 
 export function LegacyOfCourageSection() {
   return (
@@ -205,55 +304,6 @@ export const LongParagraphsSection = () => {
             Meet the rest
           </button>
         </div>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
-          Also, people don`t really like doing surveys. Only about <span className="text-[#31C57D] font-bold">2–4%</span> of
-          people actually finish them.
-        </p>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
-          The result? Private clinics are faced with a lot of guesswork when
-          making business decisions.
-        </p>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
-          We knew <span className="text-[#31C57D] font-bold">there had to be a better way.</span>
-        </p>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
-          <span className="text-[#31C57D] font-bold">Our team has worked</span> on setting up feedback systems in multinational
-          companies. Combining our backgrounds in data science and psychology,
-          we started helping the largest private clinics in Croatia to collect
-          feedback using technology.
-        </p>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
-          <span className="text-[#31C57D] font-bold">Our team has worked</span> on setting up feedback systems in multinational
-          companies. Combining our backgrounds in data science and psychology,
-          we started helping the largest private clinics in Croatia to collect
-          feedback using technology.
-        </p>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
-          That`s how InsiderCX was born.
-        </p>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
-          Automating clinic operations and ensuring patient happiness became <span className="text-[#31C57D] font-bold">
-            our
-            daily mission.
-          </span>
-        </p>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
-          Seeing the impact it had on our first clients, we decided to make it
-          accessible to private clinics that want to transform their businesses.
-        </p>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
-          Our mission is simple: <span className="text-[#31C57D] font-bold">empower clinics to focus</span> on patient care, while
-          we handle the rest.
-        </p>
-        <p className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-center text-white leading-7 px-6 font-bold">
-          <span className="text-[#31C57D]">Enrage</span> your inner beast and <span className="text-[#31C57D]">unleash</span> it today!
-        </p>
-        <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
-          
-          <button className="w-fit border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
-            Explore Locations
-          </button>
-        </div>
       </div>
     </SectionWrapper>
   );
@@ -262,6 +312,12 @@ export const LongParagraphsSection = () => {
 export const MissionAndValuesSection = () => {
   return (
     <SectionWrapper>
+       <h1 className="uppercase italic text-white text-2xl tracking-normal text-start font-semibold">
+        History
+      </h1>
+      <p className="normal-case text-sm text-gray-300 text-start leading-2 font-normal">
+        Embark on a journey through our very hubmle beginnings, to the new heights as of today
+      </p>
       <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {stats.map((stat) => (
           <StatCard key={stat.id} stat={stat} />

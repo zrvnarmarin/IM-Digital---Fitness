@@ -10,13 +10,13 @@ export default function HeroSection() {
         className="absolute top-36 left-4 w-[32rem] h-64 bg-[#0f3d27] opacity-60 z-10 blur-3xl"
       />
       <div className="flex flex-col gap-6 items-center justify-center z-20">
-        <p className="w-full uppercase text-md md:text-md text-gray-300 leading-2 text-start font-normal">
+        <p className="w-full uppercase text-md md:text-lg text-gray-300 leading-2 text-start font-normal">
           Gym areas
         </p>
-        <h1 className="w-full text-xl md:text-xl lg:text-5xl tracking-normal text-start text-white leading-7 font-semibold">
-          We create simple and effective plans and programs 
+        <h1 className="w-full text-xl md:text-xl lg:text-6xl tracking-normal text-start text-white leading-7 font-semibold">
+          We create simple and effective plans 
         </h1>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
+        <p className="normal-case text-md md:text-lg text-gray-300 leading-2 font-normal">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quae aliquid deserunt.
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>

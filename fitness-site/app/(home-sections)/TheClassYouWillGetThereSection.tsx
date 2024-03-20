@@ -62,15 +62,12 @@ export const FacilitiesCard = ({
   return (
     <li
       onClick={onShow}
-      className={`${isActive ? 'cursor-pointer group flex flex-row rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#292929] border border-[#292929]' : 'cursor-pointer'}`}
+      className={`${isActive ? 'cursor-pointer group flex flex-row rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#191919] border border-[#292929]' : 'cursor-pointer'}`}
     >
       
       <div className={`${isActive ? 'flex flex-row gap-2 items-start' : 'rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#292929] border border-[#292929] flex flex-row gap-2 items-start px-6'} `}>
-        <div className="pt-0.5">
-          <DumbellIcon width={25} height={25} />
-        </div>
         <div className="flex flex-col">
-          <div className={`${isActive ? 'w-full flex flex-col items-center gap-2 text-xl md:text-xl lg:text-xl tracking-normal text-start text-[#31C57D] leading-7 font-semibold' : 'flex items-center gap-2 w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-[#31C57D] group-hover:text-[#C57D31] leading-7 font-semibold'}`}>
+          <div className={`${isActive ? 'w-full flex flex-col items-center gap-2 text-xl md:text-xl lg:text-xl tracking-normal text-start text-[#31C57D] leading-7 font-semibold' : 'flex items-center gap-2 w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold'}`}>
             <p className="w-full ">{card.mainTitle}</p>
             {
               isActive

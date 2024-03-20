@@ -32,7 +32,7 @@ export const InstructorCard = ({
           alt="instructor"
           className="w-fit object-cover"
         />
-        <div className="w-full group flex flex-col gap-4 py-4 px-6 rounded-lg bg-gradient-to-r from-[#101010] to-[#292929] border border-[#292929]">
+        <div className="w-full group flex flex-col gap-4 py-4 px-6 rounded-lg bg-gradient-to-r from-[#101010] to-[#191919] border border-[#292929]">
           <div className="flex flex-row items-center justify-between">
             <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
               {instructor.name}

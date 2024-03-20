@@ -6,7 +6,7 @@ import TestImage from '../../public/HeroTestTest.jpg'
 
 export default function Page() {
   return (
-    <main className="flex flex-col items-center lg:py-4 bg-[#111317]">
+    <main className="flex flex-col items-center bg-[#111317]">
       <FacilitiesSection facilities={facilities} />
     </main>
   );
@@ -19,11 +19,11 @@ const FacilitiesSection = ({ facilities } : { facilities: FacilityType[] }) => {
         Explore Our Gym Amenities
       </div>
       <h1 className="w-full text-xl md:text-xl lg:text-5xl tracking-normal text-start text-white leading-7 font-semibold">
-        Gym Amenities
+        Gym Facilities
       </h1>
       <div className="flex flex-row gap-6 normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
         <div className="flex flex-row justify-center gap-3">
-          <span className="w-2.5 h-6 bg-[#31C57D]" />
+          <span className="w-2.5  h-6 bg-[#31C57D]" />
           <span className="w-2.5  h-6 bg-[#31C57D]" />
           <span className="w-2.5  h-6 bg-[#31C57D]" />
           <span className="w-2.5  h-6 bg-[#31C57D]" />
