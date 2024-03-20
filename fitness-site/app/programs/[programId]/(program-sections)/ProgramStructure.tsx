@@ -43,7 +43,7 @@ export const TrainingPhaseCard = ({
     <li className={`grid grid-cols-1 md:grid-cols-2 gap-6`}>
 
       {/* Left section */}
-      <div className="relative flex flex-col justify-center items-center gap-6">
+      <div className={`${!isEven ? 'order-2' : 'order-0'} relative flex flex-col justify-center items-center gap-6`}>
         <div className="z-30">
           <p className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold">
             <span className="text-[#31C57D]">Phase</span>{" "}
