@@ -15,12 +15,12 @@ export default function Page() {
 const FacilitiesSection = ({ facilities } : { facilities: FacilityType[] }) => {
   return (
     <SectionWrapper>
-      <div className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
-        Explore Our Gym Amenities
-      </div>
-      <h1 className="w-full text-xl md:text-xl lg:text-5xl tracking-normal text-start text-white leading-7 font-semibold">
+      <h1 className="w-full text-xl md:text-xl lg:text-6xl tracking-normal text-start text-white leading-7 font-semibold">
         Gym Facilities
       </h1>
+      <div className="uppercase text-xs font-semibold w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
+        Explore Our Gym Amenities
+      </div>
       <div className="flex flex-row gap-6 normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
         <div className="flex flex-row justify-center gap-3">
           <span className="w-2.5  h-6 bg-[#31C57D]" />

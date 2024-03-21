@@ -6,7 +6,7 @@ import TestImage from "../../public/CardioBlastImage.jpg";
 import ShareIcon from "../../public/share-arrow-svgrepo-com.png";
 import { SuccessStoryCard } from "../(home-sections)/SuccessStories";
 import { testimonials } from "../data";
-import { DumbellIcon } from "@/public/Icons";
+import { DumbellIcon, TestIcon, TestIconTwo } from "@/public/Icons";
 
 // TO DO: osmisliti kako ukorporirati galeriju slika (tipa kao na hacksmithu)
 
@@ -15,11 +15,11 @@ export default function Page() {
     <main className="flex min-h-screen flex-col items-center bg-[#000000]">
       <HeroSection />
       <SecondSection />
-      {/* <FoundersSection /> */}
-      <MissionAndValuesSection />
-      <LongParagraphsSection />
       <LegacyOfCourageSection />
-      <TestimonialsSection />
+      <MissionAndValuesSection />
+      {/* <LongParagraphsSection /> */}
+      {/* <FoundersSection /> */}
+      {/* <TestimonialsSection /> */}
       <SeeProgramsSection />
     </main>
   );
@@ -33,7 +33,7 @@ export function HeroSection() {
           <h1 className="w-full text-xl md:text-xl lg:text-5xl tracking-normal text-end text-white leading-7 font-semibold">
             Our Evolutionary Odissey
           </h1>
-          <p className="normal-case text-sm text-gray-300 leading-2 font-normal text-end">
+          <p className="normal-case text-md text-gray-300 leading-2 font-normal text-end">
             At Aeon Olympia Strength Gym, we pride ourselves on providing a world-class fitness facility
             equiped with a range of amenities to enhance your workout experience. Our goal is to create a
             comfortable and motivating environment where you can focus on your fitness journey. Our goal is to create a
@@ -61,15 +61,24 @@ export function HeroSection() {
 export function SecondSection() {
   return (
     <SectionWrapper>
-      <h1 className="uppercase italic text-white text-2xl tracking-normal text-center font-semibold">
-        History
-      </h1>
-      <p className="normal-case text-sm text-gray-300 text-center leading-2 font-normal">
-        Embark on a journey through our very hubmle beginnings, to the new heights as of today
-      </p>
-      {secondSectionArray.map((card, index) =>
-        <SecondSectionCard card={card} key={card.id} index={index} />  
-      )}
+      <div className="flex flex-col gap-3 pb-8">
+        <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
+          Timeline
+        </p>
+        <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
+          Embark on our journey of strength
+        </h1>
+      </div>
+      <div className="flex flex-col gap-16 pb-4">
+        {secondSectionArray.map((card, index) =>
+          <SecondSectionCard card={card} key={card.id} index={index} />
+        )}
+      </div>
+      <div className="flex w-full items-center justify-center pt-6">
+        <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
+          Read More Stories
+        </button>
+      </div>
     </SectionWrapper>
   )
 }
@@ -84,26 +93,26 @@ const secondSectionArray = [
   {
     id: 1,
     year: 2012,
-    title: 'Lorem Ipsum Dolor Sit',
-    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam? Quae atque sed distinctio.`
+    title: 'Our Gym Takes Shape',
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam.`
   },
   {
     id: 2,
     year: 2016,
-    title: 'Lorem Ipsum Dolor Sit',
-    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam? Quae atque sed distinctio.`
+    title: 'Mainstream Transformation',
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam.`
   },
   {
     id: 3,
     year: 2020,
-    title: 'Lorem Ipsum Dolor Sit',
-    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam? Quae atque sed distinctio.`
+    title: 'Multi-City Expansion',
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam.`
   },
   {
     id: 4,
     year: 2023,
-    title: 'Lorem Ipsum Dolor Sit',
-    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam? Quae atque sed distinctio.`
+    title: 'World Recognition And Success',
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam.`
   }
 ]
 
@@ -114,23 +123,25 @@ export const SecondSectionCard = ({ card, index } : { card: CardType, index: num
     <section className="flex flex-row">
       {/* <p className="text-white">{index}</p> */}
 
-      <div className={`relative flex flex-row items-center gap-16 w-1/2 ${isEven ? 'order-2 justify-start' : 'order-0 justify-end'}`}>
+      <div className={`relative flex flex-row items-center gap-20 w-1/2 ${isEven ? 'order-2 justify-start' : 'order-0 justify-end'}`}>
         <div className={`${isEven ? 'order-1' : 'order-0'} z-30 flex flex-row`}>
           <p className="order-0 w-full text-xl md:text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold">
-            <span className="text-[#31C57D]">{card.year}</span>{" "}
+            <span className="bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] italic text-7xl tracking-normal text-start font-semibold">
+              {card.year}
+            </span>{" "}
           </p>
         </div>
         <div className="flex items-center h-full w-[1px] bg-[#31C57D]"></div>
       </div>
       
 
-      <div className={`flex flex-col gap-2 w-1/2 ${!isEven ? 'pl-16' : 'pr-16'}`}>
-        <div className="w-full group flex flex-row gap-4 py-10 px-10 rounded-lg bg-gradient-to-r from-[#101010] to-[#191919] border border-[#292929]">
-          <div className="flex flex-col gap-6">
-            <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-gray-100 leading-7 font-semibold">
+      <div className={`flex flex-col gap-2 w-1/2 ${!isEven ? 'pl-8' : 'pr-8'}`}>
+        <div className="w-full shadow-lg shadow-[#141414] group flex flex-row gap-4 py-6 px-16 rounded-lg bg-gradient-to-r from-[#101010] to-[#191919] border border-[#292929]">
+          <div className="flex flex-col gap-2">
+            <p className="w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold">
               {card.title}
             </p>
-            <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
+            <p className="normal-case text-md md:text-md text-gray-300 leading-2">
               {card.description}
             </p>
           </div>
@@ -144,26 +155,39 @@ export const SecondSectionCard = ({ card, index } : { card: CardType, index: num
 export function LegacyOfCourageSection() {
   return (
     <SectionWrapper>
-      <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
-        Carrying the journey of strength for decades
-      </h1>
+      <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex flex-col">
 
-      <div className=" grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="flex flex-col gap-6 relative">
-          <p className="normal-case text-sm text-gray-300 leading-2 font-normal">
-            <span className="text-[#31C57D] font-semibold">Our story is more than 46 years</span> in the making and we’re continuing
-            to set the bar high when it comes to fitness innovation. Even if
-            you’re just starting the first chapter of your personal fitness
-            journey!
-          </p>
-          <p className="normal-case text-sm text-gray-300 leading-2 font-normal">
-            <span className="text-[#31C57D] font-semibold">In the “golden days”</span>, there weren’t many options for working out.
-            But Joe Gold, our founder, had a passion for bodybuilding. He found
-            success as a professional “muscleman” and <span className="text-[#31C57D] font-semibold">toured with celebrities!</span>
-          </p>
-          <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
-            Meet the rest
+          <div className="flex flex-col gap-3">
+            <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
+              Consitency is the key
+            </h1>
+            <p className="normal-case text-md md:text-md text-gray-300 leading-2">
+              In the “golden days”,
+              there weren’t many options for working out.
+              But Joe Gold, our founder, had a passion for bodybuilding. He found
+              success as a professional “muscleman” and
+              toured with celebrities!
+              But Joe Gold, our founder, had a passion for bodybuilding. He found
+              success as a professional “muscleman”
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 gap-4 pt-8">
+            <div className="flex items-center gap-4">
+              <TestIcon />
+              <p className="text-md md:text-md text-gray-300 leading-2 uppercase font-semibold">Mind Over Body</p>
+            </div>
+            <div className="flex items-center gap-4">
+              <TestIconTwo />
+              <p className="text-md md:text-md text-gray-300 leading-2 uppercase font-semibold">Healing Factor Benefits</p>
+            </div>
+          </div>
+
+          <button className="mt-8 w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
+            Discover Our Programs
           </button>
+          
         </div>
         <div className="text-white flex items-center justify-center">
           <div className="relative flex items-center justify-center group h-full w-full rounded-xl cursor-pointer">
@@ -274,26 +298,23 @@ export const founders: FounderType[] = [
 export const LongParagraphsSection = () => {
   return (
     <SectionWrapper>
-      <div className="flex flex-col gap-8 px-4 md:px-20 lg:px-32 xl:px-56 2xl:px-72">
-      <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full text-center">
-          Something of placeholder
+      <div className="flex flex-col gap-8 ">
+        <h1 className="uppercase italic text-white text-2xl tracking-normal text-start font-semibold">
+          History
         </h1>
+        <p className="uppercase italic text-white text-2xl tracking-normal text-start font-semibold">
+          Embark on a journey through our very hubmle beginnings, to the new heights as of today
+        </p>
         <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
           <span className="text-[#31C57D] font-bold">As we were building</span> our platform, we were looking closely at how
           private healthcare providers get feedback, and what that means for
-          their businesses.
-        </p>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
-          Here`s what most private clinics do: <span className="text-[#31C57D] font-bold">they use pen-and-paper surveys</span>,
+          their businesses. Here`s what most private clinics do: <span className="text-[#31C57D] font-bold">they use pen-and-paper surveys</span>,
           emails, and forms on their websites. But there`s a problem with these
-          methods.
-        </p>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
-          <span className="text-[#31C57D] font-bold">These methods are difficult</span> to analyze, and if patients aren`t
+          methods. These methods are difficult to analyze, and if patients aren`t
           satisfied, clinics can`t fix things quickly. By the time they analyze
           the survey, the patient is already considering the competition.
         </p>
-        <div className="flex flex-col items-center gap-6 px-6 py-6 bg-gradient-to-r from-[#101010] to-[#292929] rounded-lg">
+        {/* <div className="flex flex-col items-center gap-6 px-6 py-6 bg-gradient-to-r from-[#101010] to-[#292929] rounded-lg">
           <p className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-center text-white leading-7 font-bold">
             <span className="text-[#31C57D]">Enrage {" "}</span>
             your inner beast and {" "}
@@ -303,7 +324,7 @@ export const LongParagraphsSection = () => {
           <button className="border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
             Meet the rest
           </button>
-        </div>
+        </div> */}
       </div>
     </SectionWrapper>
   );
@@ -312,48 +333,36 @@ export const LongParagraphsSection = () => {
 export const MissionAndValuesSection = () => {
   return (
     <SectionWrapper>
-       <h1 className="uppercase italic text-white text-2xl tracking-normal text-start font-semibold">
-        History
-      </h1>
-      <p className="normal-case text-sm text-gray-300 text-start leading-2 font-normal">
-        Embark on a journey through our very hubmle beginnings, to the new heights as of today
-      </p>
+      <div className="flex flex-col items-center gap-6">
+
+        <div className="grid grid-cols-2 gap-6">
+          <div className="flex flex-col items-center justify-center">
+            <p className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
+              Our Core Values
+            </p>
+            <p className="normal-case text-center text-md md:text-md text-gray-300 leading-2 font-normal pt-6">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur, quo odio corrupti sint deleniti similique perspiciatis
+              reiciendis nulla aliquam placeat placeat placeat placeat placeat
+              placeat.
+            </p>
+          </div>
+          <div className="normal-case text-md text-center md:text-lg text-gray-300 leading-2 font-semibold">
+          <p className="flex flex-col items-center gap-24 w-full text-xl md:text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold">
+              <span className="bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] italic text-7xl tracking-normal text-start font-semibold">
+                Effective. <br /> Driven. <br /> Great.
+              </span>{" "}
+            </p>
+          </div>
+        </div>
+
+      </div>
       <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {stats.map((stat) => (
           <StatCard key={stat.id} stat={stat} />
         ))}
       </ul>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-32 ">
-        <div className="flex flex-col gap-4">
-          <p className="w-full pt-4 text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
-            Our Core Values
-          </p>
-          <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal pt-6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consequatur, quo odio corrupti sint deleniti similique perspiciatis
-            reiciendis nulla aliquam placeat placeat placeat placeat placeat
-            placeat.
-          </p>
-          <div className="normal-case text-md md:text-lg text-gray-300 leading-2 font-semibold">
-            <p><span className="text-[#31C57D]">Effective.</span> Passion-driven. <span className="text-[#31C57D]">Committed.</span></p>
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-4">
-          <p className="w-full pt-4 text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
-            Our Vision
-          </p>
-          <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal pt-6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consequatur, quo odio corrupti sint deleniti similique perspiciatis
-            reiciendis nulla aliquam placeat placeat placeat placeat placeat
-            placeat.
-          </p>
-          <div className="normal-case text-md md:text-lg text-gray-300 leading-2 font-semibold">
-            <p><span className="text-[#31C57D]">Effective.</span> Passion-driven. <span className="text-[#31C57D]">Committed.</span></p>
-          </div>
-        </div>
-      </div>
+      
     </SectionWrapper>
   );
 };
@@ -449,22 +458,35 @@ const GalleryCard = () => {
   );
 };
 
-export const SeeProgramsSection = () => {
+export function SeeProgramsSection() {
   return (
     <SectionWrapper>
-      <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-6 px-6 py-6 bg-gradient-to-r from-[#101010] to-[#292929] rounded-lg">
-        <div className="flex flex-col items-center gap-6">
-          <h2 className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
-            Check our programs — you won`t regret that decision for sure!
-          </h2>
-          <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal pt-6">
-          Analyze patient feedback. Optimize workflows to deliver a superb patient experience. Stop your never-ending battle with patient retention.
-          </p>
+      <div className="relative w-full h-64 flex flex-row justify-between rounded-lg shadow-lg">
+        <Image
+          src={TestImage}
+          layout="fill"
+          objectFit="cover"
+          className="absolute top-0 left-0 w-full h-full opacity-50"
+          alt=""
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#31C57D] to-[#161616] opacity-30 rounded-lg"></div>
+        <div className="w-full flex flex-row gap-36 items-center justify-between z-30 px-12 py-6">
+          <div className="flex flex-col">
+            <p className="text-2xl md:text-3xl lg:text-4xl tracking-normal text-start text-white leading-7 font-semibold">
+              Start Your Free 7-Day Trial Program Here
+            </p>
+            <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal pt-4">
+              Analyze patient feedback. Optimize workflows to deliver a superb patient experience. Stop your never-ending
+              battle with patient retention.
+            </p>
+          </div>
+          <div className="w-1/3">
+            <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
+              Read More Stories
+            </button>
+          </div>
         </div>
-        <button className="w-fit border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
-          See Programs
-        </button>
       </div>
     </SectionWrapper>
-  );
-};
+  )
+}
