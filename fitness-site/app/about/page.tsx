@@ -16,9 +16,11 @@ export default function Page() {
       <HeroSection />
       <SecondSection />
       <LegacyOfCourageSection />
-      <MissionAndValuesSection />
-      {/* <LongParagraphsSection /> */}
       {/* <FoundersSection /> */}
+      <MissionAndValuesSection />
+      <StatsSection />
+      <LegacyOfCourageSectionTwo />
+      {/* <LongParagraphsSection /> */}
       {/* <TestimonialsSection /> */}
       <SeeProgramsSection />
     </main>
@@ -136,7 +138,7 @@ export const SecondSectionCard = ({ card, index } : { card: CardType, index: num
       
 
       <div className={`flex flex-col gap-2 w-1/2 ${!isEven ? 'pl-8' : 'pr-8'}`}>
-        <div className="w-full shadow-lg shadow-[#141414] group flex flex-row gap-4 py-6 px-16 rounded-lg bg-gradient-to-r from-[#101010] to-[#191919] border border-[#292929]">
+        <div className="w-full shadow-lg shadow-[#141414] group flex flex-row gap-4 py-6 px-16 rounded-lg bg-gradient-to-r from-[#101010] to-[#191919] border-y border-[#292929]">
           <div className="flex flex-col gap-2">
             <p className="w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold">
               {card.title}
@@ -206,6 +208,50 @@ export function LegacyOfCourageSection() {
   );
 }
 
+export function LegacyOfCourageSectionTwo() {
+  return (
+    <SectionWrapper>
+      <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="text-white flex items-center justify-center">
+          <div className="relative flex items-center justify-center group h-full w-full rounded-xl cursor-pointer">
+            <Image
+              priority
+              src={TestImage}
+              alt="alt"
+              fill={true}
+              // fill={true} slika s ovim propertijem ocito zauzima mjesta koliko mu flexbox sirina i njegova visina dopustaju
+              className="object-cover rounded-md"
+            />
+          </div>
+        </div>
+        <div className="flex flex-col">
+
+          <div className="flex flex-col gap-3">
+          <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
+            Assets
+          </p>
+            <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
+              Best Quality Facilities And Program
+            </h1>
+            <p className="normal-case text-md md:text-md text-gray-300 leading-2">
+              In the “golden days”,
+              there weren’t many options for working out.
+              But Joe Gold, our founder, had a passion for bodybuilding. He found
+              success as a professional “muscleman” and
+              toured with celebrities!
+              But Joe Gold, our founder, had a passion for bodybuilding. He found
+              success as a professional “muscleman”
+            </p>
+          </div>
+          
+          
+          
+        </div>
+      </div>
+    </SectionWrapper>
+  );
+}
+
 
 
 export function FoundersSection() {
@@ -215,7 +261,7 @@ export function FoundersSection() {
         <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
           Meet The Founders
         </h1>
-        <ul className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <ul className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {founders.map((founderData) => (
             <FounderCard key={founderData.id} founder={founderData} />
           ))}
@@ -293,6 +339,11 @@ export const founders: FounderType[] = [
     name: "Rajesh Mayour",
     proffesion: "Founder and Operations Managers",
   },
+  {
+    id: 4,
+    name: "Joshua Erlington",
+    proffesion: "Finances",
+  },
 ];
 
 export const LongParagraphsSection = () => {
@@ -333,14 +384,14 @@ export const LongParagraphsSection = () => {
 export const MissionAndValuesSection = () => {
   return (
     <SectionWrapper>
-      <div className="flex flex-col items-center gap-6">
+      <div className="grid grid-col-1 lg:grid-cols-2 items-center gap-12">
 
-        <div className="grid grid-cols-2 gap-6">
+        <div className="flex flex-col  gap-6">
           <div className="flex flex-col items-center justify-center">
             <p className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
               Our Core Values
             </p>
-            <p className="normal-case text-center text-md md:text-md text-gray-300 leading-2 font-normal pt-6">
+            <p className="normal-case text-start text-md md:text-md text-gray-300 leading-2 font-normal pt-6">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Consequatur, quo odio corrupti sint deleniti similique perspiciatis
               reiciendis nulla aliquam placeat placeat placeat placeat placeat
@@ -349,7 +400,28 @@ export const MissionAndValuesSection = () => {
           </div>
           <div className="normal-case text-md text-center md:text-lg text-gray-300 leading-2 font-semibold">
           <p className="flex flex-col items-center gap-24 w-full text-xl md:text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold">
-              <span className="bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] italic text-7xl tracking-normal text-start font-semibold">
+              <span className="bg-gradient-to-r bg-clip-text text-transparent from-[#1D7349] to-[#31C57D] italic text-7xl tracking-normal text-start font-semibold">
+                Effective. <br /> Driven. <br /> Great.
+              </span>{" "}
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-col  gap-6">
+          <div className="flex flex-col items-center justify-center">
+            <p className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
+              Our Mission
+            </p>
+            <p className="normal-case text-right text-md md:text-md text-gray-300 leading-2 font-normal pt-6">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur, quo odio corrupti sint deleniti similique perspiciatis
+              reiciendis nulla aliquam placeat placeat placeat placeat placeat
+              placeat.
+            </p>
+          </div>
+          <div className="normal-case text-md text-center md:text-lg text-gray-300 leading-2 font-semibold">
+          <p className="flex flex-col items-center gap-24 w-full text-xl md:text-xl lg:text-3xl tracking-normal text-white leading-7 font-semibold">
+              <span className="text-end bg-gradient-to-r bg-clip-text text-transparent from-[#1D7349] to-[#31C57D] italic text-7xl tracking-normal font-semibold">
                 Effective. <br /> Driven. <br /> Great.
               </span>{" "}
             </p>
@@ -357,15 +429,24 @@ export const MissionAndValuesSection = () => {
         </div>
 
       </div>
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {stats.map((stat) => (
-          <StatCard key={stat.id} stat={stat} />
-        ))}
-      </ul>
+
+      
       
     </SectionWrapper>
   );
 };
+
+export const StatsSection = () => {
+  return (
+    <SectionWrapper>
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+        {stats.map((stat) => (
+          <StatCard key={stat.id} stat={stat} />
+        ))}
+      </ul>
+    </SectionWrapper>
+  )
+}
 
 export const TestimonialsSection = () => {
   return (
@@ -413,21 +494,14 @@ export const stats = [
 
 const StatCard = ({ stat }: { stat: StatType }) => {
   return (
-    <li className="col-span-1 md:col-span-1 lg:col-span-1">
+    <li className="col-span-1 md:col-span-1 lg:col-span-1 rounded-lg bg-gradient-to-r from-[#101010] to-[#191919] border-y border-[#292929]">
       <div className="relative w-full h-64 overflow-hidden rounded-lg shadow-lg">
-        <Image
-          src={TestImage}
-          layout="fill"
-          objectFit="cover"
-          className="absolute top-0 left-0 w-full h-full opacity-50"
-          alt=""
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#31C57D] to-[#161616] opacity-30"></div>
+        
         <div className="absolute inset-0 flex flex-col gap-4 items-center justify-center">
           <p className="text-4xl md:text-5xl lg:text-6xl tracking-normal text-start text-white leading-7 font-semibold">
             {stat.statValue}
           </p>
-          <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal pt-4">
+          <p className="normal-case text-right text-md md:text-md text-gray-300 leading-2 font-normal">
             {stat.statDescription}
           </p>
         </div>
