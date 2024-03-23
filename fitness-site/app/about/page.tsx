@@ -6,7 +6,7 @@ import TestImage from "../../public/CardioBlastImage.jpg";
 import ShareIcon from "../../public/share-arrow-svgrepo-com.png";
 import { SuccessStoryCard } from "../(home-sections)/SuccessStories";
 import { testimonials } from "../data";
-import { DumbellIcon, TestIcon, TestIconTwo } from "@/public/Icons";
+import { DumbellIcon, QuotationMark, TestIcon, TestIconTwo } from "@/public/Icons";
 
 // TO DO: osmisliti kako ukorporirati galeriju slika (tipa kao na hacksmithu)
 
@@ -23,7 +23,8 @@ export default function Page() {
       <StatsSection />
       <LegacyOfCourageSectionTwo />
       {/* <LongParagraphsSection /> */}
-      {/* <TestimonialsSection /> */}
+      <TestimonialsSection />
+      <TestimonialCardsSection />
       <SeeProgramsSection />
     </main>
   );
@@ -296,7 +297,7 @@ export function GallerySection() {
           <p className="normal-case text-md md:text-md text-gray-300 leading-2 text-center opacity-50">10/23</p>
         </div>
         <div className="flex flex-col gap-1">
-          <p className="w-full  text-gray-500 text-2xl tracking-normal text-center font-semibold">
+          <p className="w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold">
             Gym
           </p>
           <p className="normal-case text-md md:text-md text-gray-300 leading-2 text-center">10/23</p>
@@ -560,7 +561,7 @@ export const StatsSection = () => {
 export const TestimonialsSection = () => {
   return (
     <SectionWrapper>
-      <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
+      <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
         See What Other Think Of Our Services
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 md:pt-8">
@@ -640,6 +641,49 @@ const GalleryCard = () => {
     </li>
   );
 };
+
+export function TestimonialCardsSection() {
+  return(
+    <SectionWrapper>
+      <ul className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[1,2,3].map(element =>
+          <TestimonialCard key={element} />  
+        )}
+      </ul>
+    </SectionWrapper>
+  )
+}
+export function TestimonialCard() {
+  return (
+    <li className="p-8 col-span-1 md:col-span-1 lg:col-span-1 rounded-lg bg-gradient-to-r from-[#101010] to-[#191919] border-y border-[#292929]">
+      <div className="relative w-full h-64 overflow-hidden rounded-lg shadow-lg">
+      <div className="w-full flex justify-start">
+        <QuotationMark />
+      </div>
+      <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
+        March 2024
+      </p>
+        <p className="normal-case text-md text-gray-300 leading-2 font-normal">
+          marin
+        </p>
+        <div className="flex gap-4 items-center">
+        <div className="flex items-center w-12 h-12 rounded-full">
+          <Image
+            src={TestImage}
+            width={100}
+            height={100}
+            alt="Community Image"
+            className="w-full h-full object-cover rounded-full"
+          />
+        </div>
+        <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
+          nesto
+        </p>
+      </div>
+      </div>
+    </li>
+  )
+}
 
 export function SeeProgramsSection() {
   return (

@@ -57,7 +57,7 @@ export function SuccessStoryCard({
         </p>
       </div>
       <div className="flex gap-4 items-center">
-      <div className="flex items-center w-12 h-12 rounded-full">
+        <div className="flex items-center w-12 h-12 rounded-full">
           <Image
             src={TestImage}
             width={100}
