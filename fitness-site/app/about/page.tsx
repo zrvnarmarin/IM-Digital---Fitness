@@ -14,7 +14,9 @@ export default function Page() {
   return (
     <main className="flex min-h-screen flex-col items-center bg-[#000000]">
       <HeroSection />
+      <FoundersSection />
       <SecondSection />
+      <GallerySection />
       <LegacyOfCourageSection />
       {/* <FoundersSection /> */}
       <MissionAndValuesSection />
@@ -29,35 +31,43 @@ export default function Page() {
 
 export function HeroSection() {
   return (
-    <SectionWrapper>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-        <div className="flex flex-col gap-6">
-          <h1 className="w-full text-xl md:text-xl lg:text-5xl tracking-normal text-end text-white leading-7 font-semibold">
-            Our Evolutionary Odissey
-          </h1>
-          <p className="normal-case text-md text-gray-300 leading-2 font-normal text-end">
-            At Aeon Olympia Strength Gym, we pride ourselves on providing a world-class fitness facility
-            equiped with a range of amenities to enhance your workout experience. Our goal is to create a
-            comfortable and motivating environment where you can focus on your fitness journey. Our goal is to create a
-            comfortable and motivating environment where you can focus on your fitness journey.
-          </p>
-        </div>
-        <div className="text-white flex items-center justify-center">
-          <div className="relative flex items-center justify-center group h-full w-full rounded-xl cursor-pointer">
-            <Image
-              priority
-              src={TestImage}
-              alt="alt"
-              fill={true}
-              // fill={true} slika s ovim propertijem ocito zauzima mjesta koliko mu flexbox sirina i njegova visina dopustaju
-              className="object-cover rounded-md"
-            />
-          </div>
+    <div className="relative w-full h-screen">
+      {/* Image spans across the width and height of the screen */}
+      <div className="absolute inset-0">
+        <Image
+          priority
+          src={TestImage}
+          alt="alt"
+          layout="fill"
+          objectPosition="center"
+          className="rounded-md object-cover"
+        />
+      </div>
+
+      {/* Overlaying color */}
+      <div className="absolute inset-0 bg-black opacity-70"></div>
+
+      {/* Overlaying text content */}
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-2">
+        <p className="uppercase text-md md:text-md text-gray-300 leading-2 font-normal pb-4">
+          Brutalize Your Strength
+        </p>
+        <h1 className="text-xl md:text-4xl lg:text-5xl tracking-normal leading-7 font-semibold">
+          About Us
+        </h1>
+        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
+        </p>
+        <div className="mt-6">
+          <Link 
+            href={'/contact'} 
+            className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white"
+          >
+            Get In Touch
+          </Link>
         </div>
       </div>
-      
-    </SectionWrapper>
-  )
+    </div>
+  );
 }
 
 export function SecondSection() {
@@ -114,6 +124,12 @@ const secondSectionArray = [
     id: 4,
     year: 2023,
     title: 'World Recognition And Success',
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam.`
+  },
+  {
+    id: 5,
+    year: 2024,
+    title: 'Continuous Growth',
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam.`
   }
 ]
@@ -208,6 +224,94 @@ export function LegacyOfCourageSection() {
   );
 }
 
+export function GallerySection() {
+  return (
+    <SectionWrapper>
+       <div className="flex items-center justify-between">
+         <div className="flex flex-col gap-3">
+            <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
+              See it for yourself
+            </h1>
+            <p className="normal-case text-md md:text-md text-gray-300 leading-2">
+              Browse through our gallery and see what is awaiting you in our area
+            </p>
+          </div>
+          <div className="flex flex-row items-center justify-end gap-4">
+        <button className="bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] text-gray-300 px-4 py-3 rounded-lg text-xl font-bold">&larr;</button>
+        {/* <div className="flex flex-row justify-center gap-2">
+          <span className="w-8 h-1 rounded-md bg-[#31C57D]" />
+          <span className="w-8 h-1 rounded-md bg-[#31C57D]" />
+          <span className="w-8 h-1 rounded-md bg-[#31C57D]" />
+        </div> */}
+        <button className="bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] text-gray-300 px-4 py-3 rounded-lg text-xl font-bold">&rarr;</button>
+      </div>
+       </div>
+
+      <div className="flex flex-row gap-6 items-center">
+        {/* Gallery carousel*/}
+        <div className="grid grid-cols-4 gap-6">
+          <Image
+            priority
+            src={TestImage}
+            alt="alt"
+            height={400}
+            width={400}
+            // fill={true} slika s ovim propertijem ocito zauzima mjesta koliko mu flexbox sirina i njegova visina dopustaju
+            className="object-cover rounded-md"
+          />
+          <Image
+            priority
+            src={TestImage}
+            alt="alt"
+            height={400}
+            width={400}
+            // fill={true} slika s ovim propertijem ocito zauzima mjesta koliko mu flexbox sirina i njegova visina dopustaju
+            className="object-cover rounded-md"
+          />
+          <Image
+            priority
+            src={TestImage}
+            alt="alt"
+            height={400}
+            width={400}
+            // fill={true} slika s ovim propertijem ocito zauzima mjesta koliko mu flexbox sirina i njegova visina dopustaju
+            className="object-cover rounded-md"
+          />
+          <Image
+            priority
+            src={TestImage}
+            alt="alt"
+            height={400}
+            width={400}
+            // fill={true} slika s ovim propertijem ocito zauzima mjesta koliko mu flexbox sirina i njegova visina dopustaju
+            className="object-cover rounded-md"
+          />
+        </div>
+      </div>
+      <div className="flex flex-row items-center justify-between">
+        <div className="flex flex-col gap-1 cursor-pointer scale-75">
+          <p className="w-full  text-gray-500 opacity-50 text-2xl tracking-normal text-center font-semibold">
+            People
+          </p>
+          <p className="normal-case text-md md:text-md text-gray-300 leading-2 text-center opacity-50">10/23</p>
+        </div>
+        <div className="flex flex-col gap-1">
+          <p className="w-full  text-gray-500 text-2xl tracking-normal text-center font-semibold">
+            Gym
+          </p>
+          <p className="normal-case text-md md:text-md text-gray-300 leading-2 text-center">10/23</p>
+        </div>
+        <div className="flex flex-col gap-1 scale-75 cursor-pointer">
+          <p className="w-full opacity-50  text-gray-500 text-2xl tracking-normal text-center font-semibold">
+            Somehing
+          </p>
+          <p className="normal-case opacity-50 text-md md:text-md text-gray-300 leading-2 text-center">10/23</p>
+        </div>
+      </div>
+    </SectionWrapper>
+  )
+}
+
 export function LegacyOfCourageSectionTwo() {
   return (
     <SectionWrapper>
@@ -227,9 +331,9 @@ export function LegacyOfCourageSectionTwo() {
         <div className="flex flex-col">
 
           <div className="flex flex-col gap-3">
-          <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
-            Assets
-          </p>
+            <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
+              Assets
+            </p>
             <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
               Best Quality Facilities And Program
             </h1>
@@ -258,9 +362,14 @@ export function FoundersSection() {
   return (
     <SectionWrapper>
       <div className="flex flex-col gap-6">
-        <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
-          Meet The Founders
-        </h1>
+        <div className="flex flex-col gap-3">
+          <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
+            Meet The Founders
+          </h1>
+          <p className="normal-case text-md md:text-md text-gray-300 leading-2">
+            We are the founders ofthis wonderful fitness creation
+          </p>
+        </div>
         <ul className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {founders.map((founderData) => (
             <FounderCard key={founderData.id} founder={founderData} />
@@ -305,11 +414,11 @@ export const FounderCard = ({ founder }: { founder: FounderType }) => {
         </div>
       </div>
 
-      <div className="flex flex-col items-start gap-2">
-        <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 pt-3 font-semibold">
+      <div className="flex flex-col items-start gap-1">
+        <p className="w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold pt-4">
           {founder.name}
         </p>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
+        <p className="normal-case text-md md:text-md text-gray-300 leading-2">
           {founder.proffesion}
         </p>
       </div>
