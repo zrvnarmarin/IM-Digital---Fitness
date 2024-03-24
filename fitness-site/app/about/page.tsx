@@ -23,7 +23,6 @@ export default function Page() {
       <StatsSection />
       <LegacyOfCourageSectionTwo />
       {/* <LongParagraphsSection /> */}
-      <TestimonialsSection />
       <TestimonialCardsSection />
       <SeeProgramsSection />
     </main>
@@ -645,41 +644,49 @@ const GalleryCard = () => {
 export function TestimonialCardsSection() {
   return(
     <SectionWrapper>
-      <ul className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {[1,2,3].map(element =>
+      <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
+         Read Our Success Stories
+      </h1>
+      <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {[1,2].map(element =>
           <TestimonialCard key={element} />  
         )}
       </ul>
+      <div className="flex flex-row justify-center gap-4">
+        <button className="w-8 h-2 rounded-md bg-[#31C57D]" />
+        <button className="w-8 h-2 rounded-md bg-[#31C57D]" />
+        <button className="w-8 h-2 rounded-md bg-[#31C57D]" />
+      </div>
     </SectionWrapper>
   )
 }
 export function TestimonialCard() {
   return (
-    <li className="p-8 col-span-1 md:col-span-1 lg:col-span-1 rounded-lg bg-gradient-to-r from-[#101010] to-[#191919] border-y border-[#292929]">
-      <div className="relative w-full h-64 overflow-hidden rounded-lg shadow-lg">
-      <div className="w-full flex justify-start">
-        <QuotationMark />
-      </div>
-      <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
-        March 2024
-      </p>
+    <li className="p-8 col-span-1 md:col-span-1 lg:col-span-1 shadow-lg rounded-lg bg-gradient-to-r from-[#101010] to-[#191919] border-y border-[#292929]">
+      <div className="flex flex-col gap-6">
+        <div className="w-full flex justify-start">
+          <QuotationMark />
+        </div>
+        <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
+          March 2024
+        </p>
         <p className="normal-case text-md text-gray-300 leading-2 font-normal">
-          marin
+          Starting with (ime firme) was the best decision I made for my health. The flexibility of the programs and the expert guidance kept me motivated. Highly recommended!
         </p>
         <div className="flex gap-4 items-center">
-        <div className="flex items-center w-12 h-12 rounded-full">
-          <Image
-            src={TestImage}
-            width={100}
-            height={100}
-            alt="Community Image"
-            className="w-full h-full object-cover rounded-full"
-          />
-        </div>
+          <div className="flex items-center w-12 h-12 rounded-full">
+            <Image
+              src={TestImage}
+              width={100}
+              height={100}
+              alt="Community Image"
+              className="w-full h-full object-cover rounded-full"
+            />
+          </div>
         <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
-          nesto
+          Marin Z.
         </p>
-      </div>
+        </div>
       </div>
     </li>
   )
