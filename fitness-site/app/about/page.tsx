@@ -5,7 +5,7 @@ import SectionWrapper from "../components/wrappers/SectionWrapper";
 import TestImage from "../../public/CardioBlastImage.jpg";
 import ShareIcon from "../../public/share-arrow-svgrepo-com.png";
 import { SuccessStoryCard } from "../(home-sections)/SuccessStories";
-import { testimonials } from "../data";
+import { programs, testimonials } from "../data";
 import { DumbellIcon, QuotationMark, TestIcon, TestIconTwo } from "@/public/Icons";
 
 // TO DO: osmisliti kako ukorporirati galeriju slika (tipa kao na hacksmithu)
@@ -18,11 +18,10 @@ export default function Page() {
       <SecondSection />
       <GallerySection />
       <LegacyOfCourageSection />
-      {/* <FoundersSection /> */}
       <MissionAndValuesSection />
       <StatsSection />
       <LegacyOfCourageSectionTwo />
-      {/* <LongParagraphsSection /> */}
+      <LongParagraphsSection />
       <TestimonialCardsSection />
       <SeeProgramsSection />
     </main>
@@ -356,8 +355,6 @@ export function LegacyOfCourageSectionTwo() {
   );
 }
 
-
-
 export function FoundersSection() {
   return (
     <SectionWrapper>
@@ -458,33 +455,25 @@ export const founders: FounderType[] = [
 export const LongParagraphsSection = () => {
   return (
     <SectionWrapper>
-      <div className="flex flex-col gap-8 ">
-        <h1 className="uppercase italic text-white text-2xl tracking-normal text-start font-semibold">
-          History
-        </h1>
-        <p className="uppercase italic text-white text-2xl tracking-normal text-start font-semibold">
-          Embark on a journey through our very hubmle beginnings, to the new heights as of today
-        </p>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
+      <div className="flex flex-col gap-8 px-64">
+        <p className="normal-case text-md md:text-md text-gray-300 leading-2 tracking-wider font-normal">
           <span className="text-[#31C57D] font-bold">As we were building</span> our platform, we were looking closely at how
-          private healthcare providers get feedback, and what that means for
+          private healthcare providers get feedback, and what that means for <br /> <br />
           their businesses. Here`s what most private clinics do: <span className="text-[#31C57D] font-bold">they use pen-and-paper surveys</span>,
           emails, and forms on their websites. But there`s a problem with these
           methods. These methods are difficult to analyze, and if patients aren`t
           satisfied, clinics can`t fix things quickly. By the time they analyze
           the survey, the patient is already considering the competition.
         </p>
-        {/* <div className="flex flex-col items-center gap-6 px-6 py-6 bg-gradient-to-r from-[#101010] to-[#292929] rounded-lg">
-          <p className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-center text-white leading-7 font-bold">
-            <span className="text-[#31C57D]">Enrage {" "}</span>
-            your inner beast and {" "}
-            <span className="text-[#31C57D]">unleash {" "}</span>
-            it today!
-          </p>
-          <button className="border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
-            Meet the rest
-          </button>
-        </div> */}
+        <p className="normal-case text-md md:text-md text-gray-300 leading-2 tracking-wider font-normal">
+          <span className="text-[#31C57D] font-bold">As we were building</span> our platform, we were looking closely at how
+          private healthcare providers get feedback, and what that means for <br /> <br />
+          their businesses. Here`s what most private clinics do: <span className="text-[#31C57D] font-bold">they use pen-and-paper surveys</span>,
+          emails, and forms on their websites. But there`s a problem with these
+          methods. These methods are difficult to analyze, and if patients aren`t
+          satisfied, clinics can`t fix things quickly. By the time they analyze
+          the survey, the patient is already considering the competition.
+        </p>
       </div>
     </SectionWrapper>
   );
