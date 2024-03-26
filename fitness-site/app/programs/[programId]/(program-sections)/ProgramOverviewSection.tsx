@@ -4,51 +4,82 @@ import Image from "next/image";
 import TestImage from "../../../../public/HeroTestTest.jpg";
 import { DumbellIcon } from "@/public/Icons";
 
+//TO DO: sav style dobar do intensity sekcije, nakon tog treba izmjeniti i razmisliti za drugi dizajn; i dalje duration i button prikati
 export default function ProgramOverviewSection() {
   return (
     <SectionWrapper>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="flex flex-col gap-4 rounded-lg">
-          <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-12 rounded-lg">
+          <div className="flex flex-col gap-6">
             <div className="flex flex-row items-center gap-4">
               <div className="w-full flex flex-col items-start justify-between gap-4">
-              <h1 className="uppercase italic text-[#31C57D] text-2xl tracking-normal font-semibold">
+              <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
                 Feel your strength
               </h1>
-                <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
-                  {description}
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-col justify-between w-full ">
-              <div className="flex flex-row items-center justify-between gap-4 text-sm tracking-normal text-end text-white leading-7 font-medium">
-                <span className="font-semibold">Duration:</span> <span className="font-normal">6 Weeks</span>
-              </div>
-              <div className="flex flex-row items-center justify-between gap-4">
-                <span className="text-sm tracking-normal text-end text-white leading-7 font-semibold">
-                  Intensity:
-                </span>
+              <div className="w-full flex flex-row items-center justify-between gap-4">
+                <div className="flex items-center gap-2">
+                  <p className="normal-case text-md md:text-md text-white leading-2 font-semibold">
+                    Intensity:
+                  </p>
+                </div>
                 <div className="flex flex-row items-center justify-end w-1/3 gap-2">
                   <span className="w-1/3 rounded-lg h-2 border border-[#292929]"></span>
                   <span className="bg-[#31C57D] w-1/3 rounded-lg h-2 border border-[#292929]"></span>
                   <span className="bg-[#31C57D] w-1/3 rounded-lg h-2 border border-[#292929]"></span>
                 </div>
               </div>
+                <p className="normal-case text-md md:text-md text-gray-300 leading-2">
+                  {description}
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-row justify-start gap-3">
+          <span className="w-2.5  h-6 bg-[#31C57D]" />
+          <span className="w-2.5  h-6 bg-[#31C57D]" />
+          <span className="w-2.5  h-6 bg-[#31C57D]" />
+          <span className="w-2.5  h-6 bg-[#31C57D]" />
+          <span className="w-2.5  h-6 bg-[#31C57D]" />
+          <span className="w-2.5  h-6 bg-[#31C57D]" />
+          <span className="w-2.5  h-6 bg-[#31C57D]" />
+        </div>
+
+            <div className="flex flex-col xl:flex-row justify-between w-full gap-2">
+              <div className="flex flex-row items-center justify-between gap-4 normal-case text-md md:text-md text-white leading-2">
+                <div className="flex items-center gap-2">
+                  <span className="rounded-full p-2 bg-[#292929] border border-[#292929]">
+                    <DumbellIcon />
+                  </span>
+                  <span className="font-semibold">
+                    Duration:
+                  </span>
+                </div>
+                <span className="normal-case text-md md:text-xl text-gray-300 leading-2 font-semibold">
+                  6 Weeks
+                </span>
+              </div>
+              <div className="flex flex-row items-center justify-between gap-6 normal-case text-md md:text-md text-white leading-2">
+                <div className="flex items-center gap-2">
+                  <span className="rounded-full p-2 bg-[#292929] border border-[#292929]">
+                    <DumbellIcon />
+                  </span>
+                  <span className="font-semibold">
+                    Duration:
+                  </span>
+                </div>
+                <span className="normal-case text-md md:text-xl text-gray-300 leading-2 font-semibold">
+                  6 Weeks
+                </span>
+              </div>
             </div>
 
           </div>
-          <div className="w-full flex flex-row items-center justify-between">
-            <p className="flex items-center gap-2 normal-case text-xs text-[#31C57D] leading-2 font-normal">
-              <span className="rounded-full p-2 bg-gradient-to-r from-[#101010] to-[#191919] border border-[#292929]">
-                <DumbellIcon />
-              </span>
-              Lorem ipsum dolor sit amet
-            </p>
+          
+          {/* <div className="w-full flex justify-start">
             <button className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
               Lorem Ipsum
             </button>
-          </div>
+          </div> */}
+
         </div>
 
         <div>
