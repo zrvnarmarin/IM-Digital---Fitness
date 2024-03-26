@@ -8,7 +8,7 @@ import { DumbellIcon } from "@/public/Icons";
 export default function ProgramOverviewSection() {
   return (
     <SectionWrapper>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div className="flex flex-col gap-12 rounded-lg">
           <div className="flex flex-col gap-6">
             <div className="flex flex-row items-center gap-4">

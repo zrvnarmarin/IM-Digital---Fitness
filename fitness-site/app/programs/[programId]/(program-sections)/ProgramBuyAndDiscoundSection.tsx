@@ -6,7 +6,7 @@ export default function ProgramBuyAndDiscoundSection({ programId } : { programId
     return (
         <section className="w-full flex flex-col md:flex-row items-center justify-center gap-8 py-6">
             <LogoImage  />
-            <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
+            <p className="normal-case text-md md:text-md text-gray-300 leading-2">
                 Join {" "}
                 <span className="font-semibold">{programId}</span> {" "}
                 today and get access to MFT28 {" "}
@@ -19,9 +19,9 @@ export default function ProgramBuyAndDiscoundSection({ programId } : { programId
                 <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
                     Start My 7-Day Free Trial 
                 </button>
-                <p className="text-xs tracking-normal text-end text-white leading-7 font-normal">
+                <p className="text-xs tracking-normal text-end text-white leading-7 font-medium">
                     Already a subscriber? {" "}
-                    <Link href={'programs'} className="font-medium">Log in</Link>
+                    <Link href={'programs'} className="font-bold">Log in</Link>
                 </p>
             </div>
             </div>

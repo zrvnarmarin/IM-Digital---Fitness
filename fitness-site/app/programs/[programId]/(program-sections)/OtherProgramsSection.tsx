@@ -7,8 +7,8 @@ export default function OtherProgramsSection() {
     return (
         <SectionWrapper>
             <div className="flex items-center justify-between">
-                <div className="flex flex-col items-center justify-start">
-                    <h1 className="w-full uppercase italic text-white text-2xl tracking-normal font-semibold">
+                <div className="flex flex-col items-start justify-start">
+                    <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
                         Other similar plans
                     </h1>
                     <p className="text-white">

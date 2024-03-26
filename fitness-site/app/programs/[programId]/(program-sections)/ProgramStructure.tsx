@@ -6,10 +6,10 @@ import TestImage from "../../../../public/HeroTestTest.jpg";
 export default function ProgramStructure() {
   return (
     <SectionWrapper>
-      <h1 className="uppercase italic text-white text-2xl tracking-normal font-semibold">
+      <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
         Structure
       </h1>
-      <p className="normal-case text-sm text-gray-300 leading-2 font-normal">
+      <p className="normal-case text-md md:text-md text-gray-300 leading-2">
         Throughout the program, participants will track their progress using
         performance metrics such as strength gains, muscle measurements, and
         body composition changes <br /> <br />
@@ -45,13 +45,13 @@ export const TrainingPhaseCard = ({
       {/* Left section */}
       <div className={`${!isEven ? 'order-2' : 'order-0'} relative flex flex-col justify-center items-center gap-6`}>
         <div className="z-30">
-          <p className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold">
+          <p className="w-full text-xl md:text-xl lg:text-4xl tracking-normal text-start text-white leading-7 font-semibold">
             <span className="text-[#31C57D]">Phase</span>{" "}
             {trainingPhase.phaseNumber}
           </p>
           <div className="h-0.5 w-2/3 bg-[#31C57D]"></div>
           <div className="flex flex-row md:flex-col items-center md:items-start">
-            <p className="w-full text-xl tracking-normal text-start text-white leading-7 pt-4 font-semibold">
+            <p className="w-full text-2xl tracking-normal text-start text-white leading-7 pt-4 font-semibold">
               {trainingPhase.phase}
             </p>
           </div>
@@ -82,8 +82,8 @@ export const TrainingPhaseCard = ({
           />
         </div>
         <div className="absolute inset-0 bg-black opacity-80 border border-[#292929] rounded-lg"></div>
-        <div className="flex flex-col gap-6 z-20">
-          <h1 className="uppercase italic text-[#31C57D] text-2xl tracking-normal font-semibold">
+        <div className="flex flex-col gap-10 z-20">
+          <h1 className="text-xl md:text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold">
             Feel your strength
           </h1>
           <div className="flex flex-col gap-4 px-6">
@@ -92,7 +92,7 @@ export const TrainingPhaseCard = ({
                 <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
                   &#10003;
                 </span> 
-                <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">{sentence}</p>
+                <p className="normal-case text-md md:text-md text-gray-300 leading-2">{sentence}</p>
               </div>
             ))}
           </div>

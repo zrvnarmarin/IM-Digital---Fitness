@@ -7,7 +7,7 @@ import TestImage from '../../../../public/HeroTestTest.jpg'
 export default function ProgramBenefits() {
   return (
     <SectionWrapper>
-      <h1 className="uppercase italic text-white text-2xl tracking-normal font-semibold">
+      <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-center font-bold">
         More than a workout plan. With this plan you also receive:
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-12">
@@ -28,7 +28,9 @@ export default function ProgramBenefits() {
               <span className="rounded-full p-2 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
                 <DumbellIcon  width={30} height={30} />
               </span>
-              Nutritional Guidance
+              <p className="w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold">
+                Nutritional Guidance
+              </p>
             </div>
             <div className="flex flex-row items-center justify-between gap-4 text-sm tracking-normal text-end text-white leading-7 font-medium">
               <span className="font-semibold text-white">Whole foods and power shakes</span>
@@ -55,7 +57,9 @@ export default function ProgramBenefits() {
               <span className="rounded-full p-2 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
                 <DumbellIcon  width={30} height={30} />
               </span>
-              Expert Instruction
+              <p className="w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold">
+                Expert Instruction
+              </p>
             </div>
             <div className="flex flex-row items-center justify-between gap-4 text-sm tracking-normal text-end text-white leading-7 font-medium">
               <span className="font-semibold text-white">Inspiration from Greg Plitt</span>
