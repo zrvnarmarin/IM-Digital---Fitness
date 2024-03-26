@@ -7,7 +7,7 @@ import TestImage from '../../../../public/HeroTestTest.jpg'
 export default function ProgramBenefits() {
   return (
     <SectionWrapper>
-      <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-center font-bold">
+      <h1 className="w-full  text-gray-200 text-2xl tracking-normal text-center font-semibold">
         More than a workout plan. With this plan you also receive:
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-12">
@@ -70,6 +70,15 @@ export default function ProgramBenefits() {
           </div>
         </div>
       </div>
+      <div className="flex flex-row justify-start gap-3">
+              <span className="w-2.5  h-6 bg-[#31C57D]" />
+              <span className="w-2.5  h-6 bg-[#31C57D]" />
+              <span className="w-2.5  h-6 bg-[#31C57D]" />
+              <span className="w-2.5  h-6 bg-[#31C57D]" />
+              <span className="w-2.5  h-6 bg-[#31C57D]" />
+              <span className="w-2.5  h-6 bg-[#31C57D]" />
+              <span className="w-2.5  h-6 bg-[#31C57D]" />
+            </div>
     </SectionWrapper>
   );
 }

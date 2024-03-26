@@ -12,10 +12,13 @@ export default function ProgramOverviewSection() {
         <div className="flex flex-col gap-12 rounded-lg">
           <div className="flex flex-col gap-6">
             <div className="flex flex-row items-center gap-4">
-              <div className="w-full flex flex-col items-start justify-between gap-4">
-              <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
-                Feel your strength
-              </h1>
+              <div className="w-full flex flex-col items-start justify-between gap-3">
+                <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
+                  Assets
+                </p>
+                <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
+                  Feel your strength
+                </h1>
               <div className="w-full flex flex-row items-center justify-between gap-4">
                 <div className="flex items-center gap-2">
                   <p className="normal-case text-md md:text-md text-white leading-2 font-semibold">
@@ -34,14 +37,14 @@ export default function ProgramOverviewSection() {
               </div>
             </div>
             <div className="flex flex-row justify-start gap-3">
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-        </div>
+              <span className="w-2.5  h-6 bg-[#31C57D]" />
+              <span className="w-2.5  h-6 bg-[#31C57D]" />
+              <span className="w-2.5  h-6 bg-[#31C57D]" />
+              <span className="w-2.5  h-6 bg-[#31C57D]" />
+              <span className="w-2.5  h-6 bg-[#31C57D]" />
+              <span className="w-2.5  h-6 bg-[#31C57D]" />
+              <span className="w-2.5  h-6 bg-[#31C57D]" />
+            </div>
 
             <div className="flex flex-col xl:flex-row justify-between w-full gap-2">
               <div className="flex flex-row items-center justify-between gap-4 normal-case text-md md:text-md text-white leading-2">

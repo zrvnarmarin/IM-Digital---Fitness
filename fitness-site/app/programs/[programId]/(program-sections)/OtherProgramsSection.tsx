@@ -7,7 +7,10 @@ export default function OtherProgramsSection() {
     return (
         <SectionWrapper>
             <div className="flex items-center justify-between">
-                <div className="flex flex-col items-start justify-start">
+                <div className="flex flex-col items-start justify-start gap-3">
+                    <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
+                    Assets
+                    </p>
                     <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
                         Other similar plans
                     </h1>
