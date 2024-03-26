@@ -12,7 +12,7 @@ export default function WhyJoinUs() {
   return (
     <SectionWrapper>
       <div className="flex items-center justify-between">
-        <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
+        <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
           Programs
         </h1>
         <div className="w-full flex items-center justify-end">
@@ -21,7 +21,7 @@ export default function WhyJoinUs() {
           </button>
         </div>
       </div>
-      <p className="normal-case text-sm text-gray-300 leading-2 font-normal">
+      <p className="normal-case text-md md:text-md text-gray-300 leading-2">
         We have experience serving members in helping body fitness, and under
         the guidance of a professional trainer
       </p>
@@ -58,37 +58,44 @@ const reasonsToJoin = [
 
 export function ProgramCard() {
   return (
-    <Link href={"/"} className={`bg-[#111111]`}>
+    <div className={`bg-[#111111]`}>
       <div className="w-full flex rounded-t-md">
         <Image
           src={TestImage}
           alt="program_image"
           width={0}
           height={0}
-          className="rounded-t-md h-48 object-cover"
+          className="rounded-t-md h-64 object-cover"
         />
       </div>
 
-      <div className="px-8 py-6 bg-gradient-to-r from-[#101010] hover:from-[#101010] hover:to-[#292929] to-[#161616] border border-[#292929] duration-900 rounded-b-lg">
+      <div className="px-8 py-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] rounded-b-lg">
         <div className="flex flex-col gap-3 items-start justify-start rounded-lg">
-          <div className="w-full flex items-center justify-between rounded-lg">
-            <span className="normal-case text-2xs text-white leading-2 font-normal border border-[#31C57D] px-3 py-1 rounded-lg">
-              Intensive
-            </span>
-            <span><Image src={ShareIcon} width={20} height={20} alt="share_icon" /></span>
-          </div>
-          <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
+          <p className="w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold">
             Cardiovascular Strength
           </p>
         </div>
         <div className="flex flex-col pt-8">
-          <p className="normal-case text-sm text-gray-300 leading-2 font-normal">
+          <p className="normal-case text-md md:text-md text-gray-300 leading-2">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt beatae
             obcaecati eius illo assumenda fugiat, ut quae mollitia{" "}
           </p>
         </div>
+        <div className="w-full flex flex-row items-center justify-between rounded-lg pt-8">
+          <div className="w-full flex flex-row items-center justify-between">
+            <span className="normal-case text-sm text-white leading-2 font-semibold">
+              Intensity:
+            </span>
+            <div className="flex flex-row items-center justify-end w-1/3 gap-2">
+              <span className="bg-[#31C57D] w-1/3 rounded-lg h-2 border border-[#292929]"></span>
+              <span className="bg-[#31C57D] w-1/3 rounded-lg h-2 border border-[#292929]"></span>
+              <span className="w-1/3 rounded-lg h-2 border border-[#292929]"></span>
+            </div>
+          </div>
+          {/* <span><Image src={ShareIcon} width={20} height={20} alt="share_icon" /></span> */}
+        </div>
 
-        <div className="border-b border-gray-600 flex items-center justify-between pt-8 pb-2 normal-case tracking-normal text-2xs md:text-sm lg:text-lg text-gray-100 leading-2 font-normal">
+        <div className="border-b border-gray-600 flex items-center justify-between pt-4 pb-2 normal-case tracking-normal text-2xs md:text-sm lg:text-lg text-gray-100 leading-2 font-normal">
           <span className="flex flex-row items-center gap-2 normal-case text-xs text-white leading-2 font-normal">
             <DumbellIcon /> 24 Number Of
           </span>
@@ -99,15 +106,15 @@ export function ProgramCard() {
 
         {/* Rasmiliti da li ovdje staviti gumb, da li se uklapa u dizajn */}
         <div className="flex flex-row justify-between items-center pt-6">
-          <p className="text-xl md:text-xl lg:text-xl tracking-normal text-start text-[#31C57D] group-hover:text-[#C57D31] leading-7 font-semibold">
+          <p className="text-[#31C57D] text-2xl tracking-normal text-start font-semibold">
             $130.00
           </p>
           <button className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
-          Discover More
-        </button>
+            Buy Now
+          </button>
         </div>
       </div>
       
-    </Link>
+    </div>
   );
 }

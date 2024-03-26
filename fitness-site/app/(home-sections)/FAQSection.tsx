@@ -6,7 +6,7 @@ import SectionWrapper from "../components/wrappers/SectionWrapper";
 export default function FAQSection() {
   return (
     <SectionWrapper>
-      <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
+      <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
         Frequently Asked Questions
       </h1>
       <Accordion faqArray={homePageFAQ} />

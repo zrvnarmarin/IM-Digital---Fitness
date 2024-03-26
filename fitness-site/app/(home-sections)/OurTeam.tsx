@@ -9,7 +9,7 @@ export default function OurTeam() {
   return (
     <SectionWrapper>
       <div className="flex items-center justify-between">
-        <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
+        <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold w-full">
           Our Team
         </h1>
         <div className="w-full flex items-center justify-end">
@@ -92,10 +92,10 @@ export const TrainerCard = ({ trainer }: { trainer: TrainerType }) => {
       </div>
 
       <div className="flex flex-col items-start gap-1">
-        <p className="w-full pt-4 text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
+        <p className="pt-4 w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold">
           {trainer.name}
         </p>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
+        <p className="normal-case text-md md:text-md text-gray-300 leading-2">
           {trainer.description}
         </p>
         {/* Ovdje staviti strelicu desno, pogledaj dizajn */}

@@ -6,7 +6,7 @@ import SectionWrapper from "../components/wrappers/SectionWrapper";
 export default function ExploreOurProgram() {
   return (
     <SectionWrapper>
-      <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
+      <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
         What makes us special
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-6 md:pt-8">
@@ -45,11 +45,11 @@ export function ProgramCard({
     >
       <div className="flex flex-row md:flex-col gap-4 items-center md:items-start">
         <div className=" bg-[#279C63] rounded-md p-2 w-fit"><DumbellIcon /></div>
-        <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-[#31C57D] leading-7 font-semibold">
+        <p className="w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold">
           {title}
         </p>
       </div>
-      <p className="normal-case text-sm text-gray-300 leading-2 font-normal">
+      <p className="normal-case text-md md:text-md text-gray-300 leading-2">
         {description}
       </p>
     </div>

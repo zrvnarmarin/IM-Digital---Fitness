@@ -17,7 +17,7 @@ export default function TheClassYouWillGetThereSection() {
 
   return (
     <SectionWrapper>
-      <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
+      <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
         Facilities
       </h1>
 
@@ -67,18 +67,19 @@ export const FacilitiesCard = ({
       
       <div className={`${isActive ? 'flex flex-row gap-2 items-start' : 'rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#292929] border border-[#292929] flex flex-row gap-2 items-start px-6'} `}>
         <div className="flex flex-col">
-          <div className={`${isActive ? 'w-full flex flex-col items-center gap-2 text-xl md:text-xl lg:text-xl tracking-normal text-start text-[#31C57D] leading-7 font-semibold' : 'flex items-center gap-2 w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold'}`}>
-            <p className="w-full ">{card.mainTitle}</p>
+            <p className={`${isActive ? 'w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold' : 'w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold'}`}>
+              {card.mainTitle}
+            </p>
             {
               isActive
                 ? 
                   <p className="normal-case text-sm 2xl:text-md text-gray-300 leading-2 font-normal">
                     {card.description}
+                    
                   </p>
                 : 
                   null
             }
-          </div>
         </div>
         
 

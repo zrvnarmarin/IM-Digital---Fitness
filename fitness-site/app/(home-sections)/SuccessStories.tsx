@@ -4,12 +4,13 @@ import { testimonials } from "../data";
 import { QuotationMark } from "@/public/Icons";
 import SectionWrapper from "../components/wrappers/SectionWrapper";
 import TestImage from '../../public/gymImage.jpg'
+import { TestimonialCard, TestimonialCardsSection } from "../about/page";
 
 export default function SuccessStories() {
   return (
     <SectionWrapper>
       <div className="flex items-center justify-between">
-        <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
+        <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold w-full">
           Success Stories
         </h1>
         <div className="w-full flex items-center justify-end">
@@ -18,16 +19,11 @@ export default function SuccessStories() {
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 md:pt-8">
-        {testimonials.slice(0, 2).map((testimonial) => (
-          <SuccessStoryCard
-            key={testimonial.id}
-            name={testimonial.name}
-            testimonial={testimonial.testimonial}
-            date={testimonial.date}
-          />
-        ))}
-      </div>
+      <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {[1,2].map(element =>
+          <TestimonialCard key={element} />  
+        )}
+      </ul>
       <div className="flex flex-row justify-center gap-4">
         <button className="w-8 h-2 rounded-md bg-[#31C57D]" />
         <button className="w-8 h-2 rounded-md bg-[#31C57D]" />

@@ -6,16 +6,29 @@ import TestImage from '../../../../public/HeroTestTest.jpg'
 export default function OtherProgramsSection() {
     return (
         <SectionWrapper>
-            <h1 className="uppercase italic text-white text-2xl tracking-normal font-semibold">
-                Other similar plans
-            </h1>
-            <p className="text-white">
-                See other plans for getting you in the best shape
-            </p>
+            <div className="flex items-center justify-between">
+                <div className="flex flex-col items-center justify-start">
+                    <h1 className="w-full uppercase italic text-white text-2xl tracking-normal font-semibold">
+                        Other similar plans
+                    </h1>
+                    <p className="text-white">
+                        See other plans for getting you in the best shape
+                     </p>
+                </div>
+                <div className="flex items-center gap-4">
+                    <button className="bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] text-gray-300 px-4 py-3 rounded-lg text-xl font-bold">
+                        &larr;
+                    </button>
+                    <button className="bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] text-gray-300 px-4 py-3 rounded-lg text-xl font-bold">
+                        &rarr;
+                    </button>
+                </div>
+            </div>
+            
+            <div className="flex flex-row items-center justify-end gap-4">
+            
+          </div>
             <div className="flex flex-row items-center gap-6 relative">
-                <button className="z-30 px-2 text-white bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-lg">
-                    &lt;
-                </button>
                 <div className="flex-grow">
                     <div className="grid grid-cols-3 lg:grid-cols-5 gap-6">
                         {otherPrograms.map(otherProgram =>
@@ -23,9 +36,6 @@ export default function OtherProgramsSection() {
                         )}
                     </div>
                 </div>
-                <button className="z-30 px-2 text-white bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-lg">
-                    &gt;
-                </button>
             </div>
         </SectionWrapper>
     )

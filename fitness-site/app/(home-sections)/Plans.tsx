@@ -7,7 +7,7 @@ export default function Plans() {
   return (
     <SectionWrapper>
       <div className="flex items-center justify-between">
-        <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
+        <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
           Plans
         </h1>
         <div className="w-full flex items-center justify-end">

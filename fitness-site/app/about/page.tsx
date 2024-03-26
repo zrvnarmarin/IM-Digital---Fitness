@@ -5,8 +5,8 @@ import SectionWrapper from "../components/wrappers/SectionWrapper";
 import TestImage from "../../public/CardioBlastImage.jpg";
 import ShareIcon from "../../public/share-arrow-svgrepo-com.png";
 import { SuccessStoryCard } from "../(home-sections)/SuccessStories";
-import { programs, testimonials } from "../data";
-import { DumbellIcon, QuotationMark, TestIcon, TestIconTwo } from "@/public/Icons";
+import { testimonials } from "../data";
+import { QuotationMark, TestIcon, TestIconTwo } from "@/public/Icons";
 
 // TO DO: osmisliti kako ukorporirati galeriju slika (tipa kao na hacksmithu)
 
@@ -236,14 +236,14 @@ export function GallerySection() {
             </p>
           </div>
           <div className="flex flex-row items-center justify-end gap-4">
-        <button className="bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] text-gray-300 px-4 py-3 rounded-lg text-xl font-bold">&larr;</button>
-        {/* <div className="flex flex-row justify-center gap-2">
-          <span className="w-8 h-1 rounded-md bg-[#31C57D]" />
-          <span className="w-8 h-1 rounded-md bg-[#31C57D]" />
-          <span className="w-8 h-1 rounded-md bg-[#31C57D]" />
-        </div> */}
-        <button className="bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] text-gray-300 px-4 py-3 rounded-lg text-xl font-bold">&rarr;</button>
-      </div>
+            <button className="bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] text-gray-300 px-4 py-3 rounded-lg text-xl font-bold">&larr;</button>
+            {/* <div className="flex flex-row justify-center gap-2">
+              <span className="w-8 h-1 rounded-md bg-[#31C57D]" />
+              <span className="w-8 h-1 rounded-md bg-[#31C57D]" />
+              <span className="w-8 h-1 rounded-md bg-[#31C57D]" />
+            </div> */}
+            <button className="bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] text-gray-300 px-4 py-3 rounded-lg text-xl font-bold">&rarr;</button>
+          </div>
        </div>
 
       <div className="flex flex-row gap-6 items-center">
@@ -456,24 +456,47 @@ export const LongParagraphsSection = () => {
   return (
     <SectionWrapper>
       <div className="flex flex-col gap-8 px-64">
+        <div className="flex flex-row justify-start gap-3">
+          <span className="w-2.5  h-6 bg-[#31C57D]" />
+          <span className="w-2.5  h-6 bg-[#31C57D]" />
+          <span className="w-2.5  h-6 bg-[#31C57D]" />
+          <span className="w-2.5  h-6 bg-[#31C57D]" />
+          <span className="w-2.5  h-6 bg-[#31C57D]" />
+          <span className="w-2.5  h-6 bg-[#31C57D]" />
+          <span className="w-2.5  h-6 bg-[#31C57D]" />
+        </div>
         <p className="normal-case text-md md:text-md text-gray-300 leading-2 tracking-wider font-normal">
-          <span className="text-[#31C57D] font-bold">As we were building</span> our platform, we were looking closely at how
+          <span className="text-[#31C57D] font-medium">As we were building</span> our platform, we were looking closely at how
           private healthcare providers get feedback, and what that means for <br /> <br />
-          their businesses. Here`s what most private clinics do: <span className="text-[#31C57D] font-bold">they use pen-and-paper surveys</span>,
+          their businesses. Here`s what most private clinics do: <span className="text-[#31C57D] font-medium">they use pen-and-paper surveys</span>,
           emails, and forms on their websites. But there`s a problem with these
           methods. These methods are difficult to analyze, and if patients aren`t
           satisfied, clinics can`t fix things quickly. By the time they analyze
           the survey, the patient is already considering the competition.
         </p>
         <p className="normal-case text-md md:text-md text-gray-300 leading-2 tracking-wider font-normal">
-          <span className="text-[#31C57D] font-bold">As we were building</span> our platform, we were looking closely at how
+          <span className="text-[#31C57D] font-medium">As we were building</span> our platform, we were looking closely at how
           private healthcare providers get feedback, and what that means for <br /> <br />
-          their businesses. Here`s what most private clinics do: <span className="text-[#31C57D] font-bold">they use pen-and-paper surveys</span>,
+          their businesses. Here`s what most private clinics do: <span className="text-[#31C57D] font-medium">they use pen-and-paper surveys</span>,
           emails, and forms on their websites. But there`s a problem with these
           methods. These methods are difficult to analyze, and if patients aren`t
           satisfied, clinics can`t fix things quickly. By the time they analyze
           the survey, the patient is already considering the competition.
         </p>
+        {/* <div className="flex items-center justify-center">
+          <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
+            Read More Stories
+          </button>
+        </div> */}
+        <div className="flex flex-row justify-end gap-3">
+          <span className="w-2.5  h-6 bg-[#31C57D]" />
+          <span className="w-2.5  h-6 bg-[#31C57D]" />
+          <span className="w-2.5  h-6 bg-[#31C57D]" />
+          <span className="w-2.5  h-6 bg-[#31C57D]" />
+          <span className="w-2.5  h-6 bg-[#31C57D]" />
+          <span className="w-2.5  h-6 bg-[#31C57D]" />
+          <span className="w-2.5  h-6 bg-[#31C57D]" />
+        </div>
       </div>
     </SectionWrapper>
   );
