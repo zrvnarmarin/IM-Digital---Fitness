@@ -105,8 +105,8 @@ const facilities: FacilityType[] = [
   },
   {
     id: 4,
-    href: '/welness-and-spa',
-    facilityName: 'welness and spa',
+    href: '/massage',
+    facilityName: 'Massage',
     description: ` Immerse yourself in a world of relaxation and rejuvenation at our Wellness and Spa facility. Indulge in a range of luxurious spa treatments designed to pamper your body and soothe your mind.`,
     cardImageSrc: TestImage
   },
