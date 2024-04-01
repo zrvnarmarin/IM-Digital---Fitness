@@ -10,17 +10,151 @@ export default function Page() {
   return (
     <main className="flex flex-col items-center lg:py-4 bg-[#111317]">
       <HeroSection />
+      <AboutMassage />
+      
       {/* <FinnishSaunaSection />
       <TurkishBathSection />
       <WhirpoolSection />
       <SanariumSection />
       <FAQSection /> */}
-      <MassageTypeCards />
+      <MassageBenefitsTable />
+      <MassageTypeCardsSection />
     </main>
   )
 }
 
-export function MassageTypeCards() {
+export function AboutMassage() {
+  return (
+    <SectionWrapper>
+      <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
+        Something about massage
+      </h1>
+      <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="text-white flex items-center justify-center">
+          <div className="relative flex items-center justify-center group h-full w-full rounded-xl cursor-pointer">
+            <Image
+              priority
+              src={TestImage}
+              alt="alt"
+              fill={true}
+              // fill={true} slika s ovim propertijem ocito zauzima mjesta koliko mu flexbox sirina i njegova visina dopustaju
+              className="object-cover rounded-md"
+            />
+          </div>
+        </div>
+        <div className="flex flex-col">
+
+          <div className="flex flex-col gap-3">
+            <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
+              Assets
+            </p>
+            <h1 className="w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold">
+              Best Quality Facilities And Program
+            </h1>
+            <p className="normal-case text-md md:text-md text-gray-300 leading-2">
+              In the “golden days”,
+              there weren’t many options for working out.
+              But Joe Gold, our founder, had a passion for bodybuilding. He found
+              success as a professional “muscleman” and
+              toured with celebrities!
+              But Joe Gold, our founder, had a passion for bodybuilding. He found
+              success as a professional “muscleman”
+            </p>
+          </div>
+        </div>
+      </div>
+    </SectionWrapper>
+  )
+}
+
+export function MassageBenefitsTable() {
+  return (
+    <SectionWrapper>
+      <div className="flex flex-col gap-6">
+        <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-center font-bold">
+          Something about massage
+        </h1>
+        <p className="text-center normal-case text-md md:text-md text-gray-300 leading-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, eaque.</p>
+        
+        <div>
+          <div className="grid grid-cols-5">
+            <div className="flex items-center justify-center text-md text-gray-300 leading-2 uppercase font-semibold p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">Tip tretmana/učinak</div>
+            <div className="flex items-center justify-center text-md text-gray-300 leading-2 uppercase font-semibold p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">Klasicna masaža</div>
+            <div className="flex items-center justify-center text-md text-gray-300 leading-2 uppercase font-semibold p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">Relaksacijska masaža</div>
+            <div className="flex items-center justify-center text-md text-gray-300 leading-2 uppercase font-semibold p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">Sportska masaža</div>
+            <div className="flex items-center justify-center text-md text-gray-300 leading-2 uppercase font-semibold p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">Medicinska masaža</div>
+          </div>
+
+          <div className="grid grid-cols-5">
+            <div className="flex items-center justify-center text-md text-gray-300 leading-2 uppercase font-semibold p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">Antistresni učinak</div>
+            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">✓</span>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">✓</span>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">✓</span>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">✓</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-5">
+            <div className="flex items-center justify-center text-md text-gray-300 leading-2 uppercase font-semibold p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">Smanjenje boli</div>
+            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">✓</span>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">✓</span>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">✓</span>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">✓</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-5">
+            <div className="flex items-center justify-center text-md text-gray-300 leading-2 uppercase font-semibold p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">Omamljenost nakon tretmana</div>
+            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">✓</span>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">✓</span>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">✓</span>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">✓</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-5">
+            <div className="flex items-center justify-center text-md text-gray-300 leading-2 uppercase font-semibold p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">Povećanje pokretljivosti</div>
+            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">✓</span>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">✓</span>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">✓</span>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">✓</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </SectionWrapper>
+  )
+}
+
+export function MassageTypeCardsSection() {
   return (
     <SectionWrapper>
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -35,30 +169,35 @@ export function MassageTypeCards() {
 export const massageTypes: MassageType[] = [
   {
     id: 1,
+    href:'/classical-massage',
     title: 'Classical Massage'
   },
   {
     id: 2,
+    href:'/relaxational-massage',
     title: 'Relaxational Massage'
   },
   {
     id: 3,
+    href:'/sport-massage',
     title: 'Sport Massage'
   },
   {
     id: 4,
-    title: 'Medicine Massage'
+    href:'/medical-massage',
+    title: 'Medical Massage'
   },
 ]
 
 export type MassageType = {
   id: number;
   title: string;
+  href: string;
 };
 
-export const WelnessServiceCard = ({ massageType } : { MassageType }) => {
+export const WelnessServiceCard = ({ massageType }: { MassageType }) => {
   return (
-    <Link href={`/`}>
+    <Link href={`/facilities/massage${massageType.href}`}>
       <div className="relative group rounded overflow-hidden cursor-pointer shadow-md">
         {/* Background Image */}
         <div className="group-hover:opacity-75 transition duration-300 ease-in-out">
@@ -69,12 +208,11 @@ export const WelnessServiceCard = ({ massageType } : { MassageType }) => {
             width={0}
             height={0}
           />
-          <p>lkjvh</p>
         </div>
 
         {/* On hover image */}
-        <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/50 text-white">
-          <p className="pt-4 w-full text-gray-200 text-2xl tracking-normal text-center font-semibold">
+        <div className="absolute bottom-0 left-0 right-0 p-4" style={{backgroundColor: 'rgba(29, 115, 73, 0.5)'}}>
+          <p className="w-full text-white text-2xl tracking-normal text-center font-semibold">
             {massageType.title}
           </p>
         </div>
@@ -82,6 +220,9 @@ export const WelnessServiceCard = ({ massageType } : { MassageType }) => {
     </Link>
   );
 };
+
+
+
 
 
 
