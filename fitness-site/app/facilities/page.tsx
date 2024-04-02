@@ -15,30 +15,21 @@ export default function Page() {
 const FacilitiesSection = ({ facilities } : { facilities: FacilityType[] }) => {
   return (
     <SectionWrapper>
-      <h1 className="w-full text-xl md:text-xl lg:text-6xl tracking-normal text-start text-white leading-7 font-semibold">
-        Gym Facilities
-      </h1>
-      <div className="uppercase text-xs font-semibold w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
-        Explore Our Gym Amenities
-      </div>
-      <div className="flex flex-row gap-6 normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
-        <div className="flex flex-row justify-center gap-3">
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
+      <div className="flex flex-col gap-2">
+          <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
+            Facilities
+          </p>
+          <h1 className="text-white text-7xl tracking-tight text-start font-bold">
+            Facilities
+          </h1>
+          <p className="normal-case text-start text-md md:text-md text-gray-300 leading-2 pr-48">
+            At Aeon Olympia Strength Gym, we pride ourselves on providing a world-class fitness facility
+            equiped with a range of amenities to enhance your workout experience. Our goal is to create a
+            comfortable and motivating environment where you can focus on your fitness journey. From
+            state-of-the-art equipment to convenient services, our gym amenities are designed to cater to
+            your needs.
+          </p>
         </div>
-        <p>
-          At Aeon Olympia Strength Gym, we pride ourselves on providing a world-class fitness facility
-          equiped with a range of amenities to enhance your workout experience. Our goal is to create a
-          comfortable and motivating environment where you can focus on your fitness journey. From
-          state-of-the-art equipment to convenient services, our gym amenities are designed to cater to
-          your needs.
-        </p>
-      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 pt-8">
         {facilities.map((facility) => (
           <FacilityCard key={facility.id} facility={facility} />
@@ -47,38 +38,6 @@ const FacilitiesSection = ({ facilities } : { facilities: FacilityType[] }) => {
     </SectionWrapper>
   )
 }
-
-// export const FacilityCard = ({ facility }: { facility: FacilityType }) => {
-//   return (
-//     <Link href={`/facilities/${facility.href}`}>
-//       <div className="relative group rounded overflow-hidden cursor-pointer shadow-md">
-//         {/* Background Image */}
-//         <div className="group-hover:opacity-75 transition duration-300 ease-in-out">
-//           <Image
-//             className="object-cover w-full h-54 md:h-72 lg:h-80 xl:h-96 transform group-hover:scale-105 duration-300"
-//             src={facility.cardImageSrc}
-//             alt="Card Background"
-//             width={0}
-//             height={0}
-//           />
-//         </div>
-
-//         {/* On hover image */}
-//         <div className="absolute inset-0 flex flex-col justify-center items-center p-4 transition duration-300 ease-in-out bg-black/20 text-white opacity-0 group-hover:opacity-100">
-//           <div className="flex flex-col items-center gap-8">
-//             <span className="font-black capitalize text-sm md:text-md lg:text-lg xl:text-xl text-gray-100 duration-100">
-//               {facility.facilityName}
-//             </span>
-//             <span className="font-black text-sm md:text-md lg:text-lg xl:text-xl text-gray-100 duration-100">
-//               Discover More
-//             </span>
-//           </div>
-//         </div>
-
-//       </div>
-//     </Link>
-//   );
-// };
 
 export type FacilityType = {
   id: number;
@@ -144,7 +103,7 @@ export function FacilityCard({ facility } : { facility: FacilityType}) {
       </div>
 
       <div className="w-full flex flex-row items-center justify-between pt-6">
-        <p className="capitalize text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
+        <p className="w-full capitalize text-gray-200 text-2xl tracking-normal text-start font-semibold">
           {facility.facilityName}
         </p>
         <div className="flex flex-row items-center justify-between gap-4">
