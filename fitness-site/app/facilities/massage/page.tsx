@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <main className="flex flex-col items-center lg:py-4 bg-[#111317]">
+    <main className="flex flex-col items-center bg-[#111317]">
       <HeroSection />
       <AboutMassage />
       
@@ -29,7 +29,7 @@ export function AboutMassage() {
       <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
         Something about massage
       </h1>
-      <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="text-white flex items-center justify-center">
           <div className="relative flex items-center justify-center group h-full w-full rounded-xl cursor-pointer">
             <Image

@@ -20,6 +20,7 @@ export default function Page() {
       <AboutSwimming/>
       <SwimmingSchedule />
       <StatsSection />
+      <PricingSection />
       <FAQSection />
       <LearnSwim />
     </main>
@@ -247,6 +248,65 @@ export const schedule = [
   }
 ];
 
+export function PricingSection() {
+  return (
+    <SectionWrapper>
+      <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
+          Pricing
+        </h1>
+      <div className="w-full flex flex-col md:flex-row gap-6 items-center justify-between">
+
+        <div className="w-full flex flex-col gap-2 p-6 rounded-lg bg-gradient-to-r from-[#101010] to-[#191919] border-y border-[#292929]">
+          <h1 className="w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold">
+            Parcijalna masaža
+          </h1>
+          <p className="pt-2 normal-case text-sm text-white leading-2 font-semibold">&#x2022; 55 min</p>
+          <p className="normal-case text-md md:text-md text-gray-300 leading-2">
+            Leđa ili noge
+          </p>
+          <div className="flex flex-row justify-between items-center pt-2">
+          <p className="text-[#31C57D] text-2xl tracking-normal text-start font-semibold">
+            $35.00
+          </p>
+          <button className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
+            Buy Now
+          </button>
+        </div>
+        </div>
+
+        <div className="w-full flex flex-col gap-2 p-6 rounded-lg bg-gradient-to-r from-[#101010] to-[#191919] border-y border-[#292929]">
+          <h1 className="w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold">
+            Masaža cijelog tijela
+          </h1>
+          <p className="pt-2 normal-case text-sm text-white leading-2 font-semibold">&#x2022; 55 min</p>
+          <p className="normal-case text-md md:text-md text-gray-300 leading-2">
+            Vrat, leđa, ruke i noge
+          </p>
+          <div className="flex flex-row justify-between items-center pt-2">
+          <p className="text-[#31C57D] text-2xl tracking-normal text-start font-semibold">
+            $65.00
+          </p>
+          <button className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
+            Buy Now
+          </button>
+        </div>
+        </div>
+
+      </div>
+      <p className="text-center normal-case text-md md:text-md text-gray-300 leading-2">
+        If you have our app, you can manage your appointment from there. <br />
+      </p>
+      <div className="w-full flex items-center justify-center">
+        <Link 
+          href={'/contact'} 
+          className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white"
+        >
+          Log In To App
+        </Link>
+      </div>
+    </SectionWrapper>
+  )
+}
 
 export function StatsSection() {
   return (

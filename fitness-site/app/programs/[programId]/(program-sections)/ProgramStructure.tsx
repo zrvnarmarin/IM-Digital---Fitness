@@ -116,7 +116,7 @@ const phaseOneColor: PhaseColors = "#9cd046";
 const phaseTwoColor: PhaseColors = "#43d2e8";
 const phaseThreeColor: PhaseColors = "#4682d9";
 
-const trainingPhases: TrainingPhaseType[] = [
+export const trainingPhases: TrainingPhaseType[] = [
   {
     id: 1,
     phaseNumber: "01",
