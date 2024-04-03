@@ -4,7 +4,7 @@ import { InstructorCardsSection } from './(instructors-sections)/InstructorCards
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center lg:py-4 bg-[#181a1f]">
+    <main className="flex min-h-screen flex-col items-center bg-[#181a1f]">
       <HeroSection />
       <InstructorCardsSection />
     </main>

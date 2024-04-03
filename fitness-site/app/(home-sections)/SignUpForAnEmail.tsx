@@ -20,9 +20,9 @@ const SignUpForAnEmail = () => {
 
       {/* Content */}
       <div className="absolute inset-0 flex flex-col justify-center gap-12 text-white">
-        <p className="text-center uppercase font-semibold text-white text-2xl tracking-wider w-full">
+        <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-center font-bold">
           Sign up to our newsletter
-        </p>
+        </h1>
         <div>
           <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-center text-white leading-7 font-semibold">
             Get it all in the action

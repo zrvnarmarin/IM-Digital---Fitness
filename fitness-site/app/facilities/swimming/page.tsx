@@ -22,7 +22,7 @@ export default function Page() {
       <StatsSection />
       <PricingSection />
       <FAQSection />
-      <LearnSwim />
+      <LearnToSwimSection />
     </main>
   )
 }
@@ -252,8 +252,8 @@ export function PricingSection() {
   return (
     <SectionWrapper>
       <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
-          Pricing
-        </h1>
+        Pricing
+      </h1>
       <div className="w-full flex flex-col md:flex-row gap-6 items-center justify-between">
 
         <div className="w-full flex flex-col gap-2 p-6 rounded-lg bg-gradient-to-r from-[#101010] to-[#191919] border-y border-[#292929]">
@@ -358,8 +358,8 @@ export const stats = [
 export function FAQSection () {
   return (
     <SectionWrapper>
-      <h1 className="uppercase font-semibold text-white text-2xl tracking-wider w-full text-start">
-        FAQ
+      <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
+        Frequently asked questions
       </h1>
       <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
         Find the answers to most common questiosn for the swimming facility.
@@ -529,22 +529,33 @@ export function OverallInfo() {
   )
 }
 
-export function LearnSwim() {
+export function LearnToSwimSection() {
   return (
     <SectionWrapper>
-      <h2 className="uppercase font-semibold text-white text-2xl tracking-wider w-full">
-        Learn To Swim
-      </h2>
-      <div className="flex p-6 bg-gradient-to-r from-[#101010] to-[#161616] rounded-lg">
-        <p className="w-2/3 normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
-          Whether you’re an experienced open water swimmer looking to bring your time down, or a beginner
-          venturing into the pool for the first time, you can sign up for one-to-one lessons with our coaches.
-          You can buy lessons in packs of four or 12.
-        </p>
-        <div className="w-1/3 flex items-center justify-center">
-          <button className="w-fit border-2 border-[#1D7349] rounded-3xl py-2 px-4 cursor-pointer text-white">
-            Get In Touch
-          </button>
+      <div className="relative w-full h-64 flex flex-row justify-between rounded-lg shadow-lg">
+        <Image
+          src={TestImage}
+          layout="fill"
+          objectFit="cover"
+          className="absolute top-0 left-0 w-full h-full opacity-50"
+          alt=""
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#31C57D] to-[#161616] opacity-30 rounded-lg"></div>
+        <div className="w-full flex flex-row gap-36 items-center justify-between z-30 px-12 py-6">
+          <div className="flex flex-col">
+            <p className="text-2xl md:text-3xl lg:text-4xl tracking-normal text-start text-white leading-7 font-semibold">
+              Start Your Free 7-Day Trial Program Here
+            </p>
+            <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal pt-4">
+              Analyze patient feedback. Optimize workflows to deliver a superb patient experience. Stop your never-ending
+              battle with patient retention.
+            </p>
+          </div>
+          <div className="w-1/3">
+            <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
+              Learn To Swim
+            </button>
+          </div>
         </div>
       </div>
     </SectionWrapper>

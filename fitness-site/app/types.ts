@@ -1,15 +1,15 @@
 import { StaticImageData } from "next/image";
 
-export type Program = {
+export type ProgramType = {
   title: string;
   href: string;
   description: string;
+  price: number;
   keyExercises?: string[];
   keyPoses?: string[];
   buttonText: string;
   duration?: string;
   intensity?: string;
-  icon: () => JSX.Element;
   image: any;
 };
 

@@ -2,13 +2,12 @@
 
 import React, { useState } from "react";
 import Image, { StaticImageData } from "next/image";
-import ExampleImage from "../../public/CardioBlastImage.jpg";
+import ExampleImage from "../../public/gymFacilityImage.png";
 import SectionWrapper from "../components/wrappers/SectionWrapper";
 import SwimmingImage from '../../public/SwimmingFacilityCard.jpg'
 import SpaImage from '../../public/WelnessAndSpaCard.jpg'
 import StudiosImage from '../../public/StudiosFacilityCard.jpg'
 import GymImage from '../../public/gymImage.jpg'
-import { DumbellIcon } from "@/public/Icons";
 
 export default function TheClassYouWillGetThereSection() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -29,7 +28,7 @@ export default function TheClassYouWillGetThereSection() {
               src={ExampleImage}
               alt="alt"
               fill={true}
-              className="object-cover rounded-md"
+              className="object-cover w-full rounded-md"
             />
           </div>
         </div>

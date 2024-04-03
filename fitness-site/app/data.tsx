@@ -7,9 +7,9 @@ export const programs = [
     href: "/programs/cardio-blast",
     description:
       "This high-intensity cardio program is designed to improve cardiovascular fitness and burn calories.",
+    price: '$130.00',
     duration: "4 weeks",
     intensity: "High",
-    icon: HeartIcon,
     image: YogaImage,
     benefits: [
       "Improved cardiovascular health",
@@ -34,9 +34,9 @@ export const programs = [
     href: "/programs/calisthenics",
     description:
       "This high-intensity cardio program is designed to improve cardiovascular fitness and burn calories.",
+    price: '$130.00',
     duration: "4 weeks",
     intensity: "High",
-    icon: HeartIcon,
     image: YogaImage,
     benefits: [
       "Improved cardiovascular health",
@@ -61,9 +61,9 @@ export const programs = [
     href: "/programs/strength-builder",
     description:
       "Embark on a transformative journey to build robust strength and lean muscle with the best Strength plan.",
+    price: '$130.00',
     duration: "6 weeks",
     intensity: "Moderate",
-    icon: DumbellIcon,
     image: YogaImage,
     benefits: [
       "Increased muscle strength",
@@ -88,10 +88,10 @@ export const programs = [
     href: "/programs/crossfit-challenge",
     description:
       "Engage in the ultimate fitness adventure with our CrossFit Challenge program.",
+    price: '$130.00',
     keyExercises: ["Box Jumps", "Kettlebell Swings", "Rope Climbs"],
     duration: "10 weeks",
     intensity: "Very High",
-    icon: HeartIcon,
     image: YogaImage,
     benefits: [
       "Improved agility",

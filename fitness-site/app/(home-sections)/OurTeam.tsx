@@ -19,6 +19,10 @@ export default function OurTeam() {
         </div>
       </div>
 
+      <p className="normal-case text-md md:text-md text-gray-300 leading-2">
+        Meet our exceptional team which will test your limits
+      </p>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-lg gap-6">
         {trainers.map((trainer) => (
           <TrainerCard key={trainer.id} trainer={trainer} />
