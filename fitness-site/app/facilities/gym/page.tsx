@@ -184,6 +184,17 @@ export function GallerySection() {
           </div>
         )}
       </div>
+      <p className="text-center normal-case text-md md:text-md text-gray-300 leading-2">
+        Embark on the path of the strenght - the ONLY path! <br />
+      </p>
+      <div className="w-full flex items-center justify-center">
+        <Link 
+          href={'/contact'} 
+          className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white"
+        >
+          Join Aeon Olympia Gym
+        </Link>
+      </div>
     </SectionWrapper>
   )
 }
