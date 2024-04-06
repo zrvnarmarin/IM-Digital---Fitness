@@ -389,3 +389,9 @@ export const TestIconTwo = () => {
     <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 50 50"><path fill="#ffffff" d="M17.962 44.874a1.007 1.007 0 0 1-.05 1.416l-2.172 2.031a.999.999 0 0 1-1.411-.051L1.68 34.638a1.007 1.007 0 0 1 .051-1.416l2.175-2.028a.998.998 0 0 1 1.411.051zm16.14-25.65a1.007 1.007 0 0 1-.051 1.416l-13.67 12.77a.999.999 0 0 1-1.411-.051l-3.263-3.521a1.007 1.007 0 0 1 .051-1.416l13.667-12.77a.997.997 0 0 1 1.41.051zM22.613 40.527c.374.403.351 1.04-.051 1.416l-2.175 2.03a.998.998 0 0 1-1.411-.051L6.334 30.29a1.007 1.007 0 0 1 .05-1.416l2.171-2.029a.999.999 0 0 1 1.411.051zm21.063-20.814a1.007 1.007 0 0 1-.052 1.416l-2.174 2.03a1 1 0 0 1-1.412-.05L27.394 9.48a1.006 1.006 0 0 1 .05-1.416l2.18-2.035a.997.997 0 0 1 1.41.051zm4.644-4.34a1.009 1.009 0 0 1-.051 1.417l-2.17 2.029a.997.997 0 0 1-1.41-.05L32.047 5.134a1.009 1.009 0 0 1 .05-1.417l2.172-2.033a.995.995 0 0 1 1.409.05z"></path></svg>
   )
 }
+
+export const SwimmingFacilityIcon = () => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="5" height="5" fill="none"/><circle cx="176" cy="72" r="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M40,193.61c72-59.69,104,56.47,176-3.22" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M40,153.61c72-59.69,104,56.47,176-3.22" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M189.58,165.58l-57.46-57.46A96,96,0,0,0,64.24,80H40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="79.96" y1="136.04" x2="118.91" y2="97.09" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+  )
+}

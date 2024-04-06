@@ -23,16 +23,13 @@ export default function HeroSection() {
         <div className="w-full flex items-center justify-start">
           <Link 
             href={'/contact'} 
-            className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white"
+            className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-md py-2 px-4 cursor-pointer text-white"
           >
             Get In Touch
           </Link>
         </div>
       </div>
       <div className="relative flex items-center justify-center group h-full w-full rounded-xl cursor-pointer">
-        <div
-          className="absolute bottom-4 left-0 right-0 w-[32rem] h-24 bg-[#000000] opacity-100 z-10 blur-lg"
-        />
         <Image
           priority
           src={AboutUsHeroImage}
