@@ -1,5 +1,4 @@
 import React from "react";
-import { formatString } from "@/app/utils/helpers";
 import HeroSection from "./(program-sections)/HeroSection";
 import ProgramOverviewSection from "./(program-sections)/ProgramOverviewSection";
 import ProgramStructure from "./(program-sections)/ProgramStructure";
@@ -9,10 +8,8 @@ import MoreProgramInfoSection from "./(program-sections)/MoreProgramInfoSection"
 import ProgramBuyAndDiscoundSection from "./(program-sections)/ProgramBuyAndDiscoundSection";
 import SuccessStoriesSection from "./(program-sections)/SuccessStoriesSection";
 import OtherProgramsSection from "./(program-sections)/OtherProgramsSection";
-import SectionWrapper from "@/app/components/wrappers/SectionWrapper";
-import TestImage from '../../../public/HeroTestTest.jpg'
-import Image from "next/image";
 import StartTheProgramSection from "./(program-sections)/StartTheProgramSection";
+import { formatString } from "@/app/utils/helpers";
 
 export default function Page({ params }: { params: { programId: string } }) {
   return (

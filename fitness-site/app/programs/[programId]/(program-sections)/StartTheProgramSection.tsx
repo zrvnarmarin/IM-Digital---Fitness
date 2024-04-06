@@ -6,7 +6,7 @@ import TestImage from '../../../../public/HeroTestTest.jpg'
 export default function StartTheProgramSection() {
     return (
         <SectionWrapper>
-        <div className="relative group flex flex-col gap-4 rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#161616]">
+        <div className="relative group flex flex-col gap-4 rounded-lg px-12 py-16 bg-gradient-to-r from-[#101010] to-[#161616]">
           
           <div className="absolute inset-0">
             <Image
@@ -19,7 +19,8 @@ export default function StartTheProgramSection() {
             />
           </div>
 
-          <div className="absolute inset-0 bg-black opacity-80 border border-[#292929] rounded-lg"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#31C57D] to-[#161616] opacity-30 rounded-lg"></div>
+
 
           <div className="flex flex-col gap-6 z-20">
             <h1 className="w-full  text-gray-200 text-2xl tracking-normal text-center font-semibold">
