@@ -100,4 +100,9 @@ export default function Footer() {
         name: 'Contact',
         link: '/contact'
       },
+      {
+        name: 'Facilities',
+        link: '/facilities'
+      },
+
     ]
