@@ -63,7 +63,7 @@ export const FacilitiesCard = ({
       onClick={onShow}
       className={`${isActive ? 'cursor-pointer group flex flex-row rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#191919] border border-[#292929]' : 'cursor-pointer'}`}
     >
-      
+      <p className="text-white text-md">{isActive.toString()}</p>
       <div className={`${isActive ? 'flex flex-row gap-2 items-start' : 'rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#292929] border border-[#292929] flex flex-row gap-2 items-start px-6'} `}>
         <div className="flex flex-col">
             <p className={`${isActive ? 'w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold' : 'w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold'}`}>

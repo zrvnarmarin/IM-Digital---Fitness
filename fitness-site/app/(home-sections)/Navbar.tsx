@@ -26,7 +26,7 @@ export default function Navbar({
       }`}
     >
       <nav className="flex flex-row justify-between items-center py-2 lg:bg-inherit px-4">
-        <LogoImage />
+        <LogoImage width={80} height={80} />
         <button onClick={() => onOpenSidebar()} className="flex flex-col gap-2 items-end">
           <div className="w-6 h-[2px] bg-white"></div>
           <div className="w-3 h-[2px] bg-white"></div>
@@ -49,14 +49,14 @@ export type NavbarLink = {
   link: string;
 };
 
-export const LogoImage = () => {
+export const LogoImage = ({ width, height } : { width: number, height: number }) => {
   return (
     <Link href={"/"}>
       <Image
         src={LogoWhite}
         alt="logo"
-        width={80}
-        height={80}
+        width={width}
+        height={height}
       />
     </Link>
   );
