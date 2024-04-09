@@ -19,18 +19,18 @@ export default function ProgramOverviewSection() {
                 <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
                   Feel your strength
                 </h1>
-              <div className="w-full flex flex-row items-center justify-between gap-4">
-                <div className="flex items-center gap-2">
-                  <p className="normal-case text-md md:text-md text-white leading-2 font-semibold">
-                    Intensity:
-                  </p>
+                <div className="w-full flex flex-row items-center justify-between gap-4">
+                  <div className="flex items-center gap-2">
+                    <p className="normal-case text-md md:text-md text-white leading-2 font-semibold">
+                      Intensity:
+                    </p>
+                  </div>
+                  <div className="flex flex-row items-center justify-end w-1/3 gap-2">
+                    <span className="w-1/3 rounded-lg h-2 border border-[#292929]"></span>
+                    <span className="bg-[#31C57D] w-1/3 rounded-lg h-2 border border-[#292929]"></span>
+                    <span className="bg-[#31C57D] w-1/3 rounded-lg h-2 border border-[#292929]"></span>
+                  </div>
                 </div>
-                <div className="flex flex-row items-center justify-end w-1/3 gap-2">
-                  <span className="w-1/3 rounded-lg h-2 border border-[#292929]"></span>
-                  <span className="bg-[#31C57D] w-1/3 rounded-lg h-2 border border-[#292929]"></span>
-                  <span className="bg-[#31C57D] w-1/3 rounded-lg h-2 border border-[#292929]"></span>
-                </div>
-              </div>
                 <p className="normal-case text-md md:text-md text-gray-300 leading-2">
                   {description}
                 </p>
@@ -52,9 +52,7 @@ export default function ProgramOverviewSection() {
                   <span className="rounded-full p-2 bg-[#292929] border border-[#292929]">
                     <DumbellIcon />
                   </span>
-                  <span className="font-semibold">
-                    Duration:
-                  </span>
+                  <span className="font-semibold">Duration:</span>
                 </div>
                 <span className="normal-case text-md md:text-xl text-gray-300 leading-2 font-semibold">
                   6 Weeks
@@ -65,24 +63,20 @@ export default function ProgramOverviewSection() {
                   <span className="rounded-full p-2 bg-[#292929] border border-[#292929]">
                     <DumbellIcon />
                   </span>
-                  <span className="font-semibold">
-                    Duration:
-                  </span>
+                  <span className="font-semibold">Duration:</span>
                 </div>
                 <span className="normal-case text-md md:text-xl text-gray-300 leading-2 font-semibold">
                   6 Weeks
                 </span>
               </div>
             </div>
-
           </div>
-          
+
           {/* <div className="w-full flex justify-start">
             <button className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
               Lorem Ipsum
             </button>
           </div> */}
-
         </div>
 
         <div>

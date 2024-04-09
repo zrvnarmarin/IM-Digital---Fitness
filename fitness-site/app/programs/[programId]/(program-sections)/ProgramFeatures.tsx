@@ -23,16 +23,16 @@ export default function ProgramFeatures() {
 
 export const KeyFeatureCard = ({ keyFeature }: { keyFeature: KeyFeature }) => {
   return (
-    <li
-      className="group flex flex-row rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]"
-    >
+    <li className="group flex flex-row rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
       <div className="flex flex-col gap-4">
         <div className="flex flex-row md:flex-col items-center md:items-start gap-3">
           <div className="w-full flex items-center gap-3 ">
             <span className="rounded-full p-2 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-              <DumbellIcon  width={30} height={30} />
+              <DumbellIcon width={30} height={30} />
             </span>
-            <p className="w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold">{keyFeature.title}</p>
+            <p className="w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold">
+              {keyFeature.title}
+            </p>
           </div>
         </div>
         <p className="normal-case text-md md:text-md text-gray-300 leading-2">

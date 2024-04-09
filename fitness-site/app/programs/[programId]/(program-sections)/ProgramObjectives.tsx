@@ -34,12 +34,15 @@ export const ProgramObjectiveCard = ({
 }) => {
   return (
     <div className="grid grid-cols-2">
-      <li
-        className="relative flex flex-col gap-2 p-8 py-10 bg-[#111111] items-center justify-center"
-      >
+      <li className="relative flex flex-col gap-2 p-8 py-10 bg-[#111111] items-center justify-center">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <Image src={BuildLeanMuscle} layout="fill" objectFit="cover" alt="image" />
+          <Image
+            src={BuildLeanMuscle}
+            layout="fill"
+            objectFit="cover"
+            alt="image"
+          />
         </div>
         {/* Blue Overlay */}
         <div className="absolute inset-0 bg-black opacity-95"></div>
@@ -55,7 +58,13 @@ export const ProgramObjectiveCard = ({
           </p>
         </div>
       </li>
-      <Image src={BuildLeanMuscle} width={0} height={0} alt="jkbj" className="w-full h-full object-cover" />
+      <Image
+        src={BuildLeanMuscle}
+        width={0}
+        height={0}
+        alt="jkbj"
+        className="w-full h-full object-cover"
+      />
     </div>
   );
 };

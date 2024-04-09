@@ -14,7 +14,7 @@ export default function FAQSection() {
   );
 }
 
-export function Accordion({ faqArray } : { faqArray: FAQType[]}) {
+export function Accordion({ faqArray }: { faqArray: FAQType[] }) {
   const [activeIndex, setActiveIndex] = useState(-1); // Initialize with -1 to have no active accordion initially
 
   const handleShow = (index: number) => {
@@ -77,7 +77,7 @@ export type FAQType = {
   id: number;
   title: string;
   answer: string;
-}
+};
 
 const homePageFAQ = [
   {

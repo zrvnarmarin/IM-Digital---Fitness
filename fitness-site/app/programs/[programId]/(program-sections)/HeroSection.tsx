@@ -30,11 +30,10 @@ export default function HeroSection({ programId }: { programId: string }) {
         <h1 className="text-xl md:text-4xl lg:text-5xl tracking-normal leading-7 font-semibold">
           {formatString(programId)}
         </h1>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
-        </p>
+        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal"></p>
         <div className="mt-6">
-          <Link 
-            href={'/contact'} 
+          <Link
+            href={"/contact"}
             className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white"
           >
             Get In Touch

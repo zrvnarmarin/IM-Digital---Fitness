@@ -41,9 +41,10 @@ export const TrainingPhaseCard = ({
 
   return (
     <li className={`grid grid-cols-1 md:grid-cols-2 gap-6`}>
-
       {/* Left section */}
-      <div className={`${!isEven ? 'order-2' : 'order-0'} relative flex flex-col justify-center items-center gap-6`}>
+      <div
+        className={`${!isEven ? "order-2" : "order-0"} relative flex flex-col justify-center items-center gap-6`}
+      >
         <div className="z-30">
           <p className="w-full text-xl md:text-xl lg:text-4xl tracking-normal text-start text-white leading-7 font-semibold">
             <span className="text-[#31C57D]">Phase</span>{" "}
@@ -91,14 +92,15 @@ export const TrainingPhaseCard = ({
               <div key={sentence} className="flex flex-row gap-4">
                 <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
                   &#10003;
-                </span> 
-                <p className="normal-case text-md md:text-md text-gray-300 leading-2">{sentence}</p>
+                </span>
+                <p className="normal-case text-md md:text-md text-gray-300 leading-2">
+                  {sentence}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </div>
-
     </li>
   );
 };
