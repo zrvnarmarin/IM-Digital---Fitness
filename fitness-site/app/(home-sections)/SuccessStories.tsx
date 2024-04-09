@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import Image from "next/image";
 import { testimonials } from "../data";
@@ -5,6 +7,8 @@ import { QuotationMark } from "@/public/Icons";
 import SectionWrapper from "../components/wrappers/SectionWrapper";
 import TestImage from '../../public/gymImage.jpg'
 import { TestimonialCard, TestimonialCardsSection } from "../about/page";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 export default function SuccessStories() {
   return (
@@ -19,53 +23,82 @@ export default function SuccessStories() {
           </button>
         </div>
       </div>
-      <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {[1,2].map(element =>
-          <TestimonialCard key={element} />  
-        )}
-      </ul>
-      <div className="flex flex-row justify-center gap-4">
-        <button className="w-8 h-2 rounded-md bg-[#31C57D]" />
-        <button className="w-8 h-2 rounded-md bg-[#31C57D]" />
-        <button className="w-8 h-2 rounded-md bg-[#31C57D]" />
+
+      <div className="relative pb-9">
+        <Carousel
+          additionalTransfrom={0}
+          arrows={false}
+          autoPlay
+          autoPlaySpeed={3000}
+          centerMode={false}
+          className=""
+          containerClass=""
+          customDot={<button className="w-8 h-2 rounded-md bg-[#31C57D]" />}
+          // customButtonGroup={<ButtonGroup />}
+          dotListClass="gap-4"
+          draggable
+          focusOnSelect={false}
+          infinite={true}
+          itemClass="px-3"
+          keyBoardControl
+          minimumTouchDrag={80}
+          pauseOnHover
+          renderArrowsWhenDisabled={false}
+          renderButtonGroupOutside
+          renderDotsOutside={true}
+          responsive={{
+            desktop: {
+              breakpoint: {
+                max: 3000,
+                min: 1024
+              },
+              items: 2,
+              partialVisibilityGutter: 40
+            },
+            mobile: {
+              breakpoint: {
+                max: 464,
+                min: 0
+              },
+              items: 1,
+              partialVisibilityGutter: 30
+            },
+            tablet: {
+              breakpoint: {
+                max: 1024,
+                min: 464
+              },
+              items: 2,
+              partialVisibilityGutter: 30
+            }
+          }}
+          rewind={false}
+          rewindWithAnimation={false}
+          rtl={false}
+          shouldResetAutoplay
+          showDots={true}
+          sliderClass=""
+          slidesToSlide={1}
+          swipeable
+        >
+          {testimonials.map(testimonial =>
+          <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+          )}
+          
+
+        </Carousel>
       </div>
     </SectionWrapper>
   );
 }
 
-export function SuccessStoryCard({
-  name,
-  testimonial,
-  date,
-}: {
-  name: string;
-  testimonial: string;
-  date: string;
-}) {
+const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
+  const { carouselState: { currentSlide } } = rest;
   return (
-    <div className="flex flex-col gap-8 p-8 bg-gradient-to-r from-[#101010] to-[#292929] rounded-lg">
-      <div className="flex justify-start">
-        <QuotationMark />
-      </div>
-      <div className="flex flex-row gap-2">
-        <p className="normal-case text-md text-gray-300 leading-2 font-normal">
-          {testimonial}
-        </p>
-      </div>
-      <div className="flex gap-4 items-center">
-        <div className="flex items-center w-12 h-12 rounded-full">
-          <Image
-            src={TestImage}
-            width={100}
-            height={100}
-            alt="Community Image"
-            className="w-full h-full object-cover rounded-full"
-          />
-        </div>
-        <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
-          {name}
-        </p>
-      </div>
+    <div className="absolute right-0 bg-red-400 p-2"> 
+      {/* <button className={currentSlide === 0 ? 'bg-green-400' : ''} onClick={() => previous()} /> */}
+      <button onClick={() => goToSlide(currentSlide - 1)}> Go to left </button>
+      <button onClick={() => goToSlide(currentSlide + 1)}> Go to right </button>
     </div>
   );
-}
+};

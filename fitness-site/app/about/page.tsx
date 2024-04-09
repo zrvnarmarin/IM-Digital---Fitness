@@ -672,7 +672,15 @@ export function TestimonialCardsSection() {
     </SectionWrapper>
   )
 }
-export function TestimonialCard() {
+
+export type TestimonialType = {
+  id: number;
+  testimonial: string;
+  name: string;
+  date:string;
+}
+
+export function TestimonialCard({ testimonial } : { testimonial: TestimonialType }) {
   return (
     <li className="p-8 col-span-1 md:col-span-1 lg:col-span-1 shadow-lg rounded-lg bg-gradient-to-r from-[#101010] to-[#191919] border-y border-[#292929]">
       <div className="flex flex-col gap-6">
@@ -680,10 +688,10 @@ export function TestimonialCard() {
           <QuotationMark />
         </div>
         <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
-          March 2024
+          {testimonial.date}
         </p>
         <p className="normal-case text-md text-gray-300 leading-2 font-normal">
-          Starting with (ime firme) was the best decision I made for my health. The flexibility of the programs and the expert guidance kept me motivated. Highly recommended!
+          {testimonial.testimonial}
         </p>
         <div className="flex gap-4 items-center">
           <div className="flex items-center w-12 h-12 rounded-full">
@@ -696,7 +704,7 @@ export function TestimonialCard() {
             />
           </div>
         <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
-          Marin Z.
+          {testimonial.name}
         </p>
         </div>
       </div>
