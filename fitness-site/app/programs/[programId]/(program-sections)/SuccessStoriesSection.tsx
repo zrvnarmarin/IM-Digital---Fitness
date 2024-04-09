@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import TestImage from '../../../../public/HeroTestTest.jpg'
 import { TestimonialCard, TestimonialCardsSection } from "@/app/about/page";
+import { testimonials } from "@/app/data";
 
 export default function SuccessStoriesSection() {
     return (
@@ -16,8 +17,8 @@ export default function SuccessStoriesSection() {
                 </p>
             </div>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {[1,2].map(element =>
-                <TestimonialCard key={element} />  
+                {testimonials.slice(0, 2).map(testimonial =>
+                <TestimonialCard key={testimonial.id} testimonial={testimonial} />  
                 )}
             </ul>
             <div className="flex flex-row justify-center gap-4">
@@ -28,30 +29,3 @@ export default function SuccessStoriesSection() {
         </SectionWrapper>
     )
 }
-
-const programSuccessStories = [
-    {
-        id: 1,
-        personName: 'Igor Bogzmec',
-        story: `There is no program out there like this one. Is it insanely intense? Yes. Is the nutrition unique 
-        and different? Of course. This is not meant to be a long-term, every-day lifestyle program. I was 
-        205 pounds before I started and after the 28 days were over, I weighed 175 pounds at 8 percent 
-        body fat. Doing it with 100 percent effort is the only way you will see legendary results. It is 
-        tough, but well worth it.`
-    },
-    {
-        id: 2,
-        personName: 'Igor Bogzmec',
-        story: `In the last four weeks of MFT28, my biceps have grown from 13 to 14 inches, my body fat has 
-        decreased significantly, and I'm feeling more of a man than I did before. Hats off to Greg Plitt.`
-    },
-    {
-        id: 3,
-        personName: 'Igor Bogzmec',
-        story: `There is no program out there like this one. Is it insanely intense? Yes. Is the nutrition unique 
-        and different? Of course. This is not meant to be a long-term, every-day lifestyle program. I was 
-        205 pounds before I started and after the 28 days were over, I weighed 175 pounds at 8 percent 
-        body fat. Doing it with 100 percent effort is the only way you will see legendary results. It is 
-        tough, but well worth it.`
-    },
-]

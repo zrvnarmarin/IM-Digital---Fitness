@@ -657,11 +657,11 @@ export function TestimonialCardsSection() {
   return(
     <SectionWrapper>
       <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
-         Read Our Success Stories
+        Read Our Success Stories
       </h1>
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {[1,2].map(element =>
-          <TestimonialCard key={element} />  
+        {testimonials.slice(0, 2).map(testimonial =>
+          <TestimonialCard key={testimonial.id} testimonial={testimonial} />  
         )}
       </ul>
       <div className="flex flex-row justify-center gap-4">

@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function ProgramBuyAndDiscoundSection({ programId } : { programId: string}) {
     return (
         <section className="w-full flex flex-col md:flex-row items-center justify-center gap-8 py-6">
-            <LogoImage  />
+            <LogoImage width={80} height={80}  />
             <p className="normal-case text-md md:text-md text-gray-300 leading-2">
                 Join {" "}
                 <span className="font-semibold">{programId}</span> {" "}

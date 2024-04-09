@@ -4,13 +4,12 @@ import './globals.css'
 import Footer from './Footer'
 import NavigationWrapper from './components/NavigationWrapper'
 
-const inter = League_Spartan({ subsets: ['latin'] })
+// const inter = League_Spartan({ subsets: ['latin'] })
+// const saira = Saira({
+//   subsets: ['latin'],
+//   weight: '400'
+// })
 const montserrat = Montserrat({ subsets: ['latin']})
-const saira = Saira({
-  subsets: ['latin'],
-  weight: '400'
-})
-
 
 export const metadata: Metadata = {
   title: 'Aeon Olympia Strenght | When Strength Overcomes',
