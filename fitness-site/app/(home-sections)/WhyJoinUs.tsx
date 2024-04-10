@@ -1,9 +1,7 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import Image from "next/image";
 import { TwoHumansIcons, DumbellIcon } from "@/public/Icons";
 import { CameraIcon } from "@/public/Icons";
-import { CalendarIcon } from "@/public/Icons";
-import ShareIcon from '../../public/share-arrow-svgrepo-com.png'
 import TestImage from "../../public/CardioBlastImage.jpg";
 import Link from "next/link";
 import SectionWrapper from "../components/wrappers/SectionWrapper";
@@ -12,16 +10,19 @@ export default function WhyJoinUs() {
   return (
     <SectionWrapper>
       <div className="flex items-center justify-between">
-        <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
+        <h2 className="w-full uppercase text-gray-300 text-3xl tracking-tight text-start font-bold">
           Programs
-        </h1>
+        </h2>
         <div className="w-full flex items-center justify-end">
-          <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
+          <Link
+            href="/programs"
+            className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-3 px-6 cursor-pointer text-white"
+          >
             Discover More Programs
-          </button>
+          </Link>
         </div>
       </div>
-      <p className="normal-case text-md md:text-md text-gray-300 leading-2">
+      <p className="normal-case text-lg text-gray-300 leading-2">
         We have experience serving members in helping body fitness, and under
         the guidance of a professional trainer
       </p>
@@ -49,10 +50,10 @@ const reasonsToJoin = [
     icon: CameraIcon,
   },
   {
-    title: "Good Management",
+    title: "Practice Videos",
     description:
-      "Aim to reduce fat as much as possible from the body to about 2-4%",
-    icon: CalendarIcon,
+      "Maintain body fitness by doing physical exercise at least 2-3 time a week",
+    icon: CameraIcon,
   },
 ];
 
@@ -75,15 +76,15 @@ export function ProgramCard() {
             Cardiovascular Strength
           </p>
         </div>
-        <div className="flex flex-col pt-8">
-          <p className="normal-case text-md md:text-md text-gray-300 leading-2">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt beatae
-            obcaecati eius illo assumenda fugiat, ut quae mollitia{" "}
+        <div className="flex flex-col pt-4">
+          <p className="normal-case text-md text-gray-300 leading-2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+            beatae obcaecati eius illo, sunt beatae sunt beatate sun beatate
           </p>
         </div>
-        <div className="w-full flex flex-row items-center justify-between rounded-lg pt-8">
+        <div className="w-full flex flex-row items-center justify-between rounded-lg pt-10">
           <div className="w-full flex flex-row items-center justify-between">
-            <span className="normal-case text-sm text-white leading-2 font-semibold">
+            <span className="normal-case text-md text-white leading-2 font-medium">
               Intensity:
             </span>
             <div className="flex flex-row items-center justify-end w-1/3 gap-2">
@@ -96,10 +97,10 @@ export function ProgramCard() {
         </div>
 
         <div className="border-b border-gray-600 flex items-center justify-between pt-4 pb-2 normal-case tracking-normal text-2xs md:text-sm lg:text-lg text-gray-100 leading-2 font-normal">
-          <span className="flex flex-row items-center gap-2 normal-case text-xs text-white leading-2 font-normal">
+          <span className="flex flex-row items-center gap-2 normal-case text-sm text-white leading-2 font-normal">
             <DumbellIcon /> 24 Number Of
           </span>
-          <span className="flex flex-row items-center gap-2 normal-case text-xs text-white leading-2 font-normal">
+          <span className="flex flex-row items-center gap-2 normal-case text-sm text-white leading-2 font-normal">
             <DumbellIcon />7 Ways for
           </span>
         </div>
@@ -109,12 +110,11 @@ export function ProgramCard() {
           <p className="text-[#31C57D] text-2xl tracking-normal text-start font-semibold">
             $130.00
           </p>
-          <button className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
+          <button className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-3 px-6 cursor-pointer text-white">
             Buy Now
           </button>
         </div>
       </div>
-      
     </div>
   );
 }

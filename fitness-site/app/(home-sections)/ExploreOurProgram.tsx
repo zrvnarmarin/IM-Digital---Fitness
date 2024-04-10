@@ -1,13 +1,13 @@
 import React from "react";
 import { programs } from "../data";
-import { DumbellIcon } from "@/public/Icons";
+import { DumbellIcon, TestIconTwo } from "@/public/Icons";
 import SectionWrapper from "../components/wrappers/SectionWrapper";
 
 export default function ExploreOurProgram() {
   return (
     <SectionWrapper>
-      <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
-        What makes us special
+      <h1 className="w-full uppercase text-gray-300 text-3xl tracking-tight text-start font-bold">
+        What Makes Us Special
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-6 md:pt-8">
         {programs.map((programCard) => (
@@ -39,19 +39,16 @@ export function ProgramCard({
   image: any;
 }) {
   return (
-    <div
-      //#1F2125
-      className="flex flex-col gap-4 rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]"
-    >
+    <div className="flex flex-col gap-4 rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
       <div className="flex flex-row md:flex-col gap-4 items-center md:items-start">
-        <div className=" bg-[#279C63] rounded-md p-2 w-fit">
-          <DumbellIcon />
+        <div className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-md p-2 w-fit">
+          <TestIconTwo height="1.5m" width="1.5em" iconFill="#ffffff" />
         </div>
-        <p className="w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold">
+        <p className="w-full  text-gray-200 text-2xl text-start tracking-normal font-semibold">
           {title}
         </p>
       </div>
-      <p className="normal-case text-md md:text-md text-gray-300 leading-2">
+      <p className="normal-case text-md text-gray-300 leading-2">
         {description}
       </p>
     </div>

@@ -3,11 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import AboutUsHeroImage from "../../public/heroSectionGymBaja.png";
 
-// to do: see if buttons will have rounded-lg or rounded-xl
+// to do:see if on section element should be 2xl:px-32 or px-28
 
 export default function HeroSection() {
   return (
-    <div className="pt-8 sm:pt-10 md:pt-12 lg:pt-20 pb-4 px-8 md:px-14 lg:px-20 xl:px-24 2xl:px-32 min-w-screen min-h-screen w-full grid grid-cols-1 md:grid-cols-2 gap-16 bg-[#000000] relative">
+    <section className="pt-8 sm:pt-10 md:pt-12 lg:pt-20 px-8 md:px-14 lg:px-20 xl:px-24 2xl:px-32 min-w-screen min-h-screen w-full grid grid-cols-1 md:grid-cols-2 gap-16 bg-[#000000] relative">
       <div className="flex flex-col gap-2 items-center justify-center z-20">
         <p className="w-full uppercase text-lg bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] tracking-widest text-start font-semibold pb-2">
           Learn from the best
@@ -25,14 +25,14 @@ export default function HeroSection() {
         </p>
         <div className="w-full flex items-center justify-start gap-6 pt-6">
           <Link
-            href={"/contact"}
+            href={"/programs"}
             className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-xl py-3 px-7 cursor-pointer text-lg text-white font-normal"
           >
             See Programs
           </Link>
           <Link
             href={"/contact"}
-            className="w-fit bg-gradient-to-r border to-[#31C57D] border-[#31C57D] rounded-xl py-3 px-7 cursor-pointer text-lg text-white font-normal"
+            className="w-fit bg-gradient-to-r border-2 border-[#31C57D] rounded-xl py-3 px-7 cursor-pointer text-lg text-white font-normal"
           >
             Get In Touch
           </Link>
@@ -48,6 +48,6 @@ export default function HeroSection() {
           className="object-cover rounded-md"
         />
       </div>
-    </div>
+    </section>
   );
 }

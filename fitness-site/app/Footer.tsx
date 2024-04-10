@@ -10,11 +10,15 @@ export default function Footer() {
   return (
     <FooterWrapper>
       <div className="flex flex-col gap-6">
-        <div className="flex flex-row">
+        <div className="flex flex-row items-center justify-start">
           <LogoImage width={110} height={110} />
-          <div className="flex flex-col items-start justify-center gap-1">
-            <h2 className="bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] text-xl md:text-xl lg:text-3xl tracking-normal text-center leading-7 font-bold">Aeon Olympia Strength</h2>
-            <p className="normal-case text-center text-md md:text-md text-gray-300 leading-2">We providing the worlds best gym programs and plans to our costumers</p>
+          <div className="flex flex-col items-start">
+            <h2 className="bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] text-xl md:text-xl lg:text-3xl tracking-normal text-center leading-7 font-bold">
+              Aeon Olympia Strength
+            </h2>
+            <p className="normal-case text-center text-md md:text-md text-gray-300 leading-2">
+              We providing the worlds best programs
+            </p>
           </div>
         </div>
       </div>
@@ -37,7 +41,9 @@ export default function Footer() {
 
       <div className="flex flex-row items-center justify-between border-b border-[#292929] pb-6">
         <h3 className="tracking-wider text-md text-white md:text-md lg:text-lg">
-          <span className="text-[#1D7349]">&#169;</span> <span className="text-xs text-[#1D7349]">Developed By</span> Marin Zrvnar
+          <span className="text-[#1D7349]">&#169;</span>{" "}
+          <span className="text-xs text-[#1D7349]">Developed By</span> Marin
+          Zrvnar
         </h3>
         <div className="flex flex-row gap-4">
           <div className="rounded-full cursor-pointer border-2 border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200">
@@ -53,34 +59,39 @@ export default function Footer() {
       </div>
 
       <div className="flex flex-row items-center gap-2 justify-center border-b border-[#292929] pb-6">
-        <p className="normal-case text-md text-center md:text-md text-gray-300 leading-2">Terms And Conditions</p>
-        <p className="normal-case text-md text-center md:text-md text-gray-300 leading-2">|</p>
-        <p className="normal-case text-md text-center md:text-md text-gray-300 leading-2">Privacy Policy</p>
+        <p className="normal-case text-md text-center md:text-md text-gray-300 leading-2">
+          Terms And Conditions
+        </p>
+        <p className="normal-case text-md text-center md:text-md text-gray-300 leading-2">
+          |
+        </p>
+        <p className="normal-case text-md text-center md:text-md text-gray-300 leading-2">
+          Privacy Policy
+        </p>
       </div>
     </FooterWrapper>
   );
 }
 
-
 export const footerLinks = [
   {
-    name: 'About',
-    link: '/about'
+    name: "About",
+    link: "/about",
   },
   {
-    name: 'Programs',
-    link: '/programs'
+    name: "Programs",
+    link: "/programs",
   },
   {
-    name: 'Services',
-    link: '/services'
+    name: "Services",
+    link: "/services",
   },
   {
-    name: 'Contact',
-    link: '/contact'
+    name: "Contact",
+    link: "/contact",
   },
   {
-    name: 'Facilities',
-    link: '/facilities'
-  }
-]
+    name: "Facilities",
+    link: "/facilities",
+  },
+];

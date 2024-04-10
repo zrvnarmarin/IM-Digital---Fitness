@@ -9,17 +9,17 @@ export default function OurTeam() {
   return (
     <SectionWrapper>
       <div className="flex items-center justify-between">
-        <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold w-full">
+        <h1 className="w-full uppercase text-gray-300 text-3xl tracking-tight text-start font-bold">
           Our Team
         </h1>
         <div className="w-full flex items-center justify-end">
-          <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
-           Meet The Rest
+          <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-3 px-6 cursor-pointer text-white">
+            Meet The Rest
           </button>
         </div>
       </div>
 
-      <p className="normal-case text-md md:text-md text-gray-300 leading-2">
+      <p className="normal-case text-lg text-gray-300 leading-2">
         Meet our exceptional team which will test your limits
       </p>
 
@@ -99,7 +99,7 @@ export const TrainerCard = ({ trainer }: { trainer: TrainerType }) => {
         <p className="pt-4 w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold">
           {trainer.name}
         </p>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2">
+        <p className="normal-case text-md text-gray-300 leading-2">
           {trainer.description}
         </p>
         {/* Ovdje staviti strelicu desno, pogledaj dizajn */}

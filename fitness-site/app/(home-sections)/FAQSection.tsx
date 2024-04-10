@@ -6,9 +6,9 @@ import SectionWrapper from "../components/wrappers/SectionWrapper";
 export default function FAQSection() {
   return (
     <SectionWrapper>
-      <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
+      <h2 className="w-full uppercase text-gray-300 text-3xl tracking-tight text-start font-bold">
         Frequently Asked Questions
-      </h1>
+      </h2>
       <Accordion faqArray={homePageFAQ} />
     </SectionWrapper>
   );
@@ -55,7 +55,7 @@ function Panel({
       className="cursor-pointer bg-gradient-to-r from-[#101010] to-[#191919] border-b border-[#292929] px-8 py-1"
     >
       <div className="flex items-center justify-between gap-6 py-2">
-        <h3 className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
+        <h3 className="normal-case text-lg text-gray-300 leading-2 font-semibold">
           {title}
         </h3>
         {isActive ? (
@@ -65,7 +65,7 @@ function Panel({
         )}
       </div>
       {isActive ? (
-        <p className="pl-2 pb-4 normal-case text-md md:text-sm text-gray-300 leading-2 font-normal">
+        <p className="pl-2 pb-4 normal-case text-md text-gray-300 leading-2 font-normal">
           {answer}
         </p>
       ) : null}
