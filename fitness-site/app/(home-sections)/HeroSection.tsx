@@ -3,27 +3,36 @@ import Image from "next/image";
 import Link from "next/link";
 import AboutUsHeroImage from "../../public/heroSectionGymBaja.png";
 
+// to do: see if buttons will have rounded-lg or rounded-xl
+
 export default function HeroSection() {
   return (
-    <div className="pt-8 sm:pt-10 md:pt-12 lg:pt-20 pb-4 px-8 md:px-14 lg:px-28 xl:px-42 2xl:px-48 min-w-screen min-h-screen w-full grid grid-cols-1 md:grid-cols-2 gap-6 bg-[#000000] relative">
-      {/* <div
-        className="absolute top-36 left-4 w-[32rem] h-64 bg-[#0f3d27] opacity-60 z-10 blur-3xl"
-      /> */}
-      <div className="flex flex-col gap-6 items-center justify-center z-20">
-        <p className="w-full uppercase text-md md:text-lg text-gray-300 leading-2 text-start font-normal">
-          Gym areas
+    <div className="pt-8 sm:pt-10 md:pt-12 lg:pt-20 pb-4 px-8 md:px-14 lg:px-20 xl:px-24 2xl:px-32 min-w-screen min-h-screen w-full grid grid-cols-1 md:grid-cols-2 gap-16 bg-[#000000] relative">
+      <div className="flex flex-col gap-2 items-center justify-center z-20">
+        <p className="w-full uppercase text-lg bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] tracking-widest text-start font-semibold pb-2">
+          Learn from the best
         </p>
-        <h1 className="w-full text-xl md:text-xl lg:text-7xl tracking-normal text-start text-white leading-7 font-semibold">
-          We create simple and effective plans 
+        <h1 className="capitalize w-full text-xl md:text-xl lg:text-7xl tracking-normal text-start text-white leading-10 font-semibold">
+          Transform your{" "}
+          <span className="font-bold bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] capitalize">
+            Fitness
+          </span>{" "}
+          Into Shape
         </h1>
-        <p className="normal-case text-md md:text-lg text-gray-300 leading-2 font-normal">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quae aliquid deserunt.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <p className="normal-case text-lg text-gray-300 leading-2 font-normal pt-8">
+          Unleash your strength, transform your body, conquer your fitness
+          journey, transform your body, conquer your fitness journey
         </p>
-        <div className="w-full flex items-center justify-start">
-          <Link 
-            href={'/contact'} 
-            className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-md py-2 px-4 cursor-pointer text-white"
+        <div className="w-full flex items-center justify-start gap-6 pt-6">
+          <Link
+            href={"/contact"}
+            className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-xl py-3 px-7 cursor-pointer text-lg text-white font-normal"
+          >
+            See Programs
+          </Link>
+          <Link
+            href={"/contact"}
+            className="w-fit bg-gradient-to-r border to-[#31C57D] border-[#31C57D] rounded-xl py-3 px-7 cursor-pointer text-lg text-white font-normal"
           >
             Get In Touch
           </Link>
