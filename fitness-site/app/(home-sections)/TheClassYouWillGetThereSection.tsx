@@ -68,12 +68,15 @@ export const FacilitiesCard = ({
         className={`${isActive ? "flex flex-row gap-2 items-start" : "rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#292929] border border-[#292929] flex flex-row gap-2 items-start px-6"} `}
       >
         <div className="flex flex-col gap-4">
-          <p
-            className={`${isActive ? "flex items-center gap-2 w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold" : "flex items-center gap-2 w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold"}`}
+          <div
+            className={`${isActive ? "flex items-center justify-between gap-2 w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold" : "flex items-center gap-2 w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold"}`}
           >
-            <TestIcon height="1.5em" width="1.5em" iconFill="#31C57D" />
-            {card.mainTitle}
-          </p>
+            <div className="flex flex-row items-center gap-2">
+              <TestIcon height="1.5em" width="1.5em" iconFill="#31C57D" />
+              {card.mainTitle}
+            </div>
+            <ArrowRight />
+          </div>
           {isActive ? (
             <p className="normal-case text-md text-gray-300 leading-2">
               {card.description}
@@ -125,3 +128,31 @@ const facilities = [
       "This is a placeholder text and where it will be something eventually written his. This is a placeholder text and where it will be something eventually written his.",
   },
 ];
+
+export const ArrowRight = () => {
+  return (
+    <svg
+      fill="#31C57D"
+      width="40px"
+      height="40px"
+      viewBox="-17.28 -17.28 66.56 66.56"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      stroke="#31C57D"
+      stroke-width="1.6320000000000001"
+    >
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke="#CCCCCC"
+        stroke-width="0.192"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        {" "}
+        <path d="M8.489 31.975c-0.271 0-0.549-0.107-0.757-0.316-0.417-0.417-0.417-1.098 0-1.515l14.258-14.264-14.050-14.050c-0.417-0.417-0.417-1.098 0-1.515s1.098-0.417 1.515 0l14.807 14.807c0.417 0.417 0.417 1.098 0 1.515l-15.015 15.022c-0.208 0.208-0.486 0.316-0.757 0.316z"></path>{" "}
+      </g>
+    </svg>
+  );
+};

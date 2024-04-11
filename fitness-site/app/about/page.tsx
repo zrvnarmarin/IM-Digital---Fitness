@@ -54,11 +54,10 @@ export function HeroSection() {
         <h1 className="text-xl md:text-4xl lg:text-5xl tracking-normal leading-7 font-semibold">
           About Us
         </h1>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal">
-        </p>
+        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal"></p>
         <div className="mt-6">
-          <Link 
-            href={'/contact'} 
+          <Link
+            href={"/contact"}
             className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white"
           >
             Get In Touch
@@ -81,9 +80,9 @@ export function SecondSection() {
         </h1>
       </div>
       <div className="flex flex-col gap-16 pb-4">
-        {secondSectionArray.map((card, index) =>
+        {secondSectionArray.map((card, index) => (
           <SecondSectionCard card={card} key={card.id} index={index} />
-        )}
+        ))}
       </div>
       <div className="flex w-full items-center justify-center pt-6">
         <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
@@ -91,57 +90,65 @@ export function SecondSection() {
         </button>
       </div>
     </SectionWrapper>
-  )
+  );
 }
 
 export type CardType = {
   year: number;
   title: string;
   description: string;
-}
+};
 
 const secondSectionArray = [
   {
     id: 1,
     year: 2012,
-    title: 'Our Gym Takes Shape',
-    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam.`
+    title: "Our Gym Takes Shape",
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam.`,
   },
   {
     id: 2,
     year: 2016,
-    title: 'Mainstream Transformation',
-    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam.`
+    title: "Mainstream Transformation",
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam.`,
   },
   {
     id: 3,
     year: 2020,
-    title: 'Multi-City Expansion',
-    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam.`
+    title: "Multi-City Expansion",
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam.`,
   },
   {
     id: 4,
     year: 2023,
-    title: 'World Recognition And Success',
-    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam.`
+    title: "World Recognition And Success",
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam.`,
   },
   {
     id: 5,
     year: 2024,
-    title: 'Continuous Growth',
-    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam.`
-  }
-]
+    title: "Continuous Growth",
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam.`,
+  },
+];
 
-export const SecondSectionCard = ({ card, index } : { card: CardType, index: number }) => {
+export const SecondSectionCard = ({
+  card,
+  index,
+}: {
+  card: CardType;
+  index: number;
+}) => {
   const isEven = index % 2 === 0;
 
   return (
     <section className="flex flex-row">
       {/* <p className="text-white">{index}</p> */}
 
-      <div className={`relative flex flex-row items-center gap-20 w-1/2 ${isEven ? 'order-2 justify-start' : 'order-0 justify-end'}`}>
-        <div className={`${isEven ? 'order-1' : 'order-0'} z-30 flex flex-row`}>
+      <div
+        className={`relative flex flex-row items-center gap-20 w-1/2 ${isEven ? "order-2 justify-start" : "order-0 justify-end"}`}
+      >
+        <div className={`${isEven ? "order-1" : "order-0"} z-30 flex flex-row`}>
           <p className="order-0 w-full text-xl md:text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold">
             <span className="bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] italic text-7xl tracking-normal text-start font-semibold">
               {card.year}
@@ -150,9 +157,8 @@ export const SecondSectionCard = ({ card, index } : { card: CardType, index: num
         </div>
         <div className="flex items-center h-full w-[1px] bg-[#31C57D]"></div>
       </div>
-      
 
-      <div className={`flex flex-col gap-2 w-1/2 ${!isEven ? 'pl-8' : 'pr-8'}`}>
+      <div className={`flex flex-col gap-2 w-1/2 ${!isEven ? "pl-8" : "pr-8"}`}>
         <div className="w-full shadow-lg shadow-[#141414] group flex flex-row gap-4 py-6 px-16 rounded-lg bg-gradient-to-r from-[#101010] to-[#191919] border-y border-[#292929]">
           <div className="flex flex-col gap-2">
             <p className="w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold">
@@ -164,7 +170,6 @@ export const SecondSectionCard = ({ card, index } : { card: CardType, index: num
           </div>
         </div>
       </div>
-
     </section>
   );
 };
@@ -174,37 +179,37 @@ export function LegacyOfCourageSection() {
     <SectionWrapper>
       <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex flex-col">
-
           <div className="flex flex-col gap-3">
             <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
               Consitency is the key
             </h1>
             <p className="normal-case text-md md:text-md text-gray-300 leading-2">
-              In the “golden days”,
-              there weren’t many options for working out.
-              But Joe Gold, our founder, had a passion for bodybuilding. He found
-              success as a professional “muscleman” and
-              toured with celebrities!
-              But Joe Gold, our founder, had a passion for bodybuilding. He found
-              success as a professional “muscleman”
+              In the “golden days”, there weren’t many options for working out.
+              But Joe Gold, our founder, had a passion for bodybuilding. He
+              found success as a professional “muscleman” and toured with
+              celebrities! But Joe Gold, our founder, had a passion for
+              bodybuilding. He found success as a professional “muscleman”
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 gap-4 pt-8">
             <div className="flex items-center gap-4">
               <TestIcon />
-              <p className="text-md md:text-md text-gray-300 leading-2 uppercase font-semibold">Mind Over Body</p>
+              <p className="text-md md:text-md text-gray-300 leading-2 uppercase font-semibold">
+                Mind Over Body
+              </p>
             </div>
             <div className="flex items-center gap-4">
               <TestIconTwo />
-              <p className="text-md md:text-md text-gray-300 leading-2 uppercase font-semibold">Healing Factor Benefits</p>
+              <p className="text-md md:text-md text-gray-300 leading-2 uppercase font-semibold">
+                Healing Factor Benefits
+              </p>
             </div>
           </div>
 
           <button className="mt-8 w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
             Discover Our Programs
           </button>
-          
         </div>
         <div className="text-white flex items-center justify-center">
           <div className="relative flex items-center justify-center group h-full w-full rounded-xl cursor-pointer">
@@ -226,25 +231,29 @@ export function LegacyOfCourageSection() {
 export function GallerySection() {
   return (
     <SectionWrapper>
-       <div className="flex items-center justify-between">
-         <div className="flex flex-col gap-3">
-            <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
-              See it for yourself
-            </h1>
-            <p className="normal-case text-md md:text-md text-gray-300 leading-2">
-              Browse through our gallery and see what is awaiting you in our area
-            </p>
-          </div>
-          <div className="flex flex-row items-center justify-end gap-4">
-            <button className="bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] text-gray-300 px-4 py-3 rounded-lg text-xl font-bold">&larr;</button>
-            {/* <div className="flex flex-row justify-center gap-2">
+      <div className="flex items-center justify-between">
+        <div className="flex flex-col gap-3">
+          <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
+            See it for yourself
+          </h1>
+          <p className="normal-case text-md md:text-md text-gray-300 leading-2">
+            Browse through our gallery and see what is awaiting you in our area
+          </p>
+        </div>
+        <div className="flex flex-row items-center justify-end gap-4">
+          <button className="bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] text-gray-300 px-4 py-3 rounded-lg text-xl font-bold">
+            &larr;
+          </button>
+          {/* <div className="flex flex-row justify-center gap-2">
               <span className="w-8 h-1 rounded-md bg-[#31C57D]" />
               <span className="w-8 h-1 rounded-md bg-[#31C57D]" />
               <span className="w-8 h-1 rounded-md bg-[#31C57D]" />
             </div> */}
-            <button className="bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] text-gray-300 px-4 py-3 rounded-lg text-xl font-bold">&rarr;</button>
-          </div>
-       </div>
+          <button className="bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] text-gray-300 px-4 py-3 rounded-lg text-xl font-bold">
+            &rarr;
+          </button>
+        </div>
+      </div>
 
       <div className="flex flex-row gap-6 items-center">
         {/* Gallery carousel*/}
@@ -292,23 +301,29 @@ export function GallerySection() {
           <p className="w-full  text-gray-500 opacity-50 text-2xl tracking-normal text-center font-semibold">
             People
           </p>
-          <p className="normal-case text-md md:text-md text-gray-300 leading-2 text-center opacity-50">10/23</p>
+          <p className="normal-case text-md md:text-md text-gray-300 leading-2 text-center opacity-50">
+            10/23
+          </p>
         </div>
         <div className="flex flex-col gap-1">
           <p className="w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold">
             Gym
           </p>
-          <p className="normal-case text-md md:text-md text-gray-300 leading-2 text-center">10/23</p>
+          <p className="normal-case text-md md:text-md text-gray-300 leading-2 text-center">
+            10/23
+          </p>
         </div>
         <div className="flex flex-col gap-1 scale-75 cursor-pointer">
           <p className="w-full opacity-50  text-gray-500 text-2xl tracking-normal text-center font-semibold">
             Somehing
           </p>
-          <p className="normal-case opacity-50 text-md md:text-md text-gray-300 leading-2 text-center">10/23</p>
+          <p className="normal-case opacity-50 text-md md:text-md text-gray-300 leading-2 text-center">
+            10/23
+          </p>
         </div>
       </div>
     </SectionWrapper>
-  )
+  );
 }
 
 export function LegacyOfCourageSectionTwo() {
@@ -328,7 +343,6 @@ export function LegacyOfCourageSectionTwo() {
           </div>
         </div>
         <div className="flex flex-col">
-
           <div className="flex flex-col gap-3">
             <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
               Assets
@@ -337,18 +351,13 @@ export function LegacyOfCourageSectionTwo() {
               Best Quality Facilities And Program
             </h1>
             <p className="normal-case text-md md:text-md text-gray-300 leading-2">
-              In the “golden days”,
-              there weren’t many options for working out.
-              But Joe Gold, our founder, had a passion for bodybuilding. He found
-              success as a professional “muscleman” and
-              toured with celebrities!
-              But Joe Gold, our founder, had a passion for bodybuilding. He found
-              success as a professional “muscleman”
+              In the “golden days”, there weren’t many options for working out.
+              But Joe Gold, our founder, had a passion for bodybuilding. He
+              found success as a professional “muscleman” and toured with
+              celebrities! But Joe Gold, our founder, had a passion for
+              bodybuilding. He found success as a professional “muscleman”
             </p>
           </div>
-          
-          
-          
         </div>
       </div>
     </SectionWrapper>
@@ -466,22 +475,36 @@ export const LongParagraphsSection = () => {
           <span className="w-2.5  h-6 bg-[#31C57D]" />
         </div>
         <p className="normal-case text-md md:text-md text-gray-300 leading-2 tracking-wider font-normal">
-          <span className="text-[#31C57D] font-medium">As we were building</span> our platform, we were looking closely at how
-          private healthcare providers get feedback, and what that means for <br /> <br />
-          their businesses. Here`s what most private clinics do: <span className="text-[#31C57D] font-medium">they use pen-and-paper surveys</span>,
-          emails, and forms on their websites. But there`s a problem with these
-          methods. These methods are difficult to analyze, and if patients aren`t
-          satisfied, clinics can`t fix things quickly. By the time they analyze
-          the survey, the patient is already considering the competition.
+          <span className="text-[#31C57D] font-medium">
+            As we were building
+          </span>{" "}
+          our platform, we were looking closely at how private healthcare
+          providers get feedback, and what that means for <br /> <br />
+          their businesses. Here`s what most private clinics do:{" "}
+          <span className="text-[#31C57D] font-medium">
+            they use pen-and-paper surveys
+          </span>
+          , emails, and forms on their websites. But there`s a problem with
+          these methods. These methods are difficult to analyze, and if patients
+          aren`t satisfied, clinics can`t fix things quickly. By the time they
+          analyze the survey, the patient is already considering the
+          competition.
         </p>
         <p className="normal-case text-md md:text-md text-gray-300 leading-2 tracking-wider font-normal">
-          <span className="text-[#31C57D] font-medium">As we were building</span> our platform, we were looking closely at how
-          private healthcare providers get feedback, and what that means for <br /> <br />
-          their businesses. Here`s what most private clinics do: <span className="text-[#31C57D] font-medium">they use pen-and-paper surveys</span>,
-          emails, and forms on their websites. But there`s a problem with these
-          methods. These methods are difficult to analyze, and if patients aren`t
-          satisfied, clinics can`t fix things quickly. By the time they analyze
-          the survey, the patient is already considering the competition.
+          <span className="text-[#31C57D] font-medium">
+            As we were building
+          </span>{" "}
+          our platform, we were looking closely at how private healthcare
+          providers get feedback, and what that means for <br /> <br />
+          their businesses. Here`s what most private clinics do:{" "}
+          <span className="text-[#31C57D] font-medium">
+            they use pen-and-paper surveys
+          </span>
+          , emails, and forms on their websites. But there`s a problem with
+          these methods. These methods are difficult to analyze, and if patients
+          aren`t satisfied, clinics can`t fix things quickly. By the time they
+          analyze the survey, the patient is already considering the
+          competition.
         </p>
         {/* <div className="flex items-center justify-center">
           <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
@@ -506,7 +529,6 @@ export const MissionAndValuesSection = () => {
   return (
     <SectionWrapper>
       <div className="grid grid-col-1 lg:grid-cols-2 items-center gap-12">
-
         <div className="flex flex-col  gap-6">
           <div className="flex flex-col items-center justify-center">
             <p className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
@@ -514,13 +536,13 @@ export const MissionAndValuesSection = () => {
             </p>
             <p className="normal-case text-start text-md md:text-md text-gray-300 leading-2 font-normal pt-6">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequatur, quo odio corrupti sint deleniti similique perspiciatis
-              reiciendis nulla aliquam placeat placeat placeat placeat placeat
-              placeat.
+              Consequatur, quo odio corrupti sint deleniti similique
+              perspiciatis reiciendis nulla aliquam placeat placeat placeat
+              placeat placeat placeat.
             </p>
           </div>
           <div className="normal-case text-md text-center md:text-lg text-gray-300 leading-2 font-semibold">
-          <p className="flex flex-col items-center gap-24 w-full text-xl md:text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold">
+            <p className="flex flex-col items-center gap-24 w-full text-xl md:text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold">
               <span className="bg-gradient-to-r bg-clip-text text-transparent from-[#1D7349] to-[#31C57D] italic text-7xl tracking-normal text-start font-semibold">
                 Effective. <br /> Driven. <br /> Great.
               </span>{" "}
@@ -535,24 +557,20 @@ export const MissionAndValuesSection = () => {
             </p>
             <p className="normal-case text-right text-md md:text-md text-gray-300 leading-2 font-normal pt-6">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequatur, quo odio corrupti sint deleniti similique perspiciatis
-              reiciendis nulla aliquam placeat placeat placeat placeat placeat
-              placeat.
+              Consequatur, quo odio corrupti sint deleniti similique
+              perspiciatis reiciendis nulla aliquam placeat placeat placeat
+              placeat placeat placeat.
             </p>
           </div>
           <div className="normal-case text-md text-center md:text-lg text-gray-300 leading-2 font-semibold">
-          <p className="flex flex-col items-center gap-24 w-full text-xl md:text-xl lg:text-3xl tracking-normal text-white leading-7 font-semibold">
+            <p className="flex flex-col items-center gap-24 w-full text-xl md:text-xl lg:text-3xl tracking-normal text-white leading-7 font-semibold">
               <span className="text-end bg-gradient-to-r bg-clip-text text-transparent from-[#1D7349] to-[#31C57D] italic text-7xl tracking-normal font-semibold">
                 Effective. <br /> Driven. <br /> Great.
               </span>{" "}
             </p>
           </div>
         </div>
-
       </div>
-
-      
-      
     </SectionWrapper>
   );
 };
@@ -566,8 +584,8 @@ export const StatsSection = () => {
         ))}
       </ul>
     </SectionWrapper>
-  )
-}
+  );
+};
 
 export const TestimonialsSection = () => {
   return (
@@ -617,7 +635,6 @@ const StatCard = ({ stat }: { stat: StatType }) => {
   return (
     <li className="col-span-1 md:col-span-1 lg:col-span-1 rounded-lg bg-gradient-to-r from-[#101010] to-[#191919] border-y border-[#292929]">
       <div className="relative w-full h-64 overflow-hidden rounded-lg shadow-lg">
-        
         <div className="absolute inset-0 flex flex-col gap-4 items-center justify-center">
           <p className="text-4xl md:text-5xl lg:text-6xl tracking-normal text-start text-white leading-7 font-semibold">
             {stat.statValue}
@@ -654,15 +671,15 @@ const GalleryCard = () => {
 };
 
 export function TestimonialCardsSection() {
-  return(
+  return (
     <SectionWrapper>
       <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
         Read Our Success Stories
       </h1>
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {testimonials.slice(0, 2).map(testimonial =>
-          <TestimonialCard key={testimonial.id} testimonial={testimonial} />  
-        )}
+        {testimonials.slice(0, 2).map((testimonial) => (
+          <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+        ))}
       </ul>
       <div className="flex flex-row justify-center gap-4">
         <button className="w-8 h-2 rounded-md bg-[#31C57D]" />
@@ -670,17 +687,21 @@ export function TestimonialCardsSection() {
         <button className="w-8 h-2 rounded-md bg-[#31C57D]" />
       </div>
     </SectionWrapper>
-  )
+  );
 }
 
 export type TestimonialType = {
   id: number;
   testimonial: string;
   name: string;
-  date:string;
-}
+  date: string;
+};
 
-export function TestimonialCard({ testimonial } : { testimonial: TestimonialType }) {
+export function TestimonialCard({
+  testimonial,
+}: {
+  testimonial: TestimonialType;
+}) {
   return (
     <li className="p-8 col-span-1 md:col-span-1 lg:col-span-1 shadow-lg rounded-lg bg-gradient-to-r from-[#101010] to-[#191919] border-y border-[#292929]">
       <div className="flex flex-col gap-6">
@@ -703,13 +724,13 @@ export function TestimonialCard({ testimonial } : { testimonial: TestimonialType
               className="w-full h-full object-cover rounded-full"
             />
           </div>
-        <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
-          {testimonial.name}
-        </p>
+          <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
+            {testimonial.name}
+          </p>
         </div>
       </div>
     </li>
-  )
+  );
 }
 
 export function SeeProgramsSection() {
@@ -730,8 +751,9 @@ export function SeeProgramsSection() {
               Start Your Free 7-Day Trial Program Here
             </p>
             <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal pt-4">
-              Analyze patient feedback. Optimize workflows to deliver a superb patient experience. Stop your never-ending
-              battle with patient retention.
+              Analyze patient feedback. Optimize workflows to deliver a superb
+              patient experience. Stop your never-ending battle with patient
+              retention.
             </p>
           </div>
           <div className="w-1/3">
@@ -742,5 +764,5 @@ export function SeeProgramsSection() {
         </div>
       </div>
     </SectionWrapper>
-  )
+  );
 }

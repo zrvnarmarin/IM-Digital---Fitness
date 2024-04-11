@@ -12,25 +12,25 @@ export default function Footer() {
       <div className="flex flex-col gap-6">
         <div className="flex flex-row items-center justify-start">
           <LogoImage width={110} height={110} />
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col items-start gap-1">
             <h2 className="bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] text-xl md:text-xl lg:text-3xl tracking-normal text-center leading-7 font-bold">
               Aeon Olympia Strength
             </h2>
-            <p className="normal-case text-center text-md md:text-md text-gray-300 leading-2">
+            <p className="normal-case text-center text-md text-gray-300 leading-2">
               We providing the worlds best programs
             </p>
           </div>
         </div>
       </div>
 
-      <ul className="flex flex-row items-center justify-start gap-16 border-b border-[#292929] pb-6">
+      <ul className="flex flex-row flex-wrap items-center justify-start gap-16 border-b border-[#292929] pb-6">
         {footerLinks.map((footerLink) => (
           <div key={footerLink.name}>
             <div className="flex flex-col gap-2">
               <Link
                 href={footerLink.link}
                 key={footerLink.name}
-                className="normal-case tracking-wider text-md md:text-md lg:text-lg text-gray-300 leading-2 font-normal hover:underline hover:underline-offset-4 hover:decoration-[#1D7349]"
+                className="normal-case text-center text-lg text-gray-300 leading-2"
               >
                 {footerLink.name}
               </Link>
@@ -40,11 +40,15 @@ export default function Footer() {
       </ul>
 
       <div className="flex flex-row items-center justify-between border-b border-[#292929] pb-6">
-        <h3 className="tracking-wider text-md text-white md:text-md lg:text-lg">
-          <span className="text-[#1D7349]">&#169;</span>{" "}
-          <span className="text-xs text-[#1D7349]">Developed By</span> Marin
-          Zrvnar
-        </h3>
+        <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1">
+            <span className="text-[#31C57D]">&#169;</span>
+            <span className="text-xs text-[#31C57D]">Developed By</span>
+          </div>
+          <span className="normal-case text-center text-md text-gray-300 leading-2">
+            MarinZrvnar
+          </span>
+        </div>
         <div className="flex flex-row gap-4">
           <div className="rounded-full cursor-pointer border-2 border-[#1D7349] p-1 hover:bg-white hover:scale-125 duration-200">
             <InstagramIcon />

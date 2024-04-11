@@ -41,7 +41,7 @@ export function PlanCard({ plan }: { plan: PlanCardType }) {
       </div>
 
       {/* Blue Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#101010] hover:from-[#101010] hover:to-[#292929] to-[#161616] border border-[#292929] opacity-95 rounded-lg"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#101010]  to-[#161616] border border-[#292929] opacity-95 rounded-lg"></div>
 
       {/* Text Content */}
       <div className="relative z-10">
@@ -50,7 +50,9 @@ export function PlanCard({ plan }: { plan: PlanCardType }) {
             {plan.title}
           </p>
         </div>
-        <p className="w-full pt-4 text-xl md:text-xl lg:text-5xl tracking-wider text-center bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] leading-7 font-semibold">
+        <p
+          className={`w-full pt-4 text-xl md:text-xl lg:text-5xl tracking-wider text-center bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] leading-7 font-semibold`}
+        >
           ${plan.price}
         </p>
         <h3 className="w-full text-xl pt-1 md:text-md lg:text-lg tracking-normal text-center text-white leading-7 font-semibold uppercase">
@@ -82,6 +84,7 @@ export type PlanCardType = {
   description: string;
   price: string;
   perks: string[];
+  mostPopular: boolean;
 };
 
 const plans = [
@@ -89,6 +92,7 @@ const plans = [
     id: 1,
     title: "Standard Package",
     description: "Single Class",
+    mostPopular: false,
     price: "49.77",
     perks: ["Perk One", "Perk Two", "Perk Three", "Perk Four"],
   },
@@ -97,12 +101,14 @@ const plans = [
     title: "Advanced Package",
     description: "Single Class",
     price: "99.77",
+    mostPopular: true,
     perks: ["Perk One", "Perk Two", "Perk Three", "Perk Four"],
   },
   {
     id: 2,
     title: "Premium Package",
     description: "Single class",
+    mostPopular: false,
     price: "199.77",
     perks: ["Perk One", "Perk Two", "Perk Three", "Perk Four"],
   },

@@ -9,9 +9,9 @@ export default function OurTeam() {
   return (
     <SectionWrapper>
       <div className="flex items-center justify-between">
-        <h1 className="w-full uppercase text-gray-300 text-3xl tracking-tight text-start font-bold">
+        <h2 className="w-full uppercase text-gray-300 text-3xl tracking-tight text-start font-bold">
           Our Team
-        </h1>
+        </h2>
         <div className="w-full flex items-center justify-end">
           <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-3 px-6 cursor-pointer text-white">
             Meet The Rest
@@ -78,13 +78,13 @@ export const TrainerCard = ({ trainer }: { trainer: TrainerType }) => {
 
         {/* On hover image */}
         <div className="absolute top-0 bottom-0 right-0 p-4 transition duration-300 ease-in-out bg-black/10 text-white opacity-0 group-hover:opacity-100">
-          <div className="flex flex-col gap-4 pt-4">
-            <span>
+          <div className="flex flex-col gap-4 h-full justify-start pt-4 ">
+            {/* <span>
               <Image src={ShareIcon} width={20} height={20} alt="share_icon" />
-            </span>
-            <span className="w-full pt-4 text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
+            </span> */}
+            <button className="w-full pt-4 text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
               fb
-            </span>
+            </button>
             <span className="w-full pt-4 text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
               li
             </span>
@@ -96,7 +96,7 @@ export const TrainerCard = ({ trainer }: { trainer: TrainerType }) => {
       </div>
 
       <div className="flex flex-col items-start gap-1">
-        <p className="pt-4 w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold">
+        <p className="pt-4 w-full text-gray-200 text-2xl tracking-normal text-start font-semibold">
           {trainer.name}
         </p>
         <p className="normal-case text-md text-gray-300 leading-2">
