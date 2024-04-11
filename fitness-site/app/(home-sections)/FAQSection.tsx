@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import SectionWrapper from "../components/wrappers/SectionWrapper";
+import { ArrowRight } from "./TheClassYouWillGetThereSection";
 
 export default function FAQSection() {
   return (
@@ -52,16 +53,20 @@ function Panel({
   return (
     <div
       onClick={onShow}
-      className="cursor-pointer bg-gradient-to-r from-[#101010] to-[#191919] border-b border-[#292929] px-8 py-1"
+      className="cursor-pointer bg-gradient-to-r from-[#101010] to-[#191919] border-b border-[#292929] pl-8 pr-6 py-1"
     >
       <div className="flex items-center justify-between gap-6 py-2">
         <h3 className="normal-case text-lg text-gray-300 leading-2 font-semibold">
           {title}
         </h3>
         {isActive ? (
-          <p className="text-4xl font-normal text-[#31C57D]">-</p>
+          <span className="rotate-90 duration-300">
+            <ArrowRight width="40px" height="40px" />
+          </span>
         ) : (
-          <p className="text-4xl font-normal text-[#31C57D]">+</p>
+          <span className="rotate-0 duration-300">
+            <ArrowRight width="40px" height="40px" />
+          </span>
         )}
       </div>
       {isActive ? (
