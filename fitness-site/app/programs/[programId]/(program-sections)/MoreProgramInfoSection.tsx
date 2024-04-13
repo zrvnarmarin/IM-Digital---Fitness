@@ -14,7 +14,7 @@ export default function MoreProgramInfoSection() {
               <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
                 Assets
               </p>
-              <h2 className="w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold">
+              <h2 className="w-full uppercase text-gray-300 text-3xl tracking-tight text-start font-bold">
                 Feel the power within you
               </h2>
             </div>
@@ -23,7 +23,7 @@ export default function MoreProgramInfoSection() {
                 11 workouts per week / 45-90 min. workouts
               </span>
             </div>
-            <p className="normal-case text-md md:text-md text-gray-300 leading-2">
+            <p className="normal-case text-md text-gray-300 leading-2">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia,
               consequatur iure! Ratione soluta perferendis adipisci fuga quo
               pariatur ullam itaque! Lorem ipsum dolor sit amet, consectetur
@@ -34,10 +34,10 @@ export default function MoreProgramInfoSection() {
               itaque!
             </p>
             <div className="w-full flex flex-row items-center gap-4 pt-4">
-              <button className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
+              <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-xl py-3 px-7 cursor-pointer text-md text-white font-normal">
                 View Full Calendar
               </button>
-              <button className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
+              <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-xl py-3 px-7 cursor-pointer text-md text-white font-normal">
                 Lorem Ipsum
               </button>
             </div>

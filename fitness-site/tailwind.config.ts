@@ -36,18 +36,22 @@ const config: Config = {
       addBase({});
       addComponents({
         ".h1": {
-          "@apply uppercase text-gray-300 text-3xl tracking-tight text-start font-bold":
+          "@apply capitalize text-xl md:text-xl lg:text-7xl tracking-normal text-start text-white leading-10 font-semibold":
             {},
         },
         ".h2": {
-          "@apply text-[1.75rem] leading-[2.5rem] md:text-[2rem] md:leading-[2.5rem] lg:text-[2.5rem] lg:leading-[3.5rem] xl:text-[3rem] xl:leading-tight":
+          "@apply uppercase text-gray-300 text-xl sm:text-2xl md:text-3xl tracking-tight text-start font-bold":
             {},
         },
         ".h3": {
-          "@apply text-[2rem] leading-normal md:text-[2.5rem]": {},
+          "@apply text-gray-200 text-lg sm:text-xl md:text-2xl text-start tracking-normal font-semibold":
+            {},
         },
-        ".h4": {
-          "@apply text-[2rem] leading-normal": {},
+        ".text-normal": {
+          "@apply normal-case sm:text-sm md:text-base text-gray-300": {},
+        },
+        ".text-subheading": {
+          "@apply normal-case text-lg text-gray-300 font-normal": {},
         },
         ".h5": {
           "@apply text-2xl leading-normal": {},

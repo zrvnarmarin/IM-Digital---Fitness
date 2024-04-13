@@ -6,9 +6,7 @@ import SectionWrapper from "../components/wrappers/SectionWrapper";
 export default function ExploreOurProgram() {
   return (
     <SectionWrapper>
-      <h1 className="w-full uppercase text-gray-300 text-3xl tracking-tight text-start font-bold">
-        What Makes Us Special
-      </h1>
+      <h2 className="w-full h2">What Makes Us Special</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-6 md:pt-8">
         {programs.map((programCard) => (
           <ProgramCard
@@ -44,13 +42,9 @@ export function ProgramCard({
         <div className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-md p-2 w-fit">
           <TestIconTwo height="1.5m" width="1.5em" iconFill="#ffffff" />
         </div>
-        <p className="w-full  text-gray-200 text-2xl text-start tracking-normal font-semibold">
-          {title}
-        </p>
+        <h3 className="w-full h3">{title}</h3>
       </div>
-      <p className="normal-case text-md text-gray-300 leading-2">
-        {description}
-      </p>
+      <p className="text-normal">{description}</p>
     </div>
   );
 }

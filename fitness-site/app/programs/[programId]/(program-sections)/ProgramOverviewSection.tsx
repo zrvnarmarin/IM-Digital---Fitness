@@ -16,7 +16,7 @@ export default function ProgramOverviewSection() {
                 <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
                   Assets
                 </p>
-                <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
+                <h1 className="w-full uppercase text-gray-300 text-3xl tracking-tight text-start font-bold">
                   Feel your strength
                 </h1>
                 <div className="w-full flex flex-row items-center justify-between gap-4">

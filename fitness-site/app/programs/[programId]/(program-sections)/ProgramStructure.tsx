@@ -6,16 +6,14 @@ import TestImage from "../../../../public/HeroTestTest.jpg";
 export default function ProgramStructure() {
   return (
     <SectionWrapper>
-      <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
-        Structure
-      </h1>
-      <p className="normal-case text-md md:text-md text-gray-300 leading-2">
+      <h1 className="h1">Structure</h1>
+      <p className="normal-case text-md text-gray-300 leading-2 text-justify">
         Throughout the program, participants will track their progress using
         performance metrics such as strength gains, muscle measurements, and
-        body composition changes <br /> <br />
-        Regular assessments and check-ins with our trainers will ensure that
-        participants stay on track, make necessary adjustments to their
-        workouts, and continue progressing toward their goals
+        body composition changes. Regular assessments and check-ins with our
+        trainers will ensure that participants stay on track, make necessary
+        adjustments to their workouts, and continue progressing toward their
+        goals
       </p>
       <ul className="grid grid-cols-1 lg:grid-cols-1 gap-6 pt-12">
         {trainingPhases.map((trainingPhase, index) => (
@@ -52,7 +50,7 @@ export const TrainingPhaseCard = ({
           </p>
           <div className="h-0.5 w-2/3 bg-[#31C57D]"></div>
           <div className="flex flex-row md:flex-col items-center md:items-start">
-            <p className="w-full text-2xl tracking-normal text-start text-white leading-7 pt-4 font-semibold">
+            <p className="w-full  text-gray-200 text-2xl text-start tracking-normal font-semibold pt-2">
               {trainingPhase.phase}
             </p>
           </div>
@@ -84,7 +82,7 @@ export const TrainingPhaseCard = ({
         </div>
         <div className="absolute inset-0 bg-black opacity-80 border border-[#292929] rounded-lg"></div>
         <div className="flex flex-col gap-10 z-20">
-          <h1 className="text-xl md:text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold">
+          <h1 className="w-full text-gray-200 text-2xl text-center tracking-normal font-semibold">
             Feel your strength
           </h1>
           <div className="flex flex-col gap-4 px-6">

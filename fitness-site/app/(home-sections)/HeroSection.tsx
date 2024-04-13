@@ -12,14 +12,14 @@ export default function HeroSection() {
         <p className="w-full uppercase text-lg bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] tracking-widest text-start font-medium">
           Learn from the best
         </p>
-        <h1 className="capitalize w-full text-xl md:text-xl lg:text-7xl tracking-normal text-start text-white leading-10 font-semibold">
+        <h1 className="w-full h1">
           Transform your{" "}
           <span className="font-bold bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] capitalize">
             Fitness
           </span>{" "}
           Into Shape
         </h1>
-        <p className="normal-case text-lg text-gray-300 leading-2 font-normal pt-8">
+        <p className="text-heading pt-8">
           Unleash your strength, transform your body, conquer your fitness
           journey, transform your body, conquer your fitness journey
         </p>

@@ -7,7 +7,7 @@ import { DumbellIcon } from "@/public/Icons";
 export default function ProgramFeatures() {
   return (
     <SectionWrapper>
-      <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
+      <h1 className="w-full uppercase text-gray-300 text-3xl tracking-tight text-start font-bold">
         Features
       </h1>
       <div className="flex flex-col gap-6 relative">
@@ -30,12 +30,12 @@ export const KeyFeatureCard = ({ keyFeature }: { keyFeature: KeyFeature }) => {
             <span className="rounded-full p-2 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
               <DumbellIcon width={30} height={30} />
             </span>
-            <p className="w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold">
+            <p className="w-full  text-gray-200 text-2xl text-start tracking-normal font-semibold">
               {keyFeature.title}
             </p>
           </div>
         </div>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2">
+        <p className="normal-case text-md text-gray-300 leading-2">
           {keyFeature.description}
         </p>
       </div>
