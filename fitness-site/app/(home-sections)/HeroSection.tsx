@@ -7,11 +7,9 @@ import AboutUsHeroImage from "../../public/heroSectionImage.png";
 
 export default function HeroSection() {
   return (
-    <section className="pt-8 sm:pt-10 md:pt-24 lg:pt-28 px-8 md:px-14 lg:px-20 xl:px-24 2xl:px-32 min-w-screen min-h-screen w-full grid grid-cols-1 md:grid-cols-2 gap-16 bg-[#000000] relative">
-      <div className="flex flex-col gap-2 items-center justify-center z-20">
-        <p className="w-full uppercase text-lg bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] tracking-widest text-start font-medium">
-          Learn from the best
-        </p>
+    <section className="pt-8 sm:pt-10 md:pt-24 lg:pt-28 px-8 md:px-14 lg:px-20 xl:px-24 2xl:px-32 min-w-screen min-h-screen w-full grid grid-cols-1 sm:grid-cols-2 sm:gap-6 gap-16 bg-[#000000] relative">
+      <div className="flex flex-col gap-2 items-center justify-center z-20 pt-20 sm:pt-8 md:pt-6 lg:pt-2">
+        <p className="w-full text-above-heading">Learn from the best</p>
         <h1 className="w-full h1">
           Transform your{" "}
           <span className="font-bold bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] capitalize">
@@ -19,22 +17,16 @@ export default function HeroSection() {
           </span>{" "}
           Into Shape
         </h1>
-        <p className="text-heading pt-8">
+        <p className="text-subheading pt-2 md:pt-4">
           Unleash your strength, transform your body, conquer your fitness
           journey, transform your body, conquer your fitness journey
         </p>
-        <div className="w-full flex items-center justify-start gap-6 pt-6">
-          <Link
-            href={"/programs"}
-            className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-xl py-3 px-7 cursor-pointer text-md text-white font-normal"
-          >
+        <div className="w-full flex sm:flex-col lg:flex-row sm:items-start lg:items-center xs:justify-center sm:justify-start lg:justify-start gap-4 md:gap-4 lg:gap-6 pt-6 lg-pt-4">
+          <Link href={"/programs"} className="btn-primary">
             See Programs
           </Link>
-          <Link
-            href={"/contact"}
-            className="w-fit bg-gradient-to-r border-2 border-[#31C57D] rounded-xl py-3 px-7 cursor-pointer text-md text-white font-normal"
-          >
-            Get In Touch
+          <Link href={"/contact"} className="btn-secondary">
+            Contact Us
           </Link>
         </div>
       </div>

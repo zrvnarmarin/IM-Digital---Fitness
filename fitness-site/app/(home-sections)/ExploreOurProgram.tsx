@@ -7,7 +7,7 @@ export default function ExploreOurProgram() {
   return (
     <SectionWrapper>
       <h2 className="w-full h2">What Makes Us Special</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-6 md:pt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 pt-6 md:pt-8">
         {programs.map((programCard) => (
           <ProgramCard
             key={programCard.title}

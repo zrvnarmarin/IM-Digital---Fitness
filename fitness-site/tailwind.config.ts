@@ -36,7 +36,7 @@ const config: Config = {
       addBase({});
       addComponents({
         ".h1": {
-          "@apply capitalize text-xl md:text-xl lg:text-7xl tracking-normal text-start text-white leading-10 font-semibold":
+          "@apply capitalize text-4xl md:text-5xl lg:text-7xl tracking-normal text-center sm:text-start md:text-start text-white leading-10 font-semibold":
             {},
         },
         ".h2": {
@@ -48,16 +48,23 @@ const config: Config = {
             {},
         },
         ".text-normal": {
-          "@apply normal-case sm:text-sm md:text-base text-gray-300": {},
+          "@apply normal-case text-sm md:text-base text-gray-300": {},
         },
         ".text-subheading": {
-          "@apply normal-case text-lg text-gray-300 font-normal": {},
+          "@apply normal-case text-base text-center sm:text-start md:text-start lg:text-lg text-gray-300 font-normal":
+            {},
         },
-        ".h5": {
-          "@apply text-2xl leading-normal": {},
+        ".btn-primary": {
+          "@apply w-full lg:w-fit text-center bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-xl py-2 px-6 md:py-3 md:px-7 cursor-pointer text-base text-white font-normal":
+            {},
         },
-        ".h6": {
-          "@apply font-semibold text-lg leading-8": {},
+        ".btn-secondary": {
+          "@apply w-full lg:w-fit text-center bg-[#101010] border-2 border-[#31C57D] rounded-xl py-2 px-6 md:py-3 md:px-7 cursor-pointer text-base text-white font-normal":
+            {},
+        },
+        ".text-above-heading": {
+          "@apply uppercase text-xs sm:text-sm lg:text-base bg-gradient-to-r bg-clip-text text-transparent from-[#1D7349] to-[#31C57D] tracking-widest text-center sm:text-start md:text-start font-medium":
+            {},
         },
       });
       addUtilities({
