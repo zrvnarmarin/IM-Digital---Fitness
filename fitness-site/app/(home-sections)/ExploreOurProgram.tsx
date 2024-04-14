@@ -24,17 +24,13 @@ export default function ExploreOurProgram() {
 }
 
 export function ProgramCard({
-  href,
   title,
   description,
   icon,
-  image,
 }: {
-  href: string;
   title: string;
   description: string;
   icon: () => JSX.Element;
-  image: any;
 }) {
   return (
     <div className="flex flex-col gap-4 rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
@@ -42,7 +38,7 @@ export function ProgramCard({
         <div className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-md p-2 w-fit">
           <TestIconTwo height="1.5m" width="1.5em" iconFill="#ffffff" />
         </div>
-        <h3 className="w-full h3">{title}</h3>
+        <h3 className="h3">{title}</h3>
       </div>
       <p className="text-normal">{description}</p>
     </div>

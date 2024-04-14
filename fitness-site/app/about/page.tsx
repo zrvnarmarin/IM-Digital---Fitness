@@ -711,9 +711,7 @@ export function TestimonialCard({
         <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
           {testimonial.date}
         </p>
-        <p className="normal-case text-md text-gray-300 leading-2 font-normal">
-          {testimonial.testimonial}
-        </p>
+        <p className="text-normal">{testimonial.testimonial}</p>
         <div className="flex gap-4 items-center">
           <div className="flex items-center w-12 h-12 rounded-full">
             <Image
@@ -724,9 +722,7 @@ export function TestimonialCard({
               className="w-full h-full object-cover rounded-full"
             />
           </div>
-          <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
-            {testimonial.name}
-          </p>
+          <p className="w-full h3">{testimonial.name}</p>
         </div>
       </div>
     </li>

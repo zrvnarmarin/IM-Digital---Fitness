@@ -2,26 +2,37 @@ import React from "react";
 import Image from "next/image";
 import SectionWrapper from "../components/wrappers/SectionWrapper";
 import TestImage from "../../public/gymImage.jpg";
+import Link from "next/link";
 
 export default function Plans() {
   return (
     <SectionWrapper>
       <div className="flex items-center justify-between">
-        <h2 className="w-full uppercase text-gray-300 text-3xl tracking-tight text-start font-bold">
-          Plans
-        </h2>
-        <div className="w-full flex items-center justify-end">
+        <h2 className="w-full h2">Plans</h2>
+        <div className="w-full hidden md:flex items-center justify-end">
           <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-3 px-6 cursor-pointer text-white">
             See All Plans
           </button>
         </div>
       </div>
+      <p className="text-subheading">
+        We have experience serving members in helping body fitness, and under
+        the guidance of a professional trainer
+      </p>
       <div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-lg gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 rounded-lg gap-6">
           {plans.map((planCard) => (
             <PlanCard key={planCard.id} plan={planCard} />
           ))}
         </div>
+      </div>
+      <div className="flex w-full md:hidden items-center justify-center">
+        <Link
+          href="/plans"
+          className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-3 px-6 cursor-pointer text-white"
+        >
+          See All Plans
+        </Link>
       </div>
     </SectionWrapper>
   );
@@ -46,24 +57,19 @@ export function PlanCard({ plan }: { plan: PlanCardType }) {
       {/* Text Content */}
       <div className="relative z-10">
         <div className="flex items-center">
-          <p className="w-full text-xl md:text-xl lg:text-2xl tracking-normal text-center text-gray-200 leading-7 font-semibold">
-            {plan.title}
-          </p>
+          <h3 className="w-full h3 text-center">{plan.title}</h3>
         </div>
         <p
-          className={`w-full pt-4 text-xl md:text-xl lg:text-5xl tracking-wider text-center bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] leading-7 font-semibold`}
+          className={`w-full pt-4 text-4xl md:text-5xl  tracking-wider text-center bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] leading-7 font-semibold`}
         >
           ${plan.price}
         </p>
-        <h3 className="w-full text-xl pt-1 md:text-md lg:text-lg tracking-normal text-center text-white leading-7 font-semibold uppercase">
+        <h4 className="w-full text-lg pt-1 md:text-xl lg:text-xl tracking-normal text-center text-white leading-7 font-semibold uppercase">
           {plan.description}
-        </h3>
+        </h4>
         <ul className="flex flex-col gap-1 items-center pt-6">
           {plan.perks.map((perk, index) => (
-            <li
-              key={index}
-              className="normal-case text-md text-gray-300 leading-2"
-            >
+            <li key={index} className="text-normal">
               &#x2022; {perk}
             </li>
           ))}

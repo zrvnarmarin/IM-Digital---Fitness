@@ -15,13 +15,11 @@ const SignUpForAnEmail = () => {
 
       {/* Content */}
       <div className="absolute inset-0 flex flex-col justify-center gap-12 text-white">
-        <h1 className="w-full uppercase text-gray-300 text-3xl tracking-tight text-center font-bold">
-          Sign up to our newsletter
-        </h1>
+        <h2 className="w-full h2 text-center">Sign up to our newsletter</h2>
         <div>
-          <p className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-center text-white leading-7 font-semibold">
+          <h3 className="w-full text-xl md:text-xl lg:text-xl tracking-normal text-center text-white leading-7 font-semibold">
             Get it all in the action
-          </p>
+          </h3>
           <div className="w-full flex flex-col justify-center items-center gap-6 mt-4">
             <div className="flex items-center justify-center px-12 border-b border-white normal-case text-md text-gray-300 leading-2">
               <input

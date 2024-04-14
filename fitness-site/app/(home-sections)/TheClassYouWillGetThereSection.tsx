@@ -17,9 +17,7 @@ export default function TheClassYouWillGetThereSection() {
 
   return (
     <SectionWrapper>
-      <h1 className="w-full uppercase text-gray-300 text-3xl tracking-tight text-start font-bold">
-        Facilities
-      </h1>
+      <h1 className="w-full h2">Facilities</h1>
 
       <div className=" grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="text-white flex items-center justify-center">
@@ -36,12 +34,6 @@ export default function TheClassYouWillGetThereSection() {
         <div className="flex flex-col gap-6 relative">
           <ul className="flex flex-col gap-6">
             {facilities.map((card, index) => (
-              // <FacilitiesCard
-              //   key={card.id}
-              //   card={card}
-              //   isActive={activeIndex === index}
-              //   onShow={() => handleShow(index)}
-              // />
               <li
                 key={card.id}
                 className={`flex flex-col gap-4 rounded-lg p-6 ${activeIndex === index ? "bg-gradient-to-r from-[#101010] to-[#292929]" : "bg-gradient-to-r from-[#101010] to-[#191919]"} border border-[#292929] cursor-pointer`}
@@ -51,9 +43,7 @@ export default function TheClassYouWillGetThereSection() {
                 <div className="flex flex-row items-center justify-between">
                   <div className="flex flex-row items-center gap-2">
                     <TestIcon height="2.5em" width="2.5em" iconFill="#31C57D" />
-                    <span className=" text-gray-200 text-2xl text-start tracking-normal font-semibold">
-                      {card.mainTitle}
-                    </span>
+                    <h3 className="h3">{card.mainTitle}</h3>
                   </div>
                   <span
                     className={`${activeIndex === index ? "rotate-90 duration-300" : "rotate-0 duration-300"}`}
@@ -64,9 +54,7 @@ export default function TheClassYouWillGetThereSection() {
 
                 {/* Second row */}
                 {activeIndex === index ? (
-                  <p className="normal-case text-md text-gray-300 leading-2">
-                    {card.description}
-                  </p>
+                  <p className="text-normal">{card.description}</p>
                 ) : null}
               </li>
             ))}
@@ -106,7 +94,7 @@ export const FacilitiesCard = ({
               <TestIcon height="1.5em" width="1.5em" iconFill="#31C57D" />
               {card.mainTitle}
             </div>
-            <ArrowRight width="40px" height="40px" />
+            <ArrowRight width="20px" height="20px" />
           </div>
           {isActive ? (
             <p className="normal-case text-md text-gray-300 leading-2">

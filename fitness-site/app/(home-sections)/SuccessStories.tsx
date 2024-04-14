@@ -10,10 +10,8 @@ export default function SuccessStories() {
   return (
     <SectionWrapper>
       <div className="flex items-center justify-between">
-        <h2 className="w-full uppercase text-gray-300 text-3xl tracking-tight text-start font-bold">
-          Success Stories
-        </h2>
-        <div className="w-full flex items-center justify-end">
+        <h2 className="w-full h2">Success Stories</h2>
+        <div className="w-full hidden md:flex items-center justify-end">
           <Link
             href="/"
             className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-3 px-6 cursor-pointer text-white"

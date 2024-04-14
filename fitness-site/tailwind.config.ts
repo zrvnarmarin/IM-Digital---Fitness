@@ -40,7 +40,7 @@ const config: Config = {
             {},
         },
         ".h2": {
-          "@apply uppercase text-gray-300 text-xl sm:text-2xl md:text-3xl tracking-tight text-start font-bold":
+          "@apply uppercase text-gray-300 text-2xl md:text-3xl tracking-tight text-start font-bold":
             {},
         },
         ".h3": {
@@ -51,7 +51,7 @@ const config: Config = {
           "@apply normal-case text-sm md:text-base text-gray-300": {},
         },
         ".text-subheading": {
-          "@apply normal-case text-base text-center sm:text-start md:text-start lg:text-lg text-gray-300 font-normal":
+          "@apply normal-case text-base text-start lg:text-lg text-gray-300 font-normal":
             {},
         },
         ".btn-primary": {

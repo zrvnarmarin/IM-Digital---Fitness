@@ -9,24 +9,31 @@ export default function OurTeam() {
   return (
     <SectionWrapper>
       <div className="flex items-center justify-between">
-        <h2 className="w-full uppercase text-gray-300 text-3xl tracking-tight text-start font-bold">
-          Our Team
-        </h2>
-        <div className="w-full flex items-center justify-end">
+        <h2 className="w-full h2">Our Team</h2>
+        <div className="w-full hidden md:flex items-center justify-end">
           <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-3 px-6 cursor-pointer text-white">
             Meet The Rest
           </button>
         </div>
       </div>
 
-      <p className="normal-case text-lg text-gray-300 leading-2">
+      <p className="text-subheading">
         Meet our exceptional team which will test your limits
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-lg gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 rounded-lg gap-6">
         {trainers.map((trainer) => (
           <TrainerCard key={trainer.id} trainer={trainer} />
         ))}
+      </div>
+
+      <div className="flex w-full md:hidden items-center justify-center">
+        <Link
+          href="/instructors"
+          className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-3 px-6 cursor-pointer text-white"
+        >
+          Meet The Rest
+        </Link>
       </div>
     </SectionWrapper>
   );
@@ -96,12 +103,8 @@ export const TrainerCard = ({ trainer }: { trainer: TrainerType }) => {
       </div>
 
       <div className="flex flex-col items-start gap-1">
-        <p className="pt-4 w-full text-gray-200 text-2xl tracking-normal text-start font-semibold">
-          {trainer.name}
-        </p>
-        <p className="normal-case text-md text-gray-300 leading-2">
-          {trainer.description}
-        </p>
+        <h3 className="pt-4 w-full h3">{trainer.name}</h3>
+        <p className="text-normal">{trainer.description}</p>
         {/* Ovdje staviti strelicu desno, pogledaj dizajn */}
       </div>
     </Link>

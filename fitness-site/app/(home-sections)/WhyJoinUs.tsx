@@ -10,10 +10,8 @@ export default function WhyJoinUs() {
   return (
     <SectionWrapper>
       <div className="flex items-center justify-between">
-        <h2 className="w-full uppercase text-gray-300 text-3xl tracking-tight text-start font-bold">
-          Programs
-        </h2>
-        <div className="w-full flex items-center justify-end">
+        <h2 className="h2">Programs</h2>
+        <div className="hidden w-full md:flex items-center justify-end">
           <Link
             href="/programs"
             className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-3 px-6 cursor-pointer text-white"
@@ -22,16 +20,24 @@ export default function WhyJoinUs() {
           </Link>
         </div>
       </div>
-      <p className="normal-case text-lg text-gray-300 leading-2">
+      <p className="text-subheading">
         We have experience serving members in helping body fitness, and under
         the guidance of a professional trainer
       </p>
       <div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-lg gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 rounded-lg gap-6">
           {reasonsToJoin.map((programCard) => (
             <ProgramCard key={programCard.description} />
           ))}
         </div>
+      </div>
+      <div className="flex w-full md:hidden items-center justify-center">
+        <Link
+          href="/programs"
+          className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-3 px-6 cursor-pointer text-white"
+        >
+          Discover More Programs
+        </Link>
       </div>
     </SectionWrapper>
   );
@@ -72,16 +78,16 @@ export function ProgramCard() {
 
       <div className="px-8 py-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] rounded-b-lg">
         <div className="flex flex-col gap-3 items-start justify-start rounded-lg">
-          <p className="w-full  text-gray-200 text-2xl tracking-normal text-start font-semibold">
-            Cardiovascular Strength
-          </p>
+          <h3 className="w-full  h3">Cardiovascular Strength</h3>
         </div>
+
         <div className="flex flex-col pt-4">
-          <p className="normal-case text-md text-gray-300 leading-2">
+          <p className="text-normal">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
             beatae obcaecati eius illo, sunt beatae sunt beatate sun beatate
           </p>
         </div>
+
         <div className="w-full flex flex-row items-center justify-between rounded-lg pt-10">
           <div className="w-full flex flex-row items-center justify-between">
             <span className="normal-case text-md text-white leading-2 font-medium">
@@ -93,7 +99,6 @@ export function ProgramCard() {
               <span className="w-1/3 rounded-lg h-2 border border-[#292929]"></span>
             </div>
           </div>
-          {/* <span><Image src={ShareIcon} width={20} height={20} alt="share_icon" /></span> */}
         </div>
 
         <div className="border-b border-gray-600 flex items-center justify-between pt-4 pb-2 normal-case tracking-normal text-2xs md:text-sm lg:text-lg text-gray-100 leading-2 font-normal">
@@ -106,11 +111,11 @@ export function ProgramCard() {
         </div>
 
         {/* Rasmiliti da li ovdje staviti gumb, da li se uklapa u dizajn */}
-        <div className="flex flex-row justify-between items-center pt-6">
+        <div className="flex xs:flex-row sm:flex-col md:flex-row lg:flex-col 2xl:flex-row justify-between xs:items-center sm:gap-2 md:gap-3 pt-6">
           <p className="text-[#31C57D] text-2xl tracking-normal text-start font-semibold">
             $130.00
           </p>
-          <button className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-3 px-6 cursor-pointer text-white">
+          <button className="w-fit sm:w-full md:w-fit lg:w-full 2xl:w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-3 px-6 cursor-pointer text-white">
             Buy Now
           </button>
         </div>
