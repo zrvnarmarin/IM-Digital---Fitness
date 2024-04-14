@@ -16,9 +16,7 @@ export default function ProgramOverviewSection() {
                 <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
                   Assets
                 </p>
-                <h1 className="w-full uppercase text-gray-300 text-3xl tracking-tight text-start font-bold">
-                  Feel your strength
-                </h1>
+                <h1 className="w-full h2">Feel your strength</h1>
                 <div className="w-full flex flex-row items-center justify-between gap-4">
                   <div className="flex items-center gap-2">
                     <p className="normal-case text-md md:text-md text-white leading-2 font-semibold">
@@ -31,9 +29,7 @@ export default function ProgramOverviewSection() {
                     <span className="bg-[#31C57D] w-1/3 rounded-lg h-2 border border-[#292929]"></span>
                   </div>
                 </div>
-                <p className="normal-case text-md md:text-md text-gray-300 leading-2">
-                  {description}
-                </p>
+                <p className="text-normal">{description}</p>
               </div>
             </div>
             <div className="flex flex-row justify-start gap-3">

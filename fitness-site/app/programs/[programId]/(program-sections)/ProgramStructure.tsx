@@ -6,8 +6,8 @@ import TestImage from "../../../../public/HeroTestTest.jpg";
 export default function ProgramStructure() {
   return (
     <SectionWrapper>
-      <h1 className="h1">Structure</h1>
-      <p className="normal-case text-md text-gray-300 leading-2 text-justify">
+      <h2 className="w-full h2">Structure</h2>
+      <p className="text-subheading">
         Throughout the program, participants will track their progress using
         performance metrics such as strength gains, muscle measurements, and
         body composition changes. Regular assessments and check-ins with our
@@ -67,7 +67,6 @@ export const TrainingPhaseCard = ({
           />
         </div>
       </div>
-
       {/* Right section */}
       <div className="relative group flex flex-col gap-4 rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#161616]">
         <div className="absolute inset-0">
