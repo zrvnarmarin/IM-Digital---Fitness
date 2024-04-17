@@ -1,1 +1,0 @@
-This is an Next.js application which will contain the website part (static routes) and the application part, where you can log in as a user and manage all your selected training programs and communicate with trainers. 
