@@ -18,7 +18,7 @@ export default function OtherProgramsSection() {
             See other plans for getting you in the best shape
           </p>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-4">
           <button className="bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] text-gray-300 px-4 py-3 rounded-lg text-xl font-bold">
             &larr;
           </button>
@@ -40,6 +40,14 @@ export default function OtherProgramsSection() {
             ))}
           </div>
         </div>
+      </div>
+      <div className="flex items-center justify-center md:hidden gap-4">
+        <button className="bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] text-gray-300 px-4 py-3 rounded-lg text-xl font-bold">
+          &larr;
+        </button>
+        <button className="bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] text-gray-300 px-4 py-3 rounded-lg text-xl font-bold">
+          &rarr;
+        </button>
       </div>
     </SectionWrapper>
   );

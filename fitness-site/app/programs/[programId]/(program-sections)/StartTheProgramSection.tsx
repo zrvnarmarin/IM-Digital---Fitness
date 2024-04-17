@@ -67,6 +67,9 @@ export default function StartTheProgramSection() {
               </div>
             </div>
           </div>
+          <p className="w-full text-normal font-medium lg:font-semibold text-center">
+            You will select your description during checkout plan
+          </p>
           <div className="w-full flex items-center justify-center">
             <button className="btn-primary">Start Your Program</button>
           </div>
