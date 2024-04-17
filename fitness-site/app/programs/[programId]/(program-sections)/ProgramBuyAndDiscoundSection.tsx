@@ -14,7 +14,10 @@ export default function ProgramBuyAndDiscoundSection({
           <LogoImage width={80} height={80} />
           <h2 className="h2 text-center">Aeon Olympia</h2>
         </span>
-        <p className="text-normal text-center lg:w-1/3">
+        <p
+          className="text-normal text-center lg:
+        md:w-1/3 w-2/3"
+        >
           Join <span className="font-semibold">{programId}</span> today and get
           access to MFT28 <span className="font-semibold">PLUS</span> over 60{" "}
           <br /> other{" "}

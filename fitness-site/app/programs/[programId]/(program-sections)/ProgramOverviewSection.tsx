@@ -43,27 +43,16 @@ export default function ProgramOverviewSection() {
             </div>
 
             <div className="flex flex-col xl:flex-row justify-between w-full gap-2">
-              <div className="flex flex-row items-center justify-between gap-4 normal-case text-md md:text-md text-white leading-2">
-                <div className="flex items-center gap-2">
-                  <span className="rounded-full p-2 bg-[#292929] border border-[#292929]">
-                    <DumbellIcon />
-                  </span>
-                  <span className="font-semibold">Duration:</span>
-                </div>
-                <span className="normal-case text-md md:text-xl text-gray-300 leading-2 font-semibold">
-                  6 Weeks
-                </span>
-              </div>
               <div className="flex flex-row items-center justify-between gap-6 normal-case text-md md:text-md text-white leading-2">
                 <div className="flex items-center gap-2">
-                  <span className="rounded-full p-2 bg-[#292929] border border-[#292929]">
-                    <DumbellIcon />
+                  <span className="rounded-full p-2 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
+                    <DumbellIcon width={20} height={20} />
                   </span>
                   <span className="font-semibold">Duration:</span>
                 </div>
-                <span className="normal-case text-md md:text-xl text-gray-300 leading-2 font-semibold">
+                <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
                   6 Weeks
-                </span>
+                </p>
               </div>
             </div>
           </div>

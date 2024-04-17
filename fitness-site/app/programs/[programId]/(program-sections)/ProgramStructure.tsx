@@ -81,18 +81,14 @@ export const TrainingPhaseCard = ({
         </div>
         <div className="absolute inset-0 bg-black opacity-80 border border-[#292929] rounded-lg"></div>
         <div className="flex flex-col gap-10 z-20">
-          <h1 className="w-full text-gray-200 text-2xl text-center tracking-normal font-semibold">
-            Feel your strength
-          </h1>
+          <h1 className="w-full h3 text-center">Feel your strength</h1>
           <div className="flex flex-col gap-4 px-6">
             {trainingPhase.sentences.map((sentence) => (
               <div key={sentence} className="flex flex-row gap-4">
                 <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
                   &#10003;
                 </span>
-                <p className="normal-case text-md md:text-md text-gray-300 leading-2">
-                  {sentence}
-                </p>
+                <p className="text-normal">{sentence}</p>
               </div>
             ))}
           </div>

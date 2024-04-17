@@ -9,10 +9,8 @@ export default function SuccessStoriesSection() {
   return (
     <SectionWrapper>
       <div className="flex flex-col gap-2">
-        <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
-          Success Stories
-        </h1>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2">
+        <h2 className="w-full h2">Success Stories</h2>
+        <p className="text-subheading">
           MFT-28 has changed thousands of lives. Here's what those who followed
           it have to say.
         </p>
