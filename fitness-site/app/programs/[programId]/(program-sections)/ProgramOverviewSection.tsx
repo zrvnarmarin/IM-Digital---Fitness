@@ -2,7 +2,8 @@ import React from "react";
 import SectionWrapper from "@/app/components/wrappers/SectionWrapper";
 import Image from "next/image";
 import TestImage from "../../../../public/HeroTestTest.jpg";
-import { DumbellIcon } from "@/public/Icons";
+import TimeImage from "../../../../public/time-svgrepo-com (1).png";
+import "../../../../public/styles/paralelogram.css";
 
 //TO DO: sav style dobar do intensity sekcije, nakon tog treba izmjeniti i razmisliti za drugi dizajn; i dalje duration i button prikati
 export default function ProgramOverviewSection() {
@@ -33,26 +34,28 @@ export default function ProgramOverviewSection() {
               </div>
             </div>
             <div className="flex flex-row justify-start gap-3">
-              <span className="w-2.5  h-6 bg-[#31C57D]" />
-              <span className="w-2.5  h-6 bg-[#31C57D]" />
-              <span className="w-2.5  h-6 bg-[#31C57D]" />
-              <span className="w-2.5  h-6 bg-[#31C57D]" />
-              <span className="w-2.5  h-6 bg-[#31C57D]" />
-              <span className="w-2.5  h-6 bg-[#31C57D]" />
-              <span className="w-2.5  h-6 bg-[#31C57D]" />
+              <div className="parallelogram"></div>
+              <div className="parallelogram"></div>
+              <div className="parallelogram"></div>
+              <div className="parallelogram"></div>
+              <div className="parallelogram"></div>
+              <div className="parallelogram"></div>
             </div>
 
             <div className="flex flex-col xl:flex-row justify-between w-full gap-2">
-              <div className="flex flex-row items-center justify-between gap-6 normal-case text-md md:text-md text-white leading-2">
-                <div className="flex items-center gap-2">
-                  <span className="rounded-full p-2 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                    <DumbellIcon width={20} height={20} />
-                  </span>
+              <div className="w-full flex flex-row items-center justify-between gap-6 normal-case text-md md:text-md text-white leading-2">
+                <div className="flex items-center gap-2 ">
+                  <div className="flex items-center justify-center italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-full p-2 cursor-pointer text-white">
+                    <Image
+                      src={TimeImage}
+                      height={20}
+                      width={20}
+                      alt="time_icon"
+                    />
+                  </div>
                   <span className="font-semibold">Duration:</span>
                 </div>
-                <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
-                  6 Weeks
-                </p>
+                <div className="text-normal font-semibold">6 Weeks</div>
               </div>
             </div>
           </div>

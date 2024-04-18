@@ -21,17 +21,17 @@ export default function StartTheProgramSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#31C57D] to-[#161616] opacity-30 rounded-lg"></div>
 
         <div className="flex flex-col gap-6 z-20">
-          <h3 className="w-full h3">
+          <h3 className="w-full h3 text-center">
             Start MFT28: Greg Plitt's 4-Week Military Fitness Trainer for FREE
             today!
           </h3>
-          <p className="text-normal">
+          <p className="text-normal text-center">
             Join BodyFit today to unlock the app for this fitness plan, and many
             others, in the Apple and Google Play stores! You'll be able to track
             your workouts, nail your nutrition plan, stock up on supps, and get
             fit on the go.
           </p>
-          <p className="normal-case text-md md:text-md text-gray-300 leading-2 text-center font-normal">
+          <p className="w-full text-normal">
             Get unlimited access to all of our expert training plans, exclusive
             savings in our store, and even free shipping!*
           </p>
