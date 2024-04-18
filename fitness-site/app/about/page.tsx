@@ -7,6 +7,7 @@ import ShareIcon from "../../public/share-arrow-svgrepo-com.png";
 import { SuccessStoryCard } from "../(home-sections)/SuccessStories";
 import { testimonials } from "../data";
 import { QuotationMark, TestIcon, TestIconTwo } from "@/public/Icons";
+import { ParalelogramsSection } from "../components/ParalelogramsSection";
 
 // TO DO: osmisliti kako ukorporirati galeriju slika (tipa kao na hacksmithu)
 
@@ -18,7 +19,6 @@ export default function Page() {
       <SecondSection />
       <GallerySection />
       <LegacyOfCourageSection />
-      <MissionAndValuesSection />
       <StatsSection />
       <LegacyOfCourageSectionTwo />
       <LongParagraphsSection />
@@ -71,17 +71,37 @@ export function HeroSection() {
 export function SecondSection() {
   return (
     <SectionWrapper>
-      <div className="flex flex-col gap-3 pb-8">
+      <div className="flex flex-col gap-3 pb-4 lg:pb-8">
         <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
           Timeline
         </p>
         <h2 className="h2">Embark on our journey of strength</h2>
       </div>
-      <div className="flex flex-col gap-16 pb-4">
+      <div className="hidden lg:flex flex-col gap-16 pb-4">
         {secondSectionArray.map((card, index) => (
           <SecondSectionCard card={card} key={card.id} index={index} />
         ))}
       </div>
+
+      {/* Mobile */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:hidden gap-6">
+        {/* Card */}
+        {secondSectionArray.map((card) => (
+          <div
+            key={card.id}
+            className="w-full shadow-lg shadow-[#141414] group flex flex-col gap-4 py-6 px-16 rounded-lg bg-gradient-to-r from-[#101010] to-[#191919] border-y border-[#292929]"
+          >
+            <p className="order-0 w-full text-xl md:text-xl lg:text-3xl tracking-normal text-center text-white leading-7 font-semibold">
+              <span className="bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] italic text-7xl tracking-normal text-center font-semibold">
+                {card.year}
+              </span>{" "}
+            </p>
+            <h3 className="h3 text-center">{card.title}</h3>
+            <p className="text-normal text-center">{card.description}</p>
+          </div>
+        ))}
+      </div>
+
       <div className="flex w-full items-center justify-center pt-6">
         <button className="w-fit btn-primary">Read More Stories</button>
       </div>
@@ -126,6 +146,12 @@ const secondSectionArray = [
     title: "Continuous Growth",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam.`,
   },
+  {
+    id: 6,
+    year: 2025,
+    title: "Continuous Growth",
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum quod voluptates fuga suscipit quas dolorem saepe voluptatibus explicabo vero consequatur magnam ratione inventore aspernatur numquam.`,
+  },
 ];
 
 export const SecondSectionCard = ({
@@ -139,8 +165,6 @@ export const SecondSectionCard = ({
 
   return (
     <section className="flex flex-col gap-2 md:gap-0 md:flex-row">
-      {/* <p className="text-white">{index}</p> */}
-
       <div
         className={`relative flex flex-row items-center gap-20 w-1/2 ${isEven ? "order-2 justify-start" : "order-0 justify-end"}`}
       >
@@ -166,6 +190,7 @@ export const SecondSectionCard = ({
   );
 };
 
+//ovo je mission and values section
 export function LegacyOfCourageSection() {
   return (
     <SectionWrapper>
@@ -182,7 +207,7 @@ export function LegacyOfCourageSection() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 pt-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 pt-8">
             <div className="flex items-center gap-4">
               <TestIcon height="40px" width="40px" iconFill="#31C57D" />
               <p className="text-md md:text-md text-gray-300 leading-2 uppercase font-semibold">
@@ -193,6 +218,18 @@ export function LegacyOfCourageSection() {
               <TestIconTwo height="40px" width="40px" iconFill="#31C57D" />
               <p className="text-md md:text-md text-gray-300 leading-2 uppercase font-semibold">
                 Healing Factor Benefits
+              </p>
+            </div>
+            <div className="flex items-center gap-4">
+              <TestIcon height="40px" width="40px" iconFill="#31C57D" />
+              <p className="text-md md:text-md text-gray-300 leading-2 uppercase font-semibold">
+                Mind Over Body
+              </p>
+            </div>
+            <div className="flex items-center gap-4">
+              <TestIcon height="40px" width="40px" iconFill="#31C57D" />
+              <p className="text-md md:text-md text-gray-300 leading-2 uppercase font-semibold">
+                Mind Over Body
               </p>
             </div>
           </div>
@@ -320,27 +357,23 @@ export function LegacyOfCourageSectionTwo() {
   return (
     <SectionWrapper>
       <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="text-white flex items-center justify-center">
-          <div className="relative flex items-center justify-center group h-full w-full rounded-xl cursor-pointer">
-            <Image
-              priority
-              src={TestImage}
-              alt="alt"
-              fill={true}
-              // fill={true} slika s ovim propertijem ocito zauzima mjesta koliko mu flexbox sirina i njegova visina dopustaju
-              className="object-cover rounded-md"
-            />
-          </div>
+        <div className="relative flex items-center justify-center group h-full w-full rounded-xl cursor-pointer">
+          <Image
+            priority
+            src={TestImage}
+            alt="alt"
+            fill={true}
+            // fill={true} slika s ovim propertijem ocito zauzima mjesta koliko mu flexbox sirina i njegova visina dopustaju
+            className="object-cover rounded-md"
+          />
         </div>
         <div className="flex flex-col">
           <div className="flex flex-col gap-3">
             <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
               Assets
             </p>
-            <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
-              Best Quality Facilities And Program
-            </h1>
-            <p className="normal-case text-md md:text-md text-gray-300 leading-2">
+            <h2 className="h2">Best Quality Facilities And Program</h2>
+            <p className="text-normal">
               In the “golden days”, there weren’t many options for working out.
               But Joe Gold, our founder, had a passion for bodybuilding. He
               found success as a professional “muscleman” and toured with
@@ -448,17 +481,10 @@ export const founders: FounderType[] = [
 export const LongParagraphsSection = () => {
   return (
     <SectionWrapper>
-      <div className="flex flex-col gap-8 px-64">
-        <div className="flex flex-row justify-start gap-3">
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-        </div>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 tracking-wider font-normal">
+      <div className="flex flex-col gap-8">
+        <ParalelogramsSection />
+        <h2 className="h2">Lorem Ipsum dolor sit</h2>
+        <p className="text-normal">
           <span className="text-[#31C57D] font-medium">
             As we were building
           </span>{" "}
@@ -474,7 +500,7 @@ export const LongParagraphsSection = () => {
           analyze the survey, the patient is already considering the
           competition.
         </p>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 tracking-wider font-normal">
+        <p className="text-normal">
           <span className="text-[#31C57D] font-medium">
             As we were building
           </span>{" "}
@@ -490,19 +516,8 @@ export const LongParagraphsSection = () => {
           analyze the survey, the patient is already considering the
           competition.
         </p>
-        {/* <div className="flex items-center justify-center">
-          <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
-            Read More Stories
-          </button>
-        </div> */}
-        <div className="flex flex-row justify-end gap-3">
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
-          <span className="w-2.5  h-6 bg-[#31C57D]" />
+        <div className="flex items-center justify-end">
+          <ParalelogramsSection />
         </div>
       </div>
     </SectionWrapper>
@@ -512,28 +527,7 @@ export const LongParagraphsSection = () => {
 export const MissionAndValuesSection = () => {
   return (
     <SectionWrapper>
-      <div className="grid grid-col-1 lg:grid-cols-2 items-center gap-12">
-        <div className="flex flex-col  gap-6">
-          <div className="flex flex-col items-center justify-center">
-            <h2 className="w-full h2 text-start md:text-center">
-              Our Core Values
-            </h2>
-            <p className="text-normal pt-6">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequatur, quo odio corrupti sint deleniti similique
-              perspiciatis reiciendis nulla aliquam placeat placeat placeat
-              placeat placeat placeat.
-            </p>
-          </div>
-          <div className="normal-case text-md text-center md:text-lg text-gray-300 leading-2 font-semibold">
-            <p className="flex flex-col items-center gap-24 w-full text-xl md:text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold">
-              <span className="bg-gradient-to-r bg-clip-text text-transparent from-[#1D7349] to-[#31C57D] italic text-7xl tracking-normal text-start font-semibold">
-                Effective. <br /> Driven. <br /> Great.
-              </span>{" "}
-            </p>
-          </div>
-        </div>
-
+      <div className="flex flex-col gap-6">
         <div className="flex flex-col  gap-6">
           <div className="flex flex-col items-center justify-center">
             <p className="h2">Our Mission</p>
@@ -541,16 +535,18 @@ export const MissionAndValuesSection = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Consequatur, quo odio corrupti sint deleniti similique
               perspiciatis reiciendis nulla aliquam placeat placeat placeat
-              placeat placeat placeat.
+              placeat placeat placeat. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Consequatur, quo odio corrupti sint deleniti
+              similique perspiciatis reiciendis nulla aliquam placeat placeat
+              placeat placeat placeat placeat.
             </p>
           </div>
-          <div className="normal-case text-md text-center md:text-lg text-gray-300 leading-2 font-semibold">
-            <p className="flex flex-col items-center gap-24 w-full text-xl md:text-xl lg:text-3xl tracking-normal text-white leading-7 font-semibold">
-              <span className="text-end bg-gradient-to-r bg-clip-text text-transparent from-[#1D7349] to-[#31C57D] italic text-7xl tracking-normal font-semibold">
-                Effective. <br /> Driven. <br /> Great.
-              </span>{" "}
-            </p>
-          </div>
+        </div>
+
+        <div className="normal-case text-md text-start md:text-lg text-gray-300 leading-2 font-semibold">
+          <span className="bg-gradient-to-r bg-clip-text text-transparent from-[#1D7349] to-[#31C57D] italic text-7xl tracking-normal text-start font-semibold">
+            Effective. Driven. Great.
+          </span>{" "}
         </div>
       </div>
     </SectionWrapper>
@@ -560,7 +556,7 @@ export const MissionAndValuesSection = () => {
 export const StatsSection = () => {
   return (
     <SectionWrapper>
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+      <ul className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-6 ">
         {stats.map((stat) => (
           <StatCard key={stat.id} stat={stat} />
         ))}
@@ -615,16 +611,12 @@ export const stats = [
 
 const StatCard = ({ stat }: { stat: StatType }) => {
   return (
-    <li className="col-span-1 md:col-span-1 lg:col-span-1 rounded-lg bg-gradient-to-r from-[#101010] to-[#191919] border-y border-[#292929]">
-      <div className="relative w-full h-64 overflow-hidden rounded-lg shadow-lg">
-        <div className="absolute inset-0 flex flex-col gap-4 items-center justify-center">
-          <p className="text-4xl md:text-5xl lg:text-6xl tracking-normal text-start text-white leading-7 font-semibold">
-            {stat.statValue}
-          </p>
-          <p className="normal-case text-right text-md md:text-md text-gray-300 leading-2 font-normal">
-            {stat.statDescription}
-          </p>
-        </div>
+    <li className="bg-gradient-to-r from-[#101010] to-[#191919] border-y border-[#292929] rounded-lg shadow-lg">
+      <div className="w-full flex flex-col gap-4 items-center justify-center">
+        <p className="text-6xl md:text-5xl lg:text-6xl tracking-normal text-start text-white leading-7 font-semibold">
+          {stat.statValue}
+        </p>
+        <p className="text-normal text-center">{stat.statDescription}</p>
       </div>
     </li>
   );
@@ -655,9 +647,7 @@ const GalleryCard = () => {
 export function TestimonialCardsSection() {
   return (
     <SectionWrapper>
-      <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
-        Read Our Success Stories
-      </h1>
+      <h2 className="h2">Read Our Success Stories</h2>
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {testimonials.slice(0, 2).map((testimonial) => (
           <TestimonialCard key={testimonial.id} testimonial={testimonial} />
@@ -714,30 +704,29 @@ export function TestimonialCard({
 export function SeeProgramsSection() {
   return (
     <SectionWrapper>
-      <div className="relative w-full h-64 flex flex-row justify-between rounded-lg shadow-lg">
+      <div className="relative w-full flex flex-row justify-between rounded-lg shadow-lg">
         <Image
           src={TestImage}
           layout="fill"
-          objectFit="cover"
-          className="absolute top-0 left-0 w-full h-full opacity-50"
+          className="object-cover w-full h-full opacity-50"
           alt=""
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#31C57D] to-[#161616] opacity-30 rounded-lg"></div>
-        <div className="w-full flex flex-row gap-36 items-center justify-between z-30 px-12 py-6">
+        <div className="w-full flex flex-col md:flex-row gap-36 items-center justify-between z-30 px-12 py-12">
           <div className="flex flex-col">
-            <p className="text-2xl md:text-3xl lg:text-4xl tracking-normal text-start text-white leading-7 font-semibold">
-              Start Your Free 7-Day Trial Program Here
-            </p>
-            <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal pt-4">
-              Analyze patient feedback. Optimize workflows to deliver a superb
-              patient experience. Stop your never-ending battle with patient
-              retention.
-            </p>
-          </div>
-          <div className="w-1/3">
-            <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
-              Read More Stories
-            </button>
+            <div className="lg:flex lg:flex-col">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl tracking-normal text-center text-white leading-7 font-semibold">
+                Start Your Free 7-Day Trial Program Here
+              </h2>
+              <p className="text-subheading text-center pt-8">
+                Analyze patient feedback. Optimize workflows to deliver a superb
+                patient experience. Stop your never-ending battle with patient
+                retention.
+              </p>
+            </div>
+            <div className="flex justify-center items-center pt-4">
+              <button className="w-fit btn-primary">Read More Stories</button>
+            </div>
           </div>
         </div>
       </div>
