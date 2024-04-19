@@ -611,9 +611,9 @@ export const stats = [
 
 const StatCard = ({ stat }: { stat: StatType }) => {
   return (
-    <li className="bg-gradient-to-r from-[#101010] to-[#191919] border-y border-[#292929] rounded-lg shadow-lg">
+    <li className="bg-gradient-to-r from-[#101010] to-[#191919] border-y border-[#292929] lg:py-16 lg:px-8 rounded-lg shadow-lg">
       <div className="w-full flex flex-col gap-4 items-center justify-center">
-        <p className="text-6xl md:text-5xl lg:text-6xl tracking-normal text-start text-white leading-7 font-semibold">
+        <p className="text-6xl md:text-5xl lg:text-5xl xl:text-6xl tracking-normal text-start text-white leading-7 font-semibold">
           {stat.statValue}
         </p>
         <p className="text-normal text-center">{stat.statDescription}</p>
