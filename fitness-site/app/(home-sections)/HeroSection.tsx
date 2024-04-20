@@ -21,16 +21,26 @@ export default function HeroSection() {
           Unleash your strength, transform your body, conquer your fitness
           journey, transform your body, conquer your fitness journey
         </p>
-        <div className="w-full flex sm:flex-col lg:flex-row sm:items-start lg:items-center xs:justify-center sm:justify-start lg:justify-start gap-4 md:gap-4 lg:gap-6 pt-6 lg-pt-4">
-          <Link href={"/programs"} className="btn-primary">
+        <div className="sm:hidden relative flex items-center justify-center group h-full w-full rounded-xl cursor-pointer">
+          <Image
+            priority
+            src={AboutUsHeroImage}
+            alt="alt"
+            fill={true}
+            // fill={true} slika s ovim propertijem ocito zauzima mjesta koliko mu flexbox sirina i njegova visina dopustaju
+            className="object-cover rounded-md"
+          />
+        </div>
+        <div className="w-full flex sm:flex-col lg:flex-row sm:items-start lg:items-center justify-start xs:justify-start sm:justify-start lg:justify-start gap-4 md:gap-4 lg:gap-6 pt-6 lg-pt-4">
+          <Link href={"/programs"} className="btn-primary w-fit sm:w-full">
             See Programs
           </Link>
-          <Link href={"/contact"} className="btn-secondary">
+          <Link href={"/contact"} className="btn-secondary w-fit sm:w-full">
             Contact Us
           </Link>
         </div>
       </div>
-      <div className="relative flex items-center justify-center group h-full w-full rounded-xl cursor-pointer">
+      <div className="relative hidden sm:flex items-center justify-center group h-full w-full rounded-xl cursor-pointer">
         <Image
           priority
           src={AboutUsHeroImage}

@@ -210,25 +210,25 @@ export function LegacyOfCourageSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 pt-8">
             <div className="flex items-center gap-4">
               <TestIcon height="40px" width="40px" iconFill="#31C57D" />
-              <p className="text-md md:text-md text-gray-300 leading-2 uppercase font-semibold">
+              <p className="text-sm md:text-md text-gray-300 leading-2 uppercase font-semibold">
                 Mind Over Body
               </p>
             </div>
             <div className="flex items-center gap-4">
               <TestIconTwo height="40px" width="40px" iconFill="#31C57D" />
-              <p className="text-md md:text-md text-gray-300 leading-2 uppercase font-semibold">
+              <p className="text-sm md:text-md text-gray-300 leading-2 uppercase font-semibold">
                 Healing Factor Benefits
               </p>
             </div>
             <div className="flex items-center gap-4">
               <TestIcon height="40px" width="40px" iconFill="#31C57D" />
-              <p className="text-md md:text-md text-gray-300 leading-2 uppercase font-semibold">
+              <p className="text-sm md:text-md text-gray-300 leading-2 uppercase font-semibold">
                 Mind Over Body
               </p>
             </div>
             <div className="flex items-center gap-4">
               <TestIcon height="40px" width="40px" iconFill="#31C57D" />
-              <p className="text-md md:text-md text-gray-300 leading-2 uppercase font-semibold">
+              <p className="text-sm md:text-md text-gray-300 leading-2 uppercase font-semibold">
                 Mind Over Body
               </p>
             </div>
