@@ -89,15 +89,15 @@ export function SecondSection() {
         {secondSectionArray.map((card) => (
           <div
             key={card.id}
-            className="w-full shadow-lg shadow-[#141414] group flex flex-col gap-4 py-6 px-16 rounded-lg bg-gradient-to-r from-[#101010] to-[#191919] border-y border-[#292929]"
+            className="w-full shadow-lg shadow-[#141414] group flex flex-col gap-4 py-4 px-8 rounded-lg bg-gradient-to-r from-[#101010] to-[#191919] border-y border-[#292929]"
           >
-            <p className="order-0 w-full text-xl md:text-xl lg:text-3xl tracking-normal text-center text-white leading-7 font-semibold">
-              <span className="bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] italic text-7xl tracking-normal text-center font-semibold">
+            <p className="order-0 w-full text-lg md:text-xl lg:text-3xl tracking-normal text-start text-white leading-7 font-semibold">
+              <span className="bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] italic text-5xl sm:text-6xl tracking-normal text-center font-semibold">
                 {card.year}
               </span>{" "}
             </p>
-            <h3 className="h3 text-center">{card.title}</h3>
-            <p className="text-normal text-center">{card.description}</p>
+            <h3 className="h3 text-start">{card.title}</h3>
+            <p className="text-normal text-start">{card.description}</p>
           </div>
         ))}
       </div>
@@ -611,9 +611,9 @@ export const stats = [
 
 const StatCard = ({ stat }: { stat: StatType }) => {
   return (
-    <li className="bg-gradient-to-r from-[#101010] to-[#191919] border-y border-[#292929] lg:py-16 lg:px-8 rounded-lg shadow-lg">
+    <li className="bg-gradient-to-r from-[#101010] to-[#191919] border-y border-[#292929] py-4 px-2 xs:py-6 xs:px-4 sm:py-8 sm:px-6 md:py-10 md:px-8 lg:py-14 lg:px-12 rounded-lg shadow-lg">
       <div className="w-full flex flex-col gap-4 items-center justify-center">
-        <p className="text-6xl md:text-5xl lg:text-5xl xl:text-6xl tracking-normal text-start text-white leading-7 font-semibold">
+        <p className="text-3xl xs:text-5xl sm:text-4xl md:text-5xl xl:text-6xl tracking-normal text-start text-white leading-7 font-semibold">
           {stat.statValue}
         </p>
         <p className="text-normal text-center">{stat.statDescription}</p>
