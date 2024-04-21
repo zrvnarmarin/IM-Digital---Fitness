@@ -63,7 +63,7 @@ const config: Config = {
             {},
         },
         ".text-above-heading": {
-          "@apply uppercase text-xs sm:text-sm lg:text-base bg-gradient-to-r bg-clip-text text-transparent from-[#1D7349] to-[#31C57D] tracking-widest text-center sm:text-start md:text-start font-medium":
+          "@apply uppercase text-xs sm:text-sm lg:text-base text-[#31C57D] tracking-widest text-center sm:text-start md:text-start font-medium":
             {},
         },
       });

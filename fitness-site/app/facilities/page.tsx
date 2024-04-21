@@ -2,7 +2,7 @@ import SectionWrapper from "../components/wrappers/SectionWrapper";
 import { StaticImageData } from "next/image";
 import Link from "next/link";
 import Image from "next/image";
-import TestImage from "../../public/HeroTestTest.jpg";
+import TestImage from "../../public/gym.avif";
 
 export default function Page() {
   return (
@@ -75,59 +75,6 @@ const facilities: FacilityType[] = [
     cardImageSrc: TestImage,
   },
 ];
-
-// export function FacilityCard({ facility }: { facility: FacilityType }) {
-//   return (
-//     <Link
-//       href={`/facilities/${facility.href}`}
-//       key={facility.id}
-//       className="flex flex-col items-center rounded-lg p-10 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]"
-//     >
-//       <div className="grid grid-cols-2 gap-6">
-//         <Image
-//           className="object-cover rounded-lg w-full h-300 transform group-hover:scale-105 duration-300"
-//           src={facility.cardImageSrc}
-//           alt="Card Background"
-//           width={300}
-//           height={300}
-//         />
-//         <Image
-//           className="object-cover rounded-lg w-full h-300 transform group-hover:scale-105 duration-300"
-//           src={facility.cardImageSrc}
-//           alt="Card Background"
-//           width={300}
-//           height={300}
-//         />
-//       </div>
-
-//       <div className="w-full flex flex-row items-center justify-between pt-6">
-//         <h3 className="w-full h3 capitalize">{facility.facilityName}</h3>
-//         <div className="flex flex-row items-center justify-between gap-4">
-//           <button className="bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] text-gray-300 px-4 py-3 rounded-lg text-xl font-bold">
-//             &larr;
-//           </button>
-//           <div className="flex flex-row justify-center gap-2">
-//             <span className="w-8 h-1 rounded-md bg-[#31C57D]" />
-//             <span className="w-8 h-1 rounded-md bg-[#31C57D]" />
-//             <span className="w-8 h-1 rounded-md bg-[#31C57D]" />
-//           </div>
-//           <button className="bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] text-gray-300 px-4 py-3 rounded-lg text-xl font-bold">
-//             &rarr;
-//           </button>
-//         </div>
-//       </div>
-
-//       <p className="w-full text-normal pt-4">{facility.description}</p>
-
-//       {/* TO DO: check with designer for the styling and is it really neccessary */}
-//       {/* <div className="w-full flex items-center justify-center">
-//         <button className="mt-6 w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white">
-//           Discover More
-//         </button>
-//       </div> */}
-//     </Link>
-//   );
-// }
 
 export const FacilityCard = ({ facility }: { facility: FacilityType }) => {
   return (

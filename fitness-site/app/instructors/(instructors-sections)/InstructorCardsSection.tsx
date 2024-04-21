@@ -72,8 +72,8 @@ export const InstructorCard = ({
           </div>
           <div className="flex flex-row gap-4 items-center justify-between">
             <div className="w-full flex flex-row items-center justify-end gap-4">
-              <Link 
-                href={`/instructors/${instructor.href}/availability`} 
+              <Link
+                href={`/instructors/${instructor.href}/availability`}
                 className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white"
               >
                 Check Availability

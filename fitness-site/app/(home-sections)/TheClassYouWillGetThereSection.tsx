@@ -7,7 +7,7 @@ import SectionWrapper from "../components/wrappers/SectionWrapper";
 import SwimmingImage from "../../public/SwimmingFacilityCard.jpg";
 import SpaImage from "../../public/WelnessAndSpaCard.jpg";
 import StudiosImage from "../../public/StudiosFacilityCard.jpg";
-import GymImage from "../../public/gymImage.jpg";
+import GymImage from "../../public/heroSectionDarkBackground.png";
 import { TestIcon } from "@/public/Icons";
 
 export default function TheClassYouWillGetThereSection() {

@@ -35,10 +35,10 @@ export default function StartTheProgramSection() {
             Get unlimited access to all of our expert training plans, exclusive
             savings in our store, and even free shipping!*
           </p>
-          <div className="w-full flex flex-col md:flex-row justify-center gap-6">
-            <div className="rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+          <div className="w-full flex flex-col md:flex-row justify-center gap-6 bg-red-400">
+            <div className="w-full rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
               {/* Kartica */}
-              <div className="flex flex-col gap-2 items-center text-white">
+              <div className="w-full flex flex-col gap-2 items-center text-white">
                 <h2 className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-center text-white leading-7 font-bold">
                   Monthly
                 </h2>
@@ -51,7 +51,7 @@ export default function StartTheProgramSection() {
                 <p className="text-normal">Try FREE and cancel anytime.</p>
               </div>
             </div>
-            <div className="rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+            <div className="w-full rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
               {/* Kartica */}
               <div className="flex flex-col gap-2 items-center text-white">
                 <h2 className="w-full text-xl md:text-xl lg:text-3xl tracking-normal text-center text-white leading-7 font-bold">

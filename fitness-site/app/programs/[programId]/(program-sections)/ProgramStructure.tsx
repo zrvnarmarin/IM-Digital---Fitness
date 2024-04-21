@@ -11,9 +11,7 @@ export default function ProgramStructure() {
         Throughout the program, participants will track their progress using
         performance metrics such as strength gains, muscle measurements, and
         body composition changes. Regular assessments and check-ins with our
-        trainers will ensure that participants stay on track, make necessary
-        adjustments to their workouts, and continue progressing toward their
-        goals
+        trainers
       </p>
       <ul className="grid grid-cols-1 lg:grid-cols-1 gap-6 pt-12">
         {trainingPhases.map((trainingPhase, index) => (
