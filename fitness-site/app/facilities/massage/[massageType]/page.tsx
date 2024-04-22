@@ -120,9 +120,7 @@ export function PricingSection() {
 export function FaqSection() {
   return (
     <SectionWrapper>
-      <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
-        Frequently Asked Questions
-      </h1>
+      <h2 className="w-full h2">Frequently Asked Questions</h2>
       <Accordion faqArray={massageFaqArray} />
     </SectionWrapper>
   );

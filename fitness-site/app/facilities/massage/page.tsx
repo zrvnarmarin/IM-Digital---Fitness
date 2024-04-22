@@ -6,6 +6,8 @@ import { FAQType } from "@/app/types";
 import { Accordion } from "@/app/(home-sections)/FAQSection";
 import Link from "next/link";
 
+// look this: https://figura-fit.hr/miofascijalna-relaksacija/
+
 export default function Page() {
   return (
     <main className="flex flex-col items-center bg-[#111317]">
@@ -55,137 +57,135 @@ export function AboutMassage() {
 export function MassageBenefitsTable() {
   return (
     <SectionWrapper>
-      <div className="flex flex-col gap-6">
-        <h2 className="h2 text-center">Something about massage</h2>
-        <p className="text-subheading text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
-          eaque.
-        </p>
-
-        <div>
-          <div className="grid grid-cols-5">
-            <div className="flex items-center justify-center text-md text-gray-300 leading-2 uppercase font-semibold p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              Tip tretmana/učinak
-            </div>
-            <div className="flex items-center justify-center text-md text-gray-300 leading-2 uppercase font-semibold p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              Klasicna masaža
-            </div>
-            <div className="flex items-center justify-center text-md text-gray-300 leading-2 uppercase font-semibold p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              Relaksacijska masaža
-            </div>
-            <div className="flex items-center justify-center text-md text-gray-300 leading-2 uppercase font-semibold p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              Sportska masaža
-            </div>
-            <div className="flex items-center justify-center text-md text-gray-300 leading-2 uppercase font-semibold p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              Medicinska masaža
-            </div>
-          </div>
-
-          <div className="grid grid-cols-5">
-            <div className="flex items-center justify-center text-md text-gray-300 leading-2 uppercase font-semibold p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              Antistresni učinak
-            </div>
-            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                ✓
-              </span>
-            </div>
-            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                ✓
-              </span>
-            </div>
-            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                ✓
-              </span>
-            </div>
-            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                ✓
-              </span>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-5">
-            <div className="flex items-center justify-center text-md text-gray-300 leading-2 uppercase font-semibold p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              Smanjenje boli
-            </div>
-            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                ✓
-              </span>
-            </div>
-            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                ✓
-              </span>
-            </div>
-            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                ✓
-              </span>
-            </div>
-            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                ✓
-              </span>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-5">
-            <div className="flex items-center justify-center text-md text-gray-300 leading-2 uppercase font-semibold p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              Omamljenost nakon tretmana
-            </div>
-            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                ✓
-              </span>
-            </div>
-            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                ✓
-              </span>
-            </div>
-            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                ✓
-              </span>
-            </div>
-            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                ✓
-              </span>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-5">
-            <div className="flex items-center justify-center text-md text-gray-300 leading-2 uppercase font-semibold p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              Povećanje pokretljivosti
-            </div>
-            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                ✓
-              </span>
-            </div>
-            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                ✓
-              </span>
-            </div>
-            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                ✓
-              </span>
-            </div>
-            <div className="flex items-center justify-center p-6 bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-              <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                ✓
-              </span>
-            </div>
-          </div>
-        </div>
+      return (
+      <div className="overflow-x-auto">
+        <table className="table-auto min-w-full divide-y divide-gray-200">
+          <thead>
+            <tr>
+              <th className="px-6 py-3 bg-gradient-to-r from-[#101010] to-[#161616] text-center text-md text-gray-300 leading-2 uppercase font-semibold border border-[#292929]">
+                Tip tretmana/učinak
+              </th>
+              <th className="px-6 py-3 bg-gradient-to-r from-[#101010] to-[#161616] text-center text-md text-gray-300 leading-2 uppercase font-semibold border border-[#292929]">
+                Klasicna masaža
+              </th>
+              <th className="px-6 py-3 bg-gradient-to-r from-[#101010] to-[#161616] text-center text-md text-gray-300 leading-2 uppercase font-semibold border border-[#292929]">
+                Relaksacijska masaža
+              </th>
+              <th className="px-6 py-3 bg-gradient-to-r from-[#101010] to-[#161616] text-center text-md text-gray-300 leading-2 uppercase font-semibold border border-[#292929]">
+                Sportska masaža
+              </th>
+              <th className="px-6 py-3 bg-gradient-to-r from-[#101010] to-[#161616] text-center text-md text-gray-300 leading-2 uppercase font-semibold border border-[#292929]">
+                Medicinska masaža
+              </th>
+            </tr>
+          </thead>
+          <tbody className="bg-white divide-y divide-gray-200">
+            <tr>
+              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] text-md text-gray-300 leading-2 uppercase font-semibold border border-[#292929]">
+                Antistresni učinak
+              </td>
+              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
+                  ✓
+                </span>
+              </td>
+              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
+                  ✓
+                </span>
+              </td>
+              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
+                  ✓
+                </span>
+              </td>
+              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
+                  ✓
+                </span>
+              </td>
+            </tr>
+            {/* Other rows */}
+            <tr>
+              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] text-md text-gray-300 leading-2 uppercase font-semibold border border-[#292929]">
+                Smanjenje boli
+              </td>
+              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
+                  ✓
+                </span>
+              </td>
+              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
+                  ✓
+                </span>
+              </td>
+              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
+                  ✓
+                </span>
+              </td>
+              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
+                  ✓
+                </span>
+              </td>
+            </tr>
+            {/* Add other rows similarly */}
+            <tr>
+              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] text-md text-gray-300 leading-2 uppercase font-semibold border border-[#292929]">
+                Povećanje pokreltjivosti
+              </td>
+              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
+                  ✓
+                </span>
+              </td>
+              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
+                  ✓
+                </span>
+              </td>
+              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
+                  ✓
+                </span>
+              </td>
+              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
+                  ✓
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] text-md text-gray-300 leading-2 uppercase font-semibold border border-[#292929]">
+                Omamljenost nakon tretmana
+              </td>
+              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
+                  ✓
+                </span>
+              </td>
+              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
+                  ✓
+                </span>
+              </td>
+              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
+                  ✓
+                </span>
+              </td>
+              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
+                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
+                  ✓
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+      );
     </SectionWrapper>
   );
 }
@@ -193,6 +193,12 @@ export function MassageBenefitsTable() {
 export function MassageTypeCardsSection() {
   return (
     <SectionWrapper>
+      <div className="flex flex-col gap-1">
+        <h2 className="w-full h2">Massages</h2>
+        <p className="text-subheading">
+          Lorem ipsum dolor sit opsidium lorem dolor
+        </p>
+      </div>
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {massageTypes.map((massageType) => (
           <WelnessServiceCard key={massageType.id} massageType={massageType} />
