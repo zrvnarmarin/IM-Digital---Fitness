@@ -485,3 +485,16 @@ export const SwimmingFacilityIcon = () => {
     </svg>
   );
 };
+
+export const DropdownArrowIcon = () => {
+  return (
+    <svg
+      className="w-3 h-3 fill-white"
+      xmlns="http://www.w3.org/2000/svg"
+      width="4"
+      height="4"
+    >
+      <path d="M10 2.586 11.414 4 6 9.414.586 4 2 2.586l4 4z" />
+    </svg>
+  );
+};

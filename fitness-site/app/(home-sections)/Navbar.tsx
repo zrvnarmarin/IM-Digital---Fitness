@@ -3,19 +3,16 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import { UseScrollPosition } from "../hooks/UseScrollPosition";
 import LogoWhite from "../../public/logo-white.png";
+import { DropdownArrowIcon } from "@/public/Icons";
 
 export default function Navbar({
-  isSideBarOpen,
   onOpenSidebar,
 }: {
   isSideBarOpen: boolean;
   onOpenSidebar: () => void;
 }) {
-  const pathname = usePathname();
-
   const scrolPosition = UseScrollPosition();
 
   return (
@@ -24,15 +21,18 @@ export default function Navbar({
     >
       <nav className="flex flex-row justify-between items-center py-2 lg:bg-inherit px-8 md:px-14 lg:px-20 xl:px-24 2xl:px-32">
         <LogoImage width={80} height={80} />
-        <ul className="hidden lg:flex items-center justify-between gap-8">
+        <ul className="relative hidden lg:flex items-center justify-between gap-8">
           {navbarLinks.map((navbarLink) => (
-            <div>
+            <>
               {navbarLink.dropdown === true ? (
-                <DropDwonTest />
+                <DropdownLink
+                  name={navbarLink.name}
+                  dropdownItems={navbarLink.dropdownItems}
+                />
               ) : (
                 <NavbarLink key={navbarLink.name} navbarLink={navbarLink} />
               )}
-            </div>
+            </>
           ))}
         </ul>
         <button
@@ -106,68 +106,90 @@ const navbarLinks = [
     link: "/about",
     dropdown: true,
     dropdownItems: [
-      <Link href={"/instructors"} />,
-      <Link href={"/testimonials"} />,
+      {
+        name: "Instructors",
+        link: "/instructor",
+      },
+      {
+        name: "testimonials",
+        link: "/testimonials",
+      },
     ],
   },
-
-  // {
-  //   name: "Testimonials",
-  //   link: "/about/testimonials",
-  // },
   {
     name: "Facilities",
     link: "/facilities",
+    dropdown: false,
   },
 ];
 
-export function DropDwonTest() {
+export function DropdownLink({
+  name,
+  dropdownItems,
+}: {
+  name: string;
+  dropdownItems: string[];
+}) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
-      <a className="normal-case text-md text-white leading-2 font-normal" href="#0">
-        About
+    <div
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+      className="flex items-center gap-1.5"
+    >
+      <a
+        className="normal-case text-md text-white leading-2 font-normal"
+        href="#0"
+      >
+        {name}
       </a>
       <button
-        className="shrink-0 p-1"
+        className="flex items-center"
         aria-expanded={open}
         onClick={() => setOpen(!open)}
       >
-        <span className="sr-only">Show submenu for "Flyout Menu"</span>
-        <svg
-          className="w-3 h-3 fill-slate-500"
-          xmlns="http://www.w3.org/2000/svg"
-          width="12"
-          height="12"
-        >
-          <path d="M10 2.586 11.414 4 6 9.414.586 4 2 2.586l4 4z" />
-        </svg>
+        <DropdownArrowIcon />
       </button>
       {/* 2nd level menu */}
       <ul
-        className={`origin-top-right absolute top-full left-1/2 -translate-x-1/2 min-w-[240px] bg-white border border-slate-200 p-2 rounded-lg shadow-xl ${!open && "hidden"}`}
+        className={`origin-top-right absolute top-full left-1/2 -translate-x-1/2 min-w-[240px] bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] p-2 rounded-lg shadow-xl ${!open && "hidden"}`}
       >
-        <li>
-          <Link
-            className="text-slate-800 hover:bg-slate-50 flex items-center p-2"
-            href="#"
-          >
-            <div className="flex items-center justify-center bg-white border border-slate-200 rounded shadow-sm h-7 w-7 shrink-0 mr-3">
-              <svg
-                className="fill-indigo-500"
-                xmlns="http://www.w3.org/2000/svg"
-                width="9"
-                height="12"
-              >
-                <path d="M8.724.053A.5.5 0 0 0 8.2.1L4.333 3H1.5A1.5 1.5 0 0 0 0 4.5v3A1.5 1.5 0 0 0 1.5 9h2.833L8.2 11.9a.5.5 0 0 0 .8-.4V.5a.5.5 0 0 0-.276-.447Z" />
-              </svg>
-            </div>
-            <span className="whitespace-nowrap">Priority Ratings</span>
-          </Link>
-        </li>
-        {/* Additional <li> elements here */}
+        {dropdownItems.map((item, index) => (
+          <DropdownListElement key={index} name={item.name} link={item.link} />
+        ))}
       </ul>
     </div>
   );
 }
+
+export const DropdownListElement = ({
+  name,
+  link,
+}: {
+  name: string;
+  link: string;
+}) => {
+  return (
+    <li>
+      <Link
+        className="text-slate-800 hover:bg-slate-50 flex items-center p-2"
+        href={link}
+      >
+        <div className="flex items-center justify-center bg-white border border-slate-200 rounded shadow-sm h-7 w-7 shrink-0 mr-3">
+          <svg
+            className="fill-indigo-500"
+            xmlns="http://www.w3.org/2000/svg"
+            width="9"
+            height="12"
+          >
+            <path d="M8.724.053A.5.5 0 0 0 8.2.1L4.333 3H1.5A1.5 1.5 0 0 0 0 4.5v3A1.5 1.5 0 0 0 1.5 9h2.833L8.2 11.9a.5.5 0 0 0 .8-.4V.5a.5.5 0 0 0-.276-.447Z" />
+          </svg>
+        </div>
+        <span className="whitespace-nowrap normal-case text-md text-white leading-2 font-normal">
+          {name}
+        </span>
+      </Link>
+    </li>
+  );
+};
