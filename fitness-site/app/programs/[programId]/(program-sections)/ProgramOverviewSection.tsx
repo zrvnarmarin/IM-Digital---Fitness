@@ -5,7 +5,8 @@ import TestImage from "../../../../public/HeroTestTest.jpg";
 import TimeImage from "../../../../public/time-svgrepo-com (1).png";
 import "../../../../public/styles/paralelogram.css";
 
-//TO DO: sav style dobar do intensity sekcije, nakon tog treba izmjeniti i razmisliti za drugi dizajn; i dalje duration i button prikati
+// za ikone:
+//see this: https://preview.themeforest.net/item/motivemuscle-fitness-gym-elementor-template-kit/full_screen_preview/49981420?_ga=2.131681423.102389569.1713875904-1433920345.1700008565&_gac=1.88464745.1713436734.Cj0KCQjwiYOxBhC5ARIsAIvdH52T1HqFDV9iTGGrL0CH9TVAifjo5w73Ne4-b3xAHCCMeBKENghB1TAaAm7pEALw_wcB
 export default function ProgramOverviewSection() {
   return (
     <SectionWrapper>

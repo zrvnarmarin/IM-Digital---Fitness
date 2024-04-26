@@ -36,11 +36,11 @@ const config: Config = {
       addBase({});
       addComponents({
         ".h1": {
-          "@apply capitalize text-4xl md:text-5xl lg:text-7xl tracking-normal text-center sm:text-start md:text-start text-white leading-10 font-semibold":
+          "@apply capitalize text-4xl md:text-5xl lg:text-7xl tracking-tight text-center sm:text-start md:text-start text-white leading-10 font-semibold":
             {},
         },
         ".h2": {
-          "@apply uppercase text-gray-300 text-2xl md:text-3xl tracking-tight text-start font-bold":
+          "@apply text-start text-2xl md:text-3xl lg:text-4xl text-gray-200 font-semibold lg:font-bold tracking-tight uppercase":
             {},
         },
         ".h3": {
@@ -59,7 +59,7 @@ const config: Config = {
             {},
         },
         ".btn-secondary": {
-          "@apply w-full lg:w-fit text-center bg-[#101010] border-2 border-[#31C57D] rounded-xl py-2 px-6 md:py-3 md:px-7 cursor-pointer text-base text-white font-normal":
+          "@apply w-full lg:w-fit text-center bg-[#000000] border-2 border-[#31C57D] rounded-xl py-2 px-6 md:py-3 md:px-7 cursor-pointer text-base text-white font-normal":
             {},
         },
         ".text-above-heading": {

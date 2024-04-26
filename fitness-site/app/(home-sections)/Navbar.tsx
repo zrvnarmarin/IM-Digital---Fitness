@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -26,7 +26,13 @@ export default function Navbar({
         <LogoImage width={80} height={80} />
         <ul className="hidden lg:flex items-center justify-between gap-8">
           {navbarLinks.map((navbarLink) => (
-            <NavbarLink key={navbarLink.name} navbarLink={navbarLink} />
+            <div>
+              {navbarLink.dropdown === true ? (
+                <DropDwonTest />
+              ) : (
+                <NavbarLink key={navbarLink.name} navbarLink={navbarLink} />
+              )}
+            </div>
           ))}
         </ul>
         <button
@@ -83,18 +89,26 @@ const navbarLinks = [
   {
     name: "Programs",
     link: "/programs",
+    dropdown: false,
   },
   {
     name: "Services",
     link: "/services",
+    dropdown: false,
   },
   {
     name: "Instructors",
     link: "/instructors",
+    dropdown: false,
   },
   {
     name: "About",
     link: "/about",
+    dropdown: true,
+    dropdownItems: [
+      <Link href={"/instructors"} />,
+      <Link href={"/testimonials"} />,
+    ],
   },
 
   // {
@@ -106,3 +120,54 @@ const navbarLinks = [
     link: "/facilities",
   },
 ];
+
+export function DropDwonTest() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
+      <a className="normal-case text-md text-white leading-2 font-normal" href="#0">
+        About
+      </a>
+      <button
+        className="shrink-0 p-1"
+        aria-expanded={open}
+        onClick={() => setOpen(!open)}
+      >
+        <span className="sr-only">Show submenu for "Flyout Menu"</span>
+        <svg
+          className="w-3 h-3 fill-slate-500"
+          xmlns="http://www.w3.org/2000/svg"
+          width="12"
+          height="12"
+        >
+          <path d="M10 2.586 11.414 4 6 9.414.586 4 2 2.586l4 4z" />
+        </svg>
+      </button>
+      {/* 2nd level menu */}
+      <ul
+        className={`origin-top-right absolute top-full left-1/2 -translate-x-1/2 min-w-[240px] bg-white border border-slate-200 p-2 rounded-lg shadow-xl ${!open && "hidden"}`}
+      >
+        <li>
+          <Link
+            className="text-slate-800 hover:bg-slate-50 flex items-center p-2"
+            href="#"
+          >
+            <div className="flex items-center justify-center bg-white border border-slate-200 rounded shadow-sm h-7 w-7 shrink-0 mr-3">
+              <svg
+                className="fill-indigo-500"
+                xmlns="http://www.w3.org/2000/svg"
+                width="9"
+                height="12"
+              >
+                <path d="M8.724.053A.5.5 0 0 0 8.2.1L4.333 3H1.5A1.5 1.5 0 0 0 0 4.5v3A1.5 1.5 0 0 0 1.5 9h2.833L8.2 11.9a.5.5 0 0 0 .8-.4V.5a.5.5 0 0 0-.276-.447Z" />
+              </svg>
+            </div>
+            <span className="whitespace-nowrap">Priority Ratings</span>
+          </Link>
+        </li>
+        {/* Additional <li> elements here */}
+      </ul>
+    </div>
+  );
+}
