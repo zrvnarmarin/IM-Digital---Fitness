@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { UseScrollPosition } from "../hooks/UseScrollPosition";
 import LogoWhite from "../../public/logo-white.png";
-import { DropdownArrowIcon } from "@/public/Icons";
+import { TestIconTwo } from "@/public/Icons";
 
 export default function Navbar({
   onOpenSidebar,
@@ -108,10 +108,10 @@ const navbarLinks = [
     dropdownItems: [
       {
         name: "Instructors",
-        link: "/instructor",
+        link: "/instructors",
       },
       {
-        name: "testimonials",
+        name: "Testimonials",
         link: "/testimonials",
       },
     ],
@@ -149,21 +149,28 @@ export function DropdownLink({
         aria-expanded={open}
         onClick={() => setOpen(!open)}
       >
-        <DropdownArrowIcon />
+        <svg
+          className="w-3 h-3 fill-white"
+          xmlns="http://www.w3.org/2000/svg"
+          width="4"
+          height="4"
+        >
+          <path d="M10 2.586 11.414 4 6 9.414.586 4 2 2.586l4 4z" />
+        </svg>
       </button>
       {/* 2nd level menu */}
       <ul
         className={`origin-top-right absolute top-full left-1/2 -translate-x-1/2 min-w-[240px] bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] p-2 rounded-lg shadow-xl ${!open && "hidden"}`}
       >
         {dropdownItems.map((item, index) => (
-          <DropdownListElement key={index} name={item.name} link={item.link} />
+          <DropdownLinkElement key={index} name={item.name} link={item.link} />
         ))}
       </ul>
     </div>
   );
 }
 
-export const DropdownListElement = ({
+export const DropdownLinkElement = ({
   name,
   link,
 }: {
@@ -173,18 +180,11 @@ export const DropdownListElement = ({
   return (
     <li>
       <Link
-        className="text-slate-800 hover:bg-slate-50 flex items-center p-2"
+        className="text-slate-800 hover:bg-gradient-to-r from-[#1D7349] to-[#31C57D] flex items-center p-2 rounded-md"
         href={link}
       >
-        <div className="flex items-center justify-center bg-white border border-slate-200 rounded shadow-sm h-7 w-7 shrink-0 mr-3">
-          <svg
-            className="fill-indigo-500"
-            xmlns="http://www.w3.org/2000/svg"
-            width="9"
-            height="12"
-          >
-            <path d="M8.724.053A.5.5 0 0 0 8.2.1L4.333 3H1.5A1.5 1.5 0 0 0 0 4.5v3A1.5 1.5 0 0 0 1.5 9h2.833L8.2 11.9a.5.5 0 0 0 .8-.4V.5a.5.5 0 0 0-.276-.447Z" />
-          </svg>
+        <div className="flex items-center justify-center bg-[#31C57D] shadow-sm h-7 w-7 shrink-0 mr-3 p-1 rounded-md">
+          <TestIconTwo iconFill="#ffffff" />
         </div>
         <span className="whitespace-nowrap normal-case text-md text-white leading-2 font-normal">
           {name}
