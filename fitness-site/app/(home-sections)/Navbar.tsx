@@ -17,9 +17,9 @@ export default function Navbar({
 
   return (
     <header
-      className={`w-full fixed z-30 ${scrolPosition > 0 ? "duration-700" : ""}`}
+      className={`w-full fixed z-30  ${scrolPosition > 0 ? "duration-700 bg-[#090909]" : "bg-[#090909]"}`}
     >
-      <nav className="flex flex-row justify-between items-center py-2 lg:bg-inherit px-8 md:px-14 lg:px-20 xl:px-24 2xl:px-32">
+      <nav className="flex flex-row justify-between items-center lg:bg-inherit px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72">
         <LogoImage width={80} height={80} />
         <ul className="relative hidden lg:flex items-center justify-between gap-8">
           {navbarLinks.map((navbarLink) => (
@@ -97,8 +97,8 @@ const navbarLinks = [
     dropdown: false,
   },
   {
-    name: "Instructors",
-    link: "/instructors",
+    name: "Facilities",
+    link: "/facilities",
     dropdown: false,
   },
   {
@@ -115,11 +115,6 @@ const navbarLinks = [
         link: "/testimonials",
       },
     ],
-  },
-  {
-    name: "Facilities",
-    link: "/facilities",
-    dropdown: false,
   },
 ];
 
