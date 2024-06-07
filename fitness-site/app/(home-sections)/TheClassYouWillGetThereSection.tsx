@@ -36,7 +36,7 @@ export default function TheClassYouWillGetThereSection() {
             {facilities.map((card, index) => (
               <li
                 key={card.id}
-                className={`flex flex-col gap-4 rounded-lg p-6 ${activeIndex === index ? "bg-gradient-to-r from-[#101010] to-[#292929]" : "bg-gradient-to-r from-[#101010] to-[#191919]"} border border-[#292929] cursor-pointer`}
+                className={`flex flex-col gap-4 rounded-lg p-6 ${activeIndex === index ? "bg-gradient-to-r from-[#101010] to-[#292929]" : "bg-gradient-to-r from-[#101010] to-[#191919]"}  cursor-pointer`}
                 onClick={() => handleShow(index)}
               >
                 {/* First row */}

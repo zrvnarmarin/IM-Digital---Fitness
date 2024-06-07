@@ -15,7 +15,7 @@ export default function HeroSection() {
         <p className="w-full text-above-heading text-start">
           Learn from the best
         </p>
-        <h1 className="w-full h1 text-start">
+        <h1 className="w-full h1 text-start 2xl:text-8xl">
           Transform Your{" "}
           <span className="font-bold bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] capitalize">
             Body
