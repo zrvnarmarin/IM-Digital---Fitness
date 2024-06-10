@@ -1,5 +1,5 @@
 import React from "react";
-import { DumbellIcon, TestIconTwo } from "@/public/Icons";
+import { TestIconTwo } from "@/public/Icons";
 import SectionWrapper from "../components/wrappers/SectionWrapper";
 
 export default function ExploreOurProgram() {
