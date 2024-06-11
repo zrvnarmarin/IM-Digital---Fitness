@@ -2,7 +2,7 @@ import React from "react";
 import { TestIconTwo } from "@/public/Icons";
 import SectionWrapper from "../components/wrappers/SectionWrapper";
 
-export default function ExploreOurProgram() {
+export default function WhatMakesUsSpecialSection() {
   return (
     <SectionWrapper>
       <h2 className="w-full h2">What Makes Us Special</h2>
@@ -33,13 +33,11 @@ export function ProgramCard({
 }) {
   return (
     <div className="flex flex-col gap-4 rounded-lg p-6 bg-gradient-to-r from-[#101010] to-[#161616] hover:-translate-y-1 duration-500">
-      <div className="flex flex-row md:flex-col gap-4 items-center md:items-start">
-        <div className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-md p-2 w-fit">
-          <TestIconTwo height="1.5m" width="1.5em" iconFill="#ffffff" />
-        </div>
-        <h3 className="h3">{title}</h3>
+      <div className="flex flex-row md:flex-col gap-4 items-center md:items-center">
+        <TestIconTwo height="2.5m" width="2.5em" iconFill="#ffffff" />
+        <h3 className="h3 text-center pt-1">{title}</h3>
       </div>
-      <p className="text-normal">{description}</p>
+      <p className="text-normal text-center pt-2">{description}</p>
     </div>
   );
 }
@@ -60,7 +58,7 @@ const whatMakesUsSpecialPoints = [
   {
     title: "Expert Personal Trainers",
     description:
-      "Our team of certified personal trainers is dedicated to helping you achieve your fitness goals with personalized training plans.",
+      "Our team of personal trainers is dedicated to helping you achieve your goals with personalized training plans.",
   },
   {
     title: "Comprehensive Class Offerings",
@@ -70,6 +68,6 @@ const whatMakesUsSpecialPoints = [
   {
     title: "Community Atmosphere",
     description:
-      "We foster a supportive and motivating community where everyone is encouraged to pursue their health and fitness journey together.",
+      "We foster a supportive and motivating community where everyone is encouraged to pursue their health ",
   },
 ];
