@@ -37,14 +37,6 @@ export default function WhyJoinUs() {
           ))}
         </div>
       </div>
-      <div className="flex w-full md:hidden items-center justify-center">
-        <Link
-          href="/programs"
-          className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-3 px-6 cursor-pointer text-white"
-        >
-          Discover More Programs
-        </Link>
-      </div>
     </SectionWrapper>
   );
 }

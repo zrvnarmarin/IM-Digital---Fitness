@@ -2,10 +2,8 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { UseScrollPosition } from "../hooks/UseScrollPosition";
-import LogoWhite from "../../public/logo-white.png";
 import { TestIconTwo } from "@/public/Icons";
+import { UseScrollPosition } from "../hooks/UseScrollPosition";
 
 export default function Navbar({
   onOpenSidebar,
@@ -13,15 +11,20 @@ export default function Navbar({
   isSideBarOpen: boolean;
   onOpenSidebar: () => void;
 }) {
-  const scrolPosition = UseScrollPosition();
+  const scrollPosition = UseScrollPosition();
 
   return (
     <header
-      className={`w-full fixed z-30  ${scrolPosition > 0 ? "duration-700 bg-[#090909]" : ""}`}
+      className={`w-full fixed z-30 opacity-90 bg-[#000000] border-b border-gray-900 ${scrollPosition > 20 ? "opacity-90 bg-[#090a0c] border-b border-gray-900 backdrop-blur-xl duration-700" : ""} }`}
     >
-      <nav className="flex flex-row justify-between items-center lg:bg-inherit px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72">
-        <LogoImage width={80} height={80} />
-        <ul className="relative hidden lg:flex items-center justify-between gap-8">
+      <nav className="flex flex-row justify-between items-center lg:bg-inherit px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 py-4">
+        <div className="flex gap-2 items-center">
+          <LogoImage />{" "}
+          <span className="text-white text-3xl font-semibold">
+            Fitness<span className="text-[#24d17c] font-medium">Lab</span>
+          </span>
+        </div>
+        <ul className="relative hidden lg:flex items-center justify-between gap-10">
           {navbarLinks.map((navbarLink) => (
             <>
               {navbarLink.dropdown === true ? (
@@ -48,7 +51,7 @@ export default function Navbar({
           </p>
           <Link
             href={"/programs"}
-            className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-xl py-3 px-7 cursor-pointer text-md text-white font-normal"
+            className="w-fit bg-black rounded-[0px] border border-[#31C57D] py-2.5 px-8 cursor-pointer text-md text-white font-normal"
           >
             Sign Up
           </Link>
@@ -60,7 +63,7 @@ export default function Navbar({
 
 const NavbarLink = ({ navbarLink }: { navbarLink: NavbarLink }) => {
   return (
-    <li className="normal-case text-md text-white leading-2 font-normal">
+    <li className="normal-case text-base text-white font-normal">
       <Link href={`${navbarLink.link}`}>{navbarLink.name}</Link>
     </li>
   );
@@ -75,12 +78,23 @@ export const LogoImage = ({
   width,
   height,
 }: {
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
 }) => {
   return (
     <Link href={"/"}>
-      <Image src={LogoWhite} alt="logo" width={width} height={height} />
+      <svg
+        width="35"
+        height="42"
+        viewBox="0 0 35 42"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M24.213 0.000488281L34.7533 0.000488281L24.1045 18.4857C22.5133 15.6612 21.6864 12.4705 21.7055 9.22871C21.7245 5.98691 22.5888 2.80613 24.213 0.000488281ZM34.8092 41.9987L10.5403 0.00223828L0 0.00223828L12.1083 21.0285L0 42.0005H10.5403L17.4038 30.1635L24.2148 42.0005L34.8092 41.9987Z"
+          fill="#24D17C"
+        />
+      </svg>
     </Link>
   );
 };
@@ -133,10 +147,7 @@ export function DropdownLink({
       onMouseLeave={() => setOpen(false)}
       className="flex items-center gap-1.5"
     >
-      <a
-        className="normal-case text-md text-white leading-2 font-normal"
-        href="#0"
-      >
+      <a className="normal-case text-base text-white font-normal" href="#0">
         {name}
       </a>
       <button

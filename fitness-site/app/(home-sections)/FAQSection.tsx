@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import SectionWrapper from "../components/wrappers/SectionWrapper";
-import { ArrowRight } from "./TheClassYouWillGetThereSection";
+import { ArrowRight } from "./Facilities";
 
 export default function FAQSection() {
   return (

@@ -36,7 +36,7 @@ const config: Config = {
       addBase({});
       addComponents({
         ".h1": {
-          "@apply capitalize text-4xl md:text-5xl lg:text-7xl tracking-tight text-center sm:text-start md:text-start text-white leading-10 font-semibold":
+          "@apply capitalize text-4xl md:text-5xl lg:text-[108px] text-center sm:text-start md:text-start text-white leading-none font-semibold":
             {},
         },
         ".h2": {
@@ -51,8 +51,7 @@ const config: Config = {
           "@apply normal-case text-sm md:text-base text-gray-300": {},
         },
         ".text-subheading": {
-          "@apply normal-case text-base text-start lg:text-lg text-gray-300 font-normal":
-            {},
+          "@apply normal-case text-base text-white font-normal": {},
         },
         ".btn-primary": {
           "@apply w-full lg:w-fit text-center bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-xl py-2 px-6 md:py-3 md:px-7 cursor-pointer text-base text-white font-normal":
@@ -63,7 +62,7 @@ const config: Config = {
             {},
         },
         ".text-above-heading": {
-          "@apply uppercase text-xs sm:text-sm lg:text-base text-[#31C57D] tracking-widest text-center sm:text-start md:text-start font-medium":
+          "@apply uppercase text-xs sm:text-sm lg:text-[20px] text-[#24D17C] text-center sm:text-start md:text-start font-medium":
             {},
         },
       });

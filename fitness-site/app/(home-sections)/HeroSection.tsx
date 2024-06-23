@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 
+import "./button.css";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,22 +11,15 @@ import AboutUsHeroImage from "../../public/heroSectionImage.png";
 
 export default function HeroSection() {
   return (
-    <section className="pt-8 sm:pt-10 md:pt-24 lg:pt-28 ppx-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 min-w-screen min-h-screen w-full grid grid-cols-1 sm:grid-cols-2 sm:gap-6 gap-16 bg-[#000000] relative">
+    <section className="pt-8 sm:pt-10 md:pt-24 lg:pt-12 px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 min-w-screen min-h-screen w-full grid grid-cols-1 sm:grid-cols-2 sm:gap-6 gap-16 bg-[#000000] relative">
       <div className="flex flex-col gap-2 items-center justify-center z-20 pt-20 sm:pt-8 md:pt-6 lg:pt-2">
-        <p className="w-full text-above-heading text-start">
-          Learn from the best
+        <p className="w-full text-above-heading text-start text-[#24D17C]">
+          Train with the best
         </p>
-        <h1 className="w-full h1 text-start 2xl:text-8xl">
-          Transform Your{" "}
-          <span className="font-bold bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] capitalize">
-            Body
-          </span>
-          , Shape Your future
+        <h1 className="w-full h1 text-start">
+          Transform Your Body, Shape Your future
         </h1>
-        <p className="text-subheading pt-2 md:pt-4 text-start">
-          Unleash your strength, transform your body, conquer your fitness
-          journey, transform your body
-        </p>
+
         <div className="sm:hidden relative flex items-center justify-center group h-full w-full rounded-xl cursor-pointer">
           <Image
             priority
@@ -36,9 +30,12 @@ export default function HeroSection() {
             className="object-cover rounded-md"
           />
         </div>
-        <div className="w-full flex items-start justify-start">
-          <Link href={"/programs"} className="btn-primary ">
-            See Programs
+        <div className="w-full flex items-start justify-start pt-8">
+          <Link
+            href={"/programs"}
+            className="text-2xl capitalize rounded-[0px] text-[#24D17C] bg-[#222222] border-2 border-gray-200 px-16 py-4"
+          >
+            START YOUR TRANSFORMATION
           </Link>
         </div>
       </div>
