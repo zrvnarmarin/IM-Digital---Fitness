@@ -1,7 +1,7 @@
 import HeroSection from "./(home-sections)/HeroSection";
 import WhatMakesUsSpecialSection from "./(home-sections)/WhatMakesUsSpecialSection";
 import Facilities from "./(home-sections)/Facilities";
-import WhyJoinUs from "./(home-sections)/WhyJoinUs";
+import Programs from "./(home-sections)/Programs";
 import FAQSection from "./(home-sections)/FAQSection";
 import OurTeam from "./(home-sections)/OurTeam";
 import Plans from "./(home-sections)/Plans";
@@ -14,7 +14,7 @@ export default function Home() {
       <HeroSection />
       <WhatMakesUsSpecialSection />
       <Facilities />
-      <WhyJoinUs />
+      <Programs />
       <Plans />
       <OurTeam />
       <SuccessStories />

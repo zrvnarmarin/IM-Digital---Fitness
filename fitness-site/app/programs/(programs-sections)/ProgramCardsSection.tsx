@@ -6,7 +6,7 @@ import { programs } from "@/app/data";
 import TestImage from "../../../public/CardioBlastImage.jpg";
 import { DumbellIcon } from "@/public/Icons";
 import SectionWrapper from "@/app/components/wrappers/SectionWrapper";
-import { ProgramCard } from "@/app/(home-sections)/WhyJoinUs";
+import { ProgramCard } from "@/app/(home-sections)/Programs";
 
 export function ProgramCardsSection() {
   return (

@@ -53,7 +53,7 @@ export default function TheClassYouWillGetThereSection() {
                 </div>
 
                 {/* Third row */}
-                <div className="group-hover:bg-red-400 flex items-center justify-end ml-auto">
+                <div className="flex items-center justify-end ml-auto">
                   <ArrowRight />
                 </div>
               </li>

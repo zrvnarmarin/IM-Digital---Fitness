@@ -35,4 +35,5 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-boje: //#1F2125
+boje: #567899
+wrapper around icon - <div className="p-2 rounded-full bg-gradient-to-r from-[#1D7349] to-[#31C57D]">
