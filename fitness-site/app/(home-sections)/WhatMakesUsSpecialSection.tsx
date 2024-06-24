@@ -1,5 +1,4 @@
 import React from "react";
-import { TestIconTwo } from "@/public/Icons";
 import SectionWrapper from "../components/wrappers/SectionWrapper";
 import { uniqueSellingPoints } from "../data/uniqueSellingPoints";
 

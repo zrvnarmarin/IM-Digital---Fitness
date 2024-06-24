@@ -2,13 +2,12 @@ import React from "react";
 import Image from "next/image";
 import SectionWrapper from "@/app/components/wrappers/SectionWrapper";
 import SwimmingImage from "../../../public/SwimmingFacilityCard.jpg";
-import { DumbellIcon } from "@/public/Icons";
 import { TestIconTwo } from "@/public/Icons";
 import { Accordion } from "@/app/(home-sections)/FAQSection";
 import TestImage from "../../../public/HeroTestTest.jpg";
 import Link from "next/link";
 import { StatType } from "@/app/about/page";
-import TheClassYouWillGetThereSection from "@/app/(home-sections)/TheClassYouWillGetThereSection";
+import WhatMakesUsSpecialSection from "@/app/(home-sections)/WhatMakesUsSpecialSection";
 
 export default function Page() {
   return (
@@ -17,7 +16,7 @@ export default function Page() {
       <SwimmingBenefits />
       <LongParagraphsSection />
       {/* This section must be about different types of lessons here (kids, adults, special needs people etc.; title types of lessons) */}
-      <TheClassYouWillGetThereSection />
+      <WhatMakesUsSpecialSection />
       <AboutSwimming />
       <SwimmingSchedule />
       <StatsSection />

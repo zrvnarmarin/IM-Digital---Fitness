@@ -84,20 +84,9 @@ export const TrainerCard = ({ trainer }: { trainer: TrainerType }) => {
         </div>
 
         {/* On hover image */}
-        <div className="absolute top-0 bottom-0 right-0 p-4 transition duration-300 ease-in-out bg-black/10 text-white opacity-0 group-hover:opacity-100">
-          <div className="flex flex-col gap-4 h-full justify-start pt-4 ">
-            {/* <span>
-              <Image src={ShareIcon} width={20} height={20} alt="share_icon" />
-            </span> */}
-            <button className="w-full pt-4 text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
-              fb
-            </button>
-            <span className="w-full pt-4 text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
-              li
-            </span>
-            <span className="w-full pt-4 text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
-              in
-            </span>
+        <div className="absolute inset-0 p-4 transition duration-300 ease-in-out bg-[#24d17c]/10 text-white opacity-0 group-hover:opacity-100">
+          <div className="absolute inset-0 flex flex-col gap-4 items-center justify-center">
+            <p className="h3">Meet John</p>
           </div>
         </div>
       </div>
@@ -110,3 +99,21 @@ export const TrainerCard = ({ trainer }: { trainer: TrainerType }) => {
     </Link>
   );
 };
+
+// put this code below trainer description
+{
+  /* <span>
+              <Image src={ShareIcon} width={20} height={20} alt="share_icon" />
+            </span> */
+}
+{
+  /* <button className="w-full pt-4 text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
+              fb
+            </button>
+            <span className="w-full pt-4 text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
+              li
+            </span>
+            <span className="w-full pt-4 text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
+              in
+            </span> */
+}
