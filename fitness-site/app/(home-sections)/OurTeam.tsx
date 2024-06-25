@@ -4,6 +4,7 @@ import ShareIcon from "../../public/share-arrow-svgrepo-com.png";
 import TestImage from "../../public/CardioBlastImage.jpg";
 import Link from "next/link";
 import SectionWrapper from "../components/wrappers/SectionWrapper";
+import { ProgramSmallIconWhite } from "./Programs";
 
 export default function OurTeam() {
   return (
@@ -89,9 +90,15 @@ export const TrainerCard = ({ trainer }: { trainer: TrainerType }) => {
             <button className="border border-white px-8 py-3">
               View Profile
             </button>
-            <div className="flex flex-row items-center gap-2  bg-black/30 px-4 py-2">
+            {/* <div className="flex flex-row items-center gap-2  bg-black/30 px-4 py-2">
               <BulletPoint />
               <p className="">Over 300+ satisfied clients</p>
+            </div> */}
+            <div className="bg-black/30 absolute bottom-0 right-0 left-0 flex flex-row gap-2 items-center justify-center py-4 px-2">
+              <div className="w-fit p-2 rounded-full bg-gradient-to-r from-[#1D7349] to-[#31C57D]">
+                <ProgramSmallIconWhite />
+              </div>
+              <span>Over 300+ satisfied clients</span>
             </div>
           </div>
         </div>
