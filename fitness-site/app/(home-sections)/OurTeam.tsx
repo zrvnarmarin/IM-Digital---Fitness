@@ -84,9 +84,15 @@ export const TrainerCard = ({ trainer }: { trainer: TrainerType }) => {
         </div>
 
         {/* On hover image */}
-        <div className="absolute inset-0 p-4 transition duration-300 ease-in-out bg-[#24d17c]/10 text-white opacity-0 group-hover:opacity-100">
+        <div className="absolute inset-0 p-4 transition duration-300 ease-in-out bg-[#24d17c]/30 text-white opacity-0 group-hover:opacity-100">
           <div className="absolute inset-0 flex flex-col gap-4 items-center justify-center">
-            <p className="h3">Meet John</p>
+            <button className="border border-white px-8 py-3">
+              View Profile
+            </button>
+            <div className="flex flex-row items-center gap-2  bg-black/30 px-4 py-2">
+              <BulletPoint />
+              <p className="">Over 300+ satisfied clients</p>
+            </div>
           </div>
         </div>
       </div>
@@ -117,3 +123,27 @@ export const TrainerCard = ({ trainer }: { trainer: TrainerType }) => {
               in
             </span> */
 }
+
+export const BulletPoint = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+    >
+      <g fill="none">
+        <path
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M17 12H3"
+        ></path>
+        <path
+          fill="currentColor"
+          d="m21.643 11.786l-3.431-2.059a.8.8 0 0 0-1.212.686v3.174a.8.8 0 0 0 1.212.686l3.43-2.059a.25.25 0 0 0 0-.428"
+        ></path>
+      </g>
+    </svg>
+  );
+};
