@@ -3,31 +3,23 @@ import Link from "next/link";
 import { InstagramIcon, FacebookIcon, YouTubeIcon } from "@/public/Icons";
 import FooterWrapper from "./components/wrappers/FooterWrapper";
 import { LogoImage } from "./(home-sections)/Navbar";
+import SectionWrapper from "./components/wrappers/SectionWrapper";
 
 // https://produce-ui.com/components?section-category=footer
 
 export default function Footer() {
   return (
-    <FooterWrapper>
+    <SectionWrapper>
       <div className="flex flex-col gap-6">
         <div className="w-full flex flex-row xs:flex-row items-center justify-start">
-          {/* <LogoImage width={110} height={110} /> */}
-          <div className="flex xs:hidden">
-            <LogoImage width={90} height={90} />
-          </div>
           <div className="hidden xs:flex sm:hidden">
             <LogoImage width={95} height={95} />
           </div>
-          <div className="hidden sm:flex">
-            <LogoImage width={110} height={110} />
-          </div>
-          <div className="w-full flex flex-col items-start xs:items-start">
-            <h2 className="bg-gradient-to-r bg-clip-text text-transparent pr-2 from-[#1D7349] to-[#31C57D] text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl tracking-normal text-center leading-7 font-bold">
-              Aeon Strength
-            </h2>
-            <p className="normal-case text-start xs:text-center text-xs xs:text-sm sm:text-md 2xl:text-lg text-gray-300 leading-2">
-              We are lifting you up definetely
-            </p>
+          <div className="flex gap-2 items-center">
+            <LogoImage />{" "}
+            <span className="text-white text-3xl font-semibold">
+              Fitness<span className="text-[#24d17c] font-medium">Lab</span>
+            </span>
           </div>
         </div>
       </div>
@@ -84,7 +76,7 @@ export default function Footer() {
           Privacy Policy
         </p>
       </div>
-    </FooterWrapper>
+    </SectionWrapper>
   );
 }
 
