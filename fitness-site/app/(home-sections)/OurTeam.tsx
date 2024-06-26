@@ -1,10 +1,9 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import Image, { StaticImageData } from "next/image";
-import ShareIcon from "../../public/share-arrow-svgrepo-com.png";
+import { InstagramIcon, YouTubeIcon } from "@/public/Icons";
 import TestImage from "../../public/CardioBlastImage.jpg";
 import Link from "next/link";
 import SectionWrapper from "../components/wrappers/SectionWrapper";
-import { ProgramSmallIconWhite } from "./Programs";
 
 export default function OurTeam() {
   return (
@@ -85,69 +84,57 @@ export const TrainerCard = ({ trainer }: { trainer: TrainerType }) => {
         </div>
 
         {/* On hover image */}
-        <div className="absolute inset-0 p-4 transition duration-300 ease-in-out bg-[#24d17c]/30 text-white opacity-0 group-hover:opacity-100">
+        <div className="absolute inset-0 p-4 transition duration-300 ease-in-out bg-gradient-to-r from-[#090a0c] to-[#191919]/20 text-white opacity-0 group-hover:opacity-100">
           <div className="absolute inset-0 flex flex-col gap-4 items-center justify-center">
-            <button className="border border-white px-8 py-3">
+            <button className="h3  flex items-center gap-2">
+              <RightArrow />
               View Profile
             </button>
-            {/* <div className="flex flex-row items-center gap-2  bg-black/30 px-4 py-2">
-              <BulletPoint />
-              <p className="">Over 300+ satisfied clients</p>
-            </div> */}
             <div className="bg-black/30 absolute bottom-0 right-0 left-0 flex flex-row gap-2 items-center justify-center py-4 px-2">
-              <div className="w-fit p-2 rounded-full bg-gradient-to-r from-[#1D7349] to-[#31C57D]">
-                <ProgramSmallIconWhite />
-              </div>
-              <span>Over 300+ satisfied clients</span>
+              <span className="text-normal">
+                <span className="text-[#24d17c] text-normal font-semibold">
+                  300+
+                </span>{" "}
+                satisfied clients
+              </span>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="flex flex-col items-start gap-1">
+      <div className="flex flex-col items-start">
         <h3 className="pt-4 w-full h3">{trainer.name}</h3>
         <p className="text-normal">{trainer.description}</p>
-        {/* Ovdje staviti strelicu desno, pogledaj dizajn */}
+        <div className="flex items-center gap-2 pt-2">
+          <span className="hover:scale-110 bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-full p-1">
+            <YouTubeIcon fillColor={"#ffffff"} />
+          </span>
+          <span className="hover:scale-110 bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-full p-1">
+            <InstagramIcon fillColor={"#ffffff"} />
+          </span>
+        </div>
       </div>
     </Link>
   );
 };
 
-// put this code below trainer description
-{
-  /* <span>
-              <Image src={ShareIcon} width={20} height={20} alt="share_icon" />
-            </span> */
-}
-{
-  /* <button className="w-full pt-4 text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
-              fb
-            </button>
-            <span className="w-full pt-4 text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
-              li
-            </span>
-            <span className="w-full pt-4 text-xl md:text-xl lg:text-xl tracking-normal text-start text-white leading-7 font-semibold">
-              in
-            </span> */
-}
-
-export const BulletPoint = () => {
+export const RightArrow = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="1em"
-      height="1em"
+      width="42px"
+      height="42px"
       viewBox="0 0 24 24"
     >
       <g fill="none">
         <path
-          stroke="currentColor"
+          stroke="#24d17c"
           strokeLinecap="round"
           strokeLinejoin="round"
           d="M17 12H3"
         ></path>
         <path
-          fill="currentColor"
+          fill="#24d17c"
           d="m21.643 11.786l-3.431-2.059a.8.8 0 0 0-1.212.686v3.174a.8.8 0 0 0 1.212.686l3.43-2.059a.25.25 0 0 0 0-.428"
         ></path>
       </g>

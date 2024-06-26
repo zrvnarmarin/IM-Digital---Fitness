@@ -622,28 +622,6 @@ const StatCard = ({ stat }: { stat: StatType }) => {
   );
 };
 
-const GalleryCard = () => {
-  return (
-    <li className="col-span-1 md:col-span-1 lg:col-span-1">
-      <div className="relative w-full h-64 overflow-hidden rounded-lg shadow-lg">
-        <Image
-          src={TestImage}
-          layout="fill"
-          objectFit="cover"
-          className="absolute top-0 left-0 w-full h-full opacity-50"
-          alt=""
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#31C57D] to-[#161616] opacity-30"></div>
-        <div className="absolute inset-0 flex flex-col gap-4 items-center justify-center">
-          <p className="text-4xl md:text-5xl lg:text-6xl tracking-normal text-start text-white leading-7 font-semibold">
-            Gallery
-          </p>
-        </div>
-      </div>
-    </li>
-  );
-};
-
 export function TestimonialCardsSection() {
   return (
     <SectionWrapper>
@@ -676,7 +654,7 @@ export function TestimonialCard({
 }) {
   return (
     <li className="p-8 col-span-1 md:col-span-1 lg:col-span-1 shadow-lg rounded-lg bg-gradient-to-r from-[#090a0c] to-[#191919] border-[0.5px] border-[#111316]">
-      <div className="flex flex-col rounded-lg bg-gradient-to-r from-[#090a0c] to-[#191919] border-[0.5px] border-[#111316]">
+      <div className="flex flex-col ">
         <div className="w-full flex justify-start">
           <QuotationMarkIcon />
         </div>
@@ -693,7 +671,7 @@ export function TestimonialCard({
               className="w-full h-full object-cover rounded-full"
             />
           </div>
-          <p className="text-xl text-white">{testimonial.name}</p>
+          <p className="text-lg text-white">{testimonial.name}</p>
         </div>
       </div>
     </li>
