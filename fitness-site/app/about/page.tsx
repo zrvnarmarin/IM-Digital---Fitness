@@ -675,17 +675,16 @@ export function TestimonialCard({
   testimonial: TestimonialType;
 }) {
   return (
-    <li className="p-8 col-span-1 md:col-span-1 lg:col-span-1 shadow-lg rounded-lg bg-gradient-to-r from-[#101010] to-[#191919] border-y border-[#292929]">
-      <div className="flex flex-col gap-6">
+    <li className="p-8 col-span-1 md:col-span-1 lg:col-span-1 shadow-lg rounded-lg bg-gradient-to-r from-[#090a0c] to-[#191919] border-[0.5px] border-[#111316]">
+      <div className="flex flex-col rounded-lg bg-gradient-to-r from-[#090a0c] to-[#191919] border-[0.5px] border-[#111316]">
         <div className="w-full flex justify-start">
-          <QuotationMark />
+          <QuotationMarkIcon />
         </div>
-        <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
-          {testimonial.date}
-        </p>
-        <p className="text-normal">{testimonial.testimonial}</p>
-        <div className="flex gap-4 items-center">
-          <div className="flex items-center w-12 h-12 rounded-full">
+
+        <p className="text-normal pt-2 ">{testimonial.testimonial}</p>
+
+        <div className="flex gap-4 items-center pt-4 ">
+          <div className="flex items-center w-12 h-12 rounded-full border-[0.5px] border-[#24D17C]">
             <Image
               src={TestImage}
               width={100}
@@ -694,7 +693,7 @@ export function TestimonialCard({
               className="w-full h-full object-cover rounded-full"
             />
           </div>
-          <p className="w-full h3">{testimonial.name}</p>
+          <p className="text-xl text-white">{testimonial.name}</p>
         </div>
       </div>
     </li>
@@ -733,3 +732,28 @@ export function SeeProgramsSection() {
     </SectionWrapper>
   );
 }
+
+export const QuotationMarkIcon = () => {
+  return (
+    <svg
+      fill="#24D17C"
+      viewBox="0 0 8 8"
+      width="22"
+      height="22"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        <path
+          d="M0 0v6l3-3v-3h-3zm5 0v6l3-3v-3h-3z"
+          transform="translate(0 1)"
+        ></path>
+      </g>
+    </svg>
+  );
+};
