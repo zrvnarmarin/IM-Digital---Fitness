@@ -6,8 +6,9 @@ import TestImage from "../../public/CardioBlastImage.jpg";
 import ShareIcon from "../../public/share-arrow-svgrepo-com.png";
 import { SuccessStoryCard } from "../(home-sections)/SuccessStories";
 import { testimonials } from "../data";
-import { QuotationMark, TestIcon, TestIconTwo } from "@/public/Icons";
 import { ParalelogramsSection } from "../components/ParalelogramsSection";
+import { NewsletterSectionEmbelishment } from "../(home-sections)/SignUpForAnEmail";
+import { RightArrow } from "../(home-sections)/OurTeam";
 
 // TO DO: osmisliti kako ukorporirati galeriju slika (tipa kao na hacksmithu)
 
@@ -15,13 +16,12 @@ export default function Page() {
   return (
     <main className="flex min-h-screen flex-col items-center bg-[#000000]">
       <HeroSection />
-      <FoundersSection />
-      <SecondSection />
+      {/* <FoundersSection /> */}
       <GallerySection />
-      <LegacyOfCourageSection />
+      <SecondSection />
       <StatsSection />
+      <LegacyOfCourageSection />
       <LegacyOfCourageSectionTwo />
-      <LongParagraphsSection />
       <TestimonialCardsSection />
       <SeeProgramsSection />
     </main>
@@ -30,41 +30,38 @@ export default function Page() {
 
 export function HeroSection() {
   return (
-    <div className="relative w-full h-screen">
-      {/* Image spans across the width and height of the screen */}
-      <div className="absolute inset-0">
-        <Image
-          priority
-          src={TestImage}
-          alt="alt"
-          layout="fill"
-          objectPosition="center"
-          className="rounded-md object-cover"
-        />
-      </div>
-
-      {/* Overlaying color */}
-      <div className="absolute inset-0 bg-black opacity-70"></div>
-
-      {/* Overlaying text content */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-2">
-        <p className="uppercase text-md md:text-md text-gray-300 leading-2 font-normal pb-4">
-          Brutalize Your Strength
-        </p>
-        <h1 className="text-xl md:text-4xl lg:text-5xl tracking-normal leading-7 font-semibold">
-          About Us
-        </h1>
-        <p className="normal-case text-md md:text-md text-gray-300 leading-2 font-normal"></p>
-        <div className="mt-6">
-          <Link
-            href={"/contact"}
-            className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white"
-          >
-            Get In Touch
-          </Link>
+    <SectionWrapper>
+      <div className="flex flex-row gap-4 items-center pt-4 md:pt-8 lg:pt-[96px]">
+        <div className="relative w-full flex flex-col items-center justify-center">
+          {/* Blur background */}
+          <div className="w-full h-full absolute inset-0 bg-[#061d12] z-10 blur-[128px]"></div>
+          <p className="text-above-heading z-20">Get to know us</p>
+          <h1 className="w-full text-white text-[84px]  text-center font-medium z-20">
+            About Us
+          </h1>
         </div>
       </div>
-    </div>
+      <div className="text-white flex items-center justify-center p-2 ">
+        <div className="relative flex items-center ">
+          <Image
+            priority
+            src={TestImage}
+            alt="alt"
+            // fill={true} slika s ovim propertijem ocito zauzima mjesta koliko mu flexbox sirina i njegova visina dopustaju
+            className="object-cover rounded-lg md:max-h-[600px] z-20"
+          />
+        </div>
+      </div>
+      <h3 className="w-full h3 text-xl text-center">Lorem Ipsum Dolor Sit</h3>
+      <p className="text-normal text-center md:px-48">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
+        necessitatibus corrupti quaerat. Eveniet odio hic, blanditiis quasi,
+        culpa voluptatibus nam, provident exercitationem incidunt quam expedita
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
+        necessitatibus corrupti quaerat. Eveniet odio hic, blanditiis quasi,
+        culpa voluptatibus nam, provident exercitationem incidunt quam expedita
+      </p>
+    </SectionWrapper>
   );
 }
 
@@ -72,9 +69,7 @@ export function SecondSection() {
   return (
     <SectionWrapper>
       <div className="flex flex-col gap-3 pb-4 lg:pb-8">
-        <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
-          Timeline
-        </p>
+        <p className="text-above-heading">Timeline</p>
         <h2 className="h2">Embark on our journey of strength</h2>
       </div>
       <div className="hidden lg:flex flex-col gap-16 pb-4">
@@ -194,61 +189,36 @@ export const SecondSectionCard = ({
 export function LegacyOfCourageSection() {
   return (
     <SectionWrapper>
-      <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="flex flex-col">
-          <div className="flex flex-col gap-3">
-            <h2 className="h2">Consitency is the key</h2>
-            <p className="text-normal">
-              In the “golden days”, there weren’t many options for working out.
-              But Joe Gold, our founder, had a passion for bodybuilding. He
-              found success as a professional “muscleman” and toured with
-              celebrities! But Joe Gold, our founder, had a passion for
-              bodybuilding. He found success as a professional “muscleman”
-            </p>
-          </div>
+      <h2 className="w-full h2">Something about massage</h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 pt-8">
-            <div className="flex items-center gap-4">
-              <TestIcon height="40px" width="40px" iconFill="#31C57D" />
-              <p className="text-sm md:text-md text-gray-300 leading-2 uppercase font-semibold">
-                Mind Over Body
-              </p>
-            </div>
-            <div className="flex items-center gap-4">
-              <TestIconTwo height="40px" width="40px" iconFill="#31C57D" />
-              <p className="text-sm md:text-md text-gray-300 leading-2 uppercase font-semibold">
-                Healing Factor Benefits
-              </p>
-            </div>
-            <div className="flex items-center gap-4">
-              <TestIcon height="40px" width="40px" iconFill="#31C57D" />
-              <p className="text-sm md:text-md text-gray-300 leading-2 uppercase font-semibold">
-                Mind Over Body
-              </p>
-            </div>
-            <div className="flex items-center gap-4">
-              <TestIcon height="40px" width="40px" iconFill="#31C57D" />
-              <p className="text-sm md:text-md text-gray-300 leading-2 uppercase font-semibold">
-                Mind Over Body
-              </p>
-            </div>
-          </div>
-
-          <button className="mt-8 w-fit btn-primary">
-            Discover Our Programs
-          </button>
+      <div className="relative grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-12">
+        <div className="w-full relative flex items-center justify-start lg:justify-center">
+          {/* Image */}
+          <Image
+            priority
+            src={TestImage}
+            alt="alt"
+            className="md:max-h-[400px] md:max-w-[800px] lg:max-w-full z-20 object-cover rounded-md"
+          />
         </div>
-        <div className="text-white flex items-center justify-center">
-          <div className="relative flex items-center justify-center group h-full w-full rounded-xl cursor-pointer">
-            <Image
-              priority
-              src={TestImage}
-              alt="alt"
-              fill={true}
-              // fill={true} slika s ovim propertijem ocito zauzima mjesta koliko mu flexbox sirina i njegova visina dopustaju
-              className="object-cover rounded-md"
-            />
+
+        <div className="relative flex flex-col gap-3 bg-gradient-to-r from-[#090a0c] to-[#161616] border-[0.5px] border-[#111316] p-5 rounded-lg">
+          {/* Blur background */}
+          <div className="w-full h-full absolute inset-0 bg-[#061d12] z-10 blur-[128px]"></div>
+
+          <div className="flex flex-col z-20">
+            <p className="text-above-heading">Assets</p>
+            <h3 className="w-full h3 text-3xl pt-1">
+              Best Quality Facilities And Program
+            </h3>
           </div>
+          <p className="text-normal z-20 pt-4">
+            In the “golden days”, there weren`t many options for working out.
+            But Joe Gold, our founder, had a passion for bodybuilding. He found
+            success as a professional “muscleman” and toured with celebrities!
+            But Joe Gold, our founder, had a passion for bodybuilding. He found
+            success as a professional “muscleman”
+          </p>
         </div>
       </div>
     </SectionWrapper>
@@ -259,25 +229,16 @@ export function GallerySection() {
   return (
     <SectionWrapper>
       <div className="flex items-center justify-between">
-        <div className="flex flex-col gap-3">
-          <h1 className="uppercase italic text-gray-200 text-3xl tracking-normal text-start font-bold">
-            See it for yourself
-          </h1>
-          <p className="normal-case text-md md:text-md text-gray-300 leading-2">
-            Browse through our gallery and see what is awaiting you in our area
-          </p>
+        <div className="flex flex-col gap-3 pb-4 lg:pb-8">
+          <p className="text-above-heading">Gallery</p>
+          <h2 className="h2">See it for yourself</h2>
         </div>
         <div className="flex flex-row items-center justify-end gap-4">
-          <button className="bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] text-gray-300 px-4 py-3 rounded-lg text-xl font-bold">
-            &larr;
+          <button className="rotate-180">
+            <RightArrow />
           </button>
-          {/* <div className="flex flex-row justify-center gap-2">
-              <span className="w-8 h-1 rounded-md bg-[#31C57D]" />
-              <span className="w-8 h-1 rounded-md bg-[#31C57D]" />
-              <span className="w-8 h-1 rounded-md bg-[#31C57D]" />
-            </div> */}
-          <button className="bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] text-gray-300 px-4 py-3 rounded-lg text-xl font-bold">
-            &rarr;
+          <button className="">
+            <RightArrow />
           </button>
         </div>
       </div>
@@ -356,31 +317,33 @@ export function GallerySection() {
 export function LegacyOfCourageSectionTwo() {
   return (
     <SectionWrapper>
-      <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="relative flex items-center justify-center group h-full w-full rounded-xl cursor-pointer">
+      <div className="relative grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-12">
+        <div className="relative flex flex-col gap-3 bg-gradient-to-r from-[#090a0c] to-[#161616] border-[0.5px] border-[#111316] p-5 rounded-lg">
+          {/* Blur background */}
+          <div className="w-full h-full absolute inset-0 bg-[#061d12] z-10 blur-[128px]"></div>
+
+          <div className="flex flex-col z-20">
+            <p className="text-above-heading">Assets</p>
+            <h3 className="w-full h3 text-3xl pt-1">
+              Best Quality Facilities And Program
+            </h3>
+          </div>
+          <p className="text-normal z-20 pt-4">
+            In the “golden days”, there weren`t many options for working out.
+            But Joe Gold, our founder, had a passion for bodybuilding. He found
+            success as a professional “muscleman” and toured with celebrities!
+            But Joe Gold, our founder, had a passion for bodybuilding. He found
+            success as a professional “muscleman”
+          </p>
+        </div>
+        <div className="w-full relative flex items-center justify-start lg:justify-center">
+          {/* Image */}
           <Image
             priority
             src={TestImage}
             alt="alt"
-            fill={true}
-            // fill={true} slika s ovim propertijem ocito zauzima mjesta koliko mu flexbox sirina i njegova visina dopustaju
-            className="object-cover rounded-md"
+            className="md:max-h-[400px] md:max-w-[800px] lg:max-w-full z-20 object-cover rounded-md"
           />
-        </div>
-        <div className="flex flex-col">
-          <div className="flex flex-col gap-3">
-            <p className=" italic uppercase text-xs tracking-wide font-medium w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-5 cursor-pointer text-white">
-              Assets
-            </p>
-            <h2 className="h2">Best Quality Facilities And Program</h2>
-            <p className="text-normal">
-              In the “golden days”, there weren’t many options for working out.
-              But Joe Gold, our founder, had a passion for bodybuilding. He
-              found success as a professional “muscleman” and toured with
-              celebrities! But Joe Gold, our founder, had a passion for
-              bodybuilding. He found success as a professional “muscleman”
-            </p>
-          </div>
         </div>
       </div>
     </SectionWrapper>
@@ -553,18 +516,6 @@ export const MissionAndValuesSection = () => {
   );
 };
 
-export const StatsSection = () => {
-  return (
-    <SectionWrapper>
-      <ul className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-6 ">
-        {stats.map((stat) => (
-          <StatCard key={stat.id} stat={stat} />
-        ))}
-      </ul>
-    </SectionWrapper>
-  );
-};
-
 export const TestimonialsSection = () => {
   return (
     <SectionWrapper>
@@ -609,9 +560,21 @@ export const stats = [
   },
 ];
 
-const StatCard = ({ stat }: { stat: StatType }) => {
+export function StatsSection() {
   return (
-    <li className="bg-gradient-to-r from-[#101010] to-[#191919] border-y border-[#292929] py-4 px-2 xs:py-6 xs:px-4 sm:py-8 sm:px-6 md:py-10 md:px-8 lg:py-14 lg:px-12 rounded-lg shadow-lg">
+    <SectionWrapper>
+      <ul className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-6 ">
+        {stats.map((stat) => (
+          <StatCard key={stat.id} stat={stat} />
+        ))}
+      </ul>
+    </SectionWrapper>
+  );
+}
+
+export const StatCard = ({ stat }: { stat: StatType }) => {
+  return (
+    <li className="bg-gradient-to-r from-[#090a0c] to-[#212121] border-[0.5px] border-[#111316] py-4 px-2 xs:py-6 xs:px-4 sm:py-8 sm:px-6 md:py-10 md:px-8 lg:py-14 lg:px-12 rounded-lg shadow-lg">
       <div className="w-full flex flex-col gap-4 items-center justify-center">
         <p className="text-3xl xs:text-5xl sm:text-4xl md:text-5xl xl:text-6xl tracking-normal text-start text-white leading-7 font-semibold">
           {stat.statValue}
@@ -681,28 +644,34 @@ export function TestimonialCard({
 export function SeeProgramsSection() {
   return (
     <SectionWrapper>
-      <div className="relative w-full flex flex-row justify-between rounded-lg shadow-lg">
-        <Image
-          src={TestImage}
-          layout="fill"
-          className="object-cover w-full h-full opacity-50"
-          alt=""
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#31C57D] to-[#161616] opacity-30 rounded-lg"></div>
-        <div className="w-full flex flex-col md:flex-row gap-36 items-center justify-between z-30 px-12 py-12">
-          <div className="flex flex-col">
-            <div className="lg:flex lg:flex-col">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl tracking-normal text-center text-white leading-7 font-semibold">
-                Start Your Free 7-Day Trial Program Here
-              </h2>
-              <p className="text-subheading text-center pt-8">
-                Analyze patient feedback. Optimize workflows to deliver a superb
-                patient experience. Stop your never-ending battle with patient
-                retention.
+      <div className="relative">
+        {/* Blur background */}
+        <div className="w-full h-full absolute inset-0 bg-[#061d12] z-10 blur-[128px]"></div>
+
+        {/* Call to action */}
+        <div className="relative z-20 py-16 px-24 flex items-center justify-between gap-16 bg-gradient-to-r from-[#161616] to-[#000000] border-[0.5px] border-[#111316] p-5 rounded-lg overflow-hidden">
+          {/* Image */}
+          <div className="flex items-center justify-center absolute top-0 bottom-0 -left-12 z-0">
+            <NewsletterSectionEmbelishment />
+          </div>
+          {/* Content */}
+          <div className="flex flex-col z-20 gap-6">
+            <h2 className="h2 text-start normal-case">
+              Embark on the path of the strenght!
+            </h2>
+            <div>
+              <p className="text-normal">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+                beatae <br /> itaque voluptas voluptates distinctio at aliquam
+                nihil quidem tempora <br /> magni tempora magni
               </p>
             </div>
-            <div className="flex justify-center items-center pt-4">
-              <button className="w-fit btn-primary">Read More Stories</button>
+          </div>
+          <div className="z-0 flex flex-col justify-center items-center gap-6 mt-4">
+            <div className="w-full flex items-center justify-center">
+              <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-8 cursor-pointer text-white">
+                Get started
+              </button>
             </div>
           </div>
         </div>
