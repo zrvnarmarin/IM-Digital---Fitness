@@ -29,7 +29,7 @@ const FacilitiesSection = ({ facilities }: { facilities: FacilityType[] }) => {
           enhance your workout experience.
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 pt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-8">
         {facilities.map((facility) => (
           <FacilityCard key={facility.id} facility={facility} />
         ))}
@@ -56,20 +56,13 @@ const facilities: FacilityType[] = [
   },
   {
     id: 2,
-    href: "/studios",
-    facilityName: "Studios",
-    description: ` Ignite your passion for movement in our versatile studios. From high-intensity cardio to mind-body practices, our studio classes cater to a variety of fitness interests and levels.`,
-    cardImageSrc: TestImage,
-  },
-  {
-    id: 4,
     href: "/massage",
     facilityName: "Massage",
     description: ` Immerse yourself in a world of relaxation and rejuvenation at our Wellness and Spa facility. Indulge in a range of luxurious spa treatments designed to pamper your body and soothe your mind.`,
     cardImageSrc: TestImage,
   },
   {
-    id: 5,
+    id: 3,
     href: "/gym",
     facilityName: "Gym",
     description: ` Elevate your fitness journey in our state-of-the-art gym facility. Equipped with the latest exercise machines and free weights, our gym offers a dynamic environment for achieving your fitness goals.`,

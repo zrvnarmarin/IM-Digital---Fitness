@@ -182,7 +182,7 @@ export type MassageEffectType = {
 export const WelnessServiceCard = ({ massageType }: { MassageType }) => {
   return (
     <Link href={`/facilities/massage${massageType.href}`}>
-      <div className="relative group rounded overflow-hidden cursor-pointer shadow-md rounded-lg">
+      <div className="relative group overflow-hidden cursor-pointer shadow-md rounded-lg">
         {/* Background Image */}
         <div className="group-hover:opacity-75 transition duration-300 ease-in-out">
           <Image

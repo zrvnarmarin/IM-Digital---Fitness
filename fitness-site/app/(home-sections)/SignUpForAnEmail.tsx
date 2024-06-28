@@ -5,37 +5,38 @@ import { RightArrow } from "./OurTeam";
 const SignUpForAnEmail = () => {
   return (
     <SectionWrapper>
-      <div className="relative py-16 px-24 flex items-center justify-between gap-16 bg-gradient-to-r from-[#000000] to-[#161616] border-[0.5px] border-[#111316] p-5 rounded-lg overflow-hidden">
-        {/* Image */}
-
-        <div className="flex items-center justify-center absolute top-0 bottom-0 -left-12 z-0">
-          <NewsletterSectionEmbelishment />
-        </div>
-
-        {/* Content */}
-        <div className="flex flex-col z-20 gap-6">
-          <h2 className="h2 text-start normal-case">
-            Sign up to our newsletter
-          </h2>
-          <div>
-            <p className="text-normal">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-              beatae <br /> itaque voluptas voluptates distinctio at aliquam
-              nihil quidem tempora <br /> magni tempora magni
-            </p>
+      <div className="relative">
+        {/* Blur background */}
+        <div className="w-full h-full absolute inset-0 bg-[#061d12] z-10 blur-[128px]"></div>
+        <div className="z-20 relative py-16 px-24 flex items-center justify-between gap-16 bg-gradient-to-r from-[#000000] to-[#161616] border-[0.5px] border-[#111316] p-5 rounded-lg overflow-hidden">
+          {/* Image */}
+          <div className="flex items-center justify-center absolute top-0 bottom-0 -left-12 z-0">
+            <NewsletterSectionEmbelishment />
           </div>
-        </div>
-
-        <div className="z-0 flex flex-col justify-center items-center gap-6 mt-4">
-          <input
-            type="text"
-            placeholder="Enter Your Email"
-            className="w-full px-6 py-3 outline-none bg-gradient-to-r from-[#000000] to-[#070707] border-[0.5px] border-[#1D7349] text-normal rounded-lg"
-          />
-          <div className="w-full flex items-center justify-center">
-            <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-8 cursor-pointer text-white">
-              Submit
-            </button>
+          {/* Content */}
+          <div className="flex flex-col z-20 gap-6">
+            <h2 className="h2 text-start normal-case">
+              Sign up to our newsletter
+            </h2>
+            <div>
+              <p className="text-normal">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+                beatae <br /> itaque voluptas voluptates distinctio at aliquam
+                nihil quidem tempora <br /> magni tempora magni
+              </p>
+            </div>
+          </div>
+          <div className="z-0 flex flex-col justify-center items-center gap-6 mt-4">
+            <input
+              type="text"
+              placeholder="Enter Your Email"
+              className="w-full px-6 py-3 outline-none bg-gradient-to-r from-[#000000] to-[#070707] border-[0.5px] border-[#1D7349] text-normal rounded-lg"
+            />
+            <div className="w-full flex items-center justify-center">
+              <button className="w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-8 cursor-pointer text-white">
+                Submit
+              </button>
+            </div>
           </div>
         </div>
       </div>
