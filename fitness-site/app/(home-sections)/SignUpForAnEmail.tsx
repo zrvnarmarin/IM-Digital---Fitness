@@ -13,16 +13,15 @@ const SignUpForAnEmail = () => {
         </div>
 
         {/* Content */}
-        <div className="flex flex-col z-20">
-          <h2 className=" h2 text-start">Sign up to our newsletter</h2>
+        <div className="flex flex-col z-20 gap-6">
+          <h2 className="h2 text-start normal-case">
+            Sign up to our newsletter
+          </h2>
           <div>
-            <h3 className="w-fit h3 text-start pt-4">
-              Get it all in the action
-            </h3>
             <p className="text-normal">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
               beatae <br /> itaque voluptas voluptates distinctio at aliquam
-              nihil quidem tempora magni?
+              nihil quidem tempora <br /> magni tempora magni
             </p>
           </div>
         </div>

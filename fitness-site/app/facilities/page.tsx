@@ -3,6 +3,7 @@ import { StaticImageData } from "next/image";
 import Link from "next/link";
 import Image from "next/image";
 import TestImage from "../../public/gym.avif";
+import { RightArrow } from "../(home-sections)/OurTeam";
 
 export default function Page() {
   return (
@@ -49,14 +50,14 @@ const facilities: FacilityType[] = [
   {
     id: 1,
     href: "/swimming",
-    facilityName: "swimming",
+    facilityName: "Swimming",
     description: ` Dive into a world of aquatic bliss in our pristine swimming pool. Whether you're seeking a leisurely swim or a rigorous aquatic workout, our pool offers an invigorating experience for all.`,
     cardImageSrc: TestImage,
   },
   {
     id: 2,
     href: "/studios",
-    facilityName: "studios",
+    facilityName: "Studios",
     description: ` Ignite your passion for movement in our versatile studios. From high-intensity cardio to mind-body practices, our studio classes cater to a variety of fitness interests and levels.`,
     cardImageSrc: TestImage,
   },
@@ -70,7 +71,7 @@ const facilities: FacilityType[] = [
   {
     id: 5,
     href: "/gym",
-    facilityName: "gym",
+    facilityName: "Gym",
     description: ` Elevate your fitness journey in our state-of-the-art gym facility. Equipped with the latest exercise machines and free weights, our gym offers a dynamic environment for achieving your fitness goals.`,
     cardImageSrc: TestImage,
   },
@@ -93,11 +94,20 @@ export const FacilityCard = ({ facility }: { facility: FacilityType }) => {
         <div className="absolute inset-0 bg-black opacity-10"></div>
 
         {/* On hover image */}
-        <div className="absolute inset-0 w-full flex items-center justify-center transition duration-300 ease-in-out bg-black/10 text-white">
-          <div className="flex flex-col gap-4 justify-start">
-            <h3 className=" xs:text-2xl h3 capitalize">
+        <div className="absolute inset-0 p-4 transition duration-300 ease-in-out bg-gradient-to-r from-[#131313] to-[#191919]/10 text-white opacity-0 group-hover:opacity-100">
+          <div className="absolute inset-0 flex flex-col gap-4 items-center justify-center">
+            <button className="h3 flex items-center gap-2">
+              <RightArrow />
               {facility.facilityName}
-            </h3>
+            </button>
+            <div className="bg-black/30 absolute bottom-0 right-0 left-0 flex flex-row gap-2 items-center justify-center py-4 px-2">
+              <span className="text-normal">
+                <span className="text-[#24d17c] text-normal font-semibold">
+                  300+
+                </span>{" "}
+                satisfied clients
+              </span>
+            </div>
           </div>
         </div>
       </div>

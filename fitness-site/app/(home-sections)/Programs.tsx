@@ -109,7 +109,7 @@ export function ProgramCard() {
             $130.00
           </p>
           <button className="w-fit sm:w-full md:w-fit lg:w-full 2xl:w-fit bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-3 px-6 cursor-pointer text-white">
-            Buy Now
+            Start Now
           </button>
         </div>
       </div>

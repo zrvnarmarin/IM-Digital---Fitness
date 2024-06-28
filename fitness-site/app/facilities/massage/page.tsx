@@ -1,10 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import SectionWrapper from "@/app/components/wrappers/SectionWrapper";
-import TestImage from "../../../public/HeroTestTest.jpg";
-import { FAQType } from "@/app/types";
-import { Accordion } from "@/app/(home-sections)/FAQSection";
+import TestImage from "../../../public/ImageForArticle_22825_16576273997625986.webp";
 import Link from "next/link";
+import { RightArrow } from "@/app/(home-sections)/OurTeam";
+import { ProgramSmallIcon } from "@/app/(home-sections)/Programs";
+import { UniqueSellingPointIconThree } from "@/app/data/uniqueSellingPoints";
+import MassageEffects from "./(massage-sections)/MassageEffects";
 
 // look this: https://figura-fit.hr/miofascijalna-relaksacija/
 
@@ -13,7 +15,7 @@ export default function Page() {
     <main className="flex flex-col items-center bg-[#111317]">
       <HeroSection />
       <AboutMassage />
-      <MassageBenefitsTable />
+      <MassageEffects />
       <MassageTypeCardsSection />
     </main>
   );
@@ -23,169 +25,52 @@ export function AboutMassage() {
   return (
     <SectionWrapper>
       <h2 className="w-full h2">Something about massage</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="text-white flex items-center justify-center">
-          <div className="relative flex items-center justify-center group h-full w-full rounded-xl cursor-pointer">
-            <Image
-              priority
-              src={TestImage}
-              alt="alt"
-              fill={true}
-              // fill={true} slika s ovim propertijem ocito zauzima mjesta koliko mu flexbox sirina i njegova visina dopustaju
-              className="object-cover rounded-md"
-            />
-          </div>
+
+      <div className="relative grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-12">
+        <div className="w-full relative flex items-center justify-start lg:justify-center">
+          {/* Image */}
+          <Image
+            priority
+            src={TestImage}
+            alt="alt"
+            className="md:max-h-[400px] md:max-w-[800px] lg:max-w-full z-20 object-cover rounded-md"
+          />
         </div>
-        <div className="flex flex-col gap-3">
-          <div className="flex flex-col">
+
+        <div className="relative flex flex-col gap-3 bg-gradient-to-r from-[#090a0c] to-[#161616] border-[0.5px] border-[#111316] p-5 rounded-lg">
+          {/* Blur background */}
+          <div className="w-full h-full absolute inset-0 bg-[#061d12] z-10 blur-[128px]"></div>
+
+          <div className="flex flex-col z-20">
             <p className="text-above-heading">Assets</p>
-            <h3 className="w-full h3">Best Quality Facilities And Program</h3>
+            <h3 className="w-full h3 text-3xl pt-1">
+              Best Quality Facilities And Program
+            </h3>
           </div>
-          <p className="text-normal">
-            In the “golden days”, there weren’t many options for working out.
+          <p className="text-normal z-20 pt-4">
+            In the “golden days”, there weren`t many options for working out.
             But Joe Gold, our founder, had a passion for bodybuilding. He found
             success as a professional “muscleman” and toured with celebrities!
             But Joe Gold, our founder, had a passion for bodybuilding. He found
             success as a professional “muscleman”
           </p>
+          <div className="flex flex-row items-center justify-between pt-4">
+            <div className="z-20 flex flex-col xs:flex-row sm:flex-col md:flex-row gap-2 items-center md:items-center">
+              <ProgramSmallIcon />
+              <p className="xs:pl-2 sm:pl-0 text-start sm:text-center text-normal">
+                <span className="font-semibold">4</span> types of massages
+              </p>
+            </div>
+            <div className="z-20 flex flex-col xs:flex-row sm:flex-col md:flex-row gap-2 items-center md:items-center">
+              <ProgramSmallIcon />
+              <p className="xs:pl-2 sm:pl-0 text-start sm:text-center text-normal">
+                <span className="font-semibold">8+</span> positive effects on
+                body
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </SectionWrapper>
-  );
-}
-
-export function MassageBenefitsTable() {
-  return (
-    <SectionWrapper>
-      return (
-      <div className="overflow-x-auto">
-        <table className="table-auto min-w-full divide-y divide-gray-200">
-          <thead>
-            <tr>
-              <th className="px-6 py-3 bg-gradient-to-r from-[#101010] to-[#161616] text-center text-md text-gray-300 leading-2 uppercase font-semibold border border-[#292929]">
-                Tip tretmana/učinak
-              </th>
-              <th className="px-6 py-3 bg-gradient-to-r from-[#101010] to-[#161616] text-center text-md text-gray-300 leading-2 uppercase font-semibold border border-[#292929]">
-                Klasicna masaža
-              </th>
-              <th className="px-6 py-3 bg-gradient-to-r from-[#101010] to-[#161616] text-center text-md text-gray-300 leading-2 uppercase font-semibold border border-[#292929]">
-                Relaksacijska masaža
-              </th>
-              <th className="px-6 py-3 bg-gradient-to-r from-[#101010] to-[#161616] text-center text-md text-gray-300 leading-2 uppercase font-semibold border border-[#292929]">
-                Sportska masaža
-              </th>
-              <th className="px-6 py-3 bg-gradient-to-r from-[#101010] to-[#161616] text-center text-md text-gray-300 leading-2 uppercase font-semibold border border-[#292929]">
-                Medicinska masaža
-              </th>
-            </tr>
-          </thead>
-          <tbody className="bg-white divide-y divide-gray-200">
-            <tr>
-              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] text-md text-gray-300 leading-2 uppercase font-semibold border border-[#292929]">
-                Antistresni učinak
-              </td>
-              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                  ✓
-                </span>
-              </td>
-              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                  ✓
-                </span>
-              </td>
-              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                  ✓
-                </span>
-              </td>
-              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                  ✓
-                </span>
-              </td>
-            </tr>
-            {/* Other rows */}
-            <tr>
-              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] text-md text-gray-300 leading-2 uppercase font-semibold border border-[#292929]">
-                Smanjenje boli
-              </td>
-              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                  ✓
-                </span>
-              </td>
-              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                  ✓
-                </span>
-              </td>
-              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                  ✓
-                </span>
-              </td>
-              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                  ✓
-                </span>
-              </td>
-            </tr>
-            {/* Add other rows similarly */}
-            <tr>
-              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] text-md text-gray-300 leading-2 uppercase font-semibold border border-[#292929]">
-                Povećanje pokreltjivosti
-              </td>
-              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                  ✓
-                </span>
-              </td>
-              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                  ✓
-                </span>
-              </td>
-              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                  ✓
-                </span>
-              </td>
-              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                  ✓
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] text-md text-gray-300 leading-2 uppercase font-semibold border border-[#292929]">
-                Omamljenost nakon tretmana
-              </td>
-              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                  ✓
-                </span>
-              </td>
-              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                  ✓
-                </span>
-              </td>
-              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                  ✓
-                </span>
-              </td>
-              <td className="px-8 py-6 text-center whitespace-nowrap bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929]">
-                <span className="w-fit h-fit text-white rounded-full px-2 py-0.5 bg-gradient-to-r from-[#31C57D] to-[#31C68D] border border-[#292929]">
-                  ✓
-                </span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      );
     </SectionWrapper>
   );
 }
@@ -194,7 +79,10 @@ export function MassageTypeCardsSection() {
   return (
     <SectionWrapper>
       <div className="flex flex-col gap-1">
-        <h2 className="w-full h2">Massages</h2>
+        <p className="text-above-heading">Types</p>
+        <h2 id="massages" className="w-full h2">
+          Massages
+        </h2>
         <p className="text-subheading">
           Lorem ipsum dolor sit opsidium lorem dolor
         </p>
@@ -213,21 +101,65 @@ export const massageTypes: MassageType[] = [
     id: 1,
     href: "/classical-massage",
     title: "Classical Massage",
+    shortDescription:
+      "Somethign short about this type of massage: In the “golden days”, there weren`t many options for working out. But Joe Gold, our founder, had a passion for bodybuilding. He found success as a professional “muscleman” and toured with celebrities! But Joe Gold, our founder, had a passion for bodybuilding. He found success as a professional “muscleman”",
+    effects: [
+      {
+        id: 1,
+        antistress: true,
+        painReduction: true,
+        increasedMobility: true,
+        drowsiness: true,
+      },
+    ],
   },
   {
     id: 2,
-    href: "/relaxational-massage",
-    title: "Relaxational Massage",
+    href: "/deep-tissue",
+    title: "Deep Tissue Massage",
+    shortDescription:
+      "Somethign short about this type of massage: In the “golden days”, there weren`t many options for working out. But Joe Gold, our founder, had a passion for bodybuilding. He found success as a professional “muscleman” and toured with celebrities! But Joe Gold, our founder, had a passion for bodybuilding. He found success as a professional “muscleman”",
+    effects: [
+      {
+        id: 1,
+        antistress: true,
+        painReduction: true,
+        increasedMobility: true,
+        drowsiness: true,
+      },
+    ],
   },
   {
     id: 3,
     href: "/sport-massage",
     title: "Sport Massage",
+    shortDescription:
+      "Somethign short about this type of massage: In the “golden days”, there weren`t many options for working out. But Joe Gold, our founder, had a passion for bodybuilding. He found success as a professional “muscleman” and toured with celebrities! But Joe Gold, our founder, had a passion for bodybuilding. He found success as a professional “muscleman”",
+    effects: [
+      {
+        id: 1,
+        antistress: true,
+        painReduction: true,
+        increasedMobility: true,
+        drowsiness: true,
+      },
+    ],
   },
   {
     id: 4,
     href: "/medical-massage",
     title: "Medical Massage",
+    shortDescription:
+      "Somethign short about this type of massage: In the “golden days”, there weren`t many options for working out. But Joe Gold, our founder, had a passion for bodybuilding. He found success as a professional “muscleman” and toured with celebrities! But Joe Gold, our founder, had a passion for bodybuilding. He found success as a professional “muscleman”",
+    effects: [
+      {
+        id: 1,
+        antistress: true,
+        painReduction: true,
+        increasedMobility: true,
+        drowsiness: true,
+      },
+    ],
   },
 ];
 
@@ -235,12 +167,22 @@ export type MassageType = {
   id: number;
   title: string;
   href: string;
+  shortDescription: string;
+  effects: MassageEffectType[];
+};
+
+export type MassageEffectType = {
+  id: number;
+  antistress: boolean;
+  painReduction: boolean;
+  increasedMobility: boolean;
+  drowsiness: boolean;
 };
 
 export const WelnessServiceCard = ({ massageType }: { MassageType }) => {
   return (
     <Link href={`/facilities/massage${massageType.href}`}>
-      <div className="relative group rounded overflow-hidden cursor-pointer shadow-md">
+      <div className="relative group rounded overflow-hidden cursor-pointer shadow-md rounded-lg">
         {/* Background Image */}
         <div className="group-hover:opacity-75 transition duration-300 ease-in-out">
           <Image
@@ -253,13 +195,24 @@ export const WelnessServiceCard = ({ massageType }: { MassageType }) => {
         </div>
 
         {/* On hover image */}
-        <div
-          className="absolute bottom-0 left-0 right-0 p-4"
-          style={{ backgroundColor: "rgba(29, 115, 73, 0.5)" }}
-        >
-          <h3 className="w-full h3 text-center">{massageType.title}</h3>
+        <div className="absolute inset-0 p-4 transition duration-300 ease-in-out bg-gradient-to-r from-[#131313] to-[#191919]/10 text-white opacity-0 group-hover:opacity-100">
+          <div className="absolute inset-0 flex flex-col gap-4 items-center justify-center">
+            <button className="h3 flex items-center gap-2">
+              <RightArrow />
+              {massageType.title}
+            </button>
+            <div className="bg-black/30 absolute bottom-0 right-0 left-0 flex flex-row gap-2 items-center justify-center py-4 px-2">
+              <span className="text-normal">
+                <span className="text-[#24d17c] text-normal font-semibold">
+                  300+
+                </span>{" "}
+                satisfied clients
+              </span>
+            </div>
+          </div>
         </div>
       </div>
+      <div className="h3 pt-4 w-full">{massageType.title}</div>
     </Link>
   );
 };
