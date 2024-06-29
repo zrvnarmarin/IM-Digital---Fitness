@@ -7,6 +7,7 @@ import { Accordion } from "@/app/(home-sections)/FAQSection";
 import Link from "next/link";
 import { ProgramSmallIcon } from "@/app/(home-sections)/Programs";
 import { RightArrow } from "@/app/(home-sections)/OurTeam";
+import { ArrowRight } from "@/app/(home-sections)/Facilities";
 
 export default function Page({ params }: { params: { massageType: string } }) {
   const { massageType } = params;
@@ -29,12 +30,26 @@ export function HeroSection({
 }) {
   return (
     <SectionWrapper>
-      <div className="flex flex-row gap-4 items-center pt-4 md:pt-8 lg:pt-[96px]">
-        <div className="relative w-full flex flex-col items-center justify-center">
+      <div className="flex flex-col gap-8 items-center pt-4 md:pt-8 lg:pt-12">
+        <div className="w-full flex items-center justify-start">
+          <Link
+            href="/facilities/massage"
+            className="w-fit flex flex-row items-center justify-center gap-1 text-normal font-medium hover:text-[#24D17C] bg-gradient-to-r from-[#090a0c] to-[#191919] border-[0.5px] border-[#111316] rounded-full py-2 px-5"
+          >
+            <span className="rotate-180">
+              <ArrowRight width="20px" height="20px" />
+            </span>
+            Massage
+          </Link>
+        </div>
+        <div className="relative w-full flex flex-col items-center justify-center ">
           {/* Blur background */}
-          <div className="w-full h-full absolute inset-0 bg-[#061d12] z-10 blur-[128px]"></div>
-          <p className="text-above-heading z-20">Relax in our expert hands</p>
-          <h1 className="w-full text-white text-[84px]  text-center font-medium z-20">
+          {/* <div className="w-full h-full absolute inset-0 bg-[#061d12] z-10 blur-[128px]"></div> */}
+
+          <p className="text-above-heading bg-gradient-to-r from-[#090a0c] to-[#191919] border-[0.5px] border-[#111316] rounded-lg p-2">
+            &#x2022; Relax in our expert hands
+          </p>
+          <h1 className=" text-white text-8xl  text-center font-bold z-20">
             {formatString(massageTypeTitle)}
           </h1>
         </div>
@@ -50,11 +65,11 @@ export function HeroSection({
           />
         </div>
       </div>
-      <p className="text-normal text-center md:px-24">
+      {/* <p className="text-normal text-center md:px-24">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
         necessitatibus corrupti quaerat. Eveniet odio hic, blanditiis quasi,
         culpa voluptatibus nam, provident exercitationem incidunt quam expedita
-      </p>
+      </p> */}
     </SectionWrapper>
   );
 }
@@ -65,7 +80,7 @@ export function PricingSection() {
       <h2 className="w-full h2">Pricing</h2>
       <div className="w-full flex flex-col sm:flex-row gap-6 items-center justify-between">
         <div className="relative w-full flex flex-col gap-2 bg-gradient-to-r from-[#090a0c] to-[#212121] border-[0.5px] border-[#111316] rounded-lg p-6">
-          <h3 className="w-full h3 text-3xl">Parcijalna masaža</h3>
+          <h3 className="w-full h3">Parcijalna masaža</h3>
           <p className="pt-1 xs:pl-2 sm:pl-0 text-start  text-normal">
             &#x2022; <span className="font-semibold">35</span> min
           </p>
@@ -81,7 +96,7 @@ export function PricingSection() {
         </div>
 
         <div className="w-full flex flex-col gap-2  bg-gradient-to-r from-[#090a0c] to-[#212121] border-[0.5px] border-[#111316] rounded-lg p-6">
-          <h3 className="w-full h3 text-3xl">Masaža cijelog tijela</h3>
+          <h3 className="w-full h3">Masaža cijelog tijela</h3>
           <p className="pt-1 xs:pl-2 sm:pl-0 text-start  text-normal">
             &#x2022; <span className="font-semibold">55</span> min
           </p>
@@ -102,7 +117,7 @@ export function PricingSection() {
       <div className="w-full flex items-center justify-center">
         <Link
           href={"/contact"}
-          className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-3xl py-2 px-4 cursor-pointer text-white"
+          className="bg-gradient-to-r from-[#1D7349] to-[#31C57D] rounded-lg py-2 px-4 cursor-pointer text-white hover:text-normal"
         >
           Log In To App
         </Link>
@@ -164,10 +179,10 @@ export function AboutMassageSection() {
           <div className="w-full h-full absolute inset-0 bg-[#061d12] z-10 blur-[128px]"></div>
 
           <div className="flex flex-col z-20">
-            <p className="text-above-heading">Lorem</p>
-            <h3 className="w-full h3 text-3xl pt-1">
-              Benefits of this massage
-            </h3>
+            <p className="w-fit text-above-heading rounded-lg p-2">
+              &#x2022; Lorem ipsum
+            </p>
+            <h3 className="w-full h3  pt-1">Benefits of this massage</h3>
           </div>
           <p className="text-normal z-20 pt-4">
             In the “golden days”, there weren`t many options for working out.
@@ -215,10 +230,10 @@ export function AboutMassageSection() {
           <div className="w-full h-full absolute inset-0 bg-[#061d12] z-10 blur-[128px]"></div>
 
           <div className="flex flex-col z-20">
-            <p className="text-above-heading">Assets</p>
-            <h3 className="w-full h3 text-3xl pt-1">
-              What to expect from this massage
-            </h3>
+            <p className="w-fit text-above-heading  rounded-lg p-2">
+              &#x2022; Other Massages
+            </p>
+            <h3 className="w-full h3 pt-1">What to expect from this massage</h3>
           </div>
           <p className="text-normal z-20 pt-4">
             In the “golden days”, there weren`t many options for working out.
@@ -246,8 +261,10 @@ export function OtherMassagesSection() {
   return (
     <SectionWrapper>
       <div className="flex flex-col items-start justify-start gap-1">
-        <p className="text-above-heading">Other Massages</p>
-        <h1 className="h2">You might be interested in this</h1>
+        <p className="text-above-heading bg-gradient-to-r from-[#090a0c] to-[#191919] border-[0.5px] border-[#111316] rounded-lg p-2">
+          &#x2022; Other Massages
+        </p>
+        <h2 className="h2">You might be interested in this</h2>
       </div>
 
       <div className="flex flex-row items-center gap-6 relative">

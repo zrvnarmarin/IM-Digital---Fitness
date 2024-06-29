@@ -219,47 +219,33 @@ export const WelnessServiceCard = ({ massageType }: { MassageType }) => {
 
 export function HeroSection() {
   return (
-    <div className="relative w-full h-screen">
-      {/* Image spans across the width and height of the screen */}
-      <div className="absolute inset-0">
-        <Image
-          priority
-          src={TestImage}
-          alt="alt"
-          layout="fill"
-          objectPosition="center"
-          className="rounded-md object-cover"
-        />
-      </div>
-
-      {/* Overlaying color */}
-      <div className="absolute inset-0 bg-black opacity-70"></div>
-
-      {/* Overlaying text content */}
-      <div className="absolute inset-0 flex flex-col justify-evenly items-center text-center text-white p-2 px-8 md:px-14 lg:px-28 xl:px-36 2xl:px-42 3xl:px-80">
-        <div className="flex flex-col ">
-          <div className="w-full flex pt-2 justify-center">
-            <h1 className="text-white text-7xl tracking-tight text-center font-bold">
-              Massage
-            </h1>
-          </div>
-          <div className="w-full flex pt-6 justify-center">
-            <p className="text-subheading">
-              Dive into a world of aquatic adventure and skill-building with our
-              premier swimming lessons. Whether you're dipping your toes into
-              the water for the first time or looking to refine your stroke
-              technique, our team of certified instructors is here to guide you
-              through every splash.
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <Link href={"/contact"} className="btn-primary">
-            Reserve Massage
-          </Link>
+    <SectionWrapper>
+      <div className="flex flex-row gap-4 items-center pt-4 md:pt-8 lg:pt-[96px]">
+        <div className="relative w-full flex flex-col items-center justify-center">
+          {/* Blur background */}
+          <div className="w-full h-full absolute inset-0 bg-[#061d12] z-10 blur-[128px]"></div>
+          <p className="text-above-heading z-20">Relax in our expert hands</p>
+          <h1 className="w-full text-white text-[84px]  text-center font-bold z-20">
+            Massage
+          </h1>
         </div>
       </div>
-    </div>
+      <div className="text-white flex items-center justify-center p-2 ">
+        <div className="relative flex items-center ">
+          <Image
+            priority
+            src={TestImage}
+            alt="alt"
+            // fill={true} slika s ovim propertijem ocito zauzima mjesta koliko mu flexbox sirina i njegova visina dopustaju
+            className="object-cover rounded-lg md:max-h-[600px] z-20"
+          />
+        </div>
+      </div>
+      <p className="text-normal text-center md:px-24">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
+        necessitatibus corrupti quaerat. Eveniet odio hic, blanditiis quasi,
+        culpa voluptatibus nam, provident exercitationem incidunt quam expedita
+      </p>
+    </SectionWrapper>
   );
 }

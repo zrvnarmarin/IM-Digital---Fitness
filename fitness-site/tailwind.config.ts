@@ -40,7 +40,7 @@ const config: Config = {
             {},
         },
         ".h2": {
-          "@apply text-start text-2xl md:text-3xl lg:text-4xl text-gray-200 font-semibold lg:font-bold tracking-tight uppercase":
+          "@apply text-start text-2xl md:text-3xl lg:text-4xl text-gray-200 font-semibold lg:font-bold tracking-normal uppercase":
             {},
         },
         ".h3": {

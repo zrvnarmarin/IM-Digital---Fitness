@@ -50,8 +50,8 @@ export default function Navbar({
             Log In
           </p>
           <Link
-            href={"/programs"}
-            className="w-fit bg-black rounded-[0px] border border-[#31C57D] py-2.5 px-8 cursor-pointer text-md text-white font-normal"
+            href="/facilities/massage"
+            className="w-fit flex flex-row items-center justify-center gap-2 text-normal capitalize text-[#24D17C] font-medium bg-gradient-to-r from-[#090a0c] to-[#191919] border-[0.5px] border-[#111316] rounded-lg py-2 px-5"
           >
             Sign Up
           </Link>

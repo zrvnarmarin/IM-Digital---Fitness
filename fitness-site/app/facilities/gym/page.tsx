@@ -44,7 +44,7 @@ export function HeroSection() {
       <div className="absolute inset-0 flex flex-col justify-evenly items-center text-center text-white p-2 px-8 md:px-14 lg:px-28 xl:px-36 2xl:px-42 3xl:px-80">
         <div className="flex flex-col ">
           <div className="w-full flex pt-2 justify-start">
-            <h1 className="w-full text-white text-[84px]  text-center font-medium z-20">
+            <h1 className="w-full text-white text-[84px]  text-center font-bold z-20">
               Gym
             </h1>
           </div>
@@ -183,21 +183,19 @@ export function GallerySection() {
         <h1 className="h2">Gallery</h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18].map(
-          (item) => (
-            <div key={item} className="cursor-pointer">
-              <Image
-                priority
-                src={TestImage}
-                alt="alt"
-                width={0}
-                height={0}
-                // fill={true} slika s ovim propertijem ocito zauzima mjesta koliko mu flexbox sirina i njegova visina dopustaju
-                className="object-cover rounded-md"
-              />
-            </div>
-          )
-        )}
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map((item) => (
+          <div key={item} className="cursor-pointer">
+            <Image
+              priority
+              src={TestImage}
+              alt="alt"
+              width={0}
+              height={0}
+              // fill={true} slika s ovim propertijem ocito zauzima mjesta koliko mu flexbox sirina i njegova visina dopustaju
+              className="object-cover rounded-md"
+            />
+          </div>
+        ))}
       </div>
       {/* <div className="w-full flex items-center justify-center text-normal rotate-90">
         <RightArrow />
